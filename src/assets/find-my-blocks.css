@@ -1,0 +1,23 @@
+:root {
+    --fmb-blue: #75b8c8;
+    --fmb-white: #fdfdfd;
+
+    --fmb-wp-grey: #f1f1f1;
+}
+
+:root {
+    --font-size-base: 16px;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+html * {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    background: var(--fmb-wp-grey);
+}
