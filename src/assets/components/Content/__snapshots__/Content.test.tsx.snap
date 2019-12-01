@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the Content 1`] = `[Function]`;
+
+exports[`renders the Content with the different sizes 1`] = `[Function]`;
+
+exports[`renders the Content with the different sizes 2`] = `[Function]`;
+
+exports[`renders the Content with the different sizes 3`] = `[Function]`;

@@ -1,0 +1,19 @@
+.content {
+  padding-left: var(--fmb-spacing-base);
+  padding-right: var(--fmb-spacing-base);
+}
+
+.small {
+  padding-top: var(--fmb-spacing-small);
+  padding-bottom: var(--fmb-spacing-small);
+}
+
+.medium {
+  padding-top: var(--fmb-spacing-base);
+  padding-bottom: var(--fmb-spacing-base);
+}
+
+.large {
+  padding-top: var(--fmb-spacing-large);
+  padding-bottom: var(--fmb-spacing-large);
+}

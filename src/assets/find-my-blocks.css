@@ -1,10 +1,13 @@
 :root {
-  --fmb-blue: #75b8c8;
+  --fmb-blue: #5c9aa9;
+  --fmb-blue--dark: #518997;
   --fmb-white: #fdfdfd;
   --fmb-wp-grey: #f1f1f1;
 
   /** spacing **/
   --fmb-spacing-base: 16px;
+  --fmb-spacing-small: calc(var(--fmb-spacing-base) / 2);
+  --fmb-spacing-large: calc(var(--fmb-spacing-base) * 2);
 
   /** font sizes **/
   --fmb-font-base: 16px;
@@ -21,4 +24,5 @@ html * {
 body {
   margin: 0;
   background: var(--fmb-wp-grey);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }

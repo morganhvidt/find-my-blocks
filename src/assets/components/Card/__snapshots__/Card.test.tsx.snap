@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders the CalculationTabs 1`] = `
+exports[`renders the Card 1`] = `
 <div
   className="card"
 >
