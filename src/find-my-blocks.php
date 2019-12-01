@@ -60,3 +60,4 @@ if ( ! function_exists( 'fmb_activation_notice' ) ) :
 endif;
 
 require plugin_dir_path( __FILE__ ) . 'inc/settings-page.php';
+require plugin_dir_path( __FILE__ ) . 'inc/enqueue.php';
