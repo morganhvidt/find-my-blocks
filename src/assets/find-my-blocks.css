@@ -3,8 +3,11 @@
   --fmb-white: #fdfdfd;
   --fmb-wp-grey: #f1f1f1;
 
+  /** spacing **/
+  --fmb-spacing-base: 16px;
+
   /** font sizes **/
-  --font-size-base: 16px;
+  --fmb-font-base: 16px;
 }
 
 html {

@@ -1,0 +1,5 @@
+.menu {
+  background: var(--fmb-blue);
+  flex: 0 0 calc(var(--fmb-font-base) * 15);
+  padding: var(--fmb-spacing-base);
+}
