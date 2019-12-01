@@ -1,1 +1,1 @@
-export { Logo } from "./Logo";
+export { LogoIcon, Logo } from "./Logo";

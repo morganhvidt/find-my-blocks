@@ -2,6 +2,7 @@
   --fmb-blue: #5c9aa9;
   --fmb-blue--dark: #518997;
   --fmb-white: #fdfdfd;
+  --fmb-grey: #e0e0e0;
   --fmb-wp-grey: #f1f1f1;
 
   /** spacing **/
@@ -14,6 +15,7 @@
   --fmb-font-base: 16px;
   --fmb-font-med-small: calc(var(--fmb-font-base) * 0.875);
   --fmb-font-small: calc(var(--fmb-font-base) * 0.75);
+  --fmb-font-large: calc(var(--fmb-font-base) * 1.5);
 }
 
 html {

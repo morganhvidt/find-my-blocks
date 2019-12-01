@@ -1,4 +1,60 @@
 .card {
-  border: 1px solid red;
-  padding: 1rem;
+  background: var(--fmb-white);
+  padding: var(--fmb-spacing-base);
+  border-radius: 3px;
+  border: 1px solid var(--fmb-grey);
+  border-bottom: 2px solid var(--fmb-grey);
+  border-top: 3px solid var(--fmb-blue);
+  font-weight: bold;
+  font-size: var(--fmb-font-med-small);
+  transition: transform 150ms;
+}
+
+.card:hover {
+  transform: scale(1.025);
+}
+
+.card strong {
+  display: block;
+  margin-bottom: var(--fmb-spacing-mini);
+}
+
+.link {
+  font-size: var(--fmb-font-small);
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 var(--fmb-spacing-small) 0 0;
+  color: var(--fmb-blue);
+  text-decoration: underline;
+}
+
+.link:hover,
+.link:focus {
+  text-decoration: none;
+  color: var(--fmb-blue--dark);
+  outline: none;
+}
+
+.cardList {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: var(--fmb-spacing-base);
+  padding: var(--fmb-spacing-large);
+  grid-auto-rows: min-content;
+}
+
+.cardListTitle {
+  font-size: var(--fmb-font-large);
+  grid-column: 1 / -1;
+  color: var(--fmb-blue);
+  margin-bottom: var(--fmb-spacing-base);
+}
+
+.cardListTitle svg {
+  display: inline-block;
+  max-width: var(--fmb-spacing-large);
+  margin-right: var(--fmb-spacing-small);
+  vertical-align: middle;
+  fill: var(--fmb-blue);
 }
