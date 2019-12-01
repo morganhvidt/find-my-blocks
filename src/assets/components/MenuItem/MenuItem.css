@@ -8,6 +8,7 @@
   transition: background 300ms;
   padding: var(--fmb-spacing-mini) var(--fmb-spacing-base) var(--fmb-spacing-small);
   border-top: 1px solid rgba(255, 255, 255, 0.25);
+  color: var(--fmb-white);
 }
 
 .menuItem:hover,

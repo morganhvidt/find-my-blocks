@@ -1,13 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-</head>
-<body>
+    <style>
+      html {
+        box-sizing: border-box;
+      }
+
+      html * {
+        box-sizing: inherit;
+      }
+
+      body {
+        margin: 0;
+        background: var(--fmb-wp-grey);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        line-height: 1.6;
+        padding: 10px 20px 0 22px;
+      }
+    </style>
+  </head>
+  <body>
     <div id="find-my-blocks"></div>
     <script src="./find-my-blocks.tsx"></script>
-</body>
+  </body>
 </html>
