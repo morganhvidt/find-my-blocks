@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "prestart": "npm run build:cssTypes",
-    "start": "parcel src/find-my-blocks.html",
+    "start": "parcel src/assets/find-my-blocks.html",
     "lint": "eslint './src/**/*.{ts,tsx,js,jsx}'",
     "build:cssTypes": "tcm src"
   },
