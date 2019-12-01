@@ -17,9 +17,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-
-
-
 if ( ! function_exists( 'fmb_activation_hook' ) ) :
 	/**
 	 * Set transient for message when plugin is actiavated.
@@ -38,9 +35,20 @@ if ( ! function_exists( 'fmb_activation_notice' ) ) :
 	function fmb_activation_notice() {
 		/* Check transient, if available display notice */
 		if ( get_transient( 'fmb-activation-notice' ) ) {
+			$str = 'Thank you for using Find My Blocks. Go to the';
 			?>
 				<div class="updated notice is-dismissible">
-					<p>Thank you for using Find My Blocks. Go to the <a href="#">settings page</a> to use this plugin.</p>
+					<p>
+						<?php
+							echo sprintf(
+								/* translators: placeholders are used to esc the url of the settings page. */
+								esc_html__( 'Thank you for using Find My Blocks. Go to the %1$s %2$s %3$s to find your blocks.', 'find-my-blocks' ),
+								'<a href="' . esc_url( admin_url( '/options-general.php?page=find-my-blocks' ) ) . '">',
+								esc_html__( 'settings page', 'find-my-blocks' ),
+								'</a>'
+							);
+						?>
+					</p>
 				</div>
 			<?php
 			/* Delete transient, only display this notice once. */
@@ -50,3 +58,5 @@ if ( ! function_exists( 'fmb_activation_notice' ) ) :
 
 	add_action( 'admin_notices', 'fmb_activation_notice' );
 endif;
+
+require plugin_dir_path( __FILE__ ) . 'inc/settings-page.php';
