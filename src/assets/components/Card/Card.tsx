@@ -4,19 +4,35 @@ import styles from "./Card.css";
 
 import { Text } from "../Text";
 import { LogoIcon } from "../Logo";
+import { Alert } from "../Alert";
 
 interface CardProps {
   title: string;
   postType: string;
+  editPost: string;
+  viewPost: string;
+  isReusable: boolean;
+  count: number;
 }
-export const Card = ({ title, postType }: CardProps) => {
+export const Card = ({
+  title,
+  postType,
+  editPost,
+  viewPost,
+  isReusable = false,
+  count
+}: CardProps) => {
+
   const cardClassNames = classnames( styles.card );
+
   return (
     <div className={ cardClassNames }>
       <strong>{title}</strong>
       <PostType type={ postType } />
-      <PostLink>Edit Post</PostLink>
-      <PostLink>View Post</PostLink>
+      <PostLink url={ editPost }>Edit Post</PostLink>
+      <PostLink url={ viewPost }>View Post</PostLink>
+      { count > 1 && <Alert>{count} usages in post</Alert>}
+      { isReusable && <Alert type="warning">This is a Reusable Block</Alert>}
     </div>
   );
 };
@@ -60,16 +76,20 @@ const PostType = ({ type }: PostTypeProps) => (
 
 interface PostLinkProps {
   children: React.ReactNode;
+  url: string;
 }
 
 
-const PostLink = ({ children }: PostLinkProps) => {
+const PostLink = ({ children, url }: PostLinkProps) => {
   const postLinkClass = classnames( styles.link );
 
   return (
     <a
       className={ postLinkClass }
-      tabIndex={0}>
+      tabIndex={0}
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer">
 
       {children}
     </a>

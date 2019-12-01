@@ -1,0 +1,22 @@
+.alert {
+  padding: var(--fmb-spacing-small);
+  border: 1px solid var(--fmb-grey);
+  border-radius: 3px;
+  font-size: var(--fmb-font-small);
+  margin: var(--fmb-spacing-small) 0 0;
+}
+
+.success {
+  border: none;
+  background: var(--fmb-green);
+}
+
+.warning {
+  border: none;
+  background: var(--fmb-yellow);
+}
+
+.error {
+  border: none;
+  background: var(--fmb-red);
+}

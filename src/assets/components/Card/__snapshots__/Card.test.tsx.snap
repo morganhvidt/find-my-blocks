@@ -1,5 +1,48 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`renders a warning if isReusable 1`] = `
+<div
+  className="card"
+>
+  <strong>
+    this is a title
+  </strong>
+  <div
+    className="text"
+  >
+    Post Type: 
+    features
+  </div>
+  <a
+    className="link"
+    rel="noopener noreferrer"
+    tabIndex={0}
+    target="_blank"
+  >
+    Edit Post
+  </a>
+  <a
+    className="link"
+    rel="noopener noreferrer"
+    tabIndex={0}
+    target="_blank"
+  >
+    View Post
+  </a>
+  <div
+    className="alert"
+  >
+    3
+     usages in post
+  </div>
+  <div
+    className="alert warning"
+  >
+    This is a Reusable Block
+  </div>
+</div>
+`;
+
 exports[`renders the CardList and Card 1`] = `
 <div
   className="cardList"
@@ -42,16 +85,58 @@ exports[`renders the CardList and Card 1`] = `
     </div>
     <a
       className="link"
+      rel="noopener noreferrer"
       tabIndex={0}
+      target="_blank"
     >
       Edit Post
     </a>
     <a
       className="link"
+      rel="noopener noreferrer"
       tabIndex={0}
+      target="_blank"
     >
       View Post
     </a>
+  </div>
+</div>
+`;
+
+exports[`tells that there is multiple usages in post 1`] = `
+<div
+  className="card"
+>
+  <strong>
+    this is a title
+  </strong>
+  <div
+    className="text"
+  >
+    Post Type: 
+    features
+  </div>
+  <a
+    className="link"
+    rel="noopener noreferrer"
+    tabIndex={0}
+    target="_blank"
+  >
+    Edit Post
+  </a>
+  <a
+    className="link"
+    rel="noopener noreferrer"
+    tabIndex={0}
+    target="_blank"
+  >
+    View Post
+  </a>
+  <div
+    className="alert"
+  >
+    3
+     usages in post
   </div>
 </div>
 `;

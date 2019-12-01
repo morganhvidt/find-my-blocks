@@ -25,10 +25,6 @@ const App = () => {
     fetchPosts();
   }, []);
 
-  useEffect( () => {
-
-  });
-
   const MenuItems = blocks.map(({ name, posts }) => {
     const handleClick = () => {
       console.log("hello");
@@ -45,13 +41,29 @@ const App = () => {
     );
   });
 
+  const activeBlockObj = blocks.filter( block => block.name === activeBlock );
+  console.log("activeBlockObj", activeBlockObj);
+
+  const ListOfCards = activeBlockObj.map( block => {
+    return block.posts.map( post => (
+      <Card
+        key={ post.id  }
+        title={ post.title }
+        postType={ post.postType }
+        editPost={ post.edit_url }
+        viewPost={ post.post_url }
+        isReusable={ post.isReusable }
+        count={ post.count } />
+    ) );
+  });
+
   return (
     <Layout>
       <Menu>
         { MenuItems }
       </Menu>
       <CardList title={activeBlock}>
-        <Card title="Community" postType="features" />
+        { ListOfCards }
       </CardList>
     </Layout>
   );
