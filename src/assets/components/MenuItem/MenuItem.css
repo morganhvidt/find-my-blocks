@@ -12,9 +12,11 @@
 }
 
 .menuItem:hover,
-.menuItem:focus {
+.menuItem:focus,
+.active {
   background: var(--fmb-wp-grey);
   outline: none;
+  box-shadow: none;
   color: var(--fmb-blue);
 }
 
@@ -33,6 +35,7 @@
 }
 
 .menuItem:hover::before,
-.menuItem:focus::before {
+.menuItem:focus::before,
+.active::before {
   border-left-color: var(--fmb-blue);
 }

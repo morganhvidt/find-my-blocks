@@ -7,14 +7,26 @@ import { Text } from "../Text";
 interface MenuItemProps {
   title: string;
   count: number;
+  isActive: boolean;
+  onClick?(): void;
 }
-export const MenuItem = ({ title, count }: MenuItemProps) => {
-  const menuItemClass = classnames( styles.menuItem );
+
+export const MenuItem = ({
+  title,
+  count,
+  isActive,
+  onClick }: MenuItemProps) => {
+
+  const menuItemClass = classnames(
+    styles.menuItem,
+    isActive && styles.active
+  );
 
   return (
     <a
       className={ menuItemClass }
-      tabIndex={0}>
+      tabIndex={0}
+      onClick={ onClick }>
 
       {title}
       <PostCount count={count} />

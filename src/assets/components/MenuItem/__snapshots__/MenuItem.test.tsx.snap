@@ -1,5 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`renders active menu item 1`] = `[Function]`;
+
 exports[`renders posts vs post based on count 1`] = `[Function]`;
 
 exports[`renders posts vs post based on count 2`] = `[Function]`;
