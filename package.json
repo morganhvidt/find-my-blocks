@@ -6,7 +6,9 @@
   "scripts": {
     "prestart": "npm run build:cssTypes",
     "start": "parcel src/assets/find-my-blocks.html",
-    "lint": "eslint './src/**/*.{ts,tsx,js,jsx}'",
+    "lint:js": "eslint './src/**/*.{ts,tsx,js,jsx}'",
+    "lint:css": "stylelint 'src/**/*.css'",
+    "lint": "npm run lint:js && npm run lint:css",
     "build:cssTypes": "tcm src"
   },
   "repository": {
@@ -49,6 +51,9 @@
     "husky": "^3.1.0",
     "lint-staged": "^9.5.0",
     "postcss-modules": "^1.4.1",
+    "stylelint": "^12.0.0",
+    "stylelint-config-css-modules": "^2.1.0",
+    "stylelint-config-standard": "^19.0.0",
     "typed-css-modules": "^0.6.3",
     "typescript": "^3.7.2"
   }

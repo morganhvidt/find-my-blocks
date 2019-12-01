@@ -1,23 +1,21 @@
 :root {
-    --fmb-blue: #75b8c8;
-    --fmb-white: #fdfdfd;
+  --fmb-blue: #75b8c8;
+  --fmb-white: #fdfdfd;
+  --fmb-wp-grey: #f1f1f1;
 
-    --fmb-wp-grey: #f1f1f1;
-}
-
-:root {
-    --font-size-base: 16px;
+  /** font sizes **/
+  --font-size-base: 16px;
 }
 
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html * {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 body {
-    margin: 0;
-    background: var(--fmb-wp-grey);
+  margin: 0;
+  background: var(--fmb-wp-grey);
 }
