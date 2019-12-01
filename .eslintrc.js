@@ -21,8 +21,8 @@ module.exports = {
       'no-trailing-spaces': ["error"],
       "@typescript-eslint/explicit-function-return-type": 0,
       "no-unexpected-multiline": 2,
-      "object-curly-spacing": ["error", "never"],
-      "computed-property-spacing": ["error", "never"],
+      "object-curly-spacing": ["error", "always"],
+      "computed-property-spacing": ["error", "always"],
     },
     settings: {
       react: {

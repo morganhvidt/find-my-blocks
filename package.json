@@ -4,8 +4,10 @@
   "description": "A tool to help you find what Gutenbergs blocks you have used on your website and where they are located.",
   "main": "index.js",
   "scripts": {
+    "prestart": "npm run build:cssTypes",
     "start": "parcel src/find-my-blocks.html",
-    "lint": "eslint './src/**/*.{ts,tsx,js,jsx}'"
+    "lint": "eslint './src/**/*.{ts,tsx,js,jsx}'",
+    "build:cssTypes": "tcm src"
   },
   "repository": {
     "type": "git",
@@ -35,15 +37,19 @@
     "react-dom": "^16.12.0"
   },
   "devDependencies": {
+    "@types/classnames": "^2.2.9",
     "@types/node": "^12.12.14",
     "@types/react": "^16.9.13",
     "@types/react-dom": "^16.9.4",
     "@typescript-eslint/eslint-plugin": "^2.9.0",
     "@typescript-eslint/parser": "^2.9.0",
+    "classnames": "^2.2.6",
     "eslint": "^6.7.2",
     "eslint-plugin-react": "^7.17.0",
     "husky": "^3.1.0",
     "lint-staged": "^9.5.0",
+    "postcss-modules": "^1.4.1",
+    "typed-css-modules": "^0.6.3",
     "typescript": "^3.7.2"
   }
 }

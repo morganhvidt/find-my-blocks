@@ -1,7 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-const App = () => <div>Hello World</div>;
+import { Card } from "./components/Card";
+
+const App = () => <div><Card /></div>;
 
 ReactDOM.render(
   <App />,
