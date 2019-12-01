@@ -1,0 +1,37 @@
+.menuItem {
+  position: relative;
+  display: block;
+  font-weight: bold;
+  line-height: 1.8;
+  font-size: var(--fmb-font-med-small);
+  cursor: pointer;
+  transition: background 300ms;
+  padding: var(--fmb-spacing-mini) var(--fmb-spacing-base) var(--fmb-spacing-small);
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.menuItem:hover,
+.menuItem:focus {
+  background: var(--fmb-wp-grey);
+  outline: none;
+  color: var(--fmb-blue);
+}
+
+.menuItem::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-left: 8px solid var(--fmb-white);
+  border-bottom: 5px solid transparent;
+  right: var(--fmb-spacing-base);
+  top: 50%;
+  transform: translateY(-50%);
+  transition: border-left-color 300ms;
+}
+
+.menuItem:hover::before,
+.menuItem:focus::before {
+  border-left-color: var(--fmb-blue);
+}
