@@ -59,6 +59,24 @@ if ( ! function_exists( 'fmb_activation_notice' ) ) :
 	add_action( 'admin_notices', 'fmb_activation_notice' );
 endif;
 
+if ( ! function_exists( 'find_my_blocks_add_reusable_to_admin_menu' ) ) :
+	/**
+	 * Adds Reusable blocks to the admin menu.
+	 */
+	function find_my_blocks_add_reusable_to_admin_menu() {
+		add_menu_page(
+			'Reusable Blocks',
+			'Reusable Blocks',
+			'edit_posts',
+			'edit.php?post_type=wp_block',
+			'',
+			'dashicons-editor-table',
+			22
+		);
+	}
+	add_action( 'admin_menu', 'find_my_blocks_add_reusable_to_admin_menu' );
+endif;
+
 require plugin_dir_path( __FILE__ ) . 'inc/settings-page.php';
 require plugin_dir_path( __FILE__ ) . 'inc/enqueue.php';
 require plugin_dir_path( __FILE__ ) . 'inc/register-route.php';
