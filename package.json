@@ -18,6 +18,17 @@
     "url": "https://github.com/eddysims/find-my-blocks/issues"
   },
   "homepage": "https://github.com/eddysims/find-my-blocks#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "npm run lint -- --max-warnings=0",
+      "git add"
+    ]
+  },
   "dependencies": {
     "parcel-bundler": "^1.12.4",
     "react": "^16.12.0",
@@ -31,6 +42,8 @@
     "@typescript-eslint/parser": "^2.9.0",
     "eslint": "^6.7.2",
     "eslint-plugin-react": "^7.17.0",
+    "husky": "^3.1.0",
+    "lint-staged": "^9.5.0",
     "typescript": "^3.7.2"
   }
 }
