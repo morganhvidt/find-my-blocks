@@ -5,6 +5,11 @@
  * @package FindMyBlocks
  */
 
+// Exit if accessed directly.
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 if ( ! function_exists( 'find_my_blocks_register_options_page' ) ) :
 	/**
 	 * Register the options page

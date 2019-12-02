@@ -5,6 +5,11 @@
  * @package FindMyBlocks
  */
 
+// Exit if accessed directly.
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 if ( ! function_exists( 'find_my_blocks_enqueue_scripts' ) ) :
 	/**
 	 * Checks if a block styles/scripts should be enqueued.
