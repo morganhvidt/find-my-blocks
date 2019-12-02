@@ -21,9 +21,12 @@ if (NEED_DEV_URL) {
 }
 
 const srcDir = "src";
-const watchFiles = [`${ srcDir }/**/*.php`,];
+const watchFiles = [
+  `${ srcDir }/**/*.php`,
+  `${ srcDir }/**/*.txt`,
+];
 const options = {
-  outDir: OUTDIR !== undefined ? OUTDIR : "./dist",
+  outDir: OUTDIR !== undefined ? OUTDIR : "./find-my-blocks",
   sourceMaps: NODE_ENV !== "production",
   production: NODE_ENV === "production",
   hmr: false,

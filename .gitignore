@@ -3,6 +3,7 @@
 .cache/**
 .vscode/**
 
+find-my-blocks/**
 dist/**
 node_modules/**
 coverage/**
