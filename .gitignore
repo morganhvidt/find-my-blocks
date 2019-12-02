@@ -7,3 +7,5 @@ find-my-blocks/**
 dist/**
 node_modules/**
 coverage/**
+
+find-my-blocks.zip
