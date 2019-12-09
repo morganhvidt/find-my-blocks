@@ -1,10 +1,10 @@
 import React from "react";
 import classnames from "classnames";
-import styles from "./Alert.css";
+import styles from "./Alert.module.css";
 
 interface AlertProps {
-    type?: string;
-    children: React.ReactNode;
+  type?: string;
+  children: React.ReactNode;
 }
 
 export const Alert = ({ type, children }: AlertProps) => {
@@ -16,9 +16,8 @@ export const Alert = ({ type, children }: AlertProps) => {
   );
 
   return (
-    <div className={ alertClass }>
-      {children}
+    <div className={alertClass}>
+      {children} - HI
     </div>
   );
-}
-;
+};

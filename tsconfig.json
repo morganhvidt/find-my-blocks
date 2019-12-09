@@ -1,6 +1,11 @@
 {
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
+    "moduleResolution": "node",
+    "strict": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": false,
+    "noEmit": true,
     "jsx": "react",
     "esModuleInterop": true,
     "target": "es6",

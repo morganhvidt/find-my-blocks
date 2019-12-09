@@ -1,3 +1,5 @@
+@import '../../find-my-blocks.css';
+
 .alert {
   padding: var(--fmb-spacing-small);
   border: 1px solid var(--fmb-grey);
