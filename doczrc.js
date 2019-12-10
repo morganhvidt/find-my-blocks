@@ -1,12 +1,13 @@
 
 export default {
   typescript: true,
-  title: "Docz Typescript",
-  menu: ["Getting Started", "Components"],
+  title: "Find My Blocks",
+  menu: ["Find My Blocks", "Components"],
   themeConfig: {
     colors: {
       header: {
-        bg: 'tomato',
+        bg: "#FF4B3E",
+        color: "#FFF"
       },
     },
   },

@@ -1,24 +1,23 @@
 @import '../../find-my-blocks.css';
 
 .alert {
-  padding: var(--fmb-spacing-small);
-  border: 1px solid var(--fmb-grey);
-  border-radius: 3px;
-  font-size: var(--fmb-font-small);
+  padding: var(--fmb-spacing-base);
+  border-top: 3px solid var(--fmb-grey);
+  background: var(--fmb-grey--light);
   margin: var(--fmb-spacing-small) 0 0;
 }
 
 .success {
-  border: none;
-  background: var(--fmb-green);
+  background: var(--fmb-success--light);
+  border-top-color: var(--fmb-success);
 }
 
 .warning {
-  border: none;
-  background: var(--fmb-yellow);
+  background: var(--fmb-warning--light);
+  border-top-color: var(--fmb-warning);
 }
 
 .error {
-  border: none;
-  background: var(--fmb-red);
+  background: var(--fmb-error--light);
+  border-top-color: var(--fmb-error);
 }

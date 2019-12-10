@@ -1,6 +1,7 @@
 ---
 name: Alert
 menu: Components
+route: /components/alert
 ---
 
 import { Playground, Props } from 'docz'
@@ -8,21 +9,36 @@ import { Alert } from './'
 
 # Alert
 
+Alert bar is used to display feedback and important messages to the user.
+
+```js
+import { Alert } from './Alert';
+```
+
+<Playground>
+  <Alert>Alerts are good for displaying messages</Alert>
+</Playground>
+
 ## Properties
 
 <Props of={Alert} />
 
-## Basic usage
+## Success
 
 <Playground>
-  <Alert type="warning">Some hello!</Alert>
+  <Alert type="success">Wow, you did a good thing!</Alert>
 </Playground>
 
-## Using different kinds
+## Warning
 
 <Playground>
-  <Alert kind="info">Some message</Alert>
-  <Alert kind="positive">Some message</Alert>
-  <Alert kind="negative">Some message</Alert>
-  <Alert kind="warning">Some message</Alert>
+  <Alert type="warning">Careful... something might be wrong.</Alert>
 </Playground>
+
+## Error
+
+<Playground>
+  <Alert type="error">Uh oh, something seems wrong here.</Alert>
+</Playground>
+
+

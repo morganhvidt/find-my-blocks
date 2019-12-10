@@ -3,7 +3,7 @@ import classnames from "classnames";
 import styles from "./Alert.module.css";
 
 interface AlertProps {
-  type?: string;
+  readonly type?: "success" | "warning" | "error";
   children: React.ReactNode;
 }
 
