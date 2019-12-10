@@ -4,7 +4,8 @@
   "description": "A tool to help you find what Gutenbergs blocks you have used on your website and where they are located.",
   "main": "index.js",
   "scripts": {
-    "dev": "rm -rf .docz && docz dev",
+    "predev": "rm -rf .docz && npm run build:cssTypes",
+    "dev": "docz dev",
     "prestart": "npm run clean && npm run build:cssTypes",
     "start": "node parcel.config.js -f './src/assets/find-my-blocks.tsx' --env=development",
     "build": "docz build",

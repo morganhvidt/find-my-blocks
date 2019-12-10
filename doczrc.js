@@ -1,8 +1,8 @@
-
 export default {
   typescript: true,
   title: "Find My Blocks",
-  menu: ["Find My Blocks", "Components"],
+  menu: ["Find My Blocks", "Getting Started", "Components"],
+  port: 8888,
   themeConfig: {
     colors: {
       header: {
