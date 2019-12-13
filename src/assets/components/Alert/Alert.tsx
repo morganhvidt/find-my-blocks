@@ -17,7 +17,7 @@ export const Alert = ({ type, children }: AlertProps) => {
 
   return (
     <div className={alertClass}>
-      {children} - HI
+      {children}
     </div>
   );
 };

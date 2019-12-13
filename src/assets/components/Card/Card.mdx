@@ -5,16 +5,25 @@ menu: Components
 
 import { Playground, Props } from 'docz'
 import { Card } from './'
+import { Alert } from '../Alert'
+import { Content } from '../Content'
 
 # Card
 
-## Properties
-
-<Props of={Card} />
+```js
+import { Card } from './Card';
+```
 
 ## Basic usage
 
+The card is used to display post information. It is also a dumb component, that only accepts children.
+
 <Playground>
-  <Card>Some message</Card>
+  <Card>
+    <Content>
+      Cards have some content.
+    </Content>
+    <Alert type="success">This card is safe, I promise</Alert>
+  </Card>
 </Playground>
 

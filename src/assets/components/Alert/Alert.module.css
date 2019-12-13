@@ -5,6 +5,7 @@
   border-top: 3px solid var(--fmb-grey);
   background: var(--fmb-grey--light);
   margin: var(--fmb-spacing-small) 0 0;
+  font-weight: bold;
 }
 
 .success {
