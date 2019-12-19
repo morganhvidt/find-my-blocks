@@ -2,7 +2,6 @@
 .DS_Store
 
 .cache/**
-.vscode/**
 .docz/**
 
 find-my-blocks/**
