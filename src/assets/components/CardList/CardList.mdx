@@ -1,0 +1,31 @@
+---
+name: Card List
+menu: Components
+route: components/card-list
+---
+
+import { Playground, Props } from 'docz'
+import { CardList } from './'
+
+# Card List
+
+```js
+import { CardList } from './CardList';
+```
+
+## Basic usage
+
+The CardList takes in an array of posts and turns them into cards.
+
+<Playground>
+    <CardList cards={ [
+        { title: 'Find' },
+        { title: 'My' },
+        { title: 'Blocks' }
+    ] } />
+</Playground>
+
+## Props
+
+<Props of={CardList} />
+

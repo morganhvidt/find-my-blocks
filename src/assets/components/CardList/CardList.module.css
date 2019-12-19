@@ -1,0 +1,8 @@
+.list {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: var(--fmb-spacing-base);
+  padding: var(--fmb-spacing-large);
+  grid-auto-rows: min-content;
+}

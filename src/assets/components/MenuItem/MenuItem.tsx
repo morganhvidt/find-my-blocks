@@ -1,8 +1,8 @@
 import React from "react";
 import classnames from "classnames";
-import styles from "./MenuItem.css";
+import styles from "./MenuItem.module.css";
 
-import { Text } from "../Text";
+import { Text } from "../Typography";
 
 interface MenuItemProps {
   title: string;

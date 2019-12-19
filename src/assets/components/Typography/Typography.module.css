@@ -1,0 +1,20 @@
+.text {
+  font-size: 0.875em;
+}
+
+.heading {
+  font-size: 1.125em;
+  font-weight: bold;
+  margin-bottom: 0.375em;
+}
+
+.link {
+  display: inline-block;
+  color: var(--fmb-blue);
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.link:hover {
+  text-decoration: none;
+}

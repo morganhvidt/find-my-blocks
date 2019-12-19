@@ -6,7 +6,7 @@ import ReactDOM from "react-dom";
 import { Layout } from "./components/Layout";
 import { Menu } from "./components/Menu";
 import { MenuItem } from "./components/MenuItem";
-import { CardList } from "./components/CardList";
+// import { CardList } from "./components/CardList";
 
 import "./find-my-blocks.css";
 
@@ -42,22 +42,21 @@ const App = () => {
     );
   });
 
-  const activeBlockPosts = blocks.filter( block => block.name === activeBlock );
-  console.log( activeBlockPosts[ 0 ] !== undefined);
-  // console.log(activeBlockPosts);
+  // const activeBlockPosts = blocks.filter( block => {
+  //     return block.name === activeBlock
+  // });
+
   return (
     <Layout>
       <Menu>
         { MenuItems }
       </Menu>
-      <CardList
+      {/* <CardList
         cards={
           activeBlockPosts[ 0 ] !== undefined ?
             activeBlockPosts[ 0 ].posts : ""
         }
-      />
-
-
+      /> */}
     </Layout>
   );
 };

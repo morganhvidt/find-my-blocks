@@ -1,0 +1,17 @@
+.menu {
+  background: var(--fmb-white);
+  flex: 0 0 calc(var(--fmb-font-base) * 18);
+  height: calc(100vh - 2rem);
+  position: sticky;
+  top: 2rem;
+  padding: 2rem 0;
+  border: 1px solid var(--fmb-grey--light);
+  box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.015);
+  overflow-y: scroll;
+}
+
+.menu svg {
+  max-width: 60%;
+  display: block;
+  margin: 0 auto;
+}

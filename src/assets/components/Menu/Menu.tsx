@@ -1,6 +1,6 @@
 import React from "react";
 import classnames from "classnames";
-import styles from "./Menu.css";
+import styles from "./Menu.module.css";
 
 import { Content } from "../Content";
 import { Logo } from "../Logo";
@@ -17,8 +17,9 @@ export const Menu = ({ children }: MenuProps) => {
       <Content>
         <Logo />
       </Content>
-
-      {children}
+      <Content>
+        {children}
+      </Content>
     </nav>
   );
 };

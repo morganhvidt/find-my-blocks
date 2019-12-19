@@ -1,0 +1,13 @@
+.logo {
+  text-align: center;
+  font-weight: 900;
+  font-size: 1.25rem;
+  color: var(--fmb-white);
+  text-transform: uppercase;
+}
+
+.logo svg {
+  max-width: calc(var(--fmb-font-base) * 4);
+  display: block;
+  margin: 0 auto calc(var(--fmb-font-base) / 1.5);
+}

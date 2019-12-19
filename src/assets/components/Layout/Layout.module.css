@@ -1,7 +1,6 @@
 .layout {
+  box-sizing: border-box;
   display: flex;
-  background: var(--fmb-white);
   margin-top: var(--fmb-spacing-large);
-  border: 1px solid var(--fmb-grey--light);
-  box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.015);
+  position: relative;
 }

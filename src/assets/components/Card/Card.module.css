@@ -1,0 +1,32 @@
+.card {
+  background: var(--fmb-white);
+  padding: var(--fmb-spacing-base);
+  border: 1px solid var(--fmb-grey);
+  border-top: 5px solid var(--fmb-grey);
+  font-size: var(--fmb-font-med-small);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.015);
+}
+
+.cardList {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: var(--fmb-spacing-base);
+  padding: var(--fmb-spacing-large);
+  grid-auto-rows: min-content;
+}
+
+.cardListTitle {
+  font-size: var(--fmb-font-large);
+  grid-column: 1 / -1;
+  color: var(--fmb-blue);
+  margin-bottom: var(--fmb-spacing-base);
+}
+
+.cardListTitle svg {
+  display: inline-block;
+  max-width: var(--fmb-spacing-large);
+  margin-right: var(--fmb-spacing-small);
+  vertical-align: middle;
+  fill: var(--fmb-blue);
+}

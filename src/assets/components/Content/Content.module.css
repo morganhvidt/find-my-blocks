@@ -1,0 +1,15 @@
+.content:first-child {
+  margin-top: 0;
+}
+
+.small {
+  margin-top: var(--fmb-spacing-small);
+}
+
+.medium {
+  margin-top: var(--fmb-spacing-base);
+}
+
+.large {
+  margin-top: var(--fmb-spacing-large);
+}
