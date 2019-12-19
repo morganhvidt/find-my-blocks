@@ -42,9 +42,9 @@ const App = () => {
     );
   });
 
-  // const activeBlockPosts = blocks.filter( block => {
-  //     return block.name === activeBlock
-  // });
+  const activeBlockPosts = blocks.filter( block => {
+    return block.name === activeBlock;
+  });
 
   return (
     <Layout>

@@ -1,40 +1,44 @@
 .menuItem {
-  position: relative;
   display: block;
   font-weight: bold;
-  line-height: 1.8;
+  line-height: 1.6;
   font-size: var(--fmb-font-med-small);
   cursor: pointer;
-  transition: background 300ms;
   padding: var(--fmb-spacing-mini) var(--fmb-spacing-base) var(--fmb-spacing-small);
-  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  transition: background 300ms;
+  border-top: 1px solid var(--fmb-grey--light);
+  color: var(--fmb-grey--dark);
 }
 
 .menuItem:hover,
-.menuItem:focus,
-.active {
-  background: var(--fmb-wp-grey);
+.menuItem:focus {
   outline: none;
   box-shadow: none;
-  color: var(--fmb-blue);
+  background: var(--fmb-grey--light);
+  color: var(--fmb-grey--dark);
 }
 
-.menuItem::before {
+.active,
+.active:hover,
+.active:focus {
+  transition: none;
+  position: relative;
+  background: var(--fmb-red);
+  color: white;
+  pointer-events: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.active::before {
   content: '';
-  position: absolute;
   width: 0;
   height: 0;
-  border-top: 5px solid transparent;
-  border-left: 8px solid var(--fmb-white);
-  border-bottom: 5px solid transparent;
-  right: var(--fmb-spacing-base);
+  border-top: 6px solid transparent;
+  border-left: 6px solid var(--fmb-red);
+  border-bottom: 6px solid transparent;
+  right: -6px;
   top: 50%;
+  position: absolute;
   transform: translateY(-50%);
-  transition: border-left-color 300ms;
-}
-
-.menuItem:hover::before,
-.menuItem:focus::before,
-.active::before {
-  border-left-color: var(--fmb-blue);
 }

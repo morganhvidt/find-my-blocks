@@ -22,11 +22,26 @@ export const MenuItem = ({
     isActive && styles.active
   );
 
+  const handleClick = () => {
+    onClick && onClick();
+
+    const scrollToTop = () => {
+      const c = document.documentElement.scrollTop || document.body.scrollTop;
+      if (c > 0) {
+        window.requestAnimationFrame(scrollToTop);
+        window.scrollTo(0, c - c / 8);
+      }
+    };
+    scrollToTop();
+
+  };
+
   return (
     <a
       className={ menuItemClass }
       tabIndex={0}
-      onClick={ onClick }>
+      onClick={ () => handleClick() }
+      onKeyDown={ ({ key }) => key === "Enter" && handleClick() }>
 
       {title}
       <PostCount count={count} />
