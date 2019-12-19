@@ -6,7 +6,7 @@ import ReactDOM from "react-dom";
 import { Layout } from "./components/Layout";
 import { Menu } from "./components/Menu";
 import { MenuItem } from "./components/MenuItem";
-// import { CardList } from "./components/CardList";
+import { CardList } from "./components/CardList";
 
 import "./find-my-blocks.css";
 
@@ -51,12 +51,12 @@ const App = () => {
       <Menu>
         { MenuItems }
       </Menu>
-      {/* <CardList
+      <CardList
         cards={
           activeBlockPosts[ 0 ] !== undefined ?
             activeBlockPosts[ 0 ].posts : ""
         }
-      /> */}
+      />
     </Layout>
   );
 };
