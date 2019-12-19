@@ -11,10 +11,10 @@ import { Alert } from "../Alert";
 
 interface CardListProps {
     readonly cards: Array<object>;
+    readonly title: string;
 }
 
-export const CardList = ({ cards }: CardListProps) => {
-  console.log("cards", cards);
+export const CardList = ({ cards, title }: CardListProps) => {
   const Cards = cards.length > 0 && cards.map( ({
     id,
     title,
@@ -46,10 +46,26 @@ export const CardList = ({ cards }: CardListProps) => {
   } );
 
   const cardListClass = classnames(styles.list);
+  const stylez = {
+    flex: 1,
+  };
   return (
-    <div className={ cardListClass }>
-      {Cards}
+    <div style={ stylez }>
+      <CardTitle>{title}</CardTitle>
+      <div className={ cardListClass }>
+        {Cards}
+      </div>
     </div>
   );
+};
+
+interface CardTitleProps {
+  children: React.ReactNode;
 }
-;
+
+const CardTitle = ({ children }: CardTitleProps) => {
+  const cardTitleClass = classnames(styles.title);
+  return (
+    <div className={cardTitleClass}>{children}</div>
+  );
+};

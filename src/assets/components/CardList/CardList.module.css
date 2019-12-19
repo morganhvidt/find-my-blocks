@@ -6,3 +6,13 @@
   padding: var(--fmb-spacing-large);
   grid-auto-rows: min-content;
 }
+
+.title {
+  color: var(--fmb-grey--dark);
+  margin: 0 2rem;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 1.5rem;
+  border-left: 3px solid var(--fmb-red);
+}

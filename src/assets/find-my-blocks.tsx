@@ -53,9 +53,9 @@ const App = () => {
       </Menu>
       <CardList
         cards={
-          activeBlockPosts[ 0 ] !== undefined ?
-            activeBlockPosts[ 0 ].posts : ""
+          activeBlockPosts[ 0 ] !== undefined ? activeBlockPosts[ 0 ].posts : ""
         }
+        title={ activeBlock }
       />
     </Layout>
   );
