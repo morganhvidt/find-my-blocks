@@ -29,6 +29,9 @@ Yes, this plugin will work with all blocks registered and used on your site.
 
 == Changelog ==
 
+1.0.0
+* Initial Release
+
 == Upgrade Notice ==
 
 == Screenshots ==

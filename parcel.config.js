@@ -26,7 +26,7 @@ const watchFiles = [
   `${ srcDir }/**/*.txt`,
 ];
 const options = {
-  outDir: OUTDIR !== undefined ? OUTDIR : "./find-my-blocks",
+  outDir: NODE_ENV !== "production" ? OUTDIR : "./find-my-blocks",
   sourceMaps: NODE_ENV !== "production",
   production: NODE_ENV === "production",
   hmr: false,
@@ -59,11 +59,27 @@ const build = async dest => {
   }
 };
 
+const updateVersion = (dir) => {
+  fs.readFile(`${dir}/find-my-blocks.php`, "utf8", (err,data) => {
+    if (err) {
+      return console.log(err);
+    }
+    const result = data.replace(/{% VERSION %}/g, argv.v);
+    fs.writeFile(`${dir}/find-my-blocks.php`, result, "utf8", (err) => {
+      if (err) return console.log(err);
+    });
+  });
+};
+
 async function runBundle(files) {
   const bundler = new Bundler(files, options);
   await bundler.bundle();
   await build(bundler.options.outDir);
-  if (NODE_ENV !== "production") {
+  if (NODE_ENV === "production") {
+    setTimeout( () => {
+      updateVersion(bundler.options.outDir);
+    }, 100);
+  } else {
     console.clear();
     browserSync.init({ proxy: DEV_URL });
     runWatcher(bundler);

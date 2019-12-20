@@ -24,5 +24,8 @@
     "statusBar.background": "#ff4b3e",
     "statusBarItem.hoverBackground": "#eed202",
     "statusBar.foreground": "#fff"
-  }
+  },
+  "phpcs.enable": true,
+  "phpcs.executablePath": "./vendor/bin/phpcs",
+  "phpcs.standard": "WordPress"
 }
