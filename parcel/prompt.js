@@ -5,6 +5,11 @@ const prompts = require("prompts");
   const questions = [
     {
       type: "confirm",
+      name: "version",
+      message: "Have you bumped version?"
+    },
+    {
+      type: "confirm",
       name: "tag",
       message: "Have you pushed a tag?"
     },
