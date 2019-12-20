@@ -27,5 +27,10 @@
   },
   "phpcs.enable": true,
   "phpcs.executablePath": "./vendor/bin/phpcs",
-  "phpcs.standard": "WordPress"
+  "phpcs.standard": "WordPress",
+  "files.exclude": {
+    "**/.DS_Store": true,
+    ".cache": true,
+    "node_modules": true,
+  }
 }
