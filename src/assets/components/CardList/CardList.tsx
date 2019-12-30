@@ -15,6 +15,7 @@ interface CardListProps {
 }
 
 export const CardList = ({ cards, title }: CardListProps) => {
+  console.log("cards", cards);
   const Cards = cards.length > 0 && cards.map( ({
     id,
     title,
@@ -24,6 +25,14 @@ export const CardList = ({ cards, title }: CardListProps) => {
     post_url,
     edit_url
   }) => {
+    const hasAlerts = count > 1 || isReusable;
+    const Alerts = (
+      <Content>
+        { count > 1 && <Alert>{ count } usages in post.</Alert>}
+        { isReusable && <Alert type="warning">Reusable Block</Alert>}
+      </Content>
+    );
+
     return (
       <Card key={ id }>
         <Content>
@@ -37,10 +46,7 @@ export const CardList = ({ cards, title }: CardListProps) => {
           </Content>
         </Content>
 
-        { count > 1 || isReusable && <Content>
-          { count > 1 && <Alert>{ count } usages in post.</Alert>}
-          { isReusable && <Alert type="warning">Reusable Block</Alert>}
-        </Content> }
+        { hasAlerts && Alerts }
       </Card>
     );
   } );
