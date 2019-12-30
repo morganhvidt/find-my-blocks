@@ -20,31 +20,3 @@ export const Card = ({
     </div>
   );
 };
-
-interface CardListProps {
-  children: React.ReactNode;
-  title: string;
-}
-
-export const CardList = ({ children, title }: CardListProps) => {
-  const cardListClass = classnames( styles.cardList );
-
-  return (
-    <div className={ cardListClass }>
-      <CardListTitle>
-        <LogoIcon />{title }
-      </CardListTitle>
-      {children}
-    </div>
-  );
-};
-
-interface CardListTitleProps {
-  children: React.ReactNode;
-}
-
-const CardListTitle = ({ children }: CardListTitleProps) => {
-  const cardListTitleClass = classnames( styles.cardListTitle );
-
-  return <div className={cardListTitleClass}>{children}</div>;
-};
