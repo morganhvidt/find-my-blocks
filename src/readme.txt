@@ -9,11 +9,19 @@ Requires PHP: 5.2.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Find my blocks is a tool to help you find what Gutenbergs blocks you have used on your website and where they are located.
+Find my blocks is a tool to list all the blocks that are used on you WordPress site and what posts/pages they are used on.
 
 == Description ==
 
-Have you ever gone to update a Block in Gutenberg and are unsure that your changes are safe? Now with Find My Blocks you can see where each block is used on your WordPress website.
+Gutenberg can be a great tool to make managing content on your WordPress website easier. However after a while, updating blocks can become a hassle for developers. It is hard to keep track of what posts/pages your blocks are used on, and this makes maintaining Gutenberg a little more difficult.
+
+Find my blocks is a tool that is here to help. With Find My Blocks you can see:
+
+* A list of all the blocks that are used on your WordPress site.
+* The amount of times a specific block has been used on your WordPress site.
+* The posts/pages that a block has been used on.
+* The amount of times a block has been used on a specific post/page.
+* If the block is a "Reusable Block"
 
 == Installation ==
 
@@ -29,10 +37,9 @@ Yes, this plugin will work with all blocks registered and used on your site.
 
 == Changelog ==
 
+1.1.0
+* Adds a message to notify the amount of times a block has been used in a post.
+* Removes some old, unused functionality.
+
 1.0.0
 * Initial Release
-
-== Upgrade Notice ==
-
-== Screenshots ==
-
