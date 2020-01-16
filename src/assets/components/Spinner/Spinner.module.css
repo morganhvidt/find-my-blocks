@@ -1,0 +1,80 @@
+.cube {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  transform: rotate(-15deg);
+  margin: 0 auto 1.5rem;
+}
+
+.inner {
+  width: 36px;
+  height: 36px;
+  left: 50%;
+  top: 50%;
+  margin-left: -18px;
+  margin-top: -18px;
+  position: absolute;
+  transform-style: preserve-3d;
+  transform: rotate3d(1, -1, 0, 54.8deg);
+  animation: run 3s infinite forwards;
+}
+
+.face {
+  color: var(--fmb-red);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  box-shadow: inset 0 0 0 4px currentColor, 0 0 0 4px currentColor, 0 0 0 4px currentColor;
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+
+.face1 {
+  transform: rotateX(90deg) translateZ(18px);
+}
+
+.face2 {
+  transform: translateZ(-18px);
+}
+
+.face3 {
+  transform: rotateX(90deg) translateZ(-18px);
+}
+
+.face4 {
+  transform: translateZ(18px);
+}
+
+.face5 {
+  transform: rotateY(90deg) translateZ(18px);
+}
+
+.face6 {
+  transform: rotateY(90deg) translateZ(-18px);
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--fmb-grey--dark);
+  text-transform: uppercase;
+}
+
+@keyframes run {
+  22.2222%,
+  33.3333% {
+    transform: rotate3d(1, -1, 0, 54.8deg) rotateZ(-90deg);
+  }
+
+  55.5555%,
+  66.6666% {
+    transform: rotate3d(1, -1, 0, 54.8deg) rotateZ(-90deg) rotateX(90deg);
+  }
+
+  88.8888%,
+  99.9999% {
+    transform: rotate3d(1, -1, 0, 54.8deg) rotateZ(-90deg) rotateX(90deg) rotateZ(90deg);
+  }
+}

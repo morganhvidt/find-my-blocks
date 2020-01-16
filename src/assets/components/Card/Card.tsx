@@ -2,8 +2,6 @@ import React from "react";
 import classnames from "classnames";
 import styles from "./Card.module.css";
 
-import { LogoIcon } from "../Logo";
-
 interface CardProps {
   children: React.ReactNode;
 }

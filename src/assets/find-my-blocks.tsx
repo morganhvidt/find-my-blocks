@@ -5,6 +5,7 @@ import { Layout } from "./components/Layout";
 import { Menu } from "./components/Menu";
 import { MenuItem } from "./components/MenuItem";
 import { CardList } from "./components/CardList";
+import { Spinner } from "./components/Spinner";
 
 import "./find-my-blocks.css";
 
@@ -43,6 +44,19 @@ const App = () => {
   const activeBlockPosts = blocks.filter( block => {
     return block.name === activeBlock;
   });
+
+  if ( blocks.length < 1 ) {
+    return (
+      <div style={
+        {
+          textAlign: "center",
+          marginTop: "15rem",
+        }
+      }>
+        <Spinner caption="Loading" />
+      </div>
+    );
+  }
 
   return (
     <Layout>

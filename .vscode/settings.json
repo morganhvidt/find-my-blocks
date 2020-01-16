@@ -1,25 +1,10 @@
 {
   "eslint.enable": true,
   "eslint.packageManager": "npm",
-  "eslint.autoFixOnSave": true,
-  "eslint.validate": [
-    {
-      "language": "javascript",
-      "autoFix": true
-    },
-    {
-      "language": "javascriptreact",
-      "autoFix": true
-    },
-    {
-      "language": "typescript",
-      "autoFix": true
-    },
-    {
-      "language": "typescriptreact",
-      "autoFix": true
-    }
-  ],
+  "editor.codeActionsOnSave": {
+		"source.fixAll": true,
+		"source.fixAll.eslint": true
+	},
   "workbench.colorCustomizations": {
     "statusBar.background": "#ff4b3e",
     "statusBarItem.hoverBackground": "#eed202",
