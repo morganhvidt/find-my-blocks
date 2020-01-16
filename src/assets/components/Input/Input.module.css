@@ -1,0 +1,14 @@
+.input[type="text"] {
+  width: 100%;
+  border: 0;
+  border-top: 1px solid var(--fmb-grey);
+  border-bottom: 1px solid var(--fmb-grey);
+  box-shadow: none;
+  padding: 1rem;
+  margin: 0;
+  font-size: 0.875rem;
+}
+
+.input[type="text"]::placeholder {
+  color: var(--fmb-grey);
+}

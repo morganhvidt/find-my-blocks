@@ -15,7 +15,6 @@ interface CardListProps {
 }
 
 export const CardList = ({ cards, title }: CardListProps) => {
-  console.log("cards", cards);
   const Cards = cards.length > 0 && cards.map( ({
     id,
     title,

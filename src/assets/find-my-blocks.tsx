@@ -6,6 +6,7 @@ import { Menu } from "./components/Menu";
 import { MenuItem } from "./components/MenuItem";
 import { CardList } from "./components/CardList";
 import { Spinner } from "./components/Spinner";
+import { Input } from "./components/Input";
 
 import "./find-my-blocks.css";
 
@@ -61,6 +62,12 @@ const App = () => {
   return (
     <Layout>
       <Menu>
+        <Input
+          placeholder="Filter Blocks"
+          onChange={ async (val) => {
+            console.log(val);
+          } }
+        />
         { MenuItems }
       </Menu>
       <CardList
