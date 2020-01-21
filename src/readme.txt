@@ -37,6 +37,11 @@ Yes, this plugin will work with all blocks registered and used on your site.
 
 == Changelog ==
 
+1.2.0
+* Adds a Filter Input to allow you to filter blocks in the menu.
+* Updates the style of the header to be just a little bit nicer.
+* Adds a loading screen so that you are not bored waiting for the page to load.
+
 1.1.0
 * Adds a message to notify the amount of times a block has been used in a post.
 * Removes some old, unused functionality.
