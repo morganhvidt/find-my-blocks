@@ -1,18 +1,21 @@
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 
+import { Alert } from "./components/Alert";
 import { Layout } from "./components/Layout";
 import { Menu } from "./components/Menu";
 import { MenuItem } from "./components/MenuItem";
 import { CardList } from "./components/CardList";
 import { Spinner } from "./components/Spinner";
 import { Input } from "./components/Input";
+import { FilteredSearch } from "./components/FilteredSearch";
 
 import "./find-my-blocks.css";
 
 const App = () => {
   const [ blocks, setBlocks ] = useState<Array<string>>([]);
   const [ activeBlock, setActiveBlock ] = useState<string>("");
+  const [ filter, setFilter ] = useState<string>("");
 
   const fetchPosts = async () => {
     await fetch( "/wp-json/find-my-blocks/blocks" )
@@ -26,21 +29,6 @@ const App = () => {
   useEffect( () => {
     fetchPosts();
   }, []);
-
-  const MenuItems = blocks.map(({ name, posts }) => {
-    const handleClick = () => {
-      setActiveBlock(name);
-    };
-
-    return (
-      <MenuItem
-        key={name}
-        title={name}
-        count={posts.length}
-        isActive={ activeBlock === name }
-        onClick={ () => handleClick() } />
-    );
-  });
 
   const activeBlockPosts = blocks.filter( block => {
     return block.name === activeBlock;
@@ -64,11 +52,36 @@ const App = () => {
       <Menu>
         <Input
           placeholder="Filter Blocks"
-          onChange={ async (val) => {
-            console.log(val);
+          onChange={ (val) => setFilter(val) }
+        />
+        <FilteredSearch
+          data={blocks}
+          value={filter}
+          renderedResults={ (results) => {
+            if ( results.length < 1 ) {
+              return <Alert type="error">Sorry, no blocks found</Alert>;
+            }
+
+            return (
+              <>
+                { results.map( ({ name, posts }) => {
+                  const handleClick = () => {
+                    setActiveBlock(name);
+                  };
+
+                  return (
+                    <MenuItem
+                      key={name}
+                      title={name}
+                      count={posts.length}
+                      isActive={ activeBlock === name }
+                      onClick={ () => handleClick() } />
+                  );
+                }) }
+              </>
+            );
           } }
         />
-        { MenuItems }
       </Menu>
       <CardList
         cards={

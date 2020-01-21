@@ -1,5 +1,5 @@
 declare const styles: {
-  readonly "spinner": string;
+  readonly "cube": string;
   readonly "inner": string;
   readonly "run": string;
   readonly "face": string;
@@ -9,6 +9,7 @@ declare const styles: {
   readonly "face4": string;
   readonly "face5": string;
   readonly "face6": string;
+  readonly "title": string;
 };
 export = styles;
 
