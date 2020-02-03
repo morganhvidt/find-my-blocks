@@ -1,5 +1,3 @@
-import React from "react";
-
 interface FilteredSearchProps {
   data: Array<string>;
   value: string;

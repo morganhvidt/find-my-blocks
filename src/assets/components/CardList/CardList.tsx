@@ -3,12 +3,14 @@ import React from "react";
 import classnames from "classnames";
 import styles from "./CardList.module.css";
 
-import { Notice } from "@wordpress/components";
-import { Card } from "../Card";
+import {
+  Notice,
+  Card,
+  CardBody,
+  CardHeader,
+} from "@wordpress/components";
 import { Content } from "../Content";
 import { Heading, Text, Bold, Link } from "../Typography";
-import { Alert } from "../Alert";
-
 
 interface CardListProps {
     readonly cards: Array<object>;
@@ -27,9 +29,9 @@ export const CardList = ({ cards, title }: CardListProps) => {
   }) => {
     const hasAlerts = count > 1 || isReusable;
     const Alerts = (
-      <Content>
+      <>
         { count > 1 && (
-          <Notice status="warning" isDismissible={ false }>
+          <Notice status="info" isDismissible={ false }>
             { count } usages in post.
           </Notice>
         )}
@@ -38,22 +40,25 @@ export const CardList = ({ cards, title }: CardListProps) => {
             Reusable Block
           </Notice>
         )}
-      </Content>
+      </>
     );
 
     return (
-      <Card key={ id }>
-        <Content>
+      <Card key={ id } size="medium" isElevated={ true } isBorderless={ true }>
+        <CardHeader isBorderless={ false }>
           <Heading>{title}</Heading>
-          { postType && <Text>Post Type: <Bold>{ postType }</Bold></Text> }
+        </CardHeader>
+        <CardBody>
+          <Content spacing="small">
+            Post Type: <Bold>{ postType }</Bold>
+          </Content>
           <Content spacing="small">
             <Text>
               <Link to={ edit_url }>Edit Post</Link>
               <Link to={ post_url }>View Post</Link>
             </Text>
           </Content>
-        </Content>
-
+        </CardBody>
         { hasAlerts && Alerts }
       </Card>
     );
