@@ -44,7 +44,7 @@ export const CardList = ({ cards, title }: CardListProps) => {
     );
 
     return (
-      <Card key={ id } size="medium" isElevated={ true } isBorderless={ true }>
+      <Card key={ id } size="medium">
         <CardHeader isBorderless={ false }>
           <Heading>{title}</Heading>
         </CardHeader>

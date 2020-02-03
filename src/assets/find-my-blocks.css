@@ -37,4 +37,5 @@
 
 :global(.components-notice) {
   margin: 0;
+  border-radius: 3px;
 }
