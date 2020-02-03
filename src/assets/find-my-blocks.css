@@ -34,3 +34,7 @@
   --fmb-font-small: calc(var(--fmb-font-base) * 0.75);
   --fmb-font-large: calc(var(--fmb-font-base) * 1.5);
 }
+
+:global(.components-notice) {
+  margin: 0;
+}

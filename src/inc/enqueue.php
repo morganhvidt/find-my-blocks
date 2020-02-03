@@ -21,12 +21,16 @@ if ( ! function_exists( 'find_my_blocks_enqueue_scripts' ) ) :
 			return;
 		}
 
-		$deps = array(
+		$js_deps = array(
 			'wp-block-library',
 			'wp-blocks',
 			'wp-element',
 			'wp-edit-post',
 			'jquery',
+		);
+
+		$style_deps = array(
+			'wp-components',
 		);
 
 		/**
@@ -36,7 +40,7 @@ if ( ! function_exists( 'find_my_blocks_enqueue_scripts' ) ) :
 		wp_enqueue_script(
 			'find-my-blocks-script',
 			plugin_dir_url( __DIR__ ) . 'find-my-blocks.js',
-			$deps,
+			$js_deps,
 			filemtime( plugin_dir_path( __DIR__ ) . 'find-my-blocks.js' ),
 			true
 		);
@@ -44,7 +48,7 @@ if ( ! function_exists( 'find_my_blocks_enqueue_scripts' ) ) :
 		wp_enqueue_style(
 			'find-my-blocks-style',
 			plugin_dir_url( __DIR__ ) . 'find-my-blocks.css',
-			null,
+			$style_deps,
 			filemtime( plugin_dir_path( __DIR__ ) . 'find-my-blocks.css' )
 		);
 	}

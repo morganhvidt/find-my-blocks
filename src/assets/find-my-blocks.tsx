@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 
-import { Alert } from "./components/Alert";
+import { Notice } from "@wordpress/components";
 import { Layout } from "./components/Layout";
 import { Menu } from "./components/Menu";
 import { MenuItem } from "./components/MenuItem";
@@ -59,7 +59,14 @@ const App = () => {
           value={filter}
           renderedResults={ (results) => {
             if ( results.length < 1 ) {
-              return <Alert type="error">Sorry, no blocks found</Alert>;
+              return (
+                <Notice
+                  status="error"
+                  isDismissible={false}
+                >
+                  Sorry, no blocks found
+                </Notice>
+              );
             }
 
             return (

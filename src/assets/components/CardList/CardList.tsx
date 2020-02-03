@@ -3,6 +3,7 @@ import React from "react";
 import classnames from "classnames";
 import styles from "./CardList.module.css";
 
+import { Notice } from "@wordpress/components";
 import { Card } from "../Card";
 import { Content } from "../Content";
 import { Heading, Text, Bold, Link } from "../Typography";
@@ -27,8 +28,16 @@ export const CardList = ({ cards, title }: CardListProps) => {
     const hasAlerts = count > 1 || isReusable;
     const Alerts = (
       <Content>
-        { count > 1 && <Alert>{ count } usages in post.</Alert>}
-        { isReusable && <Alert type="warning">Reusable Block</Alert>}
+        { count > 1 && (
+          <Notice status="warning" isDismissible={ false }>
+            { count } usages in post.
+          </Notice>
+        )}
+        { isReusable && (
+          <Notice status="warning" isDismissible={ false }>
+            Reusable Block
+          </Notice>
+        )}
       </Content>
     );
 
