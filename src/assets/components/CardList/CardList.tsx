@@ -64,12 +64,10 @@ export const CardList = ({ cards, title }: CardListProps) => {
     );
   } );
 
+  const cardListHolderClass = classnames( styles.holder );
   const cardListClass = classnames(styles.list);
-  const stylez = {
-    flex: 1,
-  };
   return (
-    <div style={ stylez }>
+    <div className={ cardListHolderClass }>
       <CardTitle>{title}</CardTitle>
       <div className={ cardListClass }>
         {Cards}
