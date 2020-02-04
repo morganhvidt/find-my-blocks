@@ -2,8 +2,6 @@ import React from "react";
 import classnames from "classnames";
 import styles from "./MenuItem.module.css";
 
-import { Text } from "../Typography";
-
 interface MenuItemProps {
   title: string;
   count: number;
@@ -54,7 +52,10 @@ interface PostCountProps {
 }
 
 const PostCount = ({ count }: PostCountProps) => {
+  const postCountClass = classnames( styles.count );
   return (
-    <Text>Found in {count} post{ count !== 1 ? "s" : "" }</Text>
+    <div className={ postCountClass }>
+      Found in {count} post{ count !== 1 ? "s" : "" }
+    </div>
   );
 };

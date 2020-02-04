@@ -1,10 +1,9 @@
 .menuItem {
   display: block;
   font-weight: bold;
-  line-height: 1.6;
   font-size: var(--fmb-font-med-small);
   cursor: pointer;
-  padding: var(--fmb-spacing-mini) var(--fmb-spacing-base) var(--fmb-spacing-small);
+  padding: var(--fmb-spacing-small) var(--fmb-spacing-base) var(--fmb-spacing-small);
   transition: background 300ms;
   border-top: 1px solid var(--fmb-grey--light);
   color: var(--fmb-grey--dark);
@@ -41,4 +40,11 @@
   top: 50%;
   position: absolute;
   transform: translateY(-50%);
+}
+
+.count {
+  font-weight: 400;
+  display: block;
+  margin-top: 3px;
+  font-size: 0.8125rem;
 }

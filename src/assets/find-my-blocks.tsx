@@ -69,9 +69,13 @@ const App = () => {
               );
             }
 
+            const sortedResults = [...results].sort((a, b) => {
+              return (a.name > b.name) ? 1 : -1;
+            });
+
             return (
               <>
-                { results.map( ({ name, posts }) => {
+                { sortedResults.map( ({ name, posts }) => {
                   const handleClick = () => {
                     setActiveBlock(name);
                   };
