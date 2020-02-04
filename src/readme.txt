@@ -22,6 +22,7 @@ Find my blocks is a tool that is here to help. With Find My Blocks you can see:
 * The posts/pages that a block has been used on.
 * The amount of times a block has been used on a specific post/page.
 * If the block is a "Reusable Block"
+* Filter blocks by name to search for where a specific block was used.
 
 == Installation ==
 
@@ -37,14 +38,19 @@ Yes, this plugin will work with all blocks registered and used on your site.
 
 == Changelog ==
 
+1.3.0
+- Sorts the list of the navigation alphabetically.
+- Sorts the list of pages alphabetically.
+- Some updates to styling to bring more inline with Gutenberg and WordPress core.
+
 1.2.0
-* Adds a Filter Input to allow you to filter blocks in the menu.
-* Updates the style of the header to be just a little bit nicer.
-* Adds a loading screen so that you are not bored waiting for the page to load.
+- Adds a Filter Input to allow you to filter blocks in the menu.
+- Updates the style of the header to be just a little bit nicer.
+- Adds a loading screen so that you are not bored waiting for the page to load.
 
 1.1.0
-* Adds a message to notify the amount of times a block has been used in a post.
-* Removes some old, unused functionality.
+- Adds a message to notify the amount of times a block has been used in a post.
+- Removes some old, unused functionality.
 
 1.0.0
-* Initial Release
+- Initial Release
