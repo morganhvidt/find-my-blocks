@@ -6,7 +6,7 @@ Requires at least: 5.0
 Tested up to: 5.3
 Stable tag: trunk
 Requires PHP: 5.2.4
-License: GPLv2 or later 
+License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 Find my blocks is a tool to list all the blocks that are used on you WordPress site and what posts/pages they are used on.
