@@ -18,7 +18,8 @@ interface CardListProps {
 }
 
 export const CardList = ({ cards, title }: CardListProps) => {
-  const Cards = cards.length > 0 && cards.map( ({
+  const sortedCards = [...cards].sort((a, b) => (a.title > b.title) ? 1 : -1);
+  const Cards = sortedCards.length > 0 && sortedCards.map( ({
     id,
     title,
     postType,
