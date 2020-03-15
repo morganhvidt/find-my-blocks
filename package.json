@@ -28,7 +28,8 @@
   "homepage": "https://github.com/eddysims/find-my-blocks#readme",
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "pre-push": "npm run prerelease"
     }
   },
   "lint-staged": {
