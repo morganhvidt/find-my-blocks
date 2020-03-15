@@ -26,7 +26,7 @@ const watchFiles = [
   `${ srcDir }/**/*.txt`,
 ];
 const options = {
-  outDir: NODE_ENV !== "production" ? OUTDIR : "./find-my-blocks/trunk",
+  outDir: NODE_ENV !== "production" ? OUTDIR : "./find-my-blocks",
   sourceMaps: NODE_ENV !== "production",
   production: NODE_ENV === "production",
   hmr: false,
