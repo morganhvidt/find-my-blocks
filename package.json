@@ -7,7 +7,7 @@
     "prestart": "npm run clean && npm run cssTypes",
     "start": "node parcel.config.js -f './src/assets/find-my-blocks.tsx' --env=development",
     "prerelease": "node parcel/prompt.js",
-    "release": "node parcel.config.js -f './src/assets/find-my-blocks.tsx' -v $npm_package_version",
+    "build": "node parcel.config.js -f './src/assets/find-my-blocks.tsx' -v $npm_package_version",
     "lint:js": "eslint './src/**/*.{ts,tsx,js,jsx}'",
     "lint:css": "stylelint 'src/**/*.css'",
     "lint": "npm run lint:js && npm run lint:css",
