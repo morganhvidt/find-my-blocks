@@ -18,7 +18,7 @@ if ( ! function_exists( 'find_my_blocks_register_options_page' ) ) :
 		add_options_page(
 			'Find My Blocks',
 			'Find My Blocks',
-			'manage_options',
+			'edit_posts',
 			'find-my-blocks',
 			'find_my_blocks_register_options_page_markup'
 		);
