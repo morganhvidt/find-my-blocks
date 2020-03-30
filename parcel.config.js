@@ -12,8 +12,7 @@ const { OUTDIR, DEV_URL } = process.env;
 const NODE_ENV = argv.env || "production";
 const NEED_DEV_URL = NODE_ENV !== "production" && DEV_URL === undefined;
 
-const tag = argv.t || "eddy";
-console.log("this tag is", tag);
+const tag = argv.t || "this should be a tag";
 
 if (NEED_DEV_URL) {
   console.clear();
@@ -67,7 +66,7 @@ const updateVersion = (dir) => {
     if (err) {
       return console.log(err);
     }
-    const result = data.replace(/{% VERSION %}/g, argv.v);
+    const result = data.replace(/{% VERSION %}/g, tag);
     fs.writeFile(`${dir}/find-my-blocks.php`, result, "utf8", (err) => {
       if (err) return console.log(err);
     });
