@@ -3,7 +3,7 @@ Contributors: edeesims
 Donate link: https://www.paypal.com/paypalme2/eddysims
 Tags: gutenberg, developer, blocks, custom blocks
 Requires at least: 5.0
-Tested up to: 5.3
+Tested up to: 5.3.2
 Stable tag: trunk
 Requires PHP: 5.2.4
 License: GPLv2 or later 
