@@ -12,6 +12,9 @@ const { OUTDIR, DEV_URL } = process.env;
 const NODE_ENV = argv.env || "production";
 const NEED_DEV_URL = NODE_ENV !== "production" && DEV_URL === undefined;
 
+const tag = argv.t || "eddy";
+console.log("this tag is", tag);
+
 if (NEED_DEV_URL) {
   console.clear();
   console.log(chalk.red("✋🛑  STOP! 🛑✋"));
