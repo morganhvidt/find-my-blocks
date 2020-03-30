@@ -1,12 +1,11 @@
 {
   "name": "find-my-blocks",
-  "version": "1.3.0",
+  "version": "1.0.0",
   "description": "A tool to help you find what Gutenbergs blocks you have used on your website and where they are located.",
   "main": "index.js",
   "scripts": {
     "prestart": "npm run clean && npm run cssTypes",
     "start": "node parcel.config.js -f './src/assets/find-my-blocks.tsx' --env=development",
-    "prerelease": "node parcel/prompt.js",
     "build": "node parcel.config.js -f './src/assets/find-my-blocks.tsx'",
     "lint:js": "eslint './src/**/*.{ts,tsx,js,jsx}'",
     "lint:css": "stylelint 'src/**/*.css'",
@@ -28,8 +27,7 @@
   "homepage": "https://github.com/eddysims/find-my-blocks#readme",
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "npm run prerelease"
+      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {

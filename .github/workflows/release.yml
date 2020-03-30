@@ -13,9 +13,9 @@ jobs:
       run: |
         npm install
         npm run build -- -t ${GITHUB_REF/refs\/tags\//}
-    # - name: WordPress Plugin Deploy
-    #   uses: 10up/action-wordpress-plugin-deploy@master
-    #   env:
-    #     SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
-    #     SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
-    #     SLUG: find-my-blocks
+    - name: WordPress Plugin Deploy
+      uses: 10up/action-wordpress-plugin-deploy@master
+      env:
+        SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
+        SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+        SLUG: find-my-blocks
