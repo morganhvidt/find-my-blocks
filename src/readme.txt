@@ -38,6 +38,9 @@ Yes, this plugin will work with all blocks registered and used on your site.
 
 == Changelog ==
 
+1.4.0
+- Allows the editor role to use the plugin
+
 1.3.0
 - Sorts the list of the navigation alphabetically.
 - Sorts the list of pages alphabetically.
