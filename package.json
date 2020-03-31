@@ -10,6 +10,7 @@
     "package.json"
   ],
   "scripts": {
+    "prestart": "rm -rf .docz & rm -rf .cache",
     "start": "npm run dev",
     "prewordpress": "node ./parcel/clean.js",
     "wordpress": "node ./parcel/parcel.config.js -f './src/plugin/assets/find-my-blocks.tsx' --env=development",
