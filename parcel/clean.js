@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
 require("dotenv").config();
 const rimraf = require("rimraf");
 const chalk = require("chalk");
