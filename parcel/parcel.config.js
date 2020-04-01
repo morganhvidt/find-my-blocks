@@ -1,7 +1,6 @@
 require("dotenv").config();
 const argv = require("minimist")(process.argv.slice(2));
 const Bundler = require("parcel-bundler");
-const browserSync = require("browser-sync").create();
 
 /**
  * Get some functions that we use for WordPress development
@@ -20,15 +19,15 @@ if (NEED_DEV_URL) wordpress.needsDevUrl();
 /**
  * Our main function that bundles our javascript and css, as well as moves our
  * files into the proper location based off the OUTDIR in our .env
- * 
+ *
  * @param {glob} files - A glob of files for parcel to use as entry points
  */
-const runBundle = async files => {
+const runBundle = async (files) => {
   const options = {
     outDir: NODE_ENV !== "production" ? OUTDIR : "./",
     sourceMaps: NODE_ENV !== "production",
     production: NODE_ENV === "production",
-    hmr: false
+    hmr: false,
   };
   const bundler = new Bundler(files, options);
 
@@ -45,7 +44,7 @@ const runBundle = async files => {
     console.clear();
     wordpress.browserInit();
     wordpress.runWatcher(bundler);
-    bundler.on("bundled", async () => reloadBrowsers());
+    bundler.on("bundled", async () => wordpress.browserReload());
   }
 };
 

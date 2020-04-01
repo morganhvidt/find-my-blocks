@@ -1,7 +1,7 @@
 interface UUIDFunction {
-    (): string;
-    v1(): string;
-  }
+  (): string;
+  v1(): string;
+}
 
 let count = 0;
 const finalSection = 426655440000;
@@ -16,4 +16,5 @@ const uuid = fakeUUID as UUIDFunction;
 
 uuid.v1 = fakeUUID;
 
+// eslint-disable-next-line import/no-default-export
 export default uuid;

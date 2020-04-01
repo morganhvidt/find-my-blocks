@@ -1,2 +1,2 @@
-import React from 'react';
-export const Header = () => <React.Fragment />
+import React from "react";
+export const Header = () => <React.Fragment />;

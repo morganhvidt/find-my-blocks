@@ -9,13 +9,25 @@
     "tsconfig.json",
     "package.json"
   ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "npm run lint -- --max-warnings=0",
+      "git add"
+    ]
+  },
   "scripts": {
     "start": "npm run dev",
     "prewordpress": "node ./parcel/clean.js",
     "wordpress": "node ./parcel/parcel.config.js -f './src/plugin/assets/find-my-blocks.tsx' --env=development",
     "predev": "rm -rf .docz & rm -rf .cache",
     "dev": "docz dev",
-    "build": "docz build"
+    "build": "docz build",
+    "lint": "eslint --ignore-path .gitignore --ext js --ext jsx --ext ts --ext tsx ."
   },
   "dependencies": {
     "@emotion/core": "^10.0.14",
@@ -30,10 +42,16 @@
     "browser-sync": "^2.26.7",
     "chalk": "^3.0.0",
     "dotenv": "^8.2.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-prettier": "^3.1.2",
     "fast-glob": "^3.2.2",
     "fs-extra": "^9.0.0",
     "glob-watcher": "^5.0.3",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.1.1",
     "minimist": "^1.2.5",
-    "parcel-bundler": "^1.12.4"
+    "parcel-bundler": "^1.12.4",
+    "prettier": "^2.0.2"
   }
 }

@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
-export const Card = () => {
-    return(
-        <div>
-            Hello World
-        </div>
-    )
+interface CardProps {
+  children: React.ReactNode | React.ReactNode[];
 }
+
+export const Card = ({ children }: CardProps) => {
+  return <div>Hello World - {children}</div>;
+};

@@ -17,21 +17,21 @@ const watchFiles = [`${source}/**/*.php`, `${source}/**/*.txt`];
 
 /**
  * Initilize browser sync
- * 
+ *
  * @param {boolean} init - Should we init
  * @param {boolean} reload - Should we reload
  */
-const browserInit = (init = false, reload = false) => {
+const browserInit = () => {
   const { DEV_URL } = process.env;
-    browserSync.init({
-      proxy: DEV_URL,
-      /**
-       * We change our proxy here to not conflict with docz
-       */
-      port: 1234,
-      ui: false
-    });
-}
+  browserSync.init({
+    proxy: DEV_URL,
+    /**
+     * We change our proxy here to not conflict with docz
+     */
+    port: 1234,
+    ui: false,
+  });
+};
 
 /**
  * Reload our browser
@@ -39,21 +39,20 @@ const browserInit = (init = false, reload = false) => {
 const browserReload = () => browserSync.reload();
 
 /**
- * 
+ *
  * @param {string} from - Path to the original file
  * @param {string} to - Path to destination directory
  * @param {boolean} reload - Should we run browser sync reload
  */
 const moveFile = (from, to, reload = false) => {
-  const slug = from.replace( `${source}/`, "");
+  const slug = from.replace(`${source}/`, "");
   to = `${to}/${slug}`;
 
   fs.copy(from, to)
     .then(console.log(chalk.bgGreenBright.black(`✔ ${slug} moved.`)))
     .then(reload && browserReload())
-    .catch(err => console.error(err));
+    .catch((err) => console.error(err));
 };
-
 
 /**
  * If a DEV_URL is not set in .env we want to hault development on WordPress
@@ -69,15 +68,15 @@ const needsDevUrl = () => {
 /**
  * When we build production, we want to get our latest tag and replace some
  * variables throughout PHP.
- * 
- * @param {string} dir 
- * @param {string} tag 
+ *
+ * @param {string} dir
+ * @param {string} tag
  */
 const updateVersion = (dir, tag) => {
   fs.readFile(`${dir}/find-my-blocks.php`, "utf8", (err, data) => {
     if (err) return console.log(err);
     const result = data.replace(/{% VERSION %}/g, tag);
-    fs.writeFile(`${dir}/find-my-blocks.php`, result, "utf8", err => {
+    fs.writeFile(`${dir}/find-my-blocks.php`, result, "utf8", (err) => {
       if (err) return console.log(err);
     });
   });
@@ -85,21 +84,21 @@ const updateVersion = (dir, tag) => {
 
 /**
  * Watch a glob of files for changes or additions.
- * 
+ *
  * @param {string} param0 - deconstructed path of output directory
  */
 const runWatcher = ({ options: { outDir } }) => {
   const watcher = watch(watchFiles);
-  watcher.on("change", filePath => moveFile(filePath, outDir, true));
-  watcher.on("add", filePath => moveFile(filePath, outDir, true));
+  watcher.on("change", (filePath) => moveFile(filePath, outDir, true));
+  watcher.on("add", (filePath) => moveFile(filePath, outDir, true));
 };
 
 /**
  * Build our production code
- * 
+ *
  * @param {string} dest - output directory
  */
-const build = async dest => {
+const build = async (dest) => {
   const stream = fg.stream(watchFiles);
 
   for await (const entry of stream) {
@@ -112,5 +111,5 @@ module.exports = {
   updateVersion,
   runWatcher,
   build,
-  browserInit
+  browserInit,
 };
