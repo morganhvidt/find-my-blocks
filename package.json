@@ -16,7 +16,11 @@
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx}": [
-      "npm run lint -- --max-warnings=0",
+      "npm run lint:js -- --max-warnings=0",
+      "git add"
+    ],
+    "src/**/*.css": [
+      "npm run lint:css:fix",
       "git add"
     ]
   },
@@ -27,7 +31,10 @@
     "predev": "rm -rf .docz & rm -rf .cache",
     "dev": "docz dev",
     "build": "docz build",
-    "lint": "eslint --ignore-path .gitignore --ext js --ext jsx --ext ts --ext tsx ."
+    "lint:js": "eslint --ignore-path .gitignore --ext js --ext jsx --ext ts --ext tsx .",
+    "lint:css": "stylelint 'src/**/*.css'",
+    "lint:css:fix": "npm run lint:css -- --fix",
+    "lint": "npm run lint:js & npm run lint:css"
   },
   "dependencies": {
     "@emotion/core": "^10.0.14",
@@ -52,6 +59,10 @@
     "lint-staged": "^10.1.1",
     "minimist": "^1.2.5",
     "parcel-bundler": "^1.12.4",
-    "prettier": "^2.0.2"
+    "prettier": "^2.0.2",
+    "stylelint": "^12.0.1",
+    "stylelint-config-css-modules": "^2.2.0",
+    "stylelint-config-property-sort-order-smacss": "^6.0.0",
+    "stylelint-config-standard": "^19.0.0"
   }
 }
