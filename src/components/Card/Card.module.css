@@ -1,6 +1,19 @@
 .card {
-  display: block;
-  padding: 3rem;
-  background: red;
-  color: green;
+  border: 1px solid #eee;
+  border-radius: 2px;
+  background: white;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 13px;
+}
+
+.title {
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.02rem;
+}
+
+.body {
+  padding: 1rem;
 }
