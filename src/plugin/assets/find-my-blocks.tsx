@@ -1,16 +1,39 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
+import { useBlocks } from "../../hooks/blocks";
+
+import { Box } from "../../components/Box";
 import { Card } from "../../components/Card";
 import { Link } from "../../components/Link";
+import { Icon } from "../../components/Icon";
 
-import "./find-my-blocks.css";
+import Logo from "./find-my-blocks.svg";
+
+import "./find-my-blocks.foundation.css";
+import styles from "./find-my-blocks.css";
 
 const App = () => {
+  const [blocks] = useBlocks();
+
+  const menuItems =
+    blocks.length > 0 &&
+    blocks.map((block) => {
+      return (
+        <li key={block.name}>
+          <Icon icon="arrow-right" /> {block.name}
+          <div>Found in {block.posts.length} posts</div>
+        </li>
+      );
+    });
+
   return (
-    <>
-      <div className="menu">Menu</div>
-      <div className="cards">
+    <Box className={styles.container}>
+      <Box className={styles.menu}>
+        <img src={Logo} alt="React Logo" />
+        <ul>{menuItems}</ul>
+      </Box>
+      <Box className={styles.cards}>
         <Card title="Example Card">
           <p>Hello World</p>
           <Link icon="edit" url="#">
@@ -30,8 +53,8 @@ const App = () => {
             View Post
           </Link>
         </Card>
-      </div>
-    </>
+      </Box>
+    </Box>
   );
 };
 
