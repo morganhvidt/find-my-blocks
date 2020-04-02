@@ -41,6 +41,7 @@
     "@emotion/core": "^10.0.14",
     "@emotion/styled": "^10.0.14",
     "docz": "latest",
+    "feather-icons-react": "^0.4.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   },
