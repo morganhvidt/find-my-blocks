@@ -1,0 +1,34 @@
+---
+name: Link
+menu: Components
+route: /components/link
+---
+
+import { Playground, Props } from "docz";
+import { Link } from "."
+import { Icon } from '../Icon'
+
+
+# Link
+
+A very common link. Used to link out to other URLs.
+
+## Usage
+
+```ts
+import { Link } from '../components/Link';
+```
+
+<Playground>
+    <Link url="https://eddysims.com" icon="camera">
+        Look at this amazing website!
+    </Link>
+</Playground>
+
+## Props
+
+<Props of={ Link } />
+
+## Icon
+
+The `icon` prop uses the `<Icon />` component but without the size and color props.
