@@ -1,3 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders the Content 1`] = `[Function]`;
+exports[`Card component should renders correctly 1`] = `
+<div
+  className="card"
+>
+  <div
+    className="title"
+  >
+    Toronto
+  </div>
+  <div
+    className="body"
+  >
+    Go Raps!
+  </div>
+</div>
+`;

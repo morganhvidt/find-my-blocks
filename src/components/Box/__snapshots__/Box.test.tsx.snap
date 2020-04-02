@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Box component should render classNames correctly 1`] = `
+<div
+  className="raptors"
+>
+  Box
+</div>
+`;
+
+exports[`Box component should render correctly 1`] = `
+<div>
+  Box
+</div>
+`;
