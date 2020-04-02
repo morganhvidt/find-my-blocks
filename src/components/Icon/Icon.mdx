@@ -1,0 +1,46 @@
+---
+name: Icon
+menu: Components
+route: /components/icon
+---
+
+import { Playground, Props } from 'docz'
+import { Icon, iconList } from '.'
+import icons from "feather-icons-react/build/icons.json";
+
+
+
+`whats this`
+
+<Playground>
+    <Icon icon="camera" />
+</Playground>
+
+
+<Props of={Icon} />
+
+export const IconList = () => {
+    const icons = Object.keys(iconList).map(icon => {
+        return (
+            <tr>
+                <td>{icon}</td>
+                <td><Icon icon={icon} size={20} /></td>
+            </tr>
+        );
+    })
+    return (
+        <table>
+            <thead>
+                <tr>
+                    <th>Icon</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {icons}
+            </tbody>
+        </table>
+    );
+}
+
+<IconList />
