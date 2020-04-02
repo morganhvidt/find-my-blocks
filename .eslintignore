@@ -1,4 +1,5 @@
-./__mocks__/uuid.ts
+**/__mocks__/**
+**/templates/**
 **/node_modules/**
 **/public/**
 **/.cache/**

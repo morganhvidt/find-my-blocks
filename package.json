@@ -31,15 +31,18 @@
     "predev": "rm -rf .docz & rm -rf .cache",
     "dev": "docz dev",
     "build": "docz build",
-    "lint:js": "eslint --ignore-path .gitignore --ext js --ext jsx --ext ts --ext tsx .",
+    "lint:js": "eslint --ext js --ext jsx --ext ts --ext tsx .",
     "lint:css": "stylelint 'src/**/*.css'",
     "lint:css:fix": "npm run lint:css -- --fix",
     "lint": "npm run lint:js & npm run lint:css",
-    "test": "jest './src' --verbose --coverage"
+    "test": "jest './src' --verbose --coverage",
+    "plop": "plop"
   },
   "dependencies": {
     "@emotion/core": "^10.0.14",
     "@emotion/styled": "^10.0.14",
+    "@types/classnames": "^2.2.10",
+    "classnames": "^2.2.6",
     "docz": "latest",
     "feather-icons-react": "^0.4.1",
     "react": "^16.8.6",
@@ -68,6 +71,7 @@
     "lint-staged": "^10.1.1",
     "minimist": "^1.2.5",
     "parcel-bundler": "^1.12.4",
+    "plop": "^2.6.0",
     "prettier": "^2.0.2",
     "react-test-renderer": "^16.13.1",
     "stylelint": "^12.0.1",
