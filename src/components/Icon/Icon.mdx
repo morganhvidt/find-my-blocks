@@ -9,15 +9,27 @@ import { Icon, iconList } from '.'
 import icons from "feather-icons-react/build/icons.json";
 
 
+# Icon
 
-`whats this`
+Icon is a wrapper component around the [feather-icons-react](https://www.npmjs.com/package/feather-icons-react) package. It uses [Feather Icons](https://feathericons.com/) as a list of icons that are available.
+
+## Usage
+
+```ts
+import { Icon } from '../components/Icon'
+```
 
 <Playground>
     <Icon icon="camera" />
+    <Icon icon="camera" size={24} />
+    <Icon icon="camera" color="#f00" />
 </Playground>
 
+## Props
 
 <Props of={Icon} />
+
+## Icon List
 
 export const IconList = () => {
     const icons = Object.keys(iconList).map(icon => {
