@@ -8,17 +8,30 @@ import "./find-my-blocks.css";
 
 const App = () => {
   return (
-    <div>
-      <Card title="Example Card">
-        <p>Hello World</p>
-        <Link icon="edit" url="#">
-          Edit Post
-        </Link>
-        <Link icon="eye" url="#">
-          View Post
-        </Link>
-      </Card>
-    </div>
+    <>
+      <div className="menu">Menu</div>
+      <div className="cards">
+        <Card title="Example Card">
+          <p>Hello World</p>
+          <Link icon="edit" url="#">
+            Edit Post
+          </Link>
+          <Link icon="eye" url="#">
+            View Post
+          </Link>
+        </Card>
+
+        <Card title="Example Card">
+          <p>Hello World</p>
+          <Link icon="edit" url="#">
+            Edit Post
+          </Link>
+          <Link icon="eye" url="#">
+            View Post
+          </Link>
+        </Card>
+      </div>
+    </>
   );
 };
 
