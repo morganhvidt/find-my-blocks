@@ -17,7 +17,7 @@ if ( ! function_exists( 'find_my_blocks_enqueue_scripts' ) ) :
 	 * @param string $hook - Options page hook.
 	 */
 	function find_my_blocks_enqueue_scripts( $hook ) {
-		if ( 'settings_page_find-my-blocks' !== $hook ) {
+		if ( 'toplevel_page_find-my-blocks' !== $hook ) {
 			return;
 		}
 

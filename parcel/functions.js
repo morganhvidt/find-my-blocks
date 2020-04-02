@@ -13,7 +13,11 @@ const source = path.join(__dirname, "../src/plugin");
 /**
  * An array of files to glob and watch.
  */
-const watchFiles = [`${source}/**/*.php`, `${source}/**/*.txt`];
+const watchFiles = [
+  `${source}/**/*.php`,
+  `${source}/**/*.txt`,
+  `${source}/**/*.svg`,
+];
 
 /**
  * Initilize browser sync
@@ -112,4 +116,5 @@ module.exports = {
   runWatcher,
   build,
   browserInit,
+  browserReload,
 };
