@@ -6,11 +6,14 @@ route: /components/card
 
 import { Playground, Props } from 'docz';
 import { Card } from '.';
+import { Link } from '../Link'
 
 # Card
 
 <Playground>
     <Card title="Joker">
-        52 pickup is a great card game
+        <p>52 pickup is a great card game</p>
+        <Link url="https//en.wikipedia.org/wiki/52_pickup" icon="smile" openInNewTab>Learn to play</Link>
+        <Link url="https://eddysims.com" icon="eye" openInNewTab>See a great website</Link>
     </Card>
 </Playground>

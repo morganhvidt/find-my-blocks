@@ -6,6 +6,15 @@ const styles = {
     ...themeStyles.Container,
     maxWidth: 768,
   },
+  inlineCode: {
+    opacity: "0.75",
+    background: "#eee",
+    marginX: "2px",
+    padding: "0.25em 0.5em",
+    fontSize: ".875em",
+    borderRadius: "2px",
+    fontFamily: "Inconsolata",
+  },
   table: {
     fontSize: 16,
     borderRadius: 0,

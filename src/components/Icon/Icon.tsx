@@ -11,7 +11,7 @@ interface IconProps {
   icon: string;
 }
 
-export const Icon = ({ size = 16, color, icon }: IconProps) => {
+export const Icon = ({ size, color, icon }: IconProps) => {
   return <FeatherIcon size={size} color={color} icon={icon} />;
 };
 
