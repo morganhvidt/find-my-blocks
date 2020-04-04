@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 
 import { useBlocks } from "../../hooks/blocks";
@@ -15,6 +15,13 @@ import styles from "./find-my-blocks.css";
 const App = () => {
   const [activeBlock, setActiveBlock] = useState();
   const [blocks] = useBlocks();
+
+  useEffect(() => {
+    console.log("l", blocks.length);
+    if (blocks[0]) {
+      setActiveBlock(blocks[0].name);
+    }
+  }, [blocks]);
 
   const menuItems =
     blocks.length > 0 &&
