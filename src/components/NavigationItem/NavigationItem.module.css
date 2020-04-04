@@ -1,0 +1,49 @@
+.button {
+  display: block;
+  position: relative;
+  padding: 0.75em 3.5em 0.75em 1em;
+  transition: color 300ms, background 300ms;
+  border: none;
+  border-bottom: 1px solid #f1f1f1;
+  background: #fff;
+  color: #333;
+  font-size: 0.875em;
+  cursor: pointer;
+  appearance: none;
+}
+
+.button:nth-child(2n+2) {
+  background: #fafafa;
+}
+
+.button:not(.active):hover {
+  color: #ff4b3e;
+}
+
+.button svg {
+  position: absolute;
+  top: 50%;
+  right: 1.5em;
+  width: 1.25em;
+  height: 1.25em;
+  transform: translateY(-50%);
+  transition: right 300ms;
+  opacity: 0.8;
+}
+
+.button:not(.active):hover svg {
+  right: 1em;
+}
+
+.label {
+  display: block;
+  margin-bottom: 0.25em;
+  font-size: 1.25em;
+  font-weight: 500;
+}
+
+.button.active {
+  background: #ff4b3e;
+  color: white;
+  cursor: default;
+}

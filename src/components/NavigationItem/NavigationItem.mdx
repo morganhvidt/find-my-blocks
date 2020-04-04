@@ -1,0 +1,43 @@
+---
+name: NavigationItem
+menu: Components
+route: /components/navigation-item
+---
+
+import { Playground, Props } from "docz";
+import { useState } from 'react';
+import { NavigationItem } from ".";
+
+
+# NavigationItem
+
+NavigationItem is a component that **you** just made! It's lovely...
+
+## Usage
+
+```ts
+import { NavigationItem } from '../components/NavigationItem';
+```
+
+<Playground>
+{() => {
+    const [active, setActive] = useState(true);
+    return (
+        <>
+        <NavigationItem label="Toronto Raptors" postCount={1} active={active} onClick={() => setActive(!active)} />
+        <NavigationItem label="Los Angeles Lakers" postCount={1} />
+        <NavigationItem label="Miami Heat" postCount={1} />
+        <NavigationItem label="Boston Celtics" postCount={1} />
+        <NavigationItem label="Brooklyn Nets" postCount={1} />
+        </>
+    )
+}}
+</Playground>
+
+## Props
+
+<Props of={ NavigationItem } />
+
+## Size
+
+NavigationItem can be displayed at 3 different sizes. How incredible is that?

@@ -16,7 +16,7 @@
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx}": [
-      "npm run lint:js -- --max-warnings=0",
+      "npm run lint:js",
       "git add"
     ],
     "src/**/*.css": [
