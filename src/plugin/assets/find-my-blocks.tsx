@@ -13,13 +13,28 @@ import { Link } from "../../components/Link";
 import "./find-my-blocks.foundation.css";
 import styles from "./find-my-blocks.css";
 
+interface Block {
+  name: string;
+  posts: Array<string>;
+}
+
+interface Post {
+  id: number;
+  title: string;
+  postType: string;
+  edit_url: string;
+  post_url: string;
+}
+
 const App = () => {
-  const [activeBlock, setActiveBlock] = useState();
+  const [activeBlock, setActiveBlock] = useState<string>();
   const [blocks] = useBlocks();
 
   useEffect(() => {
     if (blocks.length > 0) {
-      const sortedBlocks = blocks.sort((a, b) => (a.name > b.name ? 1 : -1));
+      const sortedBlocks = blocks.sort((a: Block, b: Block) =>
+        a.name > b.name ? 1 : -1
+      );
       const localStorageBlock = localStorage.getItem("fmb_active");
       if (windowWasReloaded() && localStorageBlock) {
         setActiveBlock(localStorageBlock);
@@ -29,45 +44,9 @@ const App = () => {
     }
   }, [blocks]);
 
-  const menuItems =
-    blocks.length > 0 &&
-    blocks.map((block) => {
-      return (
-        <NavigationItem
-          key={block.name}
-          label={block.name}
-          postCount={block.posts.length}
-          active={block.name === activeBlock}
-          onClick={() => {
-            localStorage.setItem("fmb_active", block.name);
-            setActiveBlock(block.name);
-          }}
-        />
-      );
-    });
-
   const activePosts =
-    activeBlock && blocks.find((block) => block.name === activeBlock).posts;
-  const postCards =
-    activePosts &&
-    activePosts.map((post) => {
-      return (
-        <Card key={post.id} title={post.title}>
-          <div>
-            Post Type: <strong>{post.postType}</strong>
-          </div>
-
-          <Link icon="edit" url={post.edit_url}>
-            Edit Post
-          </Link>
-          <Link icon="eye" url={post.post_url}>
-            View Post
-          </Link>
-
-          <p>reusable</p>
-        </Card>
-      );
-    });
+    activeBlock &&
+    blocks.find((post: Block) => post.name === activeBlock).posts;
 
   return (
     <Box className={styles.container}>
@@ -75,9 +54,45 @@ const App = () => {
         <Box className={styles.logo}>
           <Logo size={85} />
         </Box>
-        <Box className={styles.nav}>{menuItems}</Box>
+        <Box className={styles.nav}>
+          {blocks.length > 0 &&
+            blocks.map((block: Block) => {
+              return (
+                <NavigationItem
+                  key={block.name}
+                  label={block.name}
+                  postCount={block.posts.length}
+                  active={block.name === activeBlock}
+                  onClick={() => {
+                    localStorage.setItem("fmb_active", block.name);
+                    setActiveBlock(block.name);
+                  }}
+                />
+              );
+            })}
+        </Box>
       </Box>
-      <Box className={styles.cards}>{postCards}</Box>
+      <Box className={styles.cards}>
+        {activePosts &&
+          activePosts.map((post: Post) => {
+            return (
+              <Card key={post.id} title={post.title}>
+                <div>
+                  Post Type: <strong>{post.postType}</strong>
+                </div>
+
+                <Link icon="edit" url={post.edit_url}>
+                  Edit Post
+                </Link>
+                <Link icon="eye" url={post.post_url}>
+                  View Post
+                </Link>
+
+                <p>reusable</p>
+              </Card>
+            );
+          })}
+      </Box>
     </Box>
   );
 };
