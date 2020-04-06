@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 
 import { useBlocks } from "../../hooks/blocks";
+import { windowWasReloaded } from "../../helpers/windowWasReloaded";
 
 import { Box } from "../../components/Box";
 import { Logo } from "../../components/Logo";
@@ -17,9 +18,14 @@ const App = () => {
   const [blocks] = useBlocks();
 
   useEffect(() => {
-    console.log("l", blocks.length);
-    if (blocks[0]) {
-      setActiveBlock(blocks[0].name);
+    if (blocks.length > 0) {
+      const sortedBlocks = blocks.sort((a, b) => (a.name > b.name ? 1 : -1));
+      const localStorageBlock = localStorage.getItem("fmb_active");
+      if (windowWasReloaded() && localStorageBlock) {
+        setActiveBlock(localStorageBlock);
+      } else {
+        setActiveBlock(sortedBlocks[0].name);
+      }
     }
   }, [blocks]);
 
@@ -32,7 +38,10 @@ const App = () => {
           label={block.name}
           postCount={block.posts.length}
           active={block.name === activeBlock}
-          onClick={() => setActiveBlock(block.name)}
+          onClick={() => {
+            localStorage.setItem("fmb_active", block.name);
+            setActiveBlock(block.name);
+          }}
         />
       );
     });
