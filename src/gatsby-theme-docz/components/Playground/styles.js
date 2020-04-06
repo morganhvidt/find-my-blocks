@@ -10,6 +10,7 @@ export const editor = (theme) => ({
 
 export const previewWrapper = {
   ...styles.previewWrapper,
+  outline: (t) => console.log(t),
 
   "> div": {
     border: 0,

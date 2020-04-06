@@ -2,4 +2,16 @@
 export default {
   typescript: true,
   files: "src/**/*.{md,markdown,mdx}",
+  themeConfig: {
+    colors: {
+      primary: "var(--fmb-red--light)",
+      sidebar: {
+        bg: "var(--fmb-red)",
+        navGroup: "#fff",
+        navLinkActive: "#fff",
+        tocLink: "#eee",
+        tocLinkActive: "#fff",
+      },
+    },
+  },
 };

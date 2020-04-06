@@ -7,6 +7,13 @@
   max-width: 250px;
 }
 
+.content {
+  display: flex;
+  flex: 1;
+  flex-flow: column;
+  padding-left: 2rem;
+}
+
 .logo {
   padding-bottom: 1.5em;
   text-align: center;
@@ -17,6 +24,9 @@
   grid-auto-rows: min-content;
   grid-gap: 1em;
   grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
-  flex: 1;
-  padding-left: 2rem;
+}
+
+.footer {
+  margin-top: auto;
+  background: tomato;
 }

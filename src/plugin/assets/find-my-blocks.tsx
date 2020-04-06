@@ -72,26 +72,30 @@ const App = () => {
             })}
         </Box>
       </Box>
-      <Box className={styles.cards}>
-        {activePosts &&
-          activePosts.map((post: Post) => {
-            return (
-              <Card key={post.id} title={post.title}>
-                <div>
-                  Post Type: <strong>{post.postType}</strong>
-                </div>
+      <Box className={styles.content}>
+        <Box>Settings</Box>
+        <Box className={styles.cards}>
+          {activePosts &&
+            activePosts.map((post: Post) => {
+              return (
+                <Card key={post.id} title={post.title}>
+                  <div>
+                    Post Type: <strong>{post.postType}</strong>
+                  </div>
 
-                <Link icon="edit" url={post.edit_url}>
-                  Edit Post
-                </Link>
-                <Link icon="eye" url={post.post_url}>
-                  View Post
-                </Link>
+                  <Link icon="edit" url={post.edit_url}>
+                    Edit Post
+                  </Link>
+                  <Link icon="eye" url={post.post_url}>
+                    View Post
+                  </Link>
 
-                <p>reusable</p>
-              </Card>
-            );
-          })}
+                  <p>reusable</p>
+                </Card>
+              );
+            })}
+        </Box>
+        <Box className={styles.footer}>Footer</Box>
       </Box>
     </Box>
   );
