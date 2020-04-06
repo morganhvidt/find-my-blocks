@@ -9,6 +9,7 @@ import { Logo } from "../../components/Logo";
 import { NavigationItem } from "../../components/NavigationItem";
 import { Card } from "../../components/Card";
 import { Link } from "../../components/Link";
+import { Content } from "../../components/Content";
 
 import "./find-my-blocks.foundation.css";
 import styles from "./find-my-blocks.css";
@@ -79,18 +80,20 @@ const App = () => {
             activePosts.map((post: Post) => {
               return (
                 <Card key={post.id} title={post.title}>
-                  <div>
+                  <Content>
                     Post Type: <strong>{post.postType}</strong>
-                  </div>
+                  </Content>
 
-                  <Link icon="edit" url={post.edit_url}>
-                    Edit Post
-                  </Link>
-                  <Link icon="eye" url={post.post_url}>
-                    View Post
-                  </Link>
+                  <Content>
+                    <Link icon="edit" url={post.edit_url}>
+                      Edit Post
+                    </Link>
+                    <Link icon="eye" url={post.post_url}>
+                      View Post
+                    </Link>
+                  </Content>
 
-                  <p>reusable</p>
+                  <Content>reusable</Content>
                 </Card>
               );
             })}
