@@ -98,7 +98,21 @@ const App = () => {
               );
             })}
         </Box>
-        <Box className={styles.footer}>Footer</Box>
+        <Box className={styles.footer}>
+          <Card>
+            Developed by{" "}
+            <Link url="https://eddysims.com" openInNewTab>
+              Eddy Sims
+            </Link>{" "}
+            <Link
+              url="https://find-my-blocks.eddysims.com/donate"
+              icon="heart"
+              openInNewTab
+            >
+              Make a donation
+            </Link>
+          </Card>
+        </Box>
       </Box>
     </Box>
   );
