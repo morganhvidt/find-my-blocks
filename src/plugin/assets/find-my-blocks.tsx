@@ -10,6 +10,7 @@ import { NavigationItem } from "../../components/NavigationItem";
 import { Card } from "../../components/Card";
 import { Link } from "../../components/Link";
 import { Content } from "../../components/Content";
+import { InputText } from "../../components/InputText";
 
 import "./find-my-blocks.foundation.css";
 import styles from "./find-my-blocks.css";
@@ -55,6 +56,7 @@ const App = () => {
         <Box className={styles.logo}>
           <Logo size={85} />
         </Box>
+        <InputText placeholder="Filter Blocks" />
         <Box className={styles.nav}>
           {blocks.length > 0 &&
             blocks.map((block: Block) => {
