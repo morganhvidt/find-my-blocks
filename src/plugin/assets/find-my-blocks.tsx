@@ -12,6 +12,7 @@ import { Card } from "../../components/Card";
 import { Link } from "../../components/Link";
 import { Content } from "../../components/Content";
 import { InputText } from "../../components/InputText";
+import { Heading } from "../../components/Heading";
 
 import "./find-my-blocks.foundation.css";
 import styles from "./find-my-blocks.css";
@@ -88,6 +89,14 @@ const App = () => {
       </Box>
       <Box className={styles.content}>
         <Box>Settings</Box>
+        <Box className={styles.heading}>
+          <Card>
+            <Heading>
+              {/* <Logo version="pin" color="#444" size={28} /> */}
+              {activeBlock}
+            </Heading>
+          </Card>
+        </Box>
         <Box className={styles.cards}>
           {activePosts &&
             activePosts.map((post: Post) => {
