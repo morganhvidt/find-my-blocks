@@ -6,6 +6,7 @@ import { windowWasReloaded } from "../../helpers/windowWasReloaded";
 
 import { Box } from "../../components/Box";
 import { Logo } from "../../components/Logo";
+import { Filter } from "../../components/Filter";
 import { NavigationItem } from "../../components/NavigationItem";
 import { Card } from "../../components/Card";
 import { Link } from "../../components/Link";
@@ -30,6 +31,7 @@ interface Post {
 
 const App = () => {
   const [activeBlock, setActiveBlock] = useState<string>();
+  const [filter, setFilter] = useState<string>("");
   const [blocks] = useBlocks();
 
   useEffect(() => {
@@ -56,23 +58,32 @@ const App = () => {
         <Box className={styles.logo}>
           <Logo size={85} />
         </Box>
-        <InputText placeholder="Filter Blocks" />
+        <InputText
+          placeholder="Filter Blocks"
+          onChange={(val) => setFilter(val)}
+        />
         <Box className={styles.nav}>
-          {blocks.length > 0 &&
-            blocks.map((block: Block) => {
-              return (
+          <Filter
+            data={blocks}
+            value={filter}
+            match="name"
+            renderedResults={(results) => {
+              const blocks = results.map(({ name, posts }) => (
                 <NavigationItem
-                  key={block.name}
-                  label={block.name}
-                  postCount={block.posts.length}
-                  active={block.name === activeBlock}
+                  key={name}
+                  label={name}
+                  postCount={posts.length}
+                  active={name === activeBlock}
                   onClick={() => {
-                    localStorage.setItem("fmb_active", block.name);
-                    setActiveBlock(block.name);
+                    localStorage.setItem("fmb_active", name);
+                    setActiveBlock(name);
                   }}
                 />
-              );
-            })}
+              ));
+
+              return blocks;
+            }}
+          />
         </Box>
       </Box>
       <Box className={styles.content}>
