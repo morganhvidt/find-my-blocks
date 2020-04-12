@@ -2,7 +2,7 @@ import React from "react";
 
 interface BoxProps {
   className?: string;
-  tag?: "div" | "span";
+  tag?: string;
   children: React.ReactNode;
 }
 

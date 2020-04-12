@@ -14,6 +14,7 @@ export const previewWrapper = {
   "> div": {
     border: 0,
     borderRadius: 0,
+    outline: (t) => console.log(t),
   },
 
   "+ div": {
@@ -48,4 +49,5 @@ export const preview = {
   padding: 16,
   background: "#f1f1f1",
   borderRadius: 0,
+  fontSize: 13,
 };
