@@ -6,9 +6,11 @@ import t from "prop-types";
 import global from "gatsby-theme-docz/src/theme/global";
 import { Sidebar } from "gatsby-theme-docz/src/components/Sidebar";
 import { Box } from "../../../../../src/components/Box";
+import { InputText } from "../../../../../src/components/InputText";
 import * as styles from "gatsby-theme-docz/src/components/Layout/styles";
 
 export const Layout = ({ children }) => {
+  const [query, setQuery] = useState("");
   const [open, setOpen] = useState(false);
   const nav = useRef();
 
@@ -21,12 +23,18 @@ export const Layout = ({ children }) => {
           <Sidebar
             ref={nav}
             open={open}
+            query={query}
             onFocus={() => setOpen(true)}
             onBlur={() => setOpen(false)}
             onClick={() => setOpen(false)}
           />
           <Box>
-            <Box>Search</Box>
+            <Box>
+              <InputText
+                placeholder="Type to search..."
+                onChange={(val) => setQuery(val)}
+              />
+            </Box>
             <Box sx={styles.content}>{children}</Box>
             <Box>Footer</Box>
           </Box>
