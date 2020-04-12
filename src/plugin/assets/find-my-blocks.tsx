@@ -5,6 +5,7 @@ import { useBlocks } from "../../hooks/blocks";
 import { windowWasReloaded } from "../../helpers/windowWasReloaded";
 
 import { Box } from "../../components/Box";
+import { Loading } from "../../components/Loading";
 import { Logo } from "../../components/Logo";
 import { Filter } from "../../components/Filter";
 import { NavigationItem } from "../../components/NavigationItem";
@@ -33,6 +34,7 @@ interface Post {
 const App = () => {
   const [activeBlock, setActiveBlock] = useState<string>();
   const [filter, setFilter] = useState<string>("");
+  const [offsetHeight, setOffsetHeight] = useState<number>(0);
   const [blocks] = useBlocks();
 
   useEffect(() => {
@@ -47,11 +49,33 @@ const App = () => {
         setActiveBlock(sortedBlocks[0].name);
       }
     }
+
+    const findMyBlocks = document.querySelector("#find-my-blocks");
+
+    if (findMyBlocks) {
+      const { top } = findMyBlocks.getBoundingClientRect();
+      // Explain this 65!
+      setOffsetHeight(offsetHeight + top + 65);
+    }
   }, [blocks]);
 
   const activePosts =
     activeBlock &&
     blocks.find((post: Block) => post.name === activeBlock).posts;
+
+  if (blocks && blocks.length < 1) {
+    const style = {
+      height: `calc(100vh - ${offsetHeight}px)`,
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+    };
+    return (
+      <div style={style}>
+        <Loading />
+      </div>
+    );
+  }
 
   return (
     <Box className={styles.container}>
