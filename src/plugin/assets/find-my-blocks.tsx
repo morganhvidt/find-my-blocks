@@ -112,14 +112,18 @@ const App = () => {
         </Box>
       </Box>
       <Box className={styles.content}>
-        <Box>Settings</Box>
-        <Box className={styles.heading}>
-          <Card>
-            <Heading>
-              {/* <Logo version="pin" color="#444" size={28} /> */}
-              {activeBlock}
-            </Heading>
+        <Box>
+          <Card title="Settings" toggle initialOpen={true}>
+            <Content spacing="large">Order navigation by: select</Content>
+            <Content spacing="large">Order cards by: select</Content>
+            <Content spacing="large">Permission access level: select</Content>
           </Card>
+        </Box>
+        <Box className={styles.heading}>
+          <Heading>
+            <Logo version="pin" color="#444" size={24} />
+            {activeBlock}
+          </Heading>
         </Box>
         <Box className={styles.cards}>
           {activePosts &&

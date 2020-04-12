@@ -13,15 +13,16 @@
   letter-spacing: 0.02em;
 }
 
-.button {
-  flex: 0;
+.title svg {
+  flex: 0 0 auto;
+  width: 1.25em;
+  height: 1.25em;
   margin: 0 0 0 auto;
-  padding: 0;
-  border: none;
-  line-height: 1;
   vertical-align: middle;
+}
+
+.title.togglable {
   cursor: pointer;
-  appearance: none;
 }
 
 .body {

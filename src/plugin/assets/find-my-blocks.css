@@ -23,6 +23,11 @@
   margin: 2em 0;
 }
 
+.heading svg {
+  margin: -6px 0.5em 0 0;
+  vertical-align: middle;
+}
+
 .cards {
   display: grid;
   grid-auto-rows: min-content;

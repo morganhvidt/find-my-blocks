@@ -42,14 +42,11 @@ interface CardTitleProps {
 }
 
 const CardTitle = ({ open, toggle, title, onClick }: CardTitleProps) => {
+  const titleClass = classnames(styles.title, toggle && styles.togglable);
   return (
-    <div className={styles.title}>
+    <div className={titleClass} onClick={() => toggle && onClick()}>
       {title}
-      {toggle && (
-        <button className={styles.button} onClick={() => onClick()}>
-          <Icon icon={open ? "chevron-up" : "chevron-down"} />
-        </button>
-      )}
+      {toggle && <Icon icon={open ? "chevron-up" : "chevron-down"} />}
     </div>
   );
 };
