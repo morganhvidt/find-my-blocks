@@ -2,7 +2,7 @@
 export default {
   typescript: true,
   files: "src/**/*.{md,markdown,mdx}",
-  menu: ["Find My Blocks", "Getting Started", "Components"],
+  menu: ["Find My Blocks", "Design System", "Components"],
   themeConfig: {
     colors: {
       primary: "var(--fmb-red--light)",
