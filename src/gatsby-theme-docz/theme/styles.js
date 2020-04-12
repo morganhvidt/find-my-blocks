@@ -6,7 +6,7 @@ const styles = {
   Container: {
     ...themeStyles.Container,
     maxWidth: 768,
-    padding: 64,
+    padding: "3em 6em",
   },
   inlineCode: {
     opacity: "0.75",
