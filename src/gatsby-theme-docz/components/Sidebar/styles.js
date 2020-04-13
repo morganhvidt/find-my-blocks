@@ -1,5 +1,5 @@
-export * from "gatsby-theme-docz/src/components/Sidebar/styles";
-import * as styles from "gatsby-theme-docz/src/components/Sidebar/styles";
+export * from "@theme/components/Sidebar/styles";
+import * as styles from "@theme/components/Sidebar/styles";
 
 export const wrapper = ({ open }) => ({
   ...styles.wrapper(open),

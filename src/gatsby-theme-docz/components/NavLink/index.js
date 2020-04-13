@@ -4,8 +4,9 @@ import { jsx } from "theme-ui";
 import { Link } from "gatsby";
 import { useDocs, useCurrentDoc } from "docz";
 import { get } from "lodash/fp";
-import { Icon } from "../../../../../src/components/Icon";
-import * as styles from "gatsby-theme-docz/src/components/NavLink/styles";
+
+import { Icon } from "@fmb/components/Icon";
+import * as styles from "./styles";
 
 const getHeadings = (route, docs) => {
   const doc = docs.find((doc) => doc.route === route);

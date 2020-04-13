@@ -3,8 +3,9 @@ import { jsx } from "theme-ui";
 import React from "react";
 import { useCurrentDoc } from "docz";
 import t from "prop-types";
+
 import { NavLink } from "../NavLink";
-import { Icon } from "../../../../../src/components/Icon";
+import { Icon } from "@fmb/components/Icon";
 import * as styles from "./styles";
 
 export const NavGroup = ({ item, sidebarRef }) => {

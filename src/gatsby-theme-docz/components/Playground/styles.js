@@ -1,5 +1,5 @@
-export * from "gatsby-theme-docz/src/components/Playground/styles";
-import * as styles from "gatsby-theme-docz/src/components/Playground/styles";
+export * from "@theme/components/Playground/styles";
+import * as styles from "@theme/components/Playground/styles";
 
 export const editor = (theme) => ({
   ...styles.editor(theme),

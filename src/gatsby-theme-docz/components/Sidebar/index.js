@@ -5,10 +5,10 @@ import { Global } from "@emotion/core";
 import { jsx, Box } from "theme-ui";
 import { useMenus, useCurrentDoc } from "docz";
 
-import { NavLink } from "gatsby-theme-docz/src/components/NavLink";
-import { NavGroup } from "gatsby-theme-docz/src/components/NavGroup";
-import { Logo } from "../../../../../src/components/Logo";
-import * as styles from "gatsby-theme-docz/src/components/Sidebar/styles";
+import { Logo } from "@fmb/components/Logo";
+import { NavLink } from "../NavLink";
+import { NavGroup } from "../NavGroup";
+import * as styles from "./styles";
 
 export const Sidebar = React.forwardRef((props, ref) => {
   const { query } = props;

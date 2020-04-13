@@ -3,11 +3,12 @@ import { useRef, useState } from "react";
 import { jsx } from "theme-ui";
 import { Global } from "@emotion/core";
 import t from "prop-types";
-import global from "gatsby-theme-docz/src/theme/global";
-import { Sidebar } from "gatsby-theme-docz/src/components/Sidebar";
-import { Box } from "../../../../../src/components/Box";
-import { InputText } from "../../../../../src/components/InputText";
-import * as styles from "gatsby-theme-docz/src/components/Layout/styles";
+
+import global from "@theme/theme/global";
+import { Box } from "@fmb/components/Box";
+import { InputText } from "@fmb/components/InputText";
+import { Sidebar } from "../Sidebar";
+import * as styles from "./styles";
 
 export const Layout = ({ children }) => {
   const [query, setQuery] = useState("");

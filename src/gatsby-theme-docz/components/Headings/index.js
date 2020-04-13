@@ -1,6 +1,6 @@
 import React from "react";
 import t from "prop-types";
-import { Heading } from "../../../../../src/components/Heading";
+import { Heading } from "@fmb/components/Heading";
 
 const heading = (level) => {
   const Component = ({ id, children }) => {
