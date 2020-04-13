@@ -26,27 +26,28 @@ export const Sidebar = React.forwardRef((props, ref) => {
         {props.open && <Global styles={styles.global} />}
       </Box>
       <Box ref={ref} sx={styles.wrapper(props)} data-testid="sidebar">
-        <a href="/">
-          <Logo size={100} color="#f1f1f1" />
-        </a>
-        <hr />
-        {menus &&
-          menus.map((menu) => {
-            if (!menu.route)
-              return <NavGroup key={menu.id} item={menu} sidebarRef={ref} />;
-            if (menu.route === currentDoc.route) {
+        <Box sx={styles.container}>
+          <a href="/" sx={styles.logo}>
+            <Logo size={125} color="#f1f1f1" />
+          </a>
+          {menus &&
+            menus.map((menu) => {
+              if (!menu.route)
+                return <NavGroup key={menu.id} item={menu} sidebarRef={ref} />;
+              if (menu.route === currentDoc.route) {
+                return (
+                  <NavLink key={menu.id} item={menu} ref={currentDocRef}>
+                    {menu.name}
+                  </NavLink>
+                );
+              }
               return (
-                <NavLink key={menu.id} item={menu} ref={currentDocRef}>
+                <NavLink key={menu.id} item={menu}>
                   {menu.name}
                 </NavLink>
               );
-            }
-            return (
-              <NavLink key={menu.id} item={menu}>
-                {menu.name}
-              </NavLink>
-            );
-          })}
+            })}
+        </Box>
       </Box>
     </>
   );

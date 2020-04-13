@@ -1,9 +1,19 @@
 export * from "gatsby-theme-docz/src/components/Layout/styles";
 import * as styles from "gatsby-theme-docz/src/components/Layout/styles";
 
+export const main = {
+  ...styles.main,
+  background: "#fefefe",
+};
+
 export const wrapper = {
   ...styles.wrapper,
   gridTemplateColumns: "3.5fr 6.5fr",
+};
+
+export const content = {
+  ...styles.content,
+  background: "none",
 };
 
 // export const main = {
