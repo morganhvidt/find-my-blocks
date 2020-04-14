@@ -1,0 +1,9 @@
+.menu {
+  flex: 0 0 250px;
+  max-width: 250px;
+}
+
+.logo {
+  padding-bottom: 1.5em;
+  text-align: center;
+}

@@ -7,13 +7,14 @@ import { windowWasReloaded } from "../../helpers/windowWasReloaded";
 import { Box } from "../../components/Box";
 import { Loading } from "../../components/Loading";
 import { Logo } from "../../components/Logo";
-import { Filter } from "../../components/Filter";
-import { NavigationItem } from "../../components/NavigationItem";
 import { Card } from "../../components/Card";
 import { Link } from "../../components/Link";
 import { Content } from "../../components/Content";
-import { InputText } from "../../components/InputText";
+import { Select, Option } from "../../components/Select";
 import { Heading } from "../../components/Heading";
+
+import { Sidebar } from "./components/Sidebar";
+import { Footer } from "./components/Footer";
 
 import "./find-my-blocks.foundation.css";
 import styles from "./find-my-blocks.css";
@@ -33,7 +34,6 @@ interface Post {
 
 const App = () => {
   const [activeBlock, setActiveBlock] = useState<string>();
-  const [filter, setFilter] = useState<string>("");
   const [offsetHeight, setOffsetHeight] = useState<number>(0);
   const [blocks] = useBlocks();
 
@@ -79,42 +79,24 @@ const App = () => {
 
   return (
     <Box className={styles.container}>
-      <Box className={styles.menu}>
-        <Box className={styles.logo}>
-          <Logo size={85} />
-        </Box>
-        <InputText
-          placeholder="Filter Blocks"
-          onChange={(val) => setFilter(val)}
-        />
-        <Box className={styles.nav}>
-          <Filter
-            data={blocks}
-            value={filter}
-            match="name"
-            renderedResults={(results) => {
-              const blocks = results.map(({ name, posts }) => (
-                <NavigationItem
-                  key={name}
-                  label={name}
-                  postCount={posts.length}
-                  active={name === activeBlock}
-                  onClick={() => {
-                    localStorage.setItem("fmb_active", name);
-                    setActiveBlock(name);
-                  }}
-                />
-              ));
-
-              return blocks;
-            }}
-          />
-        </Box>
-      </Box>
+      <Sidebar
+        blocks={blocks}
+        activeBlock={activeBlock}
+        handleClick={(name: string) => {
+          localStorage.setItem("fmb_active", name);
+          setActiveBlock(name);
+        }}
+      />
       <Box className={styles.content}>
         <Box>
           <Card title="Settings" toggle initialOpen={true}>
-            <Content spacing="large">Order navigation by: select</Content>
+            <Content spacing="large">
+              Order navigation by:
+              <Select>
+                <Option>Eddy</Option>
+                <Option>Sims</Option>
+              </Select>
+            </Content>
             <Content spacing="large">Order cards by: select</Content>
             <Content spacing="large">Permission access level: select</Content>
           </Card>
@@ -148,21 +130,7 @@ const App = () => {
               );
             })}
         </Box>
-        <Box className={styles.footer}>
-          <Card>
-            Developed by{" "}
-            <Link url="https://eddysims.com" openInNewTab>
-              Eddy Sims
-            </Link>{" "}
-            <Link
-              url="https://find-my-blocks.eddysims.com/donate"
-              icon="heart"
-              openInNewTab
-            >
-              Make a donation
-            </Link>
-          </Card>
-        </Box>
+        <Footer />
       </Box>
     </Box>
   );

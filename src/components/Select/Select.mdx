@@ -1,0 +1,39 @@
+---
+name: Select
+menu: Components
+route: /components/select
+---
+
+import { Playground, Props } from "docz";
+import { Select, Option } from "."
+
+
+# Select
+
+Select is a component that **you** just made! It's lovely...
+
+## Usage
+
+```ts
+import { Select, Option } from '../components/Select';
+```
+
+<Playground>
+    <Select onChange={(val) => alert(val)} defaultValue="sims">
+        <Option value='eddy'>Eddy</Option>
+        <Option value="sims">Sims</Option>
+        <Option value="har">A really long option that could be blocked by the arrow in the background... but maybe not as well...</Option>
+    </Select>
+</Playground>
+
+## Props
+
+<Props of={ Select } />
+
+## Options
+
+<Props of={ Option } />
+
+## Size
+
+Select can be displayed at 3 different sizes. How incredible is that?
