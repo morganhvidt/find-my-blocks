@@ -7,14 +7,12 @@ import { windowWasReloaded } from "../../helpers/windowWasReloaded";
 import { Box } from "../../components/Box";
 import { Loading } from "../../components/Loading";
 import { Logo } from "../../components/Logo";
-import { Card } from "../../components/Card";
-import { Link } from "../../components/Link";
-import { Content } from "../../components/Content";
-import { Select, Option } from "../../components/Select";
 import { Heading } from "../../components/Heading";
 
-import { Sidebar } from "./components/Sidebar";
-import { Footer } from "./components/Footer";
+import { Sidebar } from "./layout/Sidebar";
+import { Settings } from "./layout/Settings";
+import { ListOfCards } from "./layout/ListOfCards";
+import { Footer } from "./layout/Footer";
 
 import "./find-my-blocks.foundation.css";
 import styles from "./find-my-blocks.css";
@@ -49,7 +47,9 @@ const App = () => {
         setActiveBlock(sortedBlocks[0].name);
       }
     }
+  }, [blocks]);
 
+  useEffect(() => {
     const findMyBlocks = document.querySelector("#find-my-blocks");
 
     if (findMyBlocks) {
@@ -57,7 +57,7 @@ const App = () => {
       // Explain this 65!
       setOffsetHeight(offsetHeight + top + 65);
     }
-  }, [blocks]);
+  }, []);
 
   const activePosts =
     activeBlock &&
@@ -79,58 +79,31 @@ const App = () => {
 
   return (
     <Box className={styles.container}>
-      <Sidebar
-        blocks={blocks}
-        activeBlock={activeBlock}
-        handleClick={(name: string) => {
-          localStorage.setItem("fmb_active", name);
-          setActiveBlock(name);
-        }}
-      />
+      <Box className={styles.sidebar}>
+        <Sidebar
+          blocks={blocks}
+          activeBlock={activeBlock}
+          handleClick={(name: string) => {
+            localStorage.setItem("fmb_active", name);
+            setActiveBlock(name);
+          }}
+        />
+      </Box>
+
       <Box className={styles.content}>
-        <Box>
-          <Card title="Settings" toggle initialOpen={true}>
-            <Content spacing="large">
-              Order navigation by:
-              <Select>
-                <Option>Eddy</Option>
-                <Option>Sims</Option>
-              </Select>
-            </Content>
-            <Content spacing="large">Order cards by: select</Content>
-            <Content spacing="large">Permission access level: select</Content>
-          </Card>
-        </Box>
+        <Settings />
         <Box className={styles.heading}>
           <Heading>
-            <Logo version="pin" color="#444" size={24} />
+            <Logo version="pin" color="var(--fmb-red--light)" size={24} />
             {activeBlock}
           </Heading>
         </Box>
         <Box className={styles.cards}>
-          {activePosts &&
-            activePosts.map((post: Post) => {
-              return (
-                <Card key={post.id} title={post.title}>
-                  <Content>
-                    Post Type: <strong>{post.postType}</strong>
-                  </Content>
-
-                  <Content>
-                    <Link icon="edit" url={post.edit_url}>
-                      Edit Post
-                    </Link>
-                    <Link icon="eye" url={post.post_url}>
-                      View Post
-                    </Link>
-                  </Content>
-
-                  <Content>reusable</Content>
-                </Card>
-              );
-            })}
+          {activePosts && <ListOfCards cards={activePosts} />}
         </Box>
-        <Footer />
+        <Box className={styles.footer}>
+          <Footer />
+        </Box>
       </Box>
     </Box>
   );

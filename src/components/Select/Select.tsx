@@ -4,7 +4,7 @@ import styles from "./Select.module.css";
 
 interface SelectProps {
   onChange?(val: string): void;
-  defaultValue: string;
+  defaultValue?: string;
   children: React.ReactNode;
 }
 
