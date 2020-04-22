@@ -1,5 +1,6 @@
-export * from "gatsby-theme-docz/src/components/Layout/styles";
-import * as styles from "gatsby-theme-docz/src/components/Layout/styles";
+export * from "@theme/components/Layout/styles";
+import * as styles from "@theme/components/Layout/styles";
+import { media } from "@theme/theme/breakpoints";
 
 export const main = {
   ...styles.main,
@@ -14,35 +15,11 @@ export const wrapper = {
 export const content = {
   ...styles.content,
   background: "none",
+  width: "100%",
+  margin: "0 auto",
+  p: "3rem 4rem",
+
+  [media.tablet]: {
+    px: 5,
+  },
 };
-
-// export const main = {
-//   display: 'flex',
-//   flexDirection: 'column',
-//   minHeight: '100vh',
-// }
-
-// export const wrapper = {
-//   py: 0,
-//   flex: 1,
-//   display: 'grid',
-//   gridTemplateColumns: '250px calc(1fr -250px',
-//   minHeight: '100vh',
-//   [media.tablet]: {
-//     display: 'block',
-//   },
-// }
-
-// export const content = {
-//   backgroundColor: 'background',
-//   position: 'relative',
-//   maxWidth: 960,
-//   py: 5,
-//   px: 4,
-//   variant: 'styles.Container',
-//   [media.tablet]: {
-//     py: 4,
-//     px: 4,
-//     pt: 5,
-//   },
-// }

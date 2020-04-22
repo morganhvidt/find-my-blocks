@@ -8,6 +8,7 @@ import global from "@theme/theme/global";
 import { Box } from "@fmb/components/Box";
 import { InputText } from "@fmb/components/InputText";
 import { Sidebar } from "../Sidebar";
+import { Footer } from "../Footer";
 import * as styles from "./styles";
 
 export const Layout = ({ children }) => {
@@ -29,7 +30,13 @@ export const Layout = ({ children }) => {
             onBlur={() => setOpen(false)}
             onClick={() => setOpen(false)}
           />
-          <Box>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              minHeight: "100vh",
+            }}
+          >
             <Box>
               <InputText
                 placeholder="Type to search..."
@@ -37,7 +44,9 @@ export const Layout = ({ children }) => {
               />
             </Box>
             <Box sx={styles.content}>{children}</Box>
-            <Box>Footer</Box>
+            <Box sx={{ flex: "0 0 auto", mt: "auto" }}>
+              <Footer />
+            </Box>
           </Box>
         </Box>
       </Box>
