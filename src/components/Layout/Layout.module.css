@@ -1,0 +1,21 @@
+.layout {
+  display: flex;
+}
+
+.sidebar {
+  flex: 1 0 250px;
+  max-width: 250px;
+  margin-right: 2em;
+}
+
+.main {
+  flex: 1 0 auto;
+}
+
+.box {
+  margin: 0 0 2em;
+}
+
+.footer {
+  background: white;
+}

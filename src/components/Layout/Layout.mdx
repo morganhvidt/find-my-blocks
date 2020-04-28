@@ -1,0 +1,43 @@
+---
+name: Layout
+menu: Components
+route: /components/layout
+---
+
+import { Playground, Props } from "docz";
+import { Layout, LayoutSidebar, LayoutMain, LayoutCards } from "."
+import { Card } from "../Card";
+
+# Layout
+
+Layout is a **very** opinionated component that takes slots of React nodes as
+layout elements. It is a dumb, display only component that will layout the
+specific areas of the plugin.
+
+Layout is not made responsive at this moment as I don't think that there are 
+many people editing from their mobile devices.
+
+## Usage
+
+```ts
+import { Layout } from '../components/Layout';
+```
+
+<Playground>
+    <Layout
+        title="Find My Blocks"
+        sidebar={(
+            <div>SIDEBAR</div>
+        )}
+        settings={(
+            <Card title="Settings" toggle={true} initialOpen={false}>Some Settings</Card>
+        )} 
+        cards={(
+            <div>CARDS</div>
+        )}
+    />
+</Playground>
+
+## Props
+
+<Props of={ Layout } />
