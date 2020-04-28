@@ -1,6 +1,6 @@
 export * from "@theme/components/Layout/styles";
 import * as styles from "@theme/components/Layout/styles";
-import { media } from "@theme/theme/breakpoints";
+import { media } from "../../theme/breakpoints";
 
 export const main = {
   ...styles.main,
@@ -9,7 +9,11 @@ export const main = {
 
 export const wrapper = {
   ...styles.wrapper,
-  gridTemplateColumns: "3.5fr 6.5fr",
+  gridTemplateColumns: "768px 1fr",
+
+  [media.xlarge]: {
+    gridTemplateColumns: "1fr 2fr",
+  },
 };
 
 export const content = {

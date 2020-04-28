@@ -5,6 +5,7 @@ export const wrapper = ({ open }) => ({
   ...styles.wrapper(open),
   p: 0,
   border: 0,
+  display: "flex",
 });
 
 export const logo = {
