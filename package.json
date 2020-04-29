@@ -25,6 +25,7 @@
     ]
   },
   "scripts": {
+    "prestart": "rm -rf .docz",
     "start": "npm run dev",
     "prewordpress": "rm -rf .cache & node ./parcel/clean.js",
     "wordpress": "node ./parcel/parcel.config.js -f './src/plugin/assets/find-my-blocks.tsx' --env=development",
@@ -43,7 +44,7 @@
     "@emotion/styled": "^10.0.14",
     "@types/classnames": "^2.2.10",
     "classnames": "^2.2.6",
-    "docz": "latest",
+    "docz": "^2.3.2-alpha.0",
     "feather-icons-react": "^0.4.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"

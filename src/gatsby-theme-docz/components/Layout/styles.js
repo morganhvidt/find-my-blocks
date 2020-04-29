@@ -9,11 +9,7 @@ export const main = {
 
 export const wrapper = {
   ...styles.wrapper,
-  gridTemplateColumns: "768px 1fr",
-
-  [media.xlarge]: {
-    gridTemplateColumns: "1fr 2fr",
-  },
+  gridTemplateColumns: "1fr 2fr",
 };
 
 export const content = {
