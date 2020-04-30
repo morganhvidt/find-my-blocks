@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render correctly 1`] = `
+<div
+  className="layout"
+>
+  <div
+    className="main"
+  >
+    <div
+      className="footer"
+    >
+      FOOTER
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders all areas correctly 1`] = `
+<div
+  className="layout"
+>
+  <div
+    className="sidebar"
+  >
+    sidebar
+  </div>
+  <div
+    className="main"
+  >
+    <div
+      className="footer"
+    >
+      FOOTER
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders all areas correctly 2`] = `
+<div
+  className="layout"
+>
+  <div
+    className="main"
+  >
+    <div
+      className="box"
+    >
+      settings
+    </div>
+    <div
+      className="footer"
+    >
+      FOOTER
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders all areas correctly 3`] = `
+<div
+  className="layout"
+>
+  <div
+    className="main"
+  >
+    <div
+      className="box"
+    >
+      <h1
+        className="heading h1"
+      >
+        title
+      </h1>
+    </div>
+    <div
+      className="footer"
+    >
+      FOOTER
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders all areas correctly 4`] = `
+<div
+  className="layout"
+>
+  <div
+    className="main"
+  >
+    <div
+      className="box"
+    >
+      cards
+    </div>
+    <div
+      className="footer"
+    >
+      FOOTER
+    </div>
+  </div>
+</div>
+`;

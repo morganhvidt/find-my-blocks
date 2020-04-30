@@ -9,7 +9,9 @@
 }
 
 .main {
+  display: flex;
   flex: 1 0 auto;
+  flex-direction: column;
 }
 
 .box {
@@ -17,5 +19,5 @@
 }
 
 .footer {
-  background: white;
+  margin-top: auto;
 }
