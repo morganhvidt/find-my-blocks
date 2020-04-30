@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import { Layout } from "@fmb/components/Layout";
 import { Sidebar } from "@fmb/components/Sidebar";
+import { Settings } from "@fmb/components/Settings";
 
 import data from "@fmb/data/data.json";
 
@@ -9,6 +10,7 @@ import "./demo.css";
 
 const Page = () => {
   const [active, setActive] = useState();
+  const [navOrder, setNavOrder] = useState("a-z");
 
   const wrapper = {
     width: "100%",
@@ -33,10 +35,11 @@ const Page = () => {
             <Sidebar
               blocks={data}
               active={active}
+              order={navOrder}
               onClick={(name) => setActive(name)}
             />
           }
-          settings={<div>Settings</div>}
+          settings={<Settings onNavOrderChange={(val) => setNavOrder(val)} />}
           cards={<div>Cards</div>}
         />
       </div>

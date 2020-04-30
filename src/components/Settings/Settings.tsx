@@ -20,8 +20,8 @@ export const Settings = ({
       >
         <Option value="a-z">Alphabetically (A-Z)</Option>
         <Option value="z-a">Alphabetically (Z-A)</Option>
-        <Option value="high-low">Number of posts (High - Low)</Option>
-        <Option value="a-z">Number of posts (Low - High)</Option>
+        <Option value="high-low">Most Popular</Option>
+        <Option value="low-high">Least Popular</Option>
       </Select>
 
       <Select onChange={(val) => onCardOrderChange(val)} label="Sort cards by:">
