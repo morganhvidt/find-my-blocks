@@ -7,8 +7,8 @@ import t from "prop-types";
 import global from "@theme/theme/global";
 import { Box } from "@fmb/components/Box";
 import { InputText } from "@fmb/components/InputText";
+import { Footer } from "@fmb/components/Footer";
 import { Sidebar } from "../Sidebar";
-import { Footer } from "../Footer";
 import * as styles from "./styles";
 
 export const Layout = ({ children }) => {
@@ -44,7 +44,7 @@ export const Layout = ({ children }) => {
               />
             </Box>
             <Box sx={styles.content}>{children}</Box>
-            <Box sx={{ flex: "0 0 auto", mt: "auto" }}>
+            <Box sx={{ flex: "0 0 auto", mt: "auto", fontSize: "14px" }}>
               <Footer />
             </Box>
           </Box>

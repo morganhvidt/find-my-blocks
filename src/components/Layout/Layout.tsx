@@ -1,6 +1,7 @@
 import React from "react";
 import { Box } from "../Box";
 import { Heading } from "../Heading";
+import { Footer } from "../Footer";
 import styles from "./Layout.module.css";
 
 interface LayoutProps {
@@ -22,7 +23,9 @@ export const Layout = ({ sidebar, settings, title, cards }: LayoutProps) => {
           </Box>
         )}
         {cards && <Box className={styles.box}>{cards}</Box>}
-        <Box className={styles.footer}>FOOTER</Box>
+        <Box className={styles.footer}>
+          <Footer />
+        </Box>
       </Box>
     </Box>
   );
