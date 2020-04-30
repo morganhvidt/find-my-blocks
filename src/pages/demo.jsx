@@ -30,7 +30,7 @@ const Page = () => {
     <div style={wrapper}>
       <div style={container}>
         <Layout
-          title="Find My Blocks"
+          title={active || "Find My Blocks"}
           sidebar={
             <Sidebar
               blocks={data}

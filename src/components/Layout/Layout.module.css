@@ -18,6 +18,11 @@
   margin: 0 0 2em;
 }
 
+.box svg {
+  display: inline-block;
+  margin-left: 0.25em;
+}
+
 .footer {
   margin-top: auto;
 }

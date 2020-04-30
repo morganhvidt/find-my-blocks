@@ -186,6 +186,25 @@ exports[`renders all areas correctly 3`] = `
         className="heading h1"
       >
         title
+        <svg
+          fill="var(--fmb-red--light)"
+          style={
+            Object {
+              "height": 16,
+              "width": "auto",
+            }
+          }
+          viewBox="0 0 73 100"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<path d='M36.7355 0L0 19.2575L0.470968 63.5731L22.8419 76.3341L36.971 100L50.629 76.3341L73 63.6891V19.4896L36.7355 0ZM29.671 64.2691L14.3645 55.6845V35.4988L29.671 44.5476V64.2691ZM21.9 23.4339L36.7355 15.7773L51.3355 23.4339L36.7355 32.0186L21.9 23.4339ZM58.871 55.6845L43.8 64.2691V44.5476L58.871 35.7309V55.6845Z'} />",
+              }
+            }
+          />
+        </svg>
       </h1>
     </div>
     <div

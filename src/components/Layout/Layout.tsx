@@ -1,5 +1,6 @@
 import React from "react";
 import { Box } from "../Box";
+import { Logo } from "../Logo";
 import { Heading } from "../Heading";
 import { Footer } from "../Footer";
 import styles from "./Layout.module.css";
@@ -19,7 +20,10 @@ export const Layout = ({ sidebar, settings, title, cards }: LayoutProps) => {
         {settings && <Box className={styles.box}>{settings}</Box>}
         {title && (
           <Box className={styles.box}>
-            <Heading>{title}</Heading>
+            <Heading>
+              {title}
+              <Logo size={16} version="pin" color="var(--fmb-red--light)" />
+            </Heading>
           </Box>
         )}
         {cards && <Box className={styles.box}>{cards}</Box>}
