@@ -5,9 +5,9 @@ import styles from "./NavigationItem.module.css";
 import { Icon } from "../Icon";
 
 interface NavigationItemProps {
-  label: string;
-  postCount?: number;
-  active?: boolean;
+  label: String;
+  postCount?: Number;
+  active?: Boolean;
   onClick?(): void;
 }
 
