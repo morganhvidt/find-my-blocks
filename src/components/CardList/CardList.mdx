@@ -1,0 +1,38 @@
+---
+name: CardList
+menu: Components
+route: /components/card-list
+---
+
+import { Playground, Props } from "docz";
+import data from '@fmb/data/data.json';
+import { CardList } from "."
+
+
+# CardList
+
+`CardList` is a layout component that is used to display a list of cards. The
+cards will display the information about posts that are used within the 
+"active" block.
+
+## Usage
+
+```ts
+import { CardList } from '../components/CardList';
+```
+
+<Playground>
+    <CardList cards={data[8].posts} />
+</Playground>
+
+## Props
+
+<Props of={ CardList } />
+
+## Empty State
+
+The `CardList` component will render an empty state if there are no `cards` available.
+
+<Playground>
+    <CardList />
+</Playground>

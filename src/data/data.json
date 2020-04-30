@@ -2286,7 +2286,7 @@
       {
         "id": 6393,
         "title": "Contact",
-        "count": 1,
+        "count": 3,
         "isReusable": false,
         "postType": "page",
         "post_url": "https://eddysims.com/contact/",
@@ -2305,7 +2305,7 @@
         "id": 276,
         "title": "Press & Media",
         "count": 1,
-        "isReusable": false,
+        "isReusable": true,
         "postType": "page",
         "post_url": "https://eddysims.com/about/media/",
         "edit_url": "https://eddysims.com/wp-admin/post.php?post=276&action=edit"
@@ -2313,8 +2313,8 @@
       {
         "id": 123,
         "title": "Careers",
-        "count": 1,
-        "isReusable": false,
+        "count": 16,
+        "isReusable": true,
         "postType": "page",
         "post_url": "https://eddysims.com/about/careers/",
         "edit_url": "https://eddysims.com/wp-admin/post.php?post=123&action=edit"
