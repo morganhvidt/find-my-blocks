@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { Layout } from "@fmb/components/Layout";
+import { Sidebar } from "@fmb/components/Sidebar";
+
+import data from "@fmb/data/data.json";
+
 import "./demo.css";
 
 const Page = () => {
+  const [active, setActive] = useState();
+
   const wrapper = {
     width: "100%",
     minHeight: "100vh",
@@ -23,7 +29,13 @@ const Page = () => {
       <div style={container}>
         <Layout
           title="Find My Blocks"
-          sidebar={<div>Sidebar!</div>}
+          sidebar={
+            <Sidebar
+              blocks={data}
+              active={active}
+              onClick={(name) => setActive(name)}
+            />
+          }
           settings={<div>Settings</div>}
           cards={<div>Cards</div>}
         />
