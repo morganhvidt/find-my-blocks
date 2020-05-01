@@ -1,11 +1,14 @@
 .layout {
   display: flex;
+  width: 100%;
+  max-width: 1260px;
+  margin: 4em auto;
 }
 
 .sidebar {
   flex: 1 0 250px;
   max-width: 250px;
-  margin-right: 2em;
+  margin-right: 4em;
 }
 
 .main {
@@ -14,13 +17,15 @@
   flex-direction: column;
 }
 
-.box {
+.box,
+.heading {
   margin: 0 0 2em;
 }
 
-.box svg {
+.heading svg {
   display: inline-block;
   margin-left: 0.25em;
+  vertical-align: baseline;
 }
 
 .footer {

@@ -28,6 +28,11 @@ module.exports = {
     "typescript/no-unused-vars": "warn",
     "react/prop-types": "error",
     "import/no-default-export": "error",
-    "import/no-named-default": "error"
+    "import/no-named-default": "error",
+    "max-lines": [ "error", {
+      "max": 100, 
+      "skipBlankLines": false,
+      "skipComments": false
+    }]
   }
 };

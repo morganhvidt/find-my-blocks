@@ -6,13 +6,7 @@ const fs = require("fs-extra");
 const watch = require("glob-watcher");
 const browserSync = require("browser-sync").create();
 
-/**
- * Set our source directory
- */
 const source = path.join(__dirname, "../src/plugin");
-/**
- * An array of files to glob and watch.
- */
 const watchFiles = [
   `${source}/**/*.php`,
   `${source}/**/*.txt`,
@@ -21,29 +15,18 @@ const watchFiles = [
 
 /**
  * Initilize browser sync
- *
- * @param {boolean} init - Should we init
- * @param {boolean} reload - Should we reload
  */
 const browserInit = () => {
   const { DEV_URL } = process.env;
   browserSync.init({
     proxy: DEV_URL,
-    /**
-     * We change our proxy here to not conflict with docz
-     */
     port: 1234,
-    ui: false,
   });
 };
 
-/**
- * Reload our browser
- */
 const browserReload = () => browserSync.reload();
 
 /**
- *
  * @param {string} from - Path to the original file
  * @param {string} to - Path to destination directory
  * @param {boolean} reload - Should we run browser sync reload
@@ -64,15 +47,13 @@ const moveFile = (from, to, reload = false) => {
 const needsDevUrl = () => {
   console.clear();
   console.log(
-    chalk.red(`STOP 🛑 🛑 🛑
-        \nYou need to set 'DEV_URL' in your .env file before you can 'npm run wordpress'`)
+    chalk.red('🛑 Set "DEV_URL" in your .env file before you can run wordpress')
   );
 };
 
 /**
  * When we build production, we want to get our latest tag and replace some
  * variables throughout PHP.
- *
  * @param {string} dir
  * @param {string} tag
  */
@@ -88,7 +69,6 @@ const updateVersion = (dir, tag) => {
 
 /**
  * Watch a glob of files for changes or additions.
- *
  * @param {string} param0 - deconstructed path of output directory
  */
 const runWatcher = ({ options: { outDir } }) => {
@@ -99,12 +79,10 @@ const runWatcher = ({ options: { outDir } }) => {
 
 /**
  * Build our production code
- *
  * @param {string} dest - output directory
  */
 const build = async (dest) => {
   const stream = fg.stream(watchFiles);
-
   for await (const entry of stream) {
     moveFile(entry, dest);
   }

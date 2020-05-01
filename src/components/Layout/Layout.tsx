@@ -19,7 +19,7 @@ export const Layout = ({ sidebar, settings, title, cards }: LayoutProps) => {
       <Box className={styles.main}>
         {settings && <Box className={styles.box}>{settings}</Box>}
         {title && (
-          <Box className={styles.box}>
+          <Box className={styles.heading}>
             <Heading>
               {title}
               <Logo size={16} version="pin" color="var(--fmb-red--light)" />

@@ -1,4 +1,5 @@
 .styled.select {
+  display: block;
   width: 100%;
   margin: 5px 0 2px;
   padding: 1em 2.75em 1em 0.75em;

@@ -69,6 +69,10 @@ const FindMyBlocks = () => {
           onClick={(name) => {
             localStorage.setItem("fmb_active", name);
             setActive(name);
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            });
           }}
         />
       }

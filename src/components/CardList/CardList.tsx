@@ -66,10 +66,10 @@ export const CardList = ({ cards, order = "a-z" }: CardListProps) => {
         </Content>
 
         <Content spacing="large">
-          <Link icon="edit" url={post.edit_url}>
+          <Link icon="edit" url={post.edit_url} openInNewTab>
             Edit Post
           </Link>
-          <Link icon="eye" url={post.post_url}>
+          <Link icon="eye" url={post.post_url} openInNewTab>
             View Post
           </Link>
         </Content>
