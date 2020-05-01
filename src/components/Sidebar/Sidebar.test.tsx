@@ -74,3 +74,16 @@ it("filters the blocks down when filter is used", () => {
 
   expect(queryByText("core/paragraph")).toBeNull();
 });
+
+it("returns an empty state", () => {
+  const { getByPlaceholderText, queryByText } = render(
+    <Sidebar blocks={data} />
+  );
+
+  const input = getByPlaceholderText("Filter Blocks");
+  fireEvent.change(input, {
+    target: { value: "not a block in sight" },
+  });
+
+  expect(queryByText("No results found")).not.toBeNull();
+});

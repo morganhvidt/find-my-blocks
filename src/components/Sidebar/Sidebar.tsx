@@ -5,6 +5,7 @@ import { Logo } from "../Logo";
 import { InputText } from "../InputText";
 import { Filter } from "../Filter";
 import { NavigationItem } from "../NavigationItem";
+import { Tag } from "../Tag";
 
 import styles from "./Sidebar.module.css";
 
@@ -66,6 +67,16 @@ export const Sidebar = ({
             value={filter}
             match="name"
             renderedResults={(results) => {
+              if (results == undefined || results.length < 1) {
+                return (
+                  <Box className={styles.empty}>
+                    <Tag variation="error" icon="alert-octagon">
+                      No results found
+                    </Tag>
+                  </Box>
+                );
+              }
+
               const blocks = results.map(({ name, posts }) => (
                 <NavigationItem
                   key={name as string}
