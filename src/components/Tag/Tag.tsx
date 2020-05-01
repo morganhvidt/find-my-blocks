@@ -2,11 +2,12 @@ import React from "react";
 import classnames from "classnames";
 
 import { Icon } from "../Icon";
+
 import styles from "./Tag.module.css";
 
 interface TagProps {
   icon?: string;
-  variation: "info" | "warning" | "default";
+  variation: "info" | "warning" | "error" | "default";
   children: React.ReactNode;
 }
 

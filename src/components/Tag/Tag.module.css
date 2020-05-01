@@ -1,10 +1,16 @@
 .tag {
   display: inline-flex;
   align-items: center;
+  padding: 0.4375em 0.5em 0.375em;
   border: 1px solid #ddd;
   border-radius: 2px;
   background: #eee;
   line-height: 1;
+  vertical-align: bottom;
+}
+
+.tag + .tag {
+  margin-left: 0.25em;
 }
 
 .tag.hasIcon {
@@ -36,6 +42,16 @@
 .warning .icon {
   background: #eed202;
   color: #f8efae;
+}
+
+.error {
+  border-color: var(--fmb-red--dark);
+  background: var(--fmb-red);
+  color: var(--fmb-grey--light);
+}
+
+.error .icon {
+  background: var(--fmb-red--dark);
 }
 
 .icon svg {

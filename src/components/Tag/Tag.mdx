@@ -10,7 +10,9 @@ import { Tag } from "."
 
 # Tag
 
-Tag is a component that **you** just made! It's lovely...
+A `Tag` is used to show tiny bits of important information to users. They
+should not consist more then a couple words and when possible have an icon to
+represent what the tag represents.
 
 ## Usage
 
@@ -19,13 +21,12 @@ import { Tag } from '../components/Tag';
 ```
 
 <Playground>
-    <Tag variation="warning" icon="alert-triangle">Reusable</Tag>
+    <Tag variation="default">Default tag</Tag>
+    <Tag variation="info" icon="info">Informational tag</Tag>
+    <Tag variation="warning" icon="alert-triangle">Warning tag</Tag>
+    <Tag variation="error" icon="stop-circle">Error tag</Tag>
 </Playground>
 
 ## Props
 
 <Props of={ Tag } />
-
-## Size
-
-Tag can be displayed at 3 different sizes. How incredible is that?
