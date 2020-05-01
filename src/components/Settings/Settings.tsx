@@ -4,8 +4,8 @@ import { Card } from "../Card";
 import { Select, Option } from "../Select";
 
 interface SettingsProps {
-  onNavOrderChange(result: String): void;
-  onCardOrderChange(result: String): void;
+  onNavOrderChange(result: string): void;
+  onCardOrderChange(result: string): void;
 }
 
 export const Settings = ({

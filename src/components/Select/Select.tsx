@@ -4,7 +4,7 @@ import styles from "./Select.module.css";
 
 interface SelectProps {
   label: string;
-  onChange?(val: String): void;
+  onChange?(val: string): void;
   defaultValue?: string | number | string[] | undefined;
   children: React.ReactNode;
 }

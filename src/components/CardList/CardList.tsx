@@ -10,6 +10,8 @@ import { Heading } from "../Heading";
 
 import styles from "./CardList.module.css";
 
+export type CardOrder = "a-z" | "z-a" | "popular" | "reusable";
+
 interface Post {
   readonly id: string;
   readonly title: string;
@@ -24,7 +26,7 @@ interface CardListProps {
   /**
    * @default 'a-z'
    */
-  readonly order: "a-z" | "z-a" | "popular" | "reusable";
+  readonly order: CardOrder;
 }
 
 export const CardList = ({ cards, order = "a-z" }: CardListProps) => {

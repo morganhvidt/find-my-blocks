@@ -16,7 +16,7 @@ module.exports = {
     es6: true,
     jest: true
   },
-  plugins: ["react", "import"],
+  plugins: ["react", "import", "typescript"],
   parserOptions: {
     ecmaFeatures: {
       jsx: true
@@ -25,6 +25,7 @@ module.exports = {
     sourceType: "module"
   },
   rules: {
+    "typescript/no-unused-vars": "warn",
     "react/prop-types": "error",
     "import/no-default-export": "error",
     "import/no-named-default": "error"

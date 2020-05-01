@@ -6,7 +6,7 @@ import { Footer } from "../Footer";
 import styles from "./Layout.module.css";
 
 interface LayoutProps {
-  readonly title?: string;
+  readonly title?: string | null;
   readonly sidebar?: React.ReactNode;
   readonly settings?: React.ReactNode;
   readonly cards?: React.ReactNode;

@@ -1,1 +1,0 @@
-export { ListOfCards } from "./ListOfCards";

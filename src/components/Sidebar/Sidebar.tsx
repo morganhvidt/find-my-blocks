@@ -9,16 +9,18 @@ import { Tag } from "../Tag";
 
 import styles from "./Sidebar.module.css";
 
+export type SidebarOrder = "a-z" | "z-a" | "low-high" | "high-low";
+
 interface Block {
-  name: String;
+  name: string;
   posts: Array<String>;
 }
 
 interface SidebarProps {
   readonly blocks: Block[];
-  readonly active?: String;
+  readonly active?: string | null;
   readonly order?: "a-z" | "z-a" | "low-high" | "high-low";
-  onClick(name: String): void;
+  onClick(name: string): void;
 }
 
 export const Sidebar = ({
@@ -27,7 +29,7 @@ export const Sidebar = ({
   order = "a-z",
   onClick = () => undefined,
 }: SidebarProps) => {
-  const [filter, setFilter] = useState<String>("");
+  const [filter, setFilter] = useState<string>("");
 
   switch (order) {
     case "a-z":
