@@ -12,6 +12,7 @@ import "./demo.css";
 const Page = () => {
   const [active, setActive] = useState();
   const [navOrder, setNavOrder] = useState("a-z");
+  const [cardOrder, setCardOrder] = useState("a-z");
   const [cards, setCards] = useState([]);
 
   useEffect(() => {
@@ -27,8 +28,6 @@ const Page = () => {
     background: "#f1f1f1",
   };
 
-  console.log(data);
-
   const container = {
     width: "100%",
     maxWidth: "1260px",
@@ -41,7 +40,7 @@ const Page = () => {
     <div style={wrapper}>
       <div style={container}>
         <Layout
-          title={active || "Find My Blocks"}
+          title={active}
           sidebar={
             <Sidebar
               blocks={data}
@@ -50,8 +49,13 @@ const Page = () => {
               onClick={(name) => setActive(name)}
             />
           }
-          settings={<Settings onNavOrderChange={(val) => setNavOrder(val)} />}
-          cards={<CardList cards={cards} />}
+          settings={
+            <Settings
+              onNavOrderChange={(val) => setNavOrder(val)}
+              onCardOrderChange={(val) => setCardOrder(val)}
+            />
+          }
+          cards={<CardList cards={cards} order={cardOrder} />}
         />
       </div>
     </div>

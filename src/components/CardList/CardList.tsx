@@ -21,9 +21,13 @@ interface Post {
 }
 interface CardListProps {
   readonly cards: Array<Post>;
+  /**
+   * @default 'a-z'
+   */
+  readonly order: "a-z" | "z-a" | "popular" | "reusable";
 }
 
-export const CardList = ({ cards }: CardListProps) => {
+export const CardList = ({ cards, order = "a-z" }: CardListProps) => {
   if (cards == undefined || cards.length < 1) {
     return (
       <Box className={styles.empty}>
@@ -32,6 +36,24 @@ export const CardList = ({ cards }: CardListProps) => {
         <Heading level={3}>Please select a block to see more info.</Heading>
       </Box>
     );
+  }
+
+  switch (order) {
+    case "a-z":
+      cards.sort((a: Post, b: Post) => (a.title > b.title ? 1 : -1));
+      break;
+    case "z-a":
+      cards.sort((a: Post, b: Post) => (a.title < b.title ? 1 : -1));
+      break;
+    case "popular":
+      cards.sort((a: Post, b: Post) => (a.count < b.count ? 1 : -1));
+      break;
+    case "reusable":
+      cards.sort((a: Post, b: Post) => (a.isReusable < b.isReusable ? 1 : -1));
+      break;
+    default:
+      cards.sort((a: Post, b: Post) => (a.title > b.title ? 1 : -1));
+      break;
   }
 
   const Cards = cards.map((post) => {
