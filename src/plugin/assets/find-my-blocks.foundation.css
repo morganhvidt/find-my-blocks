@@ -1,7 +1,12 @@
 :root {
   --fmb-red: #ff4b3e;
-  --fmb-red--dark: #d62619;
+  --fmb-red--dark: #eb756d;
   --fmb-red--light: #ff938b;
   --fmb-grey--light: #f8f8f8;
   --wordpress-blue: #007cba;
+
+  /* wordpress colors */
+  --wp-grey--dark: #444;
+  --wp-grey--light: ##f1f1f1;
+  --wp-blue: #007cba;
 }
