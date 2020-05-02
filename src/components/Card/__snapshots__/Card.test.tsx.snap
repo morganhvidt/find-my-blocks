@@ -6,6 +6,7 @@ exports[`Card component should renders correctly 1`] = `
 >
   <div
     className="title"
+    onClick={[Function]}
   >
     Toronto
   </div>

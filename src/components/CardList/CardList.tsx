@@ -24,6 +24,7 @@ interface Post {
 interface CardListProps {
   readonly cards: Array<Post>;
   /**
+   * The order that you would like the cards to appear in.
    * @default 'a-z'
    */
   readonly order: CardOrder;

@@ -14,7 +14,7 @@ import { CardList } from "."
 
 `CardList` is a layout component that is used to display a list of cards. The
 cards will display the information about posts that are used within the 
-"active" block.
+_active_ block.
 
 ## Usage
 
@@ -41,6 +41,7 @@ import { CardList } from '../components/CardList';
                     <input type="radio" name="order" id="reusable" value="reusable" onChange={(e) => setOrder(e.target.value)} />
                     <label htmlFor="reusable">Reusable first</label>
                 </fieldset>
+                <br />
                 <CardList cards={data[8].posts} order={order}/>
             </>
         )
