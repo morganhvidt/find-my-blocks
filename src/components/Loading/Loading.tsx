@@ -1,10 +1,6 @@
 import React from "react";
 import styles from "./Loading.module.css";
 
-interface LoadingProps {
-  children: React.ReactNode;
-}
-
 export const Loading = () => {
   return (
     <div className={styles.loading}>

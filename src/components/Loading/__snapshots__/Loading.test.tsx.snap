@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render correctly 1`] = `
+<div
+  className="loading"
+>
+  <div
+    className="square"
+  />
+  <div
+    className="square"
+  />
+  <div
+    className="square"
+  />
+  <div
+    className="square"
+  />
+  <div
+    className="square"
+  />
+  <div
+    className="square"
+  />
+  <div
+    className="square"
+  />
+</div>
+`;
