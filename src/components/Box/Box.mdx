@@ -10,7 +10,11 @@ import { Box } from "."
 
 # Box
 
-Box is an empty element that takes a classname and a tag. This component is used for layouts.
+`Box` is an empty element a tag and any amount of props you would like to pass
+it. All props passed into a `Box` will be applied to the tag that is used.
+
+It is best practice to only use a `Box` element for layouts. **Do not** use it
+for things like links and paragraphs.
 
 ## Usage
 
@@ -19,8 +23,8 @@ import { Box } from '../components/Box';
 ```
 
 <Playground>
-    <Box>This is a div</Box>
-    <Box tag="span">This is a span</Box>
+    <Box>Just a div</Box>
+    <Box tag="span" className="aClass">Span with a class</Box>
 </Playground>
 
 ## Props
