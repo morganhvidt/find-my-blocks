@@ -4,3 +4,4 @@
 **/public/**
 **/.cache/**
 **/.docz/**
+**/src/**/*.css.d.ts
