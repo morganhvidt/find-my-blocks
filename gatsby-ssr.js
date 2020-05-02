@@ -2,6 +2,12 @@ import React from "react";
 
 export const onRenderBody = ({ setHeadComponents }) => {
   setHeadComponents([
+    <link
+      key="favicon"
+      rel="icon"
+      type="image/png"
+      href="/public/assets/favicon.png"
+    />,
     <script
       key="ga-tag"
       async
