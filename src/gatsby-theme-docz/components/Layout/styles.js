@@ -9,7 +9,7 @@ export const main = {
 
 export const wrapper = {
   ...styles.wrapper,
-  gridTemplateColumns: "1fr 2fr",
+  display: "flex",
 };
 
 export const content = {
@@ -18,6 +18,7 @@ export const content = {
   width: "100%",
   margin: "0 auto",
   p: "3rem 4rem",
+  maxWidth: 768,
 
   [media.tablet]: {
     px: 5,

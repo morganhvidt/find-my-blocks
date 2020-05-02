@@ -35,6 +35,8 @@ export const Layout = ({ children }) => {
               display: "flex",
               flexDirection: "column",
               minHeight: "100vh",
+              flex: "1",
+              minWidth: 640,
             }}
           >
             <Box>
