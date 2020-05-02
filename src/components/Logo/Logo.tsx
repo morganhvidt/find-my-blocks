@@ -3,7 +3,14 @@ import React from "react";
 import { logos } from "./logo.ignore";
 
 interface LogoProps {
+  /**
+   * The version of the logo to display
+   */
   version?: "pin" | "full";
+  /**
+   * Set a custom color for the logo. This should be a
+   * value that can be read by css
+   */
   color?: string;
   /**
    * By default, the logo will fill its area. If you would like to specify
@@ -14,7 +21,7 @@ interface LogoProps {
 
 export const Logo = ({
   version = "full",
-  color = "#FF4B3E",
+  color = "var(--fmb-red)",
   size,
 }: LogoProps) => {
   const createMarkup = (markup: string) => {
