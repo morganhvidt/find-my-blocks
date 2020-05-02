@@ -14,7 +14,6 @@ export const previewWrapper = {
   "> div": {
     border: 0,
     borderRadius: 0,
-    outline: (t) => console.log(t),
   },
 
   "+ div": {

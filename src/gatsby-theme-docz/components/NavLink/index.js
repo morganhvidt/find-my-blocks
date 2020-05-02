@@ -29,7 +29,6 @@ export const NavLink = React.forwardRef(({ item, ...props }, ref) => {
   const isCurrent = item.route === current.route;
   const showHeadings = isCurrent && headings && headings.length > 0;
   const currentHash = getCurrentHash();
-  console.log(props);
   return (
     <React.Fragment>
       <Link
