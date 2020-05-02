@@ -13,7 +13,10 @@ import { Filter } from "."
 
 # Filter
 
-Filter is a component that **you** just made! It's lovely...
+A `Filter` is used to filter down an array of data and render the desired
+results in any format.
+
+The results that are returned should always be `JSX` elements.
 
 ## Usage
 
@@ -25,8 +28,9 @@ import { Filter } from '../components/Filter';
 {() => {
     const [filter, setFilter] = useState('');
     const [teams, setTeams] = useState([]);
+    const url = 'https://cors-anywhere.herokuapp.com/http://data.nba.net/prod/v1/2019/teams.json';
     useEffect(() => {
-        fetch('https://cors-anywhere.herokuapp.com/http://data.nba.net/prod/v1/2019/teams.json', {})
+        fetch(url, {})
             .then(res => res.json())
             .then(({league}) => league.standard.filter( team => team.isNBAFranchise ) )
             .then(data => setTeams(data))
@@ -58,7 +62,3 @@ import { Filter } from '../components/Filter';
 ## Props
 
 <Props of={ Filter } />
-
-## Size
-
-Filter can be displayed at 3 different sizes. How incredible is that?
