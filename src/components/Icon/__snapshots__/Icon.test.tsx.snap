@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Icon component should renders correctly 1`] = `
+exports[`renders correctly 1`] = `
 <svg
   className="feather feather-camera "
   fill="none"
@@ -22,7 +22,7 @@ exports[`Icon component should renders correctly 1`] = `
 </svg>
 `;
 
-exports[`Icon component should renders custom colors 1`] = `
+exports[`renders custom colors 1`] = `
 <svg
   className="feather feather-camera "
   color="#ff0000"
@@ -45,7 +45,7 @@ exports[`Icon component should renders custom colors 1`] = `
 </svg>
 `;
 
-exports[`Icon component should renders custom sizes 1`] = `
+exports[`renders custom sizes 1`] = `
 <svg
   className="feather feather-camera "
   fill="none"
