@@ -4,6 +4,7 @@ import { Box } from "./";
 
 it("render correctly", () => {
   const tree = renderer.create(<Box>Box</Box>).toJSON();
+  expect(tree.type).toBe("div");
   expect(tree).toMatchSnapshot();
 });
 
