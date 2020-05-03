@@ -44,10 +44,7 @@ Array [
       >
         acf/color-cards
       </span>
-      Found in 
-      14
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -77,10 +74,7 @@ Array [
       >
         acf/comparison-chart
       </span>
-      Found in 
-      16
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -110,10 +104,7 @@ Array [
       >
         acf/demand-landing-page
       </span>
-      Found in 
-      86
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -143,10 +134,7 @@ Array [
       >
         acf/featured-integrations
       </span>
-      Found in 
-      2
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -176,10 +164,7 @@ Array [
       >
         acf/image-slider
       </span>
-      Found in 
-      2
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -209,9 +194,7 @@ Array [
       >
         acf/integration-cards
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -241,10 +224,7 @@ Array [
       >
         acf/list-of-links
       </span>
-      Found in 
-      2
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -274,10 +254,7 @@ Array [
       >
         acf/media-and-text
       </span>
-      Found in 
-      49
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -307,9 +284,7 @@ Array [
       >
         acf/our-story
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -339,9 +314,7 @@ Array [
       >
         acf/pricing-chart
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -371,9 +344,7 @@ Array [
       >
         acf/reviews
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -403,10 +374,7 @@ Array [
       >
         acf/star-ratings
       </span>
-      Found in 
-      21
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -436,10 +404,7 @@ Array [
       >
         acf/testimonial-cards
       </span>
-      Found in 
-      4
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -469,9 +434,7 @@ Array [
       >
         acf/testimonial-grid
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -501,10 +464,7 @@ Array [
       >
         acf/two-column-accordion-and-text
       </span>
-      Found in 
-      6
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -534,10 +494,7 @@ Array [
       >
         acf/two-column-media-and-text-slider
       </span>
-      Found in 
-      16
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -567,10 +524,7 @@ Array [
       >
         core/group
       </span>
-      Found in 
-      3
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -600,9 +554,7 @@ Array [
       >
         core/html
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -632,9 +584,7 @@ Array [
       >
         core/media-text
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -664,10 +614,7 @@ Array [
       >
         core/paragraph
       </span>
-      Found in 
-      5
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -697,10 +644,7 @@ Array [
       >
         example/card-swiper
       </span>
-      Found in 
-      5
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -730,9 +674,7 @@ Array [
       >
         example/double-cta
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -762,10 +704,7 @@ Array [
       >
         example/faqs
       </span>
-      Found in 
-      54
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -795,10 +734,7 @@ Array [
       >
         example/full-width-cta
       </span>
-      Found in 
-      33
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -828,9 +764,7 @@ Array [
       >
         example/group-cta
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -860,10 +794,7 @@ Array [
       >
         example/hero-image
       </span>
-      Found in 
-      54
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -893,10 +824,7 @@ Array [
       >
         example/image-video
       </span>
-      Found in 
-      2
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -926,9 +854,7 @@ Array [
       >
         example/instagram-swiper
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -958,9 +884,7 @@ Array [
       >
         example/job-list
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -990,10 +914,7 @@ Array [
       >
         example/jobber-content
       </span>
-      Found in 
-      65
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -1023,10 +944,7 @@ Array [
       >
         example/jobber-content-with-subnav
       </span>
-      Found in 
-      41
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -1056,10 +974,7 @@ Array [
       >
         example/jobber-link-list
       </span>
-      Found in 
-      4
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -1089,10 +1004,7 @@ Array [
       >
         example/list-of-cards
       </span>
-      Found in 
-      25
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -1122,9 +1034,7 @@ Array [
       >
         example/stats
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -1154,10 +1064,7 @@ Array [
       >
         example/sub-navigation
       </span>
-      Found in 
-      6
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -1187,10 +1094,7 @@ Array [
       >
         example/testimonial
       </span>
-      Found in 
-      53
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -1220,10 +1124,7 @@ Array [
       >
         example/text-image-banner
       </span>
-      Found in 
-      41
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -1253,9 +1154,7 @@ Array [
       >
         example/text-swiper
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -1285,9 +1184,7 @@ Array [
       >
         example/three-column-content
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -1317,9 +1214,7 @@ Array [
       >
         example/upcoming-events
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -1388,10 +1283,7 @@ Array [
       >
         acf/color-cards
       </span>
-      Found in 
-      14
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -1421,10 +1313,7 @@ Array [
       >
         acf/comparison-chart
       </span>
-      Found in 
-      16
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -1454,10 +1343,7 @@ Array [
       >
         acf/demand-landing-page
       </span>
-      Found in 
-      86
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -1487,10 +1373,7 @@ Array [
       >
         acf/featured-integrations
       </span>
-      Found in 
-      2
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -1520,10 +1403,7 @@ Array [
       >
         acf/image-slider
       </span>
-      Found in 
-      2
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -1553,9 +1433,7 @@ Array [
       >
         acf/integration-cards
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -1585,10 +1463,7 @@ Array [
       >
         acf/list-of-links
       </span>
-      Found in 
-      2
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -1618,10 +1493,7 @@ Array [
       >
         acf/media-and-text
       </span>
-      Found in 
-      49
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -1651,9 +1523,7 @@ Array [
       >
         acf/our-story
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -1683,9 +1553,7 @@ Array [
       >
         acf/pricing-chart
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -1715,9 +1583,7 @@ Array [
       >
         acf/reviews
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -1747,10 +1613,7 @@ Array [
       >
         acf/star-ratings
       </span>
-      Found in 
-      21
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -1780,10 +1643,7 @@ Array [
       >
         acf/testimonial-cards
       </span>
-      Found in 
-      4
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -1813,9 +1673,7 @@ Array [
       >
         acf/testimonial-grid
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -1845,10 +1703,7 @@ Array [
       >
         acf/two-column-accordion-and-text
       </span>
-      Found in 
-      6
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -1878,10 +1733,7 @@ Array [
       >
         acf/two-column-media-and-text-slider
       </span>
-      Found in 
-      16
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -1911,10 +1763,7 @@ Array [
       >
         core/group
       </span>
-      Found in 
-      3
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -1944,9 +1793,7 @@ Array [
       >
         core/html
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -1976,9 +1823,7 @@ Array [
       >
         core/media-text
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -2008,10 +1853,7 @@ Array [
       >
         core/paragraph
       </span>
-      Found in 
-      5
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -2041,10 +1883,7 @@ Array [
       >
         example/card-swiper
       </span>
-      Found in 
-      5
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -2074,9 +1913,7 @@ Array [
       >
         example/double-cta
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -2106,10 +1943,7 @@ Array [
       >
         example/faqs
       </span>
-      Found in 
-      54
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -2139,10 +1973,7 @@ Array [
       >
         example/full-width-cta
       </span>
-      Found in 
-      33
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -2172,9 +2003,7 @@ Array [
       >
         example/group-cta
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -2204,10 +2033,7 @@ Array [
       >
         example/hero-image
       </span>
-      Found in 
-      54
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -2237,10 +2063,7 @@ Array [
       >
         example/image-video
       </span>
-      Found in 
-      2
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -2270,9 +2093,7 @@ Array [
       >
         example/instagram-swiper
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -2302,9 +2123,7 @@ Array [
       >
         example/job-list
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -2334,10 +2153,7 @@ Array [
       >
         example/jobber-content
       </span>
-      Found in 
-      65
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -2367,10 +2183,7 @@ Array [
       >
         example/jobber-content-with-subnav
       </span>
-      Found in 
-      41
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -2400,10 +2213,7 @@ Array [
       >
         example/jobber-link-list
       </span>
-      Found in 
-      4
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -2433,10 +2243,7 @@ Array [
       >
         example/list-of-cards
       </span>
-      Found in 
-      25
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -2466,9 +2273,7 @@ Array [
       >
         example/stats
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -2498,10 +2303,7 @@ Array [
       >
         example/sub-navigation
       </span>
-      Found in 
-      6
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -2531,10 +2333,7 @@ Array [
       >
         example/testimonial
       </span>
-      Found in 
-      53
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -2564,10 +2363,7 @@ Array [
       >
         example/text-image-banner
       </span>
-      Found in 
-      41
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -2597,9 +2393,7 @@ Array [
       >
         example/text-swiper
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -2629,9 +2423,7 @@ Array [
       >
         example/three-column-content
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -2661,9 +2453,7 @@ Array [
       >
         example/upcoming-events
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -2732,10 +2522,7 @@ Array [
       >
         acf/color-cards
       </span>
-      Found in 
-      14
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -2765,10 +2552,7 @@ Array [
       >
         acf/comparison-chart
       </span>
-      Found in 
-      16
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -2798,10 +2582,7 @@ Array [
       >
         acf/demand-landing-page
       </span>
-      Found in 
-      86
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -2831,10 +2612,7 @@ Array [
       >
         acf/featured-integrations
       </span>
-      Found in 
-      2
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -2864,10 +2642,7 @@ Array [
       >
         acf/image-slider
       </span>
-      Found in 
-      2
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -2897,9 +2672,7 @@ Array [
       >
         acf/integration-cards
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -2929,10 +2702,7 @@ Array [
       >
         acf/list-of-links
       </span>
-      Found in 
-      2
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -2962,10 +2732,7 @@ Array [
       >
         acf/media-and-text
       </span>
-      Found in 
-      49
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -2995,9 +2762,7 @@ Array [
       >
         acf/our-story
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -3027,9 +2792,7 @@ Array [
       >
         acf/pricing-chart
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -3059,9 +2822,7 @@ Array [
       >
         acf/reviews
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -3091,10 +2852,7 @@ Array [
       >
         acf/star-ratings
       </span>
-      Found in 
-      21
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -3124,10 +2882,7 @@ Array [
       >
         acf/testimonial-cards
       </span>
-      Found in 
-      4
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -3157,9 +2912,7 @@ Array [
       >
         acf/testimonial-grid
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -3189,10 +2942,7 @@ Array [
       >
         acf/two-column-accordion-and-text
       </span>
-      Found in 
-      6
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -3222,10 +2972,7 @@ Array [
       >
         acf/two-column-media-and-text-slider
       </span>
-      Found in 
-      16
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -3255,10 +3002,7 @@ Array [
       >
         core/group
       </span>
-      Found in 
-      3
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -3288,9 +3032,7 @@ Array [
       >
         core/html
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -3320,9 +3062,7 @@ Array [
       >
         core/media-text
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -3352,10 +3092,7 @@ Array [
       >
         core/paragraph
       </span>
-      Found in 
-      5
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -3385,10 +3122,7 @@ Array [
       >
         example/card-swiper
       </span>
-      Found in 
-      5
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -3418,9 +3152,7 @@ Array [
       >
         example/double-cta
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -3450,10 +3182,7 @@ Array [
       >
         example/faqs
       </span>
-      Found in 
-      54
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -3483,10 +3212,7 @@ Array [
       >
         example/full-width-cta
       </span>
-      Found in 
-      33
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -3516,9 +3242,7 @@ Array [
       >
         example/group-cta
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -3548,10 +3272,7 @@ Array [
       >
         example/hero-image
       </span>
-      Found in 
-      54
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -3581,10 +3302,7 @@ Array [
       >
         example/image-video
       </span>
-      Found in 
-      2
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -3614,9 +3332,7 @@ Array [
       >
         example/instagram-swiper
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -3646,9 +3362,7 @@ Array [
       >
         example/job-list
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -3678,10 +3392,7 @@ Array [
       >
         example/jobber-content
       </span>
-      Found in 
-      65
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -3711,10 +3422,7 @@ Array [
       >
         example/jobber-content-with-subnav
       </span>
-      Found in 
-      41
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -3744,10 +3452,7 @@ Array [
       >
         example/jobber-link-list
       </span>
-      Found in 
-      4
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -3777,10 +3482,7 @@ Array [
       >
         example/list-of-cards
       </span>
-      Found in 
-      25
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -3810,9 +3512,7 @@ Array [
       >
         example/stats
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -3842,10 +3542,7 @@ Array [
       >
         example/sub-navigation
       </span>
-      Found in 
-      6
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -3875,10 +3572,7 @@ Array [
       >
         example/testimonial
       </span>
-      Found in 
-      53
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -3908,10 +3602,7 @@ Array [
       >
         example/text-image-banner
       </span>
-      Found in 
-      41
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -3941,9 +3632,7 @@ Array [
       >
         example/text-swiper
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -3973,9 +3662,7 @@ Array [
       >
         example/three-column-content
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -4005,9 +3692,7 @@ Array [
       >
         example/upcoming-events
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -4076,9 +3761,7 @@ Array [
       >
         example/upcoming-events
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -4108,9 +3791,7 @@ Array [
       >
         example/three-column-content
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -4140,9 +3821,7 @@ Array [
       >
         example/text-swiper
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -4172,10 +3851,7 @@ Array [
       >
         example/text-image-banner
       </span>
-      Found in 
-      41
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -4205,10 +3881,7 @@ Array [
       >
         example/testimonial
       </span>
-      Found in 
-      53
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -4238,10 +3911,7 @@ Array [
       >
         example/sub-navigation
       </span>
-      Found in 
-      6
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -4271,9 +3941,7 @@ Array [
       >
         example/stats
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -4303,10 +3971,7 @@ Array [
       >
         example/list-of-cards
       </span>
-      Found in 
-      25
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -4336,10 +4001,7 @@ Array [
       >
         example/jobber-link-list
       </span>
-      Found in 
-      4
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -4369,10 +4031,7 @@ Array [
       >
         example/jobber-content-with-subnav
       </span>
-      Found in 
-      41
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -4402,10 +4061,7 @@ Array [
       >
         example/jobber-content
       </span>
-      Found in 
-      65
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -4435,9 +4091,7 @@ Array [
       >
         example/job-list
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -4467,9 +4121,7 @@ Array [
       >
         example/instagram-swiper
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -4499,10 +4151,7 @@ Array [
       >
         example/image-video
       </span>
-      Found in 
-      2
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -4532,10 +4181,7 @@ Array [
       >
         example/hero-image
       </span>
-      Found in 
-      54
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -4565,9 +4211,7 @@ Array [
       >
         example/group-cta
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -4597,10 +4241,7 @@ Array [
       >
         example/full-width-cta
       </span>
-      Found in 
-      33
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -4630,10 +4271,7 @@ Array [
       >
         example/faqs
       </span>
-      Found in 
-      54
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -4663,9 +4301,7 @@ Array [
       >
         example/double-cta
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -4695,10 +4331,7 @@ Array [
       >
         example/card-swiper
       </span>
-      Found in 
-      5
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -4728,10 +4361,7 @@ Array [
       >
         core/paragraph
       </span>
-      Found in 
-      5
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -4761,9 +4391,7 @@ Array [
       >
         core/media-text
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -4793,9 +4421,7 @@ Array [
       >
         core/html
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -4825,10 +4451,7 @@ Array [
       >
         core/group
       </span>
-      Found in 
-      3
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -4858,10 +4481,7 @@ Array [
       >
         acf/two-column-media-and-text-slider
       </span>
-      Found in 
-      16
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -4891,10 +4511,7 @@ Array [
       >
         acf/two-column-accordion-and-text
       </span>
-      Found in 
-      6
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -4924,9 +4541,7 @@ Array [
       >
         acf/testimonial-grid
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -4956,10 +4571,7 @@ Array [
       >
         acf/testimonial-cards
       </span>
-      Found in 
-      4
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -4989,10 +4601,7 @@ Array [
       >
         acf/star-ratings
       </span>
-      Found in 
-      21
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -5022,9 +4631,7 @@ Array [
       >
         acf/reviews
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -5054,9 +4661,7 @@ Array [
       >
         acf/pricing-chart
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -5086,9 +4691,7 @@ Array [
       >
         acf/our-story
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -5118,10 +4721,7 @@ Array [
       >
         acf/media-and-text
       </span>
-      Found in 
-      49
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -5151,10 +4751,7 @@ Array [
       >
         acf/list-of-links
       </span>
-      Found in 
-      2
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -5184,9 +4781,7 @@ Array [
       >
         acf/integration-cards
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -5216,10 +4811,7 @@ Array [
       >
         acf/image-slider
       </span>
-      Found in 
-      2
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -5249,10 +4841,7 @@ Array [
       >
         acf/featured-integrations
       </span>
-      Found in 
-      2
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -5282,10 +4871,7 @@ Array [
       >
         acf/demand-landing-page
       </span>
-      Found in 
-      86
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -5315,10 +4901,7 @@ Array [
       >
         acf/comparison-chart
       </span>
-      Found in 
-      16
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -5348,10 +4931,7 @@ Array [
       >
         acf/color-cards
       </span>
-      Found in 
-      14
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -5420,10 +5000,7 @@ Array [
       >
         acf/demand-landing-page
       </span>
-      Found in 
-      86
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -5453,10 +5030,7 @@ Array [
       >
         example/jobber-content
       </span>
-      Found in 
-      65
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -5486,10 +5060,7 @@ Array [
       >
         example/faqs
       </span>
-      Found in 
-      54
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -5519,10 +5090,7 @@ Array [
       >
         example/hero-image
       </span>
-      Found in 
-      54
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -5552,10 +5120,7 @@ Array [
       >
         example/testimonial
       </span>
-      Found in 
-      53
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -5585,10 +5150,7 @@ Array [
       >
         acf/media-and-text
       </span>
-      Found in 
-      49
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -5618,10 +5180,7 @@ Array [
       >
         example/jobber-content-with-subnav
       </span>
-      Found in 
-      41
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -5651,10 +5210,7 @@ Array [
       >
         example/text-image-banner
       </span>
-      Found in 
-      41
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -5684,10 +5240,7 @@ Array [
       >
         example/full-width-cta
       </span>
-      Found in 
-      33
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -5717,10 +5270,7 @@ Array [
       >
         example/list-of-cards
       </span>
-      Found in 
-      25
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -5750,10 +5300,7 @@ Array [
       >
         acf/star-ratings
       </span>
-      Found in 
-      21
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -5783,10 +5330,7 @@ Array [
       >
         acf/comparison-chart
       </span>
-      Found in 
-      16
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -5816,10 +5360,7 @@ Array [
       >
         acf/two-column-media-and-text-slider
       </span>
-      Found in 
-      16
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -5849,10 +5390,7 @@ Array [
       >
         acf/color-cards
       </span>
-      Found in 
-      14
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -5882,10 +5420,7 @@ Array [
       >
         acf/two-column-accordion-and-text
       </span>
-      Found in 
-      6
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -5915,10 +5450,7 @@ Array [
       >
         example/sub-navigation
       </span>
-      Found in 
-      6
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -5948,10 +5480,7 @@ Array [
       >
         core/paragraph
       </span>
-      Found in 
-      5
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -5981,10 +5510,7 @@ Array [
       >
         example/card-swiper
       </span>
-      Found in 
-      5
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -6014,10 +5540,7 @@ Array [
       >
         acf/testimonial-cards
       </span>
-      Found in 
-      4
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -6047,10 +5570,7 @@ Array [
       >
         example/jobber-link-list
       </span>
-      Found in 
-      4
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -6080,10 +5600,7 @@ Array [
       >
         core/group
       </span>
-      Found in 
-      3
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -6113,10 +5630,7 @@ Array [
       >
         acf/featured-integrations
       </span>
-      Found in 
-      2
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -6146,10 +5660,7 @@ Array [
       >
         acf/image-slider
       </span>
-      Found in 
-      2
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -6179,10 +5690,7 @@ Array [
       >
         acf/list-of-links
       </span>
-      Found in 
-      2
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -6212,10 +5720,7 @@ Array [
       >
         example/image-video
       </span>
-      Found in 
-      2
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -6245,9 +5750,7 @@ Array [
       >
         acf/integration-cards
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -6277,9 +5780,7 @@ Array [
       >
         acf/our-story
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -6309,9 +5810,7 @@ Array [
       >
         acf/pricing-chart
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -6341,9 +5840,7 @@ Array [
       >
         acf/reviews
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -6373,9 +5870,7 @@ Array [
       >
         acf/testimonial-grid
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -6405,9 +5900,7 @@ Array [
       >
         core/html
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -6437,9 +5930,7 @@ Array [
       >
         core/media-text
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -6469,9 +5960,7 @@ Array [
       >
         example/double-cta
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -6501,9 +5990,7 @@ Array [
       >
         example/group-cta
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -6533,9 +6020,7 @@ Array [
       >
         example/instagram-swiper
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -6565,9 +6050,7 @@ Array [
       >
         example/job-list
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -6597,9 +6080,7 @@ Array [
       >
         example/stats
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -6629,9 +6110,7 @@ Array [
       >
         example/text-swiper
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -6661,9 +6140,7 @@ Array [
       >
         example/three-column-content
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -6693,9 +6170,7 @@ Array [
       >
         example/upcoming-events
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -6764,9 +6239,7 @@ Array [
       >
         example/upcoming-events
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -6796,9 +6269,7 @@ Array [
       >
         example/three-column-content
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -6828,9 +6299,7 @@ Array [
       >
         example/text-swiper
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -6860,9 +6329,7 @@ Array [
       >
         example/stats
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -6892,9 +6359,7 @@ Array [
       >
         example/job-list
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -6924,9 +6389,7 @@ Array [
       >
         example/instagram-swiper
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -6956,9 +6419,7 @@ Array [
       >
         example/group-cta
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -6988,9 +6449,7 @@ Array [
       >
         example/double-cta
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -7020,9 +6479,7 @@ Array [
       >
         core/media-text
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -7052,9 +6509,7 @@ Array [
       >
         core/html
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -7084,9 +6539,7 @@ Array [
       >
         acf/testimonial-grid
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -7116,9 +6569,7 @@ Array [
       >
         acf/reviews
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -7148,9 +6599,7 @@ Array [
       >
         acf/pricing-chart
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -7180,9 +6629,7 @@ Array [
       >
         acf/our-story
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -7212,9 +6659,7 @@ Array [
       >
         acf/integration-cards
       </span>
-      Found in 
-      1
-       post
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -7244,10 +6689,7 @@ Array [
       >
         example/image-video
       </span>
-      Found in 
-      2
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -7277,10 +6719,7 @@ Array [
       >
         acf/list-of-links
       </span>
-      Found in 
-      2
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -7310,10 +6749,7 @@ Array [
       >
         acf/image-slider
       </span>
-      Found in 
-      2
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -7343,10 +6779,7 @@ Array [
       >
         acf/featured-integrations
       </span>
-      Found in 
-      2
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -7376,10 +6809,7 @@ Array [
       >
         core/group
       </span>
-      Found in 
-      3
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -7409,10 +6839,7 @@ Array [
       >
         example/jobber-link-list
       </span>
-      Found in 
-      4
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -7442,10 +6869,7 @@ Array [
       >
         acf/testimonial-cards
       </span>
-      Found in 
-      4
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -7475,10 +6899,7 @@ Array [
       >
         example/card-swiper
       </span>
-      Found in 
-      5
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -7508,10 +6929,7 @@ Array [
       >
         core/paragraph
       </span>
-      Found in 
-      5
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -7541,10 +6959,7 @@ Array [
       >
         example/sub-navigation
       </span>
-      Found in 
-      6
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -7574,10 +6989,7 @@ Array [
       >
         acf/two-column-accordion-and-text
       </span>
-      Found in 
-      6
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -7607,10 +7019,7 @@ Array [
       >
         acf/color-cards
       </span>
-      Found in 
-      14
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -7640,10 +7049,7 @@ Array [
       >
         acf/two-column-media-and-text-slider
       </span>
-      Found in 
-      16
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -7673,10 +7079,7 @@ Array [
       >
         acf/comparison-chart
       </span>
-      Found in 
-      16
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -7706,10 +7109,7 @@ Array [
       >
         acf/star-ratings
       </span>
-      Found in 
-      21
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -7739,10 +7139,7 @@ Array [
       >
         example/list-of-cards
       </span>
-      Found in 
-      25
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -7772,10 +7169,7 @@ Array [
       >
         example/full-width-cta
       </span>
-      Found in 
-      33
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -7805,10 +7199,7 @@ Array [
       >
         example/text-image-banner
       </span>
-      Found in 
-      41
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -7838,10 +7229,7 @@ Array [
       >
         example/jobber-content-with-subnav
       </span>
-      Found in 
-      41
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -7871,10 +7259,7 @@ Array [
       >
         acf/media-and-text
       </span>
-      Found in 
-      49
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -7904,10 +7289,7 @@ Array [
       >
         example/testimonial
       </span>
-      Found in 
-      53
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -7937,10 +7319,7 @@ Array [
       >
         example/hero-image
       </span>
-      Found in 
-      54
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -7970,10 +7349,7 @@ Array [
       >
         example/faqs
       </span>
-      Found in 
-      54
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -8003,10 +7379,7 @@ Array [
       >
         example/jobber-content
       </span>
-      Found in 
-      65
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
@@ -8036,10 +7409,7 @@ Array [
       >
         acf/demand-landing-page
       </span>
-      Found in 
-      86
-       post
-      s
+      Found in {postCount} post{postCount !== 1 && "s"}
       <svg
         className="feather feather-arrow-right "
         fill="none"
