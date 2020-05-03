@@ -6,7 +6,7 @@ Array [
     className="logo"
   >
     <svg
-      fill="#FF4B3E"
+      fill="var(--fmb-red)"
       style={
         Object {
           "height": 85,
@@ -1350,7 +1350,7 @@ Array [
     className="logo"
   >
     <svg
-      fill="#FF4B3E"
+      fill="var(--fmb-red)"
       style={
         Object {
           "height": 85,
@@ -2694,7 +2694,7 @@ Array [
     className="logo"
   >
     <svg
-      fill="#FF4B3E"
+      fill="var(--fmb-red)"
       style={
         Object {
           "height": 85,
@@ -4038,7 +4038,7 @@ Array [
     className="logo"
   >
     <svg
-      fill="#FF4B3E"
+      fill="var(--fmb-red)"
       style={
         Object {
           "height": 85,
@@ -5382,7 +5382,7 @@ Array [
     className="logo"
   >
     <svg
-      fill="#FF4B3E"
+      fill="var(--fmb-red)"
       style={
         Object {
           "height": 85,
@@ -6726,7 +6726,7 @@ Array [
     className="logo"
   >
     <svg
-      fill="#FF4B3E"
+      fill="var(--fmb-red)"
       style={
         Object {
           "height": 85,

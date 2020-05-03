@@ -53,12 +53,12 @@ exports[`render correctly 1`] = `
         <option
           value="high-low"
         >
-          Number of posts (High - Low)
+          Most Popular
         </option>
         <option
-          value="a-z"
+          value="low-high"
         >
-          Number of posts (Low - High)
+          Least Popular
         </option>
       </select>
     </label>
@@ -81,14 +81,14 @@ exports[`render correctly 1`] = `
           Alphabetically (Z-A)
         </option>
         <option
-          value="high-low"
+          value="popular"
         >
-          Number of posts (High - Low)
+          Popular
         </option>
         <option
-          value="a-z"
+          value="reusable"
         >
-          Number of posts (Low - High)
+          Reusable
         </option>
       </select>
     </label>

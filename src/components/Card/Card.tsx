@@ -5,7 +5,15 @@ import styles from "./Card.module.css";
 
 interface CardProps {
   title?: string;
+  /**
+   * Should the card be able to open and close
+   * @default false
+   */
   toggle?: boolean;
+  /**
+   * Should the card start open of closed
+   * @default true
+   */
   initialOpen?: boolean;
   children: React.ReactNode | React.ReactNode[];
 }

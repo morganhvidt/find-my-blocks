@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Box component should render classNames correctly 1`] = `
+exports[`render classNames correctly 1`] = `
 <div
   className="raptors"
 >
@@ -8,7 +8,7 @@ exports[`Box component should render classNames correctly 1`] = `
 </div>
 `;
 
-exports[`Box component should render correctly 1`] = `
+exports[`render correctly 1`] = `
 <div>
   Box
 </div>

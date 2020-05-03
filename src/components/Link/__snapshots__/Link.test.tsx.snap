@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Link component should can open in a new tab 1`] = `
+exports[`can open in a new tab 1`] = `
 <a
   className="link"
   href="https://eddysims.com"
@@ -10,7 +10,7 @@ exports[`Link component should can open in a new tab 1`] = `
 </a>
 `;
 
-exports[`Link component should render correctly 1`] = `
+exports[`render correctly 1`] = `
 <a
   className="link"
   href="https://eddysims.com"
@@ -20,7 +20,7 @@ exports[`Link component should render correctly 1`] = `
 </a>
 `;
 
-exports[`Link component should will render an icon 1`] = `
+exports[`will render an icon 1`] = `
 <a
   className="link"
   href="https://eddysims.com"

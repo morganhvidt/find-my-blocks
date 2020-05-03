@@ -180,10 +180,11 @@ exports[`renders all areas correctly 3`] = `
     className="main"
   >
     <div
-      className="box"
+      className="heading"
     >
       <h1
         className="heading h1"
+        tag="h1"
       >
         title
         <svg

@@ -610,7 +610,7 @@ exports[`render its empty state correctly 1`] = `
   className="empty"
 >
   <svg
-    fill="#FF4B3E"
+    fill="var(--fmb-red)"
     style={
       Object {
         "height": 150,

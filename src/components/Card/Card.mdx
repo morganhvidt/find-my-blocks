@@ -11,18 +11,34 @@ import { Card } from '.';
 
 # Card
 
+A `Card` is used to display grouped information in a contained area. It is the
+component that is used to display the post information in the `Find My Blocks`
+plugin.
+
+## Usage
+
+```ts
+import { Content } from '../components/Content';
+```
+
 <Playground>
-    <Card title="Toronto Raptors" toggle initialOpen={false}>
+    <Card title="Toronto Raptors" toggle>
         <Content>
-            The Toronto Raptors are a Canadian professional basketball team based in Toronto. The Raptors compete in the National Basketball Association as a member of the league's Eastern Conference Atlantic Division.
+            The Toronto Raptors are a Canadian professional basketball team
+            based in Toronto. The Raptors compete in the National Basketball
+            Association as a member of the league's Eastern Conference Atlantic
+            Division.
         </Content>
         <Content>
-            <Link url="https://www.nba.com/raptors/" icon="globe" openInNewTab>Go Raps!</Link>
-            <Link url="https://eddysims.com" icon="eye" openInNewTab>See another great website</Link>
+            <Link url="https://www.nba.com/raptors/" icon="globe" openInNewTab>
+                Go Raps!
+            </Link>
+            <Link url="https://eddysims.com" icon="eye" openInNewTab>
+                Go Me!
+            </Link>
         </Content>
     </Card>
 </Playground>
-
 
 ## Props
 

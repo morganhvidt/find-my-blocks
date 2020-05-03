@@ -32,7 +32,7 @@ it("fires an event for `onNavOrderChange`", () => {
   const onNavOrderChange = jest.fn();
   const { getByLabelText } = render(
     <Settings
-      onNavOrderChange={() => onNavOrderChange()}
+      onNavOrderChange={(val) => onNavOrderChange(val)}
       onCardOrderChange={() => null}
     />
   );
@@ -42,7 +42,7 @@ it("fires an event for `onNavOrderChange`", () => {
     target: { value: "Test" },
   });
 
-  expect(onNavOrderChange).toHaveBeenCalledTimes(0);
+  expect(onNavOrderChange).toHaveBeenCalled();
 });
 
 it("returns nothing if `onCardOrderChange` is not set", () => {
@@ -68,5 +68,5 @@ it("fires an event for `onCardOrderChange`", () => {
     target: { value: "Test" },
   });
 
-  expect(onCardOrderChange).toHaveBeenCalledTimes(0);
+  expect(onCardOrderChange).toHaveBeenCalled();
 });
