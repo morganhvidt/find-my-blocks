@@ -6,6 +6,7 @@ const Bundler = require("parcel-bundler");
  * Get some functions that we use for WordPress development
  */
 const wordpress = require("./functions");
+const { buildReadme } = require("./buildReadme");
 
 const { OUTDIR, DEV_URL } = process.env;
 const NODE_ENV = argv.env || "production";
@@ -39,7 +40,10 @@ const runBundle = async (files) => {
    */
   if (NODE_ENV === "production") {
     const tag = argv.t || "specify a tag";
-    setTimeout(() => wordpress.updateVersion(bundler.options.outDir, tag), 100);
+    setTimeout(() => {
+      wordpress.updateVersion(bundler.options.outDir, tag);
+      buildReadme();
+    }, 100);
   } else {
     console.clear();
     wordpress.browserInit();
