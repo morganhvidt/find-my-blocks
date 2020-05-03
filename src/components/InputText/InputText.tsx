@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import styles from "./InputText.module.css";
 
 interface InputTextProps {
-  placeholder: string;
-  defaultValue?: string;
-  onChange?(val: string): void;
+  readonly placeholder?: string;
+  readonly defaultValue?: string;
+  onChange(val: string): void;
 }
 
 export const InputText = ({
