@@ -27,3 +27,8 @@ yarn # npm i
 ```sh
 yarn dev # npm run dev
 ```
+
+data updated with
+/** 
+ * https://next.json-generator.com/NyFbl7dFd
+ **/
