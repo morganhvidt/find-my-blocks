@@ -32,6 +32,7 @@
     "predev": "rm -rf .docz & rm -rf .cache",
     "build": "docz build",
     "build:wp": "node ./parcel/parcel.config.js -f './src/plugin/assets/find-my-blocks.tsx'",
+    "serve": "docz serve",
     "lint:js": "eslint --ext js --ext jsx --ext ts --ext tsx .",
     "lint:css": "stylelint 'src/**/*.css'",
     "lint:css:fix": "npm run lint:css -- --fix",

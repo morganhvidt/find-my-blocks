@@ -4,7 +4,7 @@ const defaultFont =
 export default {
   typescript: true,
   port: 3339,
-  files: "src/**/*.{md,markdown,mdx}",
+  src: "src",
   menu: ["Find My Blocks", "Design System", "Components"],
   themeConfig: {
     fonts: {
