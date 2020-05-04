@@ -15,7 +15,7 @@ jobs:
       run: |
         npm install
         npm run build:wp
-        npm run updateBuildTags -- -t ${{ steps.tagName.outputs.tag }}
+        npm run updateBuildTags -- -t $GIT_TAG_NAME
     # - name: WordPress.org plugin asset/readme update
     #   uses: 10up/action-wordpress-plugin-asset-update@master
     #   env:
