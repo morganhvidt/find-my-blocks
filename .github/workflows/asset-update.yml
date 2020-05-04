@@ -9,16 +9,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - name: Get Previous tag
-      id: previoustag
-      uses: "WyriHaximus/github-action-get-previous-tag@master"
-      env:
-        GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+    - uses: olegtarasov/get-tag@v2
+      id: tagName
     - name: Build Readme
       run: |
         npm install
         npm run build:wp
-        npm run updateBuildTags -- -t ${{ steps.previoustag.outputs.tag }}
+        npm run updateBuildTags -- -t ${{ steps.tagName.outputs.tag }}
     # - name: WordPress.org plugin asset/readme update
     #   uses: 10up/action-wordpress-plugin-asset-update@master
     #   env:
