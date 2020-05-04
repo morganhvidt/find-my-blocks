@@ -40,3 +40,13 @@ it("onClick calls the function when clicked", () => {
   fireEvent.click(getByText("test"));
   expect(onClick).toHaveBeenCalledTimes(1);
 });
+
+it("be able to notify a sinle postCount", () => {
+  const { getByText } = render(<NavigationItem label={"test"} postCount={1} />);
+  expect(getByText("Found in 1 post")).not.toBeNull();
+});
+
+it("be able to notify multiple postCounts", () => {
+  const { getByText } = render(<NavigationItem label={"test"} postCount={3} />);
+  expect(getByText("Found in 3 posts")).not.toBeNull();
+});

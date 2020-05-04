@@ -5,6 +5,14 @@ route: /changelog
 
 # Changelog
 
+## 2.0.2
+**May 4th, 2020**
+- Fixed the navigation showing 'Found in 1 postfalse' when only one post found
+
+## 2.0.1
+**May 3rd, 2020**
+- Fixed a bug where the page refresh didn't properly set the active block
+
 ## 2.0.0
 **May 3rd, 2020**
 - Moves Find My Blocks out of the Settings menu and into its own sidebar item

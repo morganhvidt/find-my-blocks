@@ -4,20 +4,20 @@
   padding: 0.75em 3.5em 0.75em 1em;
   transition: color 300ms, background 300ms;
   border: none;
-  border-bottom: 1px solid #f1f1f1;
-  background: #fff;
-  color: #333;
+  border-bottom: 1px solid var(--fmb-grey);
+  background: var(--fmb-white);
+  color: var(--fmb-grey--darkest);
   font-size: 0.875em;
   cursor: pointer;
   appearance: none;
 }
 
 .button:nth-child(2n+2) {
-  background: #fafafa;
+  background: var(--fmb-grey--light);
 }
 
 .button:not(.active):hover {
-  color: #ff4b3e;
+  color: var(--fmb-red);
 }
 
 .button svg {
@@ -43,7 +43,7 @@
 }
 
 .button.active {
-  background: #ff4b3e;
-  color: white;
+  background: var(--fmb-red);
+  color: var(--fmb-white);
   cursor: default;
 }
