@@ -57,14 +57,11 @@ const needsDevUrl = () => {
  * @param {string} dir
  * @param {string} tag
  */
-const updateVersion = (dir, tag) => {
-  fs.readFile(`${dir}/find-my-blocks.php`, "utf8", (err, data) => {
-    if (err) return console.log(err);
-    const result = data.replace(/{% VERSION %}/g, tag);
-    fs.writeFile(`${dir}/find-my-blocks.php`, result, "utf8", (err) => {
-      if (err) return console.log(err);
-    });
-  });
+const updateVersion = async (dir, tag) => {
+  const file = `${dir}/find-my-blocks.php`;
+  let result = fs.readFileSync(file, "utf8", (data) => data);
+  result = result.replace(/{% VERSION %}/g, tag);
+  fs.writeFileSync(file, result, "utf8");
 };
 
 /**
