@@ -49,7 +49,7 @@ const getReadme = async () => {
  */
 const updateReadmeDescription = async (current) => {
   console.log(chalk.bgGreen.black("⮕ Getting the description"));
-  const file = path.join(root, "src/markdown/INDEX.mdx");
+  const file = path.join(root, "src/markdown/Index.mdx");
   let result = getAndReadFile(file);
   result = result.replace(
     `---
