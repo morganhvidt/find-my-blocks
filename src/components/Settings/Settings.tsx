@@ -50,13 +50,12 @@ export const Settings = ({
       text: "Reusable",
     },
   ];
-
   return (
     <Card toggle={true} title="Settings" initialOpen={false}>
       <Select
         onChange={(val) => onNavOrderChange(val)}
-        defaultValue={navOrder}
         label="Sort navigation by:"
+        defaultValue={navOrder}
       >
         {navOptions.map((item) => (
           <Option key={item.value} value={item.value}>

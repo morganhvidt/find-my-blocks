@@ -30,7 +30,6 @@ export const Sidebar = ({
   onClick = () => undefined,
 }: SidebarProps) => {
   const [filter, setFilter] = useState<string>("");
-
   return (
     <>
       <Box className={styles.logo}>

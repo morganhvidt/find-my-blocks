@@ -4,12 +4,14 @@ import styles from "./Select.module.css";
 
 interface SelectProps {
   label?: string;
+  defaultValue?: string;
   onChange?(val: string): void;
   children: React.ReactNode;
 }
 
 export const Select = ({
   label,
+  defaultValue,
   children,
   onChange = () => undefined,
 }: SelectProps) => {
@@ -20,7 +22,7 @@ export const Select = ({
       <select
         className={selectClass}
         onChange={(e) => onChange(e.target.value)}
-        autoComplete="true"
+        defaultValue={defaultValue}
       >
         {children}
       </select>

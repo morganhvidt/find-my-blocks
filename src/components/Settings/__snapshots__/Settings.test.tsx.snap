@@ -37,7 +37,6 @@ exports[`render correctly 1`] = `
     >
       Sort navigation by:
       <select
-        autoComplete="true"
         className="styled select"
         onChange={[Function]}
       >
@@ -68,7 +67,6 @@ exports[`render correctly 1`] = `
     >
       Sort cards by:
       <select
-        autoComplete="true"
         className="styled select"
         onChange={[Function]}
       >
