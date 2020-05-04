@@ -2,20 +2,25 @@ name: Plugin asset/readme update
 on:
   push:
     branches:
-    - master
+    # - master
 jobs:
   master:
     name: Push to master
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
+    - name: 'Get Previous tag'
+        id: previoustag
+        uses: "WyriHaximus/github-action-get-previous-tag@master"
     - name: Build Readme
+      with:
+        version: ${{ steps.previoustag.outputs.tag }}
       run: |
         npm install
         npm run build:wp
-        npm run updateBuildTags
-    - name: WordPress.org plugin asset/readme update
-      uses: 10up/action-wordpress-plugin-asset-update@master
-      env:
-        SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
-        SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+        npm run updateBuildTags -- -t ${{ steps.previoustag.outputs.tag }}
+    # - name: WordPress.org plugin asset/readme update
+    #   uses: 10up/action-wordpress-plugin-asset-update@master
+    #   env:
+    #     SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
+    #     SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
