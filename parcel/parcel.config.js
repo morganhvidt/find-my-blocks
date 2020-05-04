@@ -7,7 +7,6 @@ const path = require("path");
  * Get some functions that we use for WordPress development
  */
 const wordpress = require("./functions");
-const { buildReadme } = require("./buildReadme");
 
 const { OUTDIR, DEV_URL } = process.env;
 const NODE_ENV = argv.env || "production";
@@ -36,16 +35,7 @@ const runBundle = async (files) => {
   await bundler.bundle();
   await wordpress.build(bundler.options.outDir);
 
-  /**
-   * If we are in production mode, run our production build
-   */
-  if (NODE_ENV === "production") {
-    const tag = argv.t || "specify a tag";
-    setTimeout(async () => {
-      await buildReadme();
-      await wordpress.updateVersion(bundler.options.outDir, tag);
-    }, 200);
-  } else {
+  if (NODE_ENV !== "production") {
     console.clear();
     wordpress.browserInit();
     wordpress.runWatcher(bundler);
