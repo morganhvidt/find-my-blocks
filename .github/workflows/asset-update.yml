@@ -2,7 +2,7 @@ name: Plugin asset/readme update
 on:
   push:
     branches:
-    # - master
+    - master
 jobs:
   master:
     name: Push to master
@@ -13,14 +13,13 @@ jobs:
       with:
         repository: 'eddysims/find-my-blocks'
       id: latesttag
-    - run: echo "FMB is at version ${{ steps.latesttag.outputs.tag }}"
-    # - name: Build Readme
-    #   run: |
-    #     npm install
-    #     npm run build:wp
-    #     npm run updateBuildTags -- -t $GIT_TAG_NAME
-    # - name: WordPress.org plugin asset/readme update
-    #   uses: 10up/action-wordpress-plugin-asset-update@master
-    #   env:
-    #     SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
-    #     SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+    - name: Build Readme
+      run: |
+        npm install
+        npm run build:wp
+        npm run updateBuildTags -- -t $GIT_TAG_NAME
+    - name: WordPress.org plugin asset/readme update
+      uses: 10up/action-wordpress-plugin-asset-update@master
+      env:
+        SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
+        SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
