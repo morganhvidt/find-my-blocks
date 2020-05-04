@@ -83,7 +83,6 @@ const build = async (dest) => {
   for await (const entry of stream) {
     moveFile(entry, dest);
   }
-  console.log("building");
 };
 
 module.exports = {
