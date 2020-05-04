@@ -13,7 +13,7 @@ jobs:
       run: |
         npm install
         npm run build:wp
-        npm run updateBuildTags -- -t ${GITHUB_REF/refs\/tags\//}
+        npm run updateBuildTags
     - name: WordPress.org plugin asset/readme update
       uses: 10up/action-wordpress-plugin-asset-update@master
       env:
