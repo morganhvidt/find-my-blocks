@@ -9,13 +9,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - uses: olegtarasov/get-tag@v2
-      id: tagName
-    - name: Build Readme
-      run: |
-        npm install
-        npm run build:wp
-        npm run updateBuildTags -- -t $GIT_TAG_NAME
+    - uses: oprypin/find-latest-tag@v1
+      with:
+        repository: 'eddysims/find-my-blocks'
+      id: latesttag
+    - run: echo "FMB is at version ${{ steps.octokit.outputs.tag }}"
+    # - name: Build Readme
+    #   run: |
+    #     npm install
+    #     npm run build:wp
+    #     npm run updateBuildTags -- -t $GIT_TAG_NAME
     # - name: WordPress.org plugin asset/readme update
     #   uses: 10up/action-wordpress-plugin-asset-update@master
     #   env:
