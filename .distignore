@@ -1,6 +1,7 @@
 # This file is used by github actions to make sure that we only deploy the 
 # proper things to WordPress.
 
+/.wordpress-org
 /.cache
 /.docz
 /.git
