@@ -28,16 +28,7 @@ const FindMyBlocks = () => {
   const hasBlocks = blocks != undefined && blocks.length > 1;
 
   useEffect(() => {
-    if (hasBlocks) {
-      const activeBlock = blocks.find((block: Block) => block.name === active);
-      if (activeBlock != undefined && activeBlock.posts.length > 0) {
-        setCards(activeBlock.posts);
-      }
-    }
-  }, [active]);
-
-  useEffect(() => {
-    if (windowWasReloaded()) {
+    if (windowWasReloaded() && hasBlocks) {
       if (localStorage.getItem("fmb_active")) {
         setActive(localStorage.getItem("fmb_active"));
       }
@@ -48,7 +39,16 @@ const FindMyBlocks = () => {
         setCardOrder(localStorage.getItem("fmb_cardOrder") as CardOrder);
       }
     }
-  }, []);
+  }, [blocks]);
+
+  useEffect(() => {
+    if (hasBlocks) {
+      const activeBlock = blocks.find((block: Block) => block.name === active);
+      if (activeBlock != undefined && activeBlock.posts.length > 0) {
+        setCards(activeBlock.posts);
+      }
+    }
+  }, [active]);
 
   if (!hasBlocks) {
     return (
