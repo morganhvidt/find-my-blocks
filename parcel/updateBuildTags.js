@@ -22,7 +22,7 @@ const getAndReadFile = (path) => {
  * Updates the version of the plugin based on the tag
  */
 const updatePluginVersion = async () => {
-  console.log(chalk.bgGreen.black("⮕ Updating plugin version"));
+  console.log(chalk.bgGreen.black(`⮕ Updating plugin version to ${tag}`));
 
   const file = path.join(root, "find-my-blocks.php");
   let result = getAndReadFile(file);
