@@ -1,0 +1,32 @@
+---
+name: Tag
+menu: Components
+route: /components/tag
+---
+
+import { Playground, Props } from "docz";
+import { Tag } from "."
+
+
+# Tag
+
+A `Tag` is used to show tiny bits of important information to users. They
+should not consist more then a couple words and when possible have an icon to
+represent what the tag represents.
+
+## Usage
+
+```ts
+import { Tag } from '../components/Tag';
+```
+
+<Playground>
+    <Tag variation="default">Default tag</Tag>
+    <Tag variation="info" icon="info">Informational tag</Tag>
+    <Tag variation="warning" icon="alert-triangle">Warning tag</Tag>
+    <Tag variation="error" icon="stop-circle">Error tag</Tag>
+</Playground>
+
+## Props
+
+<Props of={ Tag } />

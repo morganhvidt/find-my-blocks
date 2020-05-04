@@ -12,7 +12,7 @@ jobs:
     - name: Build
       run: |
         npm install
-        npm run build -- -t ${GITHUB_REF/refs\/tags\//}
+        npm run build:wp -- -t ${GITHUB_REF/refs\/tags\//}
     - name: WordPress Plugin Deploy
       uses: 10up/action-wordpress-plugin-deploy@master
       env:

@@ -1,0 +1,61 @@
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4375em 0.5em 0.375em;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  background: #eee;
+  line-height: 1;
+  vertical-align: bottom;
+}
+
+.tag + .tag {
+  margin-left: 0.25em;
+}
+
+.tag.hasIcon {
+  padding: 0 0.5em 0 0;
+}
+
+.icon {
+  margin-right: 0.5em;
+  padding: 0.25em 0.5em 0.3125em;
+  background: white;
+}
+
+.info {
+  border-color: #bbe6f3;
+  background: #e5f5fa;
+  color: #29809a;
+}
+
+.info .icon {
+  background: #beeffe;
+}
+
+.warning {
+  border-color: #eed202;
+  background: #f8efae;
+  color: #7d6f04;
+}
+
+.warning .icon {
+  background: #eed202;
+  color: #f8efae;
+}
+
+.error {
+  border-color: var(--fmb-red--dark);
+  background: var(--fmb-red);
+  color: var(--fmb-grey--light);
+}
+
+.error .icon {
+  background: var(--fmb-red--dark);
+}
+
+.icon svg {
+  width: 1.25em;
+  height: 1.25em;
+  vertical-align: middle;
+}

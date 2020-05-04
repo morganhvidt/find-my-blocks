@@ -1,0 +1,64 @@
+---
+name: Filter
+menu: Components
+route: /components/filter
+---
+
+import { Playground, Props } from "docz";
+import { useState, useEffect } from "react";
+import { InputText } from '../InputText';
+import { Card } from '../Card';
+import { Filter } from "."
+
+
+# Filter
+
+A `Filter` is used to filter down an array of data and render the desired
+results in any format.
+
+The results that are returned should always be `JSX` elements.
+
+## Usage
+
+```ts
+import { Filter } from '../components/Filter';
+```
+
+<Playground>
+{() => {
+    const [filter, setFilter] = useState('');
+    const [teams, setTeams] = useState([]);
+    const url = 'https://cors-anywhere.herokuapp.com/http://data.nba.net/prod/v1/2019/teams.json';
+    useEffect(() => {
+        fetch(url, {})
+            .then(res => res.json())
+            .then(({league}) => league.standard.filter( team => team.isNBAFranchise ) )
+            .then(data => setTeams(data))
+    }, [])
+    return (
+        <>
+            <InputText 
+                placeholder="Search for team"
+                onChange={ (val) => setFilter(val) }
+            />
+            <Filter
+                data={teams}
+                value={filter}
+                match="fullName"
+                renderedResults={(results) => {
+                    const teams = results.map(result => (
+                        <Card key={result.nickname}>
+                            The {result.nickname} is in are part of the {result.divName} division.
+                        </Card>
+                    ));
+                    return teams
+                }}
+            />
+        </>
+    )
+}}
+</Playground>
+
+## Props
+
+<Props of={ Filter } />

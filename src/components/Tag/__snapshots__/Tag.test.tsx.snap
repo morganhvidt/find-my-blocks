@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render correctly 1`] = `
+<div
+  className="tag default"
+>
+  Tag
+</div>
+`;
+
+exports[`render different variations 1`] = `
+<div
+  className="tag default"
+>
+  Tag
+</div>
+`;
+
+exports[`render different variations 2`] = `
+<div
+  className="tag info"
+>
+  Tag
+</div>
+`;
+
+exports[`render different variations 3`] = `
+<div
+  className="tag warning"
+>
+  Tag
+</div>
+`;
+
+exports[`render different variations 4`] = `
+<div
+  className="tag error"
+>
+  Tag
+</div>
+`;
+
+exports[`render with an icon 1`] = `
+<div
+  className="tag default hasIcon"
+>
+  <div
+    className="icon"
+  >
+    <svg
+      className="feather feather-play "
+      fill="none"
+      height={24}
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      viewBox="0 0 24 24"
+      width={24}
+    >
+      <g
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<polygon points=\\"5 3 19 12 5 21 5 3\\"></polygon>",
+          }
+        }
+      />
+    </svg>
+  </div>
+  Tag
+</div>
+`;

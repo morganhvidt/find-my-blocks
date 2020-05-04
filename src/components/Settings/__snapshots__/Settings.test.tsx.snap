@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render correctly 1`] = `
+<div
+  className="card"
+>
+  <div
+    className="title togglable"
+    onClick={[Function]}
+  >
+    Settings
+    <svg
+      className="feather feather-chevron-down "
+      fill="none"
+      height={24}
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      viewBox="0 0 24 24"
+      width={24}
+    >
+      <g
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<polyline points=\\"6 9 12 15 18 9\\"></polyline>",
+          }
+        }
+      />
+    </svg>
+  </div>
+  <div
+    className="body hidden"
+  >
+    <label
+      className="label"
+    >
+      Sort navigation by:
+      <select
+        className="styled select"
+        onChange={[Function]}
+      >
+        <option
+          value="a-z"
+        >
+          Alphabetically (A-Z)
+        </option>
+        <option
+          value="z-a"
+        >
+          Alphabetically (Z-A)
+        </option>
+        <option
+          value="high-low"
+        >
+          Most Popular
+        </option>
+        <option
+          value="low-high"
+        >
+          Least Popular
+        </option>
+      </select>
+    </label>
+    <label
+      className="label"
+    >
+      Sort cards by:
+      <select
+        className="styled select"
+        onChange={[Function]}
+      >
+        <option
+          value="a-z"
+        >
+          Alphabetically (A-Z)
+        </option>
+        <option
+          value="z-a"
+        >
+          Alphabetically (Z-A)
+        </option>
+        <option
+          value="popular"
+        >
+          Popular
+        </option>
+        <option
+          value="reusable"
+        >
+          Reusable
+        </option>
+      </select>
+    </label>
+  </div>
+</div>
+`;

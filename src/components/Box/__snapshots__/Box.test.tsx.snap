@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render classNames correctly 1`] = `
+<div
+  className="raptors"
+>
+  Box
+</div>
+`;
+
+exports[`render correctly 1`] = `
+<div>
+  Box
+</div>
+`;

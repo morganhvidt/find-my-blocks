@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render correctly 1`] = `
+<a
+  className="button"
+  onClick={[Function]}
+>
+  <span
+    className="label"
+  >
+    label
+  </span>
+  <svg
+    className="feather feather-arrow-right "
+    fill="none"
+    height={24}
+    stroke="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth="2"
+    viewBox="0 0 24 24"
+    width={24}
+  >
+    <g
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<line x1=\\"5\\" y1=\\"12\\" x2=\\"19\\" y2=\\"12\\"></line><polyline points=\\"12 5 19 12 12 19\\"></polyline>",
+        }
+      }
+    />
+  </svg>
+</a>
+`;
+
+exports[`renders active correctly 1`] = `
+<a
+  className="button active"
+  onClick={[Function]}
+>
+  <span
+    className="label"
+  >
+    label
+  </span>
+  <svg
+    className="feather feather-arrow-right "
+    fill="none"
+    height={24}
+    stroke="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth="2"
+    viewBox="0 0 24 24"
+    width={24}
+  >
+    <g
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<line x1=\\"5\\" y1=\\"12\\" x2=\\"19\\" y2=\\"12\\"></line><polyline points=\\"12 5 19 12 12 19\\"></polyline>",
+        }
+      }
+    />
+  </svg>
+</a>
+`;
+
+exports[`renders postCount correctly 1`] = `
+<a
+  className="button active"
+  onClick={[Function]}
+>
+  <span
+    className="label"
+  >
+    label
+  </span>
+  Found in 5 posts
+  <svg
+    className="feather feather-arrow-right "
+    fill="none"
+    height={24}
+    stroke="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth="2"
+    viewBox="0 0 24 24"
+    width={24}
+  >
+    <g
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<line x1=\\"5\\" y1=\\"12\\" x2=\\"19\\" y2=\\"12\\"></line><polyline points=\\"12 5 19 12 12 19\\"></polyline>",
+        }
+      }
+    />
+  </svg>
+</a>
+`;

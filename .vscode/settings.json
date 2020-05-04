@@ -1,10 +1,15 @@
 {
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
   "eslint.enable": true,
   "eslint.packageManager": "npm",
-  "editor.codeActionsOnSave": {
-		"source.fixAll": true,
-		"source.fixAll.eslint": true
-	},
   "workbench.colorCustomizations": {
     "statusBar.background": "#ff4b3e",
     "statusBarItem.hoverBackground": "#eed202",
@@ -13,4 +18,19 @@
   "phpcs.enable": true,
   "phpcs.executablePath": "./vendor/bin/phpcs",
   "phpcs.standard": "WordPress",
+  "files.exclude": {
+    ".cache": true,
+    /**
+     * show the content of the docz dev site
+     **/
+    ".docz": true,
+    /**
+     * coverage stats from jest - gitignored
+    **/
+    "coverage": true,
+    /**
+     * node modules
+     **/
+    "node_modules": true,
+  },
 }

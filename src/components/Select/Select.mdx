@@ -1,0 +1,35 @@
+---
+name: Select
+menu: Components
+route: /components/select
+---
+
+import { Playground, Props } from "docz";
+import { Select, Option } from "."
+
+
+# Select
+
+`Select` helps users choose a value from a defined list of options.
+
+## Usage
+
+```ts
+import { Select, Option } from '../components/Select';
+```
+
+<Playground>
+    <Select onChange={(val) => alert(`My fav NBA team are the ${val}`)}>
+        <Option value="raptors">Toronto</Option>
+        <Option value="lakers" selected>Los Angeles</Option>
+        <Option value="celtics">Boston</Option>
+    </Select>
+</Playground>
+
+## Props
+
+<Props of={ Select } />
+
+## Options
+
+<Props of={ Option } />

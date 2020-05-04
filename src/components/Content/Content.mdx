@@ -1,0 +1,36 @@
+---
+name: Content
+menu: Components
+route: /components/content
+---
+
+import { Playground, Props } from "docz";
+import { Content } from "."
+import { Card } from '../Card'
+import { Link } from '../Link'
+
+
+# Content
+
+Content is used to evenly space out sections of content in a consistent way.
+
+## Usage
+
+```ts
+import { Content } from '../components/Content';
+```
+
+<Playground>
+    <Card>
+     <Content>
+        Toronto Raptors are the greatest basketball team of all time.
+    </Content>
+    <Content>
+        <Link url="https://eddysims.com" icon="globe" openInNewTab>Toronto Raptors</Link>
+    </Content>
+    </Card>
+</Playground>
+
+## Props
+
+<Props of={ Content } />

@@ -1,0 +1,61 @@
+---
+name: CardList
+menu: Components
+route: /components/card-list
+---
+
+import { Playground, Props } from "docz";
+import data from '@fmb/data/data.json';
+import { useState } from 'react';
+import { CardList } from "."
+
+
+# CardList
+
+`CardList` is a layout component that is used to display a list of cards. The
+cards will display the information about posts that are used within the 
+_active_ block.
+
+## Usage
+
+```ts
+import { CardList } from '../components/CardList';
+```
+
+<Playground>
+    {() => {
+        const [order, setOrder] = useState('a-z');
+        return (
+            <> 
+                <fieldset>
+                    <legend>Sort Cards By:</legend>
+                    <input type="radio" name="order" id="a-z" value="a-z" onChange={(e) => setOrder(e.target.value)} />
+                    <label htmlFor="a-z">Alphabetically (A-Z)</label>
+                    <br />
+                    <input type="radio" name="order" id="z-a" value="z-a" onChange={(e) => setOrder(e.target.value)} />
+                    <label htmlFor="z-a">Alphabetically (Z-A)</label>
+                    <br />
+                    <input type="radio" name="order" id="popular" value="popular" onChange={(e) => setOrder(e.target.value)} />
+                    <label htmlFor="popular">Most popular</label>
+                    <br />
+                    <input type="radio" name="order" id="reusable" value="reusable" onChange={(e) => setOrder(e.target.value)} />
+                    <label htmlFor="reusable">Reusable first</label>
+                </fieldset>
+                <br />
+                <CardList cards={data[8].posts} order={order}/>
+            </>
+        )
+    }}
+</Playground>
+
+## Props
+
+<Props of={ CardList } />
+
+## Empty State
+
+The `CardList` component will render an empty state if there are no `cards` available.
+
+<Playground>
+    <CardList />
+</Playground>

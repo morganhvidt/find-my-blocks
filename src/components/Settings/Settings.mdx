@@ -1,0 +1,32 @@
+---
+name: Settings
+menu: Components
+route: /components/settings
+---
+
+import { Playground, Props } from "docz";
+import { Settings } from "."
+
+
+# Settings
+
+`Settings` is a collapsable `<Card />` component that is used to handle all of
+the settings for the plugin. This includes things like card and navigation
+order.
+
+## Usage
+
+```ts
+import { Settings } from '../components/Settings';
+```
+
+<Playground>
+    <Settings
+        onNavOrderChange={(val) => alert(`Sort Nav by ${val}`)}
+        onCardOrderChange={(val) => alert(`Sort cards by ${val}`)}
+    />
+</Playground>
+
+## Props
+
+<Props of={ Settings } />

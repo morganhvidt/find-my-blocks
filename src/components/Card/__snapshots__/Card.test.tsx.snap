@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`becomes togglable with the toggle prop 1`] = `
+<div
+  className="card"
+>
+  <div
+    className="title togglable"
+    onClick={[Function]}
+  >
+    Toronto
+    <svg
+      className="feather feather-chevron-up "
+      fill="none"
+      height={24}
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      viewBox="0 0 24 24"
+      width={24}
+    >
+      <g
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<polyline points=\\"18 15 12 9 6 15\\"></polyline>",
+          }
+        }
+      />
+    </svg>
+  </div>
+  <div
+    className="body"
+  >
+    Go Raps!
+  </div>
+</div>
+`;
+
+exports[`renders correctly 1`] = `
+<div
+  className="card"
+>
+  <div
+    className="title"
+    onClick={[Function]}
+  >
+    Toronto
+  </div>
+  <div
+    className="body"
+  >
+    Go Raps!
+  </div>
+</div>
+`;

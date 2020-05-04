@@ -1,0 +1,33 @@
+.layout {
+  display: flex;
+  width: 100%;
+  max-width: 1260px;
+  margin: 4em auto;
+}
+
+.sidebar {
+  flex: 1 0 250px;
+  max-width: 250px;
+  margin-right: 4em;
+}
+
+.main {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+}
+
+.box,
+.heading {
+  margin: 0 0 2em;
+}
+
+.heading svg {
+  display: inline-block;
+  margin-left: 0.25em;
+  vertical-align: baseline;
+}
+
+.footer {
+  margin-top: auto;
+}

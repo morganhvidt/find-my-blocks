@@ -1,6 +1,0 @@
-.layout {
-  box-sizing: border-box;
-  display: flex;
-  margin-top: var(--fmb-spacing-large);
-  position: relative;
-}

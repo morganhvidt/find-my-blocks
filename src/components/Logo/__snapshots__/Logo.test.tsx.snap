@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render blank if no version is found 1`] = `null`;
+
+exports[`render correctly 1`] = `
+<svg
+  fill="var(--fmb-red)"
+  style={
+    Object {
+      "height": undefined,
+      "width": "auto",
+    }
+  }
+  viewBox="0 0 0 0"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <g
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "<path />",
+      }
+    }
+  />
+</svg>
+`;
+
+exports[`render pin version 1`] = `
+<svg
+  fill="var(--fmb-red)"
+  style={
+    Object {
+      "height": undefined,
+      "width": "auto",
+    }
+  }
+  viewBox="0 0 0 0"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <g
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "<path />",
+      }
+    }
+  />
+</svg>
+`;
