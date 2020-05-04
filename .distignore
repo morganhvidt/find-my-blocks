@@ -1,0 +1,36 @@
+# This file is used by github actions to make sure that we only deploy the 
+# proper things to WordPress.
+
+/.cache
+/.docz
+/.git
+/.github
+/.vscode
+
+/__mocks__
+/coverage
+/node_modules
+/parcel
+/public
+/src
+/templates
+
+.distignore
+.editorconfig
+.env
+.env.sample
+.eslintignore
+.eslintrc.js
+.gitignore
+.postcssrc
+.stylelintrc.json
+babel.config.js
+doczrc.js
+gatsby-node.js
+gatsby-ssr.js
+jest.config.js
+package-lock.json
+package.json
+plopfile.js
+README.md
+tsconfig.json

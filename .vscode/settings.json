@@ -18,19 +18,4 @@
   "phpcs.enable": true,
   "phpcs.executablePath": "./vendor/bin/phpcs",
   "phpcs.standard": "WordPress",
-  "files.exclude": {
-    ".cache": true,
-    /**
-     * show the content of the docz dev site
-     **/
-    ".docz": true,
-    /**
-     * coverage stats from jest - gitignored
-    **/
-    "coverage": true,
-    /**
-     * node modules
-     **/
-    "node_modules": true,
-  },
 }
