@@ -37,7 +37,7 @@ it("does nothing no onClick is set", () => {
 
   const { getByText } = render(<Sidebar blocks={data} />);
 
-  fireEvent.click(getByText("core/group"));
+  fireEvent.click(getByText("nba/fortean_plasto"));
   expect(onClick).toHaveBeenCalledTimes(0);
 });
 
@@ -55,9 +55,9 @@ it("onClick returns the name of the item that was clicked", () => {
     />
   );
 
-  fireEvent.click(getByText("core/group"));
+  fireEvent.click(getByText("nba/fortean_plasto"));
   expect(onClick).toHaveBeenCalledTimes(1);
-  expect(s).toBe("core/group");
+  expect(s).toBe("nba/fortean_plasto");
 });
 
 it("filters the blocks down when filter is used", () => {
@@ -65,14 +65,14 @@ it("filters the blocks down when filter is used", () => {
     <Sidebar blocks={data} />
   );
 
-  expect(queryByText("core/paragraph")).not.toBeNull();
+  expect(queryByText("nba/fortean_plasto")).not.toBeNull();
 
   const input = getByPlaceholderText("Filter Blocks");
   fireEvent.change(input, {
     target: { value: "core/group" },
   });
 
-  expect(queryByText("core/paragraph")).toBeNull();
+  expect(queryByText("nba/fortean_plasto")).toBeNull();
 });
 
 it("returns an empty state", () => {

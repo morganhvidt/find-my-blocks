@@ -74,7 +74,7 @@ exports[`renders postCount correctly 1`] = `
   >
     label
   </span>
-  Found in {postCount} post{postCount !== 1 && "s"}
+  Found in 5 posts
   <svg
     className="feather feather-arrow-right "
     fill="none"

@@ -37,7 +37,7 @@ const FindMyBlocks = () => {
   }, [active]);
 
   useEffect(() => {
-    if (windowWasReloaded() && hasBlocks) {
+    if (windowWasReloaded()) {
       if (localStorage.getItem("fmb_active")) {
         setActive(localStorage.getItem("fmb_active"));
       }
@@ -48,7 +48,7 @@ const FindMyBlocks = () => {
         setCardOrder(localStorage.getItem("fmb_cardOrder") as CardOrder);
       }
     }
-  }, [blocks]);
+  }, []);
 
   if (!hasBlocks) {
     return (
@@ -78,6 +78,8 @@ const FindMyBlocks = () => {
       }
       settings={
         <Settings
+          navOrder={navOrder}
+          cardOrder={cardOrder}
           onNavOrderChange={(val: SidebarOrder) => {
             localStorage.setItem("fmb_navOrder", val);
             setNavOrder(val);

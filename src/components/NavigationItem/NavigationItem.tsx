@@ -23,7 +23,7 @@ export const NavigationItem = ({
   return (
     <a className={buttonClass} onClick={() => onClick()}>
       <span className={labelClass}>{label}</span>
-      {postCount && `Found in {postCount} post{postCount !== 1 && "s"}`}
+      {postCount && `Found in ${postCount} post${postCount !== 1 && "s"}`}
       <Icon icon="arrow-right" />
     </a>
   );

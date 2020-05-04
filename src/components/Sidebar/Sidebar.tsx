@@ -31,28 +31,6 @@ export const Sidebar = ({
 }: SidebarProps) => {
   const [filter, setFilter] = useState<string>("");
 
-  switch (order) {
-    case "a-z":
-      blocks.sort((a: Block, b: Block) => (a.name > b.name ? 1 : -1));
-      break;
-    case "z-a":
-      blocks.sort((a: Block, b: Block) => (a.name < b.name ? 1 : -1));
-      break;
-    case "low-high":
-      blocks.sort((a: Block, b: Block) =>
-        a.posts.length > b.posts.length ? 1 : -1
-      );
-      break;
-    case "high-low":
-      blocks.sort((a: Block, b: Block) =>
-        a.posts.length < b.posts.length ? 1 : -1
-      );
-      break;
-    default:
-      blocks.sort((a: Block, b: Block) => (a.name > b.name ? 1 : -1));
-      break;
-  }
-
   return (
     <>
       <Box className={styles.logo}>
@@ -78,8 +56,8 @@ export const Sidebar = ({
                   </Box>
                 );
               }
-
-              const blocks = results.map(({ name, posts }) => (
+              const sorted = sortResults(results, order);
+              const blocks = sorted.map(({ name, posts }) => (
                 <NavigationItem
                   key={name as string}
                   label={name}
@@ -97,3 +75,18 @@ export const Sidebar = ({
     </>
   );
 };
+
+function sortResults(d: any, order: string) {
+  if (order === "a-z") {
+    d.sort((a: Block, b: Block) => (a.name > b.name ? 1 : -1));
+  } else if (order === "z-a") {
+    d.sort((a: Block, b: Block) => (a.name < b.name ? 1 : -1));
+  } else if (order === "low-high") {
+    d.sort((a: Block, b: Block) => (a.posts.length > b.posts.length ? 1 : -1));
+  } else if (order === "high-low") {
+    d.sort((a: Block, b: Block) => (a.posts.length < b.posts.length ? 1 : -1));
+  } else {
+    d.sort((a: Block, b: Block) => (a.name > b.name ? 1 : -1));
+  }
+  return d;
+}
