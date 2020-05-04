@@ -13,7 +13,7 @@ jobs:
       with:
         repository: 'eddysims/find-my-blocks'
       id: latesttag
-    - run: echo "FMB is at version ${{ steps.octokit.outputs.tag }}"
+    - run: echo "FMB is at version ${{ steps.latesttag.outputs.tag }}"
     # - name: Build Readme
     #   run: |
     #     npm install
