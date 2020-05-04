@@ -1,6 +1,7 @@
 require("dotenv").config();
 const argv = require("minimist")(process.argv.slice(2));
 const Bundler = require("parcel-bundler");
+const path = require("path");
 
 /**
  * Get some functions that we use for WordPress development
@@ -25,7 +26,7 @@ if (NEED_DEV_URL) wordpress.needsDevUrl();
  */
 const runBundle = async (files) => {
   const options = {
-    outDir: NODE_ENV !== "production" ? OUTDIR : "./",
+    outDir: NODE_ENV !== "production" ? OUTDIR : path.join(__dirname, "../"),
     sourceMaps: NODE_ENV !== "production",
     production: NODE_ENV === "production",
     hmr: false,
@@ -40,10 +41,10 @@ const runBundle = async (files) => {
    */
   if (NODE_ENV === "production") {
     const tag = argv.t || "specify a tag";
-    setTimeout(() => {
-      wordpress.updateVersion(bundler.options.outDir, tag);
-      buildReadme();
-    }, 100);
+    setTimeout(async () => {
+      await buildReadme();
+      await wordpress.updateVersion(bundler.options.outDir, tag);
+    }, 200);
   } else {
     console.clear();
     wordpress.browserInit();

@@ -2,10 +2,10 @@ const chalk = require("chalk");
 const fs = require("fs-extra");
 const path = require("path");
 
-const root = path.join(__dirname, "../src/");
+const root = path.join(__dirname, "../");
 
 const getReadme = async () => {
-  const readme = path.join(root, "plugin/readme.txt");
+  const readme = path.join(root, "readme.txt");
   const results = fs.readFileSync(readme, "utf8", (err, data) => {
     if (err || data == undefined) {
       console.log(chalk.red("Something went wrong collecting readme"));
@@ -17,7 +17,7 @@ const getReadme = async () => {
 };
 
 const updateDescription = async (current) => {
-  const description = path.join(root, "markdown/Index.mdx");
+  const description = path.join(root, "src/markdown/Index.mdx");
   let result = fs.readFileSync(description, "utf8", (data) => data);
 
   result = result.replace(
@@ -50,7 +50,7 @@ View a demo of the plugin [here](/demo).
 };
 
 const updateChangelog = async (current) => {
-  const changelog = path.join(root, "markdown/CHANGELOG.md");
+  const changelog = path.join(root, "src/markdown/CHANGELOG.md");
   let result = fs.readFileSync(changelog, "utf8", (data) => data);
 
   result = result.replace(
