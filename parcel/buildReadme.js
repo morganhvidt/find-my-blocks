@@ -50,7 +50,7 @@ View a demo of the plugin [here](/demo).
 };
 
 const updateChangelog = async (current) => {
-  const changelog = path.join(root, "src/markdown/CHANGELOG.md");
+  const changelog = path.join(root, "src/markdown/Changelog.md");
   let result = fs.readFileSync(changelog, "utf8", (data) => data);
 
   result = result.replace(
