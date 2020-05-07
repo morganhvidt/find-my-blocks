@@ -5,8 +5,12 @@ route: /changelog
 
 # Changelog
 
+2.1.0
+- Moves the menu item to **Tools > Find My Blocks**.
+
+
 2.0.2
-- **Release Date: May 4, 2020**
+- **May 4, 2020**
 - Fixed the navigation showing 'Found in 1 postfalse' when only one post found
 
 2.0.1
