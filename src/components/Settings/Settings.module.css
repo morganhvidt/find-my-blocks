@@ -1,11 +1,8 @@
-.small {
-  font-size: 0.5em;
+.select {
+  width: 100%;
 }
 
-.medium {
-  font-size: 1em;
-}
-
-.large {
-  font-size: 2em;
+.select select {
+  width: 100%;
+  max-width: 100%;
 }

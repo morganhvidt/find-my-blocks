@@ -1,3 +1,4 @@
+/* eslint-disable max-lines */
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 
@@ -21,8 +22,9 @@ interface Block {
 
 const FindMyBlocks = () => {
   const [active, setActive] = useState<string | null>("");
-  const [navOrder, setNavOrder] = useState<SidebarOrder>("a-z");
-  const [cardOrder, setCardOrder] = useState<CardOrder>("a-z");
+  const [navOrder, setNavOrder] = useState<SidebarOrder>("az");
+  const [showCoreBlocks, setShowCoreBlocks] = useState<boolean>(false);
+  const [cardOrder, setCardOrder] = useState<CardOrder>("az");
   const [cards, setCards] = useState([]);
   const [blocks] = useBlocks();
   const hasBlocks = blocks != undefined && blocks.length > 1;
@@ -80,6 +82,7 @@ const FindMyBlocks = () => {
         <Settings
           navOrder={navOrder}
           cardOrder={cardOrder}
+          showCoreBlocks={showCoreBlocks}
           onNavOrderChange={(val: SidebarOrder) => {
             localStorage.setItem("fmb_navOrder", val);
             setNavOrder(val);
@@ -88,6 +91,7 @@ const FindMyBlocks = () => {
             localStorage.setItem("fmb_cardOrder", val);
             setCardOrder(val);
           }}
+          onShowCoreBlocksClick={(val) => setShowCoreBlocks(val)}
         />
       }
       cards={<CardList cards={cards} order={cardOrder} />}

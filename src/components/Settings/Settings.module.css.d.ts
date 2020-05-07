@@ -1,7 +1,5 @@
 declare const styles: {
-  readonly "small": string;
-  readonly "medium": string;
-  readonly "large": string;
+  readonly "select": string;
 };
 export = styles;
 

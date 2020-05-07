@@ -9,7 +9,7 @@ import { Tag } from "../Tag";
 
 import styles from "./Sidebar.module.css";
 
-export type SidebarOrder = "a-z" | "z-a" | "low-high" | "high-low";
+export type SidebarOrder = "az" | "za" | "low-high" | "high-low";
 
 interface Block {
   name: string;
@@ -19,14 +19,14 @@ interface Block {
 interface SidebarProps {
   readonly blocks: Block[];
   readonly active?: string | null;
-  readonly order?: "a-z" | "z-a" | "low-high" | "high-low";
+  readonly order?: SidebarOrder;
   onClick(name: string): void;
 }
 
 export const Sidebar = ({
   blocks,
   active,
-  order = "a-z",
+  order = "az",
   onClick = () => undefined,
 }: SidebarProps) => {
   const [filter, setFilter] = useState<string>("");
@@ -76,9 +76,9 @@ export const Sidebar = ({
 };
 
 function sortResults(d: any, order: string) {
-  if (order === "a-z") {
+  if (order === "az") {
     d.sort((a: Block, b: Block) => (a.name > b.name ? 1 : -1));
-  } else if (order === "z-a") {
+  } else if (order === "za") {
     d.sort((a: Block, b: Block) => (a.name < b.name ? 1 : -1));
   } else if (order === "low-high") {
     d.sort((a: Block, b: Block) => (a.posts.length > b.posts.length ? 1 : -1));
