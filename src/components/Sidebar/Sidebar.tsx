@@ -43,7 +43,14 @@ export const Sidebar = ({
             value={filter}
             match="name"
             renderedResults={(results) => {
-              if (results == undefined || results.length < 1) {
+              let sorted = sortResults(results, order);
+              if (!showCoreBlocks) {
+                sorted = sorted.filter(
+                  (block: Block) => !block.name.includes("core/")
+                );
+              }
+
+              if (results == undefined || sorted.length < 1) {
                 return (
                   <Box className={styles.empty}>
                     <Tag variation="error" icon="alert-octagon">
@@ -52,12 +59,7 @@ export const Sidebar = ({
                   </Box>
                 );
               }
-              let sorted = sortResults(results, order);
-              if (!showCoreBlocks) {
-                sorted = sorted.filter(
-                  (block: Block) => !block.name.includes("core/")
-                );
-              }
+
               const blocks = sorted.map(({ name, posts }) => (
                 <NavigationItem
                   key={name as string}
