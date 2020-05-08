@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import { Box } from "../Box";
 import { InputText } from "../InputText";
 import { Filter } from "../Filter";
@@ -18,6 +17,7 @@ interface Block {
 interface SidebarProps {
   readonly blocks: Block[];
   readonly active?: string | null;
+  readonly showCoreBlocks?: boolean;
   readonly order?: SidebarOrder;
   onClick(name: string): void;
 }
@@ -25,6 +25,7 @@ interface SidebarProps {
 export const Sidebar = ({
   blocks,
   active,
+  showCoreBlocks = false,
   order = "az",
   onClick = () => undefined,
 }: SidebarProps) => {
@@ -51,7 +52,12 @@ export const Sidebar = ({
                   </Box>
                 );
               }
-              const sorted = sortResults(results, order);
+              let sorted = sortResults(results, order);
+              if (!showCoreBlocks) {
+                sorted = sorted.filter(
+                  (block: Block) => !block.name.includes("core/")
+                );
+              }
               const blocks = sorted.map(({ name, posts }) => (
                 <NavigationItem
                   key={name as string}

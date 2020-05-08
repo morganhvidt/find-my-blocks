@@ -67,6 +67,7 @@ const FindMyBlocks = () => {
         <Sidebar
           blocks={blocks}
           active={active}
+          showCoreBlocks={showCoreBlocks}
           order={navOrder}
           onClick={(name) => {
             localStorage.setItem("fmb_active", name);

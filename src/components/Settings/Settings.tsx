@@ -76,7 +76,7 @@ export const Settings = ({
         {blockTypes.map(({ type, checked, onChange }) => (
           <ToggleControl
             key={type}
-            label={`${type} blocks`}
+            label={`Show ${type} blocks`}
             checked={checked}
             onChange={(val) => onChange(val)}
           />
