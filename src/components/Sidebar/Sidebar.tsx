@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 import { Box } from "../Box";
-import { Logo } from "../Logo";
 import { InputText } from "../InputText";
 import { Filter } from "../Filter";
 import { NavigationItem } from "../NavigationItem";
@@ -32,9 +31,6 @@ export const Sidebar = ({
   const [filter, setFilter] = useState<string>("");
   return (
     <>
-      <Box className={styles.logo}>
-        <Logo size={85} />
-      </Box>
       <InputText
         placeholder="Filter Blocks"
         onChange={(val) => setFilter(val)}
