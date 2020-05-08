@@ -1,6 +1,6 @@
 import React from "react";
 // @ts-ignore
-import { menu, preformatted, eye } from "@wordpress/icons";
+import { cog } from "@wordpress/icons";
 import {
   Panel,
   PanelRow,
@@ -33,12 +33,20 @@ export const Settings = ({
     { label: "Alphabetically (Z-A)", value: "za" },
   ];
 
+  const blockTypes = [
+    {
+      type: "core",
+      checked: showCoreBlocks,
+      onChange: (val: boolean) => onShowCoreBlocksClick(val),
+    },
+  ];
+
   return (
-    <Panel header="Settings">
-      <PanelBody title="Sort Navigation" icon={menu} initialOpen={true}>
+    <Panel>
+      <PanelBody title="Settings" icon={cog} initialOpen={true}>
         <PanelRow>
           <SelectControl
-            label="Sort Navigation By:"
+            label="Sort navigation:"
             value={navOrder}
             options={[
               ...alphabetical,
@@ -49,29 +57,30 @@ export const Settings = ({
             className={styles.select}
           />
         </PanelRow>
-      </PanelBody>
-      <PanelBody title="Sort Cards" icon={preformatted} initialOpen={true}>
         <PanelRow>
           <SelectControl
-            label="Sort Cards By:"
+            label="Sort cards:"
             value={cardOrder}
             options={[
               ...alphabetical,
-              { label: "Popular", value: "popular" },
-              { label: "Reusable", value: "reusable" },
+              { label: "Most Popular", value: "popular" },
+              { label: "Reusable First", value: "reusable" },
             ]}
             onChange={(val) => onCardOrderChange(val)}
             className={styles.select}
           />
         </PanelRow>
-      </PanelBody>
-      <PanelBody title="Show/Hide Block Types" icon={eye} initialOpen={true}>
-        <ToggleControl
-          label="Core blocks"
-          help="Example: core/paragraph"
-          checked={showCoreBlocks}
-          onChange={(val) => onShowCoreBlocksClick(val)}
-        />
+
+        <h4>Show/hide block types</h4>
+
+        {blockTypes.map(({ type, checked, onChange }) => (
+          <ToggleControl
+            key={type}
+            label={`${type} blocks`}
+            checked={checked}
+            onChange={(val) => onChange(val)}
+          />
+        ))}
       </PanelBody>
     </Panel>
   );
