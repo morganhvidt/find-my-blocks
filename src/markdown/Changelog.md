@@ -7,6 +7,8 @@ route: /changelog
 
 2.1.0
 - Moves the menu item to **Tools > Find My Blocks**.
+- Hides core blocks by default. The option to show and hide core blocks is now in settings.
+- Settings moved from top of blocks to side on wider screens.
 
 
 2.0.2
