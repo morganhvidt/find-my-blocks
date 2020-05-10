@@ -1,9 +1,11 @@
 import React from "react";
+import classnames from "classnames";
 import { Box } from "../Box";
 import { Logo } from "../Logo";
 import { Heading } from "../Heading";
 import { Footer } from "../Footer";
 import styles from "./Layout.module.css";
+import { useThrottledResizeObserver } from "../../hooks";
 
 interface LayoutProps {
   readonly title?: string | null;
@@ -13,8 +15,16 @@ interface LayoutProps {
 }
 
 export const Layout = ({ sidebar, settings, title, cards }: LayoutProps) => {
+  const { ref, width = 1 } = useThrottledResizeObserver();
+  const isLarge = width >= 1215;
+  const isXLarge = width >= 1475;
+  const className = classnames(styles.layout, {
+    [styles.large]: isLarge,
+    [styles.xlarge]: isXLarge,
+  });
+
   return (
-    <Box className={styles.layout}>
+    <div className={className} ref={ref}>
       <Box className={styles.logo}>
         <Logo size={75} />
       </Box>
@@ -29,6 +39,6 @@ export const Layout = ({ sidebar, settings, title, cards }: LayoutProps) => {
       <Box className={styles.footer}>
         <Footer />
       </Box>
-    </Box>
+    </div>
   );
 };

@@ -2,24 +2,22 @@
   display: grid;
   grid-gap: 2em;
   grid-template-areas:
-    'logo null1'
+    'logo .'
     'menu settings'
     'menu heading'
     'menu cards'
-    'menu null2'
+    'menu .'
     'menu footer';
   grid-template-columns: 275px 1fr;
 }
 
-@media (min-width: 1420px) {
-  .layout {
-    grid-template-areas:
-      'logo heading .'
-      'menu cards settings'
-      'menu . settings'
-      'footer footer footer';
-    grid-template-columns: 275px 1fr 250px;
-  }
+.large {
+  grid-template-areas:
+    'logo heading .'
+    'menu cards settings'
+    'menu . settings'
+    'footer footer footer';
+  grid-template-columns: 275px 1fr 250px;
 }
 
 .logo {
@@ -35,31 +33,25 @@
   margin-bottom: 2em;
 }
 
-@media (min-width: 1420px) {
-  .settings {
-    margin-bottom: 0;
-  }
+.large .settings {
+  margin-bottom: 0;
 }
 
 .heading {
   grid-area: heading;
 }
 
-@media (min-width: 1420px) {
-  .heading {
-    align-self: end;
-  }
+.large .heading {
+  align-self: end;
 }
 
 .cards {
   grid-area: cards;
 }
 
-@media (min-width: 1675px) {
-  .cards,
-  .heading {
-    margin-right: 2em;
-  }
+.xlarge .cards,
+.xlarge .heading {
+  margin-right: 2em;
 }
 
 .footer {

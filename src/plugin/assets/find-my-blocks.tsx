@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 
-import { useBlocks } from "../../hooks/blocks";
+import { useBlocks } from "../../hooks";
 import { windowWasReloaded } from "../../helpers/windowWasReloaded";
 
 import { Layout } from "../../components/Layout";
