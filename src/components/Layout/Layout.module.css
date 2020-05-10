@@ -9,6 +9,7 @@
     'menu .'
     'menu footer';
   grid-template-columns: 275px 1fr;
+  margin: 2em 0;
 }
 
 .large {
