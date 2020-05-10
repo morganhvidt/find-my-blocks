@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Find My Blocks!
- * Plugin URI: https://eddysims.com
+ * Plugin URI: https://find-my-blocks.eddysims.com
  * Description: A plugin to find your gutenberg blocks
  * Version: {% VERSION %}
  * Author: Eddy Sims
