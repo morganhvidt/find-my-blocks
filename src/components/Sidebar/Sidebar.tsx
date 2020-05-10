@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-
 import { Box } from "../Box";
-import { Logo } from "../Logo";
 import { InputText } from "../InputText";
 import { Filter } from "../Filter";
 import { NavigationItem } from "../NavigationItem";
@@ -9,7 +7,7 @@ import { Tag } from "../Tag";
 
 import styles from "./Sidebar.module.css";
 
-export type SidebarOrder = "a-z" | "z-a" | "low-high" | "high-low";
+export type SidebarOrder = "az" | "za" | "low-high" | "high-low";
 
 interface Block {
   name: string;
@@ -19,22 +17,21 @@ interface Block {
 interface SidebarProps {
   readonly blocks: Block[];
   readonly active?: string | null;
-  readonly order?: "a-z" | "z-a" | "low-high" | "high-low";
+  readonly showCoreBlocks?: boolean;
+  readonly order?: SidebarOrder;
   onClick(name: string): void;
 }
 
 export const Sidebar = ({
   blocks,
   active,
-  order = "a-z",
+  showCoreBlocks = false,
+  order = "az",
   onClick = () => undefined,
 }: SidebarProps) => {
   const [filter, setFilter] = useState<string>("");
   return (
     <>
-      <Box className={styles.logo}>
-        <Logo size={85} />
-      </Box>
       <InputText
         placeholder="Filter Blocks"
         onChange={(val) => setFilter(val)}
@@ -46,7 +43,14 @@ export const Sidebar = ({
             value={filter}
             match="name"
             renderedResults={(results) => {
-              if (results == undefined || results.length < 1) {
+              let sorted = sortResults(results, order);
+              if (!showCoreBlocks) {
+                sorted = sorted.filter(
+                  (block: Block) => !block.name.includes("core/")
+                );
+              }
+
+              if (results == undefined || sorted.length < 1) {
                 return (
                   <Box className={styles.empty}>
                     <Tag variation="error" icon="alert-octagon">
@@ -55,7 +59,7 @@ export const Sidebar = ({
                   </Box>
                 );
               }
-              const sorted = sortResults(results, order);
+
               const blocks = sorted.map(({ name, posts }) => (
                 <NavigationItem
                   key={name as string}
@@ -76,9 +80,9 @@ export const Sidebar = ({
 };
 
 function sortResults(d: any, order: string) {
-  if (order === "a-z") {
+  if (order === "az") {
     d.sort((a: Block, b: Block) => (a.name > b.name ? 1 : -1));
-  } else if (order === "z-a") {
+  } else if (order === "za") {
     d.sort((a: Block, b: Block) => (a.name < b.name ? 1 : -1));
   } else if (order === "low-high") {
     d.sort((a: Block, b: Block) => (a.posts.length > b.posts.length ? 1 : -1));

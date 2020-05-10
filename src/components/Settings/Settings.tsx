@@ -1,80 +1,89 @@
 import React from "react";
+// @ts-ignore
+import { cog } from "@wordpress/icons";
+import {
+  Panel,
+  PanelRow,
+  PanelBody,
+  SelectControl,
+  ToggleControl,
+} from "@wordpress/components";
 
-import { Card } from "../Card";
-import { Select, Option } from "../Select";
+import styles from "./Settings.module.css";
 
 interface SettingsProps {
   readonly navOrder: string;
   readonly cardOrder: string;
+  readonly showCoreBlocks: boolean;
+  readonly initialOpen: boolean;
   onNavOrderChange(result: string): void;
   onCardOrderChange(result: string): void;
+  onShowCoreBlocksClick(result: boolean): void;
 }
 
 export const Settings = ({
   navOrder,
   cardOrder,
+  showCoreBlocks,
+  initialOpen = true,
   onNavOrderChange = () => undefined,
   onCardOrderChange = () => undefined,
+  onShowCoreBlocksClick = () => undefined,
 }: SettingsProps) => {
   const alphabetical = [
+    { label: "Alphabetically (A-Z)", value: "az" },
+    { label: "Alphabetically (Z-A)", value: "za" },
+  ];
+
+  const blockTypes = [
     {
-      value: "a-z",
-      text: "Alphabetically (A-Z)",
-    },
-    {
-      value: "z-a",
-      text: "Alphabetically (Z-A)",
+      type: "core",
+      checked: showCoreBlocks,
+      onChange: (val: boolean) => onShowCoreBlocksClick(val),
     },
   ];
 
-  const navOptions = [
-    ...alphabetical,
-    {
-      value: "high-low",
-      text: "Most Popular",
-    },
-    {
-      value: "low-high",
-      text: "Least Popular",
-    },
-  ];
-
-  const cardOptions = [
-    ...alphabetical,
-    {
-      value: "popular",
-      text: "Popular",
-    },
-    {
-      value: "reusable",
-      text: "Reusable",
-    },
-  ];
   return (
-    <Card toggle={true} title="Settings" initialOpen={false}>
-      <Select
-        onChange={(val) => onNavOrderChange(val)}
-        label="Sort navigation by:"
-        defaultValue={navOrder}
-      >
-        {navOptions.map((item) => (
-          <Option key={item.value} value={item.value}>
-            {item.text}
-          </Option>
-        ))}
-      </Select>
+    <Panel>
+      <PanelBody title="Settings" icon={cog} initialOpen={initialOpen}>
+        <PanelRow>
+          <SelectControl
+            label="Sort navigation:"
+            value={navOrder}
+            options={[
+              ...alphabetical,
+              { label: "Most Popular", value: "high-low" },
+              { label: "Least Popular", value: "low-high" },
+            ]}
+            onChange={(val) => onNavOrderChange(val)}
+            className={styles.select}
+          />
+        </PanelRow>
+        <PanelRow>
+          <SelectControl
+            label="Sort cards:"
+            value={cardOrder}
+            options={[
+              ...alphabetical,
+              { label: "Most Popular", value: "popular" },
+              { label: "Reusable First", value: "reusable" },
+            ]}
+            onChange={(val) => onCardOrderChange(val)}
+            className={styles.select}
+          />
+        </PanelRow>
 
-      <Select
-        onChange={(val) => onCardOrderChange(val)}
-        label="Sort cards by:"
-        defaultValue={cardOrder}
-      >
-        {cardOptions.map((item) => (
-          <Option key={item.value} value={item.value}>
-            {item.text}
-          </Option>
+        <h4>Show/hide block types</h4>
+
+        {blockTypes.map(({ type, checked, onChange }) => (
+          <ToggleControl
+            key={type}
+            label={`Show ${type} blocks`}
+            checked={checked}
+            onChange={(val) => onChange(val)}
+          />
         ))}
-      </Select>
-    </Card>
+      </PanelBody>
+    </Panel>
   );
 };

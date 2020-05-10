@@ -10,7 +10,7 @@ import { Heading } from "../Heading";
 
 import styles from "./CardList.module.css";
 
-export type CardOrder = "a-z" | "z-a" | "popular" | "reusable";
+export type CardOrder = "az" | "za" | "popular" | "reusable";
 
 interface Post {
   readonly id: string;
@@ -30,7 +30,7 @@ interface CardListProps {
   readonly order: CardOrder;
 }
 
-export const CardList = ({ cards, order = "a-z" }: CardListProps) => {
+export const CardList = ({ cards, order = "az" }: CardListProps) => {
   if (cards == undefined || cards.length < 1) {
     return (
       <Box className={styles.empty}>
@@ -42,10 +42,10 @@ export const CardList = ({ cards, order = "a-z" }: CardListProps) => {
   }
 
   switch (order) {
-    case "a-z":
+    case "az":
       cards.sort((a: Post, b: Post) => (a.title > b.title ? 1 : -1));
       break;
-    case "z-a":
+    case "za":
       cards.sort((a: Post, b: Post) => (a.title < b.title ? 1 : -1));
       break;
     case "popular":

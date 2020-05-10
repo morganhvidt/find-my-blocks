@@ -1,9 +1,11 @@
 import React from "react";
+import classnames from "classnames";
 import { Box } from "../Box";
 import { Logo } from "../Logo";
 import { Heading } from "../Heading";
 import { Footer } from "../Footer";
 import styles from "./Layout.module.css";
+import { useThrottledResizeObserver } from "../../hooks";
 
 interface LayoutProps {
   readonly title?: string | null;
@@ -13,24 +15,30 @@ interface LayoutProps {
 }
 
 export const Layout = ({ sidebar, settings, title, cards }: LayoutProps) => {
+  const { ref, width = 1 } = useThrottledResizeObserver();
+  const isLarge = width >= 1215;
+  const isXLarge = width >= 1475;
+  const className = classnames(styles.layout, {
+    [styles.large]: isLarge,
+    [styles.xlarge]: isXLarge,
+  });
+
   return (
-    <Box className={styles.layout}>
-      {sidebar && <Box className={styles.sidebar}>{sidebar}</Box>}
-      <Box className={styles.main}>
-        {settings && <Box className={styles.box}>{settings}</Box>}
-        {title && (
-          <Box className={styles.heading}>
-            <Heading>
-              {title}
-              <Logo size={16} version="pin" color="var(--fmb-red--light)" />
-            </Heading>
-          </Box>
-        )}
-        {cards && <Box className={styles.box}>{cards}</Box>}
-        <Box className={styles.footer}>
-          <Footer />
-        </Box>
+    <div className={className} ref={ref}>
+      <Box className={styles.logo}>
+        <Logo size={75} />
       </Box>
-    </Box>
+      {sidebar && <Box className={styles.sidebar}>{sidebar}</Box>}
+      {settings && <Box className={styles.settings}>{settings}</Box>}
+      {title && (
+        <Box className={styles.heading}>
+          <Heading>{title}</Heading>
+        </Box>
+      )}
+      {cards && <Box className={styles.cards}>{cards}</Box>}
+      <Box className={styles.footer}>
+        <Footer />
+      </Box>
+    </div>
   );
 };

@@ -1,33 +1,59 @@
 .layout {
-  display: flex;
-  width: 100%;
-  max-width: 1260px;
-  margin: 4em auto;
+  display: grid;
+  grid-gap: 2em;
+  grid-template-areas:
+    'logo .'
+    'menu settings'
+    'menu heading'
+    'menu cards'
+    'menu .'
+    'menu footer';
+  grid-template-columns: 275px 1fr;
+}
+
+.large {
+  grid-template-areas:
+    'logo heading .'
+    'menu cards settings'
+    'menu . settings'
+    'footer footer footer';
+  grid-template-columns: 275px 1fr 250px;
+}
+
+.logo {
+  text-align: center;
 }
 
 .sidebar {
-  flex: 1 0 250px;
-  max-width: 250px;
-  margin-right: 4em;
+  grid-area: menu;
 }
 
-.main {
-  display: flex;
-  flex: 1 0 auto;
-  flex-direction: column;
+.settings {
+  grid-area: settings;
+  margin-bottom: 2em;
 }
 
-.box,
+.large .settings {
+  margin-bottom: 0;
+}
+
 .heading {
-  margin: 0 0 2em;
+  grid-area: heading;
 }
 
-.heading svg {
-  display: inline-block;
-  margin-left: 0.25em;
-  vertical-align: baseline;
+.large .heading {
+  align-self: end;
+}
+
+.cards {
+  grid-area: cards;
+}
+
+.xlarge .cards,
+.xlarge .heading {
+  margin-right: 2em;
 }
 
 .footer {
-  margin-top: auto;
+  grid-area: footer;
 }
