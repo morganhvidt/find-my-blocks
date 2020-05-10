@@ -15,6 +15,7 @@ interface SettingsProps {
   readonly navOrder: string;
   readonly cardOrder: string;
   readonly showCoreBlocks: boolean;
+  readonly initialOpen: boolean;
   onNavOrderChange(result: string): void;
   onCardOrderChange(result: string): void;
   onShowCoreBlocksClick(result: boolean): void;
@@ -24,6 +25,7 @@ export const Settings = ({
   navOrder,
   cardOrder,
   showCoreBlocks,
+  initialOpen = true,
   onNavOrderChange = () => undefined,
   onCardOrderChange = () => undefined,
   onShowCoreBlocksClick = () => undefined,
@@ -43,7 +45,7 @@ export const Settings = ({
 
   return (
     <Panel>
-      <PanelBody title="Settings" icon={cog} initialOpen={true}>
+      <PanelBody title="Settings" icon={cog} initialOpen={initialOpen}>
         <PanelRow>
           <SelectControl
             label="Sort navigation:"
