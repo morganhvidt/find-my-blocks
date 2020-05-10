@@ -10,7 +10,6 @@ route: /changelog
 - Hides core blocks by default. The option to show and hide core blocks is now in settings.
 - Settings moved from top of blocks to side on wider screens.
 
-
 2.0.2
 - **May 4, 2020**
 - Fixed the navigation showing 'Found in 1 postfalse' when only one post found
