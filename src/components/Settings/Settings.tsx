@@ -6,7 +6,7 @@ import {
   PanelRow,
   PanelBody,
   SelectControl,
-  ToggleControl,
+  CheckboxControl,
 } from "@wordpress/components";
 
 import styles from "./Settings.module.css";
@@ -76,7 +76,7 @@ export const Settings = ({
         <h4>Show/hide block types</h4>
 
         {blockTypes.map(({ type, checked, onChange }) => (
-          <ToggleControl
+          <CheckboxControl
             key={type}
             label={`Show ${type} blocks`}
             checked={checked}
