@@ -5,6 +5,9 @@ const projectPlugin = () =>
     onCreateWebpackConfig: ({ stage, loaders, getConfig }) => {
       const config = getConfig();
 
+      /**
+       * Prevents the SSR rendering of components on docz
+       */
       if (stage.includes("html")) {
         config.module.rules.push({
           test: /(?:components)\/.*\.(?:js|jsx|ts|tsx)$/,
