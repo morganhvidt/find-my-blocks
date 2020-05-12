@@ -4,25 +4,27 @@ menu: Components
 route: /components/icon
 ---
 
-import { Playground, Props } from 'docz'
-import { Icon, iconList } from '.'
+import { Playground, Props } from "docz";
+import { Icon, iconList } from ".";
 import icons from "feather-icons-react/build/icons.json";
-
 
 # Icon
 
-Icon is a wrapper component around the [feather-icons-react](https://www.npmjs.com/package/feather-icons-react) package. It uses [Feather Icons](https://feathericons.com/) as a list of icons that are available.
+Icon is a wrapper component around the
+[feather-icons-react](https://www.npmjs.com/package/feather-icons-react)
+package. It uses [Feather Icons](https://feathericons.com/) as a list of icons
+that are available.
 
 ## Usage
 
 ```ts
-import { Icon } from '../components/Icon'
+import { Icon } from "../components/Icon";
 ```
 
 <Playground>
-    <Icon icon="camera" />
-    <Icon icon="camera" size={24} />
-    <Icon icon="camera" color="#f00" />
+  <Icon icon="camera" />
+  <Icon icon="camera" size={24} />
+  <Icon icon="camera" color="#f00" />
 </Playground>
 
 ## Props
@@ -32,27 +34,27 @@ import { Icon } from '../components/Icon'
 ## Icon List
 
 export const IconList = () => {
-    const icons = Object.keys(iconList).map(icon => {
-        return (
-            <tr>
-                <td>{icon}</td>
-                <td><Icon icon={icon} size={20} /></td>
-            </tr>
-        );
-    })
+  const icons = Object.keys(iconList).map((icon) => {
     return (
-        <table>
-            <thead>
-                <tr>
-                    <th>Icon</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                {icons}
-            </tbody>
-        </table>
+      <tr>
+        <td>{icon}</td>
+        <td>
+          <Icon icon={icon} size={20} />
+        </td>
+      </tr>
     );
-}
+  });
+  return (
+    <table>
+      <thead>
+        <tr>
+          <th>Icon</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>{icons}</tbody>
+    </table>
+  );
+};
 
 <IconList />
