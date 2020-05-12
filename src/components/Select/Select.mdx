@@ -5,8 +5,7 @@ route: /components/select
 ---
 
 import { Playground, Props } from "docz";
-import { Select, Option } from "."
-
+import { Select, Option } from ".";
 
 # Select
 
@@ -15,21 +14,23 @@ import { Select, Option } from "."
 ## Usage
 
 ```ts
-import { Select, Option } from '../components/Select';
+import { Select, Option } from "../components/Select";
 ```
 
 <Playground>
-    <Select onChange={(val) => alert(`My fav NBA team are the ${val}`)}>
-        <Option value="raptors">Toronto</Option>
-        <Option value="lakers" selected>Los Angeles</Option>
-        <Option value="celtics">Boston</Option>
-    </Select>
+  <Select onChange={(val) => alert(`My fav NBA team are the ${val}`)}>
+    <Option value="raptors">Toronto</Option>
+    <Option value="lakers" selected>
+      Los Angeles
+    </Option>
+    <Option value="celtics">Boston</Option>
+  </Select>
 </Playground>
 
 ## Props
 
-<Props of={ Select } />
+<Props of={Select} />
 
 ## Options
 
-<Props of={ Option } />
+<Props of={Option} />

@@ -5,8 +5,7 @@ route: /components/settings
 ---
 
 import { Playground, Props } from "docz";
-import { Settings } from "."
-
+import { Settings } from ".";
 
 # Settings
 
@@ -17,16 +16,16 @@ order.
 ## Usage
 
 ```ts
-import { Settings } from '../components/Settings';
+import { Settings } from "../components/Settings";
 ```
 
 <Playground>
-    <Settings
-        onNavOrderChange={(val) => alert(`Sort Nav by ${val}`)}
-        onCardOrderChange={(val) => alert(`Sort cards by ${val}`)}
-    />
+  <Settings
+    onNavOrderChange={(val) => alert(`Sort Nav by ${val}`)}
+    onCardOrderChange={(val) => alert(`Sort cards by ${val}`)}
+  />
 </Playground>
 
 ## Props
 
-<Props of={ Settings } />
+<Props of={Settings} />

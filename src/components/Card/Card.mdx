@@ -4,10 +4,10 @@ menu: Components
 route: /components/card
 ---
 
-import { Playground, Props } from 'docz';
-import { Link } from '../Link';
-import { Content } from '../Content'
-import { Card } from '.';
+import { Playground, Props } from "docz";
+import { Link } from "../Link";
+import { Content } from "../Content";
+import { Card } from ".";
 
 # Card
 
@@ -18,26 +18,25 @@ plugin.
 ## Usage
 
 ```ts
-import { Content } from '../components/Content';
+import { Content } from "../components/Content";
 ```
 
 <Playground>
-    <Card title="Toronto Raptors" toggle>
-        <Content>
-            The Toronto Raptors are a Canadian professional basketball team
-            based in Toronto. The Raptors compete in the National Basketball
-            Association as a member of the league's Eastern Conference Atlantic
-            Division.
-        </Content>
-        <Content>
-            <Link url="https://www.nba.com/raptors/" icon="globe" openInNewTab>
-                Go Raps!
-            </Link>
-            <Link url="https://eddysims.com" icon="eye" openInNewTab>
-                Go Me!
-            </Link>
-        </Content>
-    </Card>
+  <Card title="Toronto Raptors" toggle>
+    <Content>
+      The Toronto Raptors are a Canadian professional basketball team based in
+      Toronto. The Raptors compete in the National Basketball Association as a
+      member of the league's Eastern Conference Atlantic Division.
+    </Content>
+    <Content>
+      <Link url="https://www.nba.com/raptors/" icon="globe" openInNewTab>
+        Go Raps!
+      </Link>
+      <Link url="https://eddysims.com" icon="eye" openInNewTab>
+        Go Me!
+      </Link>
+    </Content>
+  </Card>
 </Playground>
 
 ## Props
