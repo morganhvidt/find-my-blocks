@@ -15,15 +15,9 @@
     }
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx}": [
-      "npm run lint:js"
-    ],
-    "src/**/*.css": [
-      "npm run lint:css:fix"
-    ],
-    "*.{md,mdx}": [
-      "npm run lint:mdx"
-    ]
+    "src/**/*.{js,jsx,ts,tsx}": ["npm run lint:js"],
+    "src/**/*.css": ["npm run lint:css:fix"],
+    "*.{md,mdx}": ["npm run lint:mdx"]
   },
   "scripts": {
     "prestart": "rm -rf .docz & npm run build:cssTypes",
