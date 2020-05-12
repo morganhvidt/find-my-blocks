@@ -16,12 +16,13 @@
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx}": [
-      "npm run lint:js",
-      "git add"
+      "npm run lint:js"
     ],
     "src/**/*.css": [
-      "npm run lint:css:fix",
-      "git add"
+      "npm run lint:css:fix"
+    ],
+    "*.{md,mdx}": [
+      "npm run lint:mdx"
     ]
   },
   "scripts": {
@@ -36,6 +37,7 @@
     "lint:js": "eslint --ext js --ext jsx --ext ts --ext tsx .",
     "lint:css": "stylelint 'src/**/*.css'",
     "lint:css:fix": "npm run lint:css -- --fix",
+    "lint:mdx": "prettier './src/**/*.{md,mdx}' --prose-wrap always --write",
     "prelint": "npm run build:cssTypes",
     "lint": "npm run lint:js & npm run lint:css",
     "test": "jest './src' --verbose --coverage",
@@ -85,7 +87,7 @@
     "parcel-bundler": "^1.12.4",
     "plop": "^2.6.0",
     "postcss-modules": "^1.5.0",
-    "prettier": "^2.0.2",
+    "prettier": "^2.0.5",
     "react-test-renderer": "^16.13.1",
     "stylelint": "^12.0.1",
     "stylelint-config-css-modules": "^2.2.0",
