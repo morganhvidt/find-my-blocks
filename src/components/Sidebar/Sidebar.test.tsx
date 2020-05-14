@@ -3,7 +3,13 @@ import renderer from "react-test-renderer";
 import { cleanup, fireEvent, render } from "@testing-library/react";
 import { Sidebar } from "./";
 
+interface Block {
+  name: string;
+  posts: Array<String>;
+}
+
 import data from "../../data/data.json";
+import { NavigationItem } from "../NavigationItem";
 
 afterEach(cleanup);
 
@@ -16,8 +22,24 @@ it("sorts the order of the blocks properly", () => {
   const tree = renderer
     .create(<Sidebar blocks={data} order="nothing" />)
     .toJSON();
-  const az = renderer.create(<Sidebar blocks={data} order="a-z" />).toJSON();
-  const za = renderer.create(<Sidebar blocks={data} order="z-a" />).toJSON();
+  const az = renderer
+    .create(
+      <Sidebar
+        order="az"
+        blocks={data as any | Block[]}
+        onClick={() => undefined}
+      />
+    )
+    .toJSON();
+  const za = renderer
+    .create(
+      <Sidebar
+        order="za"
+        blocks={data as any | Block[]}
+        onClick={() => undefined}
+      />
+    )
+    .toJSON();
   const highLow = renderer
     .create(<Sidebar blocks={data} order="high-low" />)
     .toJSON();
@@ -86,4 +108,42 @@ it("returns an empty state", () => {
   });
 
   expect(queryByText("No results found")).not.toBeNull();
+});
+
+it("should not show core blocks if `showCoreBlocks` is false", () => {
+  const tree = renderer.create(
+    <Sidebar
+      order="az"
+      blocks={data as any | Block[]}
+      onClick={() => undefined}
+      showCoreBlocks={false}
+    />
+  ).root;
+
+  const items = tree.findAllByType(NavigationItem);
+  let labelString = "";
+  items.forEach((item) => {
+    labelString = `${labelString}, ${item.props.label}`;
+  });
+
+  expect(labelString).not.toContain("core/");
+});
+
+it("should show core blocks if `showCoreBlocks` is true", () => {
+  const tree = renderer.create(
+    <Sidebar
+      order="az"
+      blocks={data as any | Block[]}
+      onClick={() => undefined}
+      showCoreBlocks={true}
+    />
+  ).root;
+
+  const items = tree.findAllByType(NavigationItem);
+  let labelString = "";
+  items.forEach((item) => {
+    labelString = `${labelString}, ${item.props.label}`;
+  });
+
+  expect(labelString).toContain("core/");
 });
