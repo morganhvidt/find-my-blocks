@@ -9,16 +9,10 @@ const projectPlugin = () =>
        * Prevents the SSR rendering of components and hooks on docz
        */
       if (stage.includes("html")) {
-        config.module.rules.push(
-          {
-            test: /(?:components)\/.*\.(?:js|jsx|ts|tsx)$/,
-            use: loaders.null(),
-          },
-          {
-            test: /(?:hooks)\/.*\.(?:js|jsx|ts|tsx)$/,
-            use: loaders.null(),
-          }
-        );
+        config.module.rules.push({
+          test: /@wordpress\/components/,
+          use: loaders.null(),
+        });
       }
     },
   });
