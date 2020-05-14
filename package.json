@@ -15,9 +15,15 @@
     }
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx}": ["npm run lint:js"],
-    "src/**/*.css": ["npm run lint:css:fix"],
-    "*.{md,mdx}": ["npm run lint:mdx"]
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "npm run lint:js"
+    ],
+    "src/**/*.css": [
+      "npm run lint:css:fix"
+    ],
+    "*.{md,mdx}": [
+      "npm run lint:mdx"
+    ]
   },
   "scripts": {
     "prestart": "rm -rf .docz & npm run build:cssTypes",
@@ -47,6 +53,7 @@
     "classnames": "^2.2.6",
     "docz": "^2.3.2-alpha.0",
     "feather-icons-react": "^0.4.1",
+    "lodash": "^4.17.15",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   },
@@ -76,7 +83,6 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^25.2.4",
     "lint-staged": "^10.1.1",
-    "lodash-es": "^4.17.15",
     "minimist": "^1.2.5",
     "parcel-bundler": "^1.12.4",
     "plop": "^2.6.0",

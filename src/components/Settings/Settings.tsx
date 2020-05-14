@@ -30,6 +30,11 @@ export const Settings = ({
   onCardOrderChange = () => undefined,
   onShowCoreBlocksClick = () => undefined,
 }: SettingsProps) => {
+  /**
+   * We must check for window when using @wordpress/components
+   */
+  if (typeof window === "undefined") return <></>;
+
   const alphabetical = [
     { label: "Alphabetically (A-Z)", value: "az" },
     { label: "Alphabetically (Z-A)", value: "za" },
