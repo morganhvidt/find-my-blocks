@@ -70,3 +70,44 @@ it("fires an event for `onCardOrderChange`", () => {
 
   expect(onCardOrderChange).toHaveBeenCalled();
 });
+
+it("fires an event for `onShowCoreBlocksClick`", () => {
+  const onShowCoreBlocksClick = jest.fn();
+  const { getByLabelText } = render(
+    <Settings
+      onShowCoreBlocksClick={() => onShowCoreBlocksClick()}
+      onCardOrderChange={() => undefined}
+      navOrder={""}
+      cardOrder={""}
+      showCoreBlocks={false}
+      initialOpen={true}
+      onNavOrderChange={() => undefined}
+    />
+  );
+
+  const checkbox = getByLabelText("Show core blocks");
+  fireEvent.click(checkbox);
+
+  expect(onShowCoreBlocksClick).toHaveBeenCalled();
+});
+
+it("does nothing if `onShowCoreBlocksClick` not set", () => {
+  const onShowCoreBlocksClick = jest.fn();
+  const { getByLabelText } = render(
+    // Ignoring for purpose of test
+    // @ts-ignore
+    <Settings
+      onCardOrderChange={() => undefined}
+      navOrder={""}
+      cardOrder={""}
+      showCoreBlocks={false}
+      initialOpen={true}
+      onNavOrderChange={() => undefined}
+    />
+  );
+
+  const checkbox = getByLabelText("Show core blocks");
+  fireEvent.click(checkbox);
+
+  expect(onShowCoreBlocksClick).not.toHaveBeenCalled();
+});
