@@ -20,7 +20,7 @@ it("returns nothing if `onNavOrderChange` is not set", () => {
     <Settings onCardOrderChange={() => null} />
   );
 
-  const select = getByLabelText("Sort navigation by:");
+  const select = getByLabelText("Sort navigation:");
   fireEvent.change(select, {
     target: { value: "Test" },
   });
@@ -37,7 +37,7 @@ it("fires an event for `onNavOrderChange`", () => {
     />
   );
 
-  const select = getByLabelText("Sort navigation by:");
+  const select = getByLabelText("Sort navigation:");
   fireEvent.change(select, {
     target: { value: "Test" },
   });
@@ -49,7 +49,7 @@ it("returns nothing if `onCardOrderChange` is not set", () => {
   const onCardOrderChange = jest.fn();
   const { getByLabelText } = render(<Settings />);
 
-  const select = getByLabelText("Sort cards by:");
+  const select = getByLabelText("Sort cards:");
   fireEvent.change(select, {
     target: { value: "Test" },
   });
@@ -63,7 +63,7 @@ it("fires an event for `onCardOrderChange`", () => {
     <Settings onCardOrderChange={() => onCardOrderChange()} />
   );
 
-  const select = getByLabelText("Sort cards by:");
+  const select = getByLabelText("Sort cards:");
   fireEvent.change(select, {
     target: { value: "Test" },
   });
