@@ -8,7 +8,7 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: "Lint"
-    - run:
+    - run: |
       npm install
       npm run lint
   test:
@@ -17,6 +17,6 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: "Test"
-    - run:
+    - run: |
       npm install
       npm run test
