@@ -2,6 +2,12 @@ import React from "react";
 import renderer from "react-test-renderer";
 import { Layout } from "./";
 
+jest.mock("../../hooks", () => ({
+  useThrottledResizeObserver: jest
+    .fn()
+    .mockReturnValue([null, { width: 1, height: 1 }]),
+}));
+
 it("render correctly", () => {
   const tree = renderer.create(<Layout />).toJSON();
   expect(tree).toMatchSnapshot();
