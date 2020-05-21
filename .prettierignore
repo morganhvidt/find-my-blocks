@@ -1,0 +1,8 @@
+**/__mocks__/**
+**/templates/**
+**/node_modules/**
+**/public/**
+**/.cache/**
+**/.docz/**
+**/src/markdown/Index.mdx
+**/src/markdown/Changelog.md
