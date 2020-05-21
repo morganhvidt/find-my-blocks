@@ -57,20 +57,24 @@ name: Find My Blocks
 route: /
 ---
 
-import { Playground, Props } from 'docz';
-import { Logo } from '../components/Logo';
-import { Link } from '../components/Link';
+import { Playground, Props } from "docz";
+import { Logo } from "../components/Logo";
+import { Link } from "../components/Link";
 
 <p>
-    <Logo size={100} />
+  <Logo size={100} />
 </p>
 
-# Find My Blocks`,
+# Find My Blocks
+
+`,
     ""
   );
 
   result = result.replace(
-    `<br />
+    `
+
+<br />
 
 View a demo of the plugin [here](/demo).
 `,
@@ -94,7 +98,9 @@ name: Changelog
 route: /changelog
 ---
 
-# Changelog`,
+# Changelog
+
+`,
     ""
   );
   console.log(chalk.bgGreen.black("⮕ Changelog Updated"));
