@@ -5,6 +5,11 @@ route: /changelog
 
 # Changelog
 
+2.2.0
+
+- Hides the "core-embed" blocks with the "Hide Core Blocks" option.
+- Fixes the broken link when plugin is first activated.
+
 2.1.0
 
 - Moves the menu item to **Tools > Find My Blocks**.
