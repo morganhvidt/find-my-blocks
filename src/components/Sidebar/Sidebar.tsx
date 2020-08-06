@@ -45,9 +45,14 @@ export const Sidebar = ({
             renderedResults={(results) => {
               let sorted = sortResults(results, order);
               if (!showCoreBlocks) {
-                sorted = sorted.filter(
-                  (block: Block) => !block.name.includes("core/")
-                );
+                sorted = sorted.filter((block: Block) => {
+                  if (
+                    !block.name.includes("core/") &&
+                    !block.name.includes("core-embed/")
+                  ) {
+                    return block;
+                  }
+                });
               }
 
               if (results == undefined || sorted.length < 1) {
