@@ -43,8 +43,8 @@ if ( ! function_exists( 'fmb_activation_notice' ) ) :
 							echo sprintf(
 								/* translators: placeholders are used to esc the url of the settings page. */
 								esc_html__( 'Thank you for using Find My Blocks. Go to the %1$s %2$s %3$s to find your blocks.', 'find-my-blocks' ),
-								'<a href="' . esc_url( admin_url( '/options-general.php?page=find-my-blocks' ) ) . '">',
-								esc_html__( 'settings page', 'find-my-blocks' ),
+								'<a href="' . esc_url( admin_url( '/tools.php?page=find-my-blocks' ) ) . '">',
+								esc_html__( 'tools page', 'find-my-blocks' ),
 								'</a>'
 							);
 						?>
