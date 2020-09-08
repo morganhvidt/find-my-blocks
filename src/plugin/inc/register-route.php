@@ -20,8 +20,9 @@ if ( ! function_exists( 'find_my_blocks_register_route' ) ) :
 			'find-my-blocks',
 			'blocks',
 			array(
-				'methods'  => WP_REST_Server::READABLE,
-				'callback' => 'find_my_blocks_route_callback',
+				'methods'             => WP_REST_Server::READABLE,
+				'callback'            => 'find_my_blocks_route_callback',
+				'permission_callback' => '__return_true',
 			)
 		);
 	}
