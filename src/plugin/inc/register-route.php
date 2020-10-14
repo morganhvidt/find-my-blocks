@@ -119,8 +119,8 @@ function find_my_blocks_search_for_block_key( $array, $field, $value ) {
 /**
  * Recursive function to find all blocks.
  *
- * @param Array $block The block to inspect.
- * @param Array $blocks The record of all blocks.
+ * @param Array  $block The block to inspect.
+ * @param Array  $blocks The record of all blocks.
  * @param Object $post The current post.
  */
 function find_blocks( $block, &$blocks, &$post ) {
@@ -139,7 +139,7 @@ function find_blocks( $block, &$blocks, &$post ) {
 		return;
 	}
 
-	foreach ( $block["innerBlocks"] as $inner_block ) {
+	foreach ( $block['innerBlocks'] as $inner_block ) {
 		find_blocks( $inner_block, $blocks, $post );
 	}
 
