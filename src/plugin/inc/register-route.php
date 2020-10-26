@@ -20,8 +20,9 @@ if ( ! function_exists( 'find_my_blocks_register_route' ) ) :
 			'find-my-blocks',
 			'blocks',
 			array(
-				'methods'  => WP_REST_Server::READABLE,
-				'callback' => 'find_my_blocks_route_callback',
+				'methods'             => WP_REST_Server::READABLE,
+				'callback'            => 'find_my_blocks_route_callback',
+				'permission_callback' => '__return_true',
 			)
 		);
 	}
@@ -84,49 +85,7 @@ if ( ! function_exists( 'find_my_blocks_route_callback' ) ) :
 			$post_blocks = parse_blocks( $post->post_content );
 
 			foreach ( $post_blocks as $block ) {
-				/**
-				 * If the block name is blank, skip
-				 */
-				if ( strlen( $block['blockName'] ) === 0 ) {
-					continue;
-				}
-
-				/**
-				 * If the block is reusable, skip
-				 */
-				if ( 'core/block' === $block['blockName'] ) {
-					continue;
-				}
-
-				/**
-				 * If block is not in blocks array, push the
-				 * blockName into the array.
-				 */
-				if ( ! in_array( $block['blockName'], array_column( $blocks, 'name' ), true ) ) {
-					$block_array = array(
-						'name'  => $block['blockName'],
-						'posts' => array(),
-					);
-
-					array_push( $blocks, $block_array );
-				}
-
-				$block_key = find_my_blocks_search_for_block_key( $blocks, 'name', $block['blockName'] );
-
-				if ( ! in_array( $post->ID, array_column( $blocks[ $block_key ]['posts'], 'id' ), true ) ) {
-					$blocks[ $block_key ]['posts'][] = array(
-						'id'         => $post->ID,
-						'title'      => $post->post_title,
-						'count'      => 1,
-						'isReusable' => 'wp_block' === $post->post_type,
-						'postType'   => $post->post_type,
-						'post_url'   => get_permalink( $post->ID ),
-						'edit_url'   => home_url( '/wp-admin/post.php?post=' . $post->ID . '&action=edit' ),
-					);
-				} else {
-					$post_key = find_my_blocks_search_for_block_key( $blocks[ $block_key ]['posts'], 'id', $post->ID );
-					$blocks[ $block_key ]['posts'][ $post_key ]['count']++;
-				}
+				find_blocks( $block, $blocks, $post );
 			}
 		}
 
@@ -155,4 +114,64 @@ function find_my_blocks_search_for_block_key( $array, $field, $value ) {
 		}
 	}
 	return false;
+}
+
+/**
+ * Recursive function to find all blocks.
+ *
+ * @param Array  $block The block to inspect.
+ * @param Array  $blocks The record of all blocks.
+ * @param Object $post The current post.
+ */
+function find_blocks( $block, &$blocks, &$post, $nested_block_name = null ) {
+
+	/**
+	 * If the block name is blank, skip
+	 */
+	if ( strlen( $block['blockName'] ) === 0 ) {
+		return;
+	}
+
+	/**
+	 * If the block is reusable, skip
+	 */
+	if ( 'core/block' === $block['blockName'] ) {
+		return;
+	}
+
+	foreach ( $block['innerBlocks'] as $inner_block ) {
+		find_blocks( $inner_block, $blocks, $post, $block['blockName'] );
+	}
+
+	/**
+	 * If block is not in blocks array, push the
+	 * blockName into the array.
+	 */
+	if ( ! in_array( $block['blockName'], array_column( $blocks, 'name' ), true ) ) {
+		$block_array = array(
+			'name'  => $block['blockName'],
+			'posts' => array(),
+		);
+
+		array_push( $blocks, $block_array );
+	}
+
+	$block_key = find_my_blocks_search_for_block_key( $blocks, 'name', $block['blockName'] );
+
+	if ( ! in_array( $post->ID, array_column( $blocks[ $block_key ]['posts'], 'id' ), true ) ) {
+		$blocks[ $block_key ]['posts'][] = array(
+			'id'              => $post->ID,
+			'title'           => $post->post_title,
+			'count'           => 1,
+			'isReusable'      => 'wp_block' === $post->post_type,
+			'isNested'        => $nested_block_name !== null,
+			'nestedBlockType' => $nested_block_name,
+			'postType'        => $post->post_type,
+			'post_url'        => get_permalink( $post->ID ),
+			'edit_url'        => home_url( '/wp-admin/post.php?post=' . $post->ID . '&action=edit' ),
+		);
+	} else {
+		$post_key = find_my_blocks_search_for_block_key( $blocks[ $block_key ]['posts'], 'id', $post->ID );
+		$blocks[ $block_key ]['posts'][ $post_key ]['count']++;
+	}
 }
