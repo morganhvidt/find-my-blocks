@@ -123,7 +123,7 @@ function find_my_blocks_search_for_block_key( $array, $field, $value ) {
  * @param Array  $blocks The record of all blocks.
  * @param Object $post The current post.
  */
-function find_blocks( $block, &$blocks, &$post ) {
+function find_blocks( $block, &$blocks, &$post, $nested_block_name = null ) {
 
 	/**
 	 * If the block name is blank, skip
@@ -140,7 +140,7 @@ function find_blocks( $block, &$blocks, &$post ) {
 	}
 
 	foreach ( $block['innerBlocks'] as $inner_block ) {
-		find_blocks( $inner_block, $blocks, $post );
+		find_blocks( $inner_block, $blocks, $post, $block['blockName'] );
 	}
 
 	/**
@@ -164,6 +164,8 @@ function find_blocks( $block, &$blocks, &$post ) {
 			'title'      => $post->post_title,
 			'count'      => 1,
 			'isReusable' => 'wp_block' === $post->post_type,
+			'isNested'   => $nested_block_name !== null,
+			'nestedBlockType' => $nested_block_name,
 			'postType'   => $post->post_type,
 			'post_url'   => get_permalink( $post->ID ),
 			'edit_url'   => home_url( '/wp-admin/post.php?post=' . $post->ID . '&action=edit' ),
