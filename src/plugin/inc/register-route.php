@@ -160,15 +160,15 @@ function find_blocks( $block, &$blocks, &$post, $nested_block_name = null ) {
 
 	if ( ! in_array( $post->ID, array_column( $blocks[ $block_key ]['posts'], 'id' ), true ) ) {
 		$blocks[ $block_key ]['posts'][] = array(
-			'id'         => $post->ID,
-			'title'      => $post->post_title,
-			'count'      => 1,
-			'isReusable' => 'wp_block' === $post->post_type,
-			'isNested'   => $nested_block_name !== null,
+			'id'              => $post->ID,
+			'title'           => $post->post_title,
+			'count'           => 1,
+			'isReusable'      => 'wp_block' === $post->post_type,
+			'isNested'        => $nested_block_name !== null,
 			'nestedBlockType' => $nested_block_name,
-			'postType'   => $post->post_type,
-			'post_url'   => get_permalink( $post->ID ),
-			'edit_url'   => home_url( '/wp-admin/post.php?post=' . $post->ID . '&action=edit' ),
+			'postType'        => $post->post_type,
+			'post_url'        => get_permalink( $post->ID ),
+			'edit_url'        => home_url( '/wp-admin/post.php?post=' . $post->ID . '&action=edit' ),
 		);
 	} else {
 		$post_key = find_my_blocks_search_for_block_key( $blocks[ $block_key ]['posts'], 'id', $post->ID );

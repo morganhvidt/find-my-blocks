@@ -19,6 +19,8 @@ interface Post {
   readonly edit_url: string;
   readonly post_url: string;
   readonly isReusable: boolean;
+  readonly isNested: boolean;
+  readonly nestedBlockType: string;
   readonly count: number;
 }
 interface CardListProps {
@@ -79,6 +81,14 @@ export const CardList = ({ cards, order = "az" }: CardListProps) => {
           <Content>
             <Tag variation="warning" icon="alert-triangle">
               Reusable block
+            </Tag>
+          </Content>
+        )}
+
+        {post.isNested && (
+          <Content>
+            <Tag variation="info" icon="info">
+              Nested in:&nbsp;<b>{post.nestedBlockType}</b>
             </Tag>
           </Content>
         )}
