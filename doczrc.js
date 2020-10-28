@@ -5,9 +5,7 @@ const projectPlugin = () =>
     onCreateWebpackConfig: ({ stage, loaders, getConfig }) => {
       const config = getConfig();
 
-      /**
-       * Prevents the SSR rendering of components and hooks on docz
-       */
+      // Prevents the SSR rendering of components and hooks on docz
       if (stage.includes("html")) {
         config.module.rules.push({
           test: /@wordpress\/components/,
@@ -19,7 +17,7 @@ const projectPlugin = () =>
 
 const defaultFont =
   "-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif";
-// eslint-disable-next-line import/no-default-export
+
 export default {
   title: "Find My Blocks",
   description:
