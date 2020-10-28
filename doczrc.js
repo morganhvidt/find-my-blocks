@@ -5,7 +5,6 @@ const projectPlugin = () =>
     onCreateWebpackConfig: ({ stage, loaders, getConfig }) => {
       const config = getConfig();
 
-      // Prevents the SSR rendering of components and hooks on docz
       if (stage.includes("html")) {
         config.module.rules.push({
           test: /@wordpress\/components/,

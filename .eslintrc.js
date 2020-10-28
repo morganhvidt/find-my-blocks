@@ -34,7 +34,8 @@ module.exports = {
     {
       files: [
         "**/doczrc.js",
-      "./src/gatsby-theme-docz/**/*"
+      "./src/gatsby-theme-docz/**/*",
+      "./src/pages/**/*"
       ],
       rules: {
         "import/no-default-export": "off",
