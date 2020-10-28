@@ -26,7 +26,7 @@
     ]
   },
   "scripts": {
-    "prestart": "rm -rf .docz .cache & npm run build:cssTypes",
+    "prestart": "npm run clean",
     "start": "docz dev",
     "prestart:wp": "rm -rf .cache & node ./parcel/clean.js",
     "start:wp": "node ./parcel/parcel.config.js -f './src/plugin/assets/find-my-blocks.tsx' --env=development",
@@ -34,6 +34,7 @@
     "build": "docz build",
     "build:wp": "node ./parcel/parcel.config.js -f './src/plugin/assets/find-my-blocks.tsx'",
     "serve": "docz serve",
+    "clean": "rm -rf .docz .cache & npm run build:cssTypes",
     "lint:js": "eslint --ext js --ext jsx --ext ts --ext tsx .",
     "lint:css": "stylelint 'src/**/*.css'",
     "lint:css:fix": "npm run lint:css -- --fix",
