@@ -41,7 +41,6 @@
     "prelint": "npm run build:cssTypes",
     "lint": "npm run lint:js & npm run lint:css",
     "test": "jest './src' --verbose --coverage",
-    "plop": "plop",
     "build:cssTypes": "tcm src",
     "updateBuildTags": "node ./parcel/updateBuildTags.js"
   },
@@ -85,7 +84,6 @@
     "lint-staged": "^10.1.1",
     "minimist": "^1.2.5",
     "parcel-bundler": "^1.12.4",
-    "plop": "^2.6.0",
     "postcss-modules": "^1.5.0",
     "prettier": "^2.0.5",
     "react-test-renderer": "^16.13.1",

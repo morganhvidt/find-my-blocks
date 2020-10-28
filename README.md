@@ -1,11 +1,12 @@
 # Find My Blocks
 
-Find My Blocks is a WordPress plugin built to help (as it says in the name)
-find where you have used specific Gutenberg blocks on your WordPress website.
+Find My Blocks is a WordPress plugin built to help (as it says in the name) find
+where you have used specific Gutenberg blocks on your WordPress website.
 
 ## Installation
 
-To install this plugin, Please use the [WordPress Plugin Page](https://wordpress.org/plugins/find-my-blocks).
+To install this plugin, Please use the
+[WordPress Plugin Page](https://wordpress.org/plugins/find-my-blocks).
 
 ## Development
 
@@ -33,22 +34,13 @@ mv .env.sample .env
 
 **Add the following 2 variables to your `.env` file**
 
-`OUTDIR` = The path to your `find-my-blocks` plugin.
-
-`DEV_URL` = The url you server your local WordPress site on.
+`OUTDIR` = The path to your `find-my-blocks` plugin. `DEV_URL` = The url you
+server your local WordPress site on.
 
 **Start the server**
 
 ```sh
 npm run start:wp
-```
-
-## Generate a component
-
-Running the following command will generate a boilerplate component for you to work with
-
-```sh
-npm run plop
 ```
 
 ## Linting & Testing
