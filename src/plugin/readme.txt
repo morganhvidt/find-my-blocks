@@ -19,7 +19,7 @@ Find My Blocks is a tool to list all the blocks that are used on you WordPress s
 
 1. Upload the plugin files to the `/wp-content/plugins/find-my-blocks` directory, or install the plugin through the WordPress plugins screen directly.
 2. Activate the plugin through the 'Plugins' screen in WordPress
-3. Use the Settings->Find My Blocks screen to locate all of your blocks
+3. Use the Tools->Find My Blocks screen to locate all of your blocks
 
 == Frequently Asked Questions ==
 
