@@ -29,5 +29,16 @@ module.exports = {
     "react/prop-types": "error",
     "import/no-default-export": "error",
     "import/no-named-default": "error",
-  }
+  },
+  overrides: [
+    {
+      files: [
+        "**/doczrc.js",
+      "./src/gatsby-theme-docz/**/*"
+      ],
+      rules: {
+        "import/no-default-export": "off",
+      },
+    },
+  ],
 };

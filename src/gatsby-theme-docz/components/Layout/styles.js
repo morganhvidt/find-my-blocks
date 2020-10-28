@@ -1,5 +1,5 @@
-export * from "@theme/components/Layout/styles";
-import * as styles from "@theme/components/Layout/styles";
+export * from "gatsby-theme-docz/src/components/Layout/styles";
+import * as styles from "gatsby-theme-docz/src/components/Layout/styles";
 import { media } from "../../theme/breakpoints";
 
 export const main = {

@@ -1,5 +1,5 @@
-export * from "@theme/theme/breakpoints";
-import * as bp from "@theme/theme/breakpoints";
+export * from "gatsby-theme-docz/src/theme/breakpoints";
+import * as bp from "gatsby-theme-docz/src/theme/breakpoints";
 
 const em = (px) => `${px / 16}em`;
 const mountMedia = (val) => `@media screen and (max-width: ${em(val)})`;

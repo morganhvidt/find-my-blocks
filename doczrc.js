@@ -21,6 +21,9 @@ const defaultFont =
   "-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif";
 // eslint-disable-next-line import/no-default-export
 export default {
+  title: "Find My Blocks",
+  description:
+    "Find My Blocks, a WordPress plugin to help finspecific Gutenberg blocks on your WordPress website.",
   typescript: true,
   port: 3339,
   src: "src",

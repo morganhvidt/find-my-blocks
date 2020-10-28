@@ -4,7 +4,7 @@ import { jsx } from "theme-ui";
 import { Global } from "@emotion/core";
 import t from "prop-types";
 
-import global from "@theme/theme/global";
+import global from "gatsby-theme-docz/src/theme/global";
 import { Box } from "@fmb/components/Box";
 import { InputText } from "@fmb/components/InputText";
 import { Footer } from "@fmb/components/Footer";

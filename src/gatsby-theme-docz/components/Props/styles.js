@@ -1,4 +1,4 @@
-export * from "@theme/components/Props/styles";
+export * from "gatsby-theme-docz/src/components/Props/styles";
 
 export const container = {
   marginBottom: "1em",
