@@ -8,7 +8,7 @@ interface Block {
   posts: Array<String>;
 }
 
-import data from "../../data/data.json";
+import data from "../../assets/data/data.json";
 import { NavigationItem } from "../NavigationItem";
 
 afterEach(cleanup);
