@@ -3,10 +3,88 @@ name: Contact
 route: /contact
 ---
 
-import { Card, CardBody } from "@wordpress/components";
+import { Card } from "@fmb/components/Card";
+import { Content } from "@fmb/components/Content";
 import { Link } from "@fmb/components/Link";
+import { TextControl, TextareaControl, Button } from "@wordpress/components";
 
 # Contact
 
 I would love to hear from you, whether you have a feature request, bug report,
 or just some general feedback.
+
+<div style={{ display: "flex", gap: "1.25em", flexWrap: "wrap" }}>
+  <div style={{ flex: "1 0" }}>
+    <Card title="Requests">
+      <Content>
+        Have an idea on how to make Find My Blocks better? Let me know by
+        submitting a feature request on{" "}
+        <Link
+          url="https://github.com/eddysims/find-my-blocks/issues"
+          openInNewTab
+        >
+          Github
+        </Link>
+        .
+      </Content>
+    </Card>
+  </div>
+  <div style={{ flex: "1 0" }}>
+    <Card title="Report A Bug">
+      <Content>
+        Found an issue or bug with the plugin? Let me know by reporting it on{" "}
+        <Link
+          url="https://github.com/eddysims/find-my-blocks/issues"
+          openInNewTab
+        >
+          Github
+        </Link>{" "}
+        <span>or</span>{" "}
+        <Link
+          url="https://wordpress.org/support/plugin/find-my-blocks/"
+          openInNewTab
+        >
+          WordPress.org
+        </Link>
+        .
+      </Content>
+    </Card>
+  </div>
+  <div style={{ flex: "1 0 100%" }}>
+    <Card title="Donations">
+      <Content>
+        Are you enjoying Find My Blocks? If so, please consider{" "}
+        <Link url="/donate">donating</Link> to help keep the plugin going.
+      </Content>
+    </Card>
+  </div>
+  <div style={{ flex: "1 0 100%" }}>
+    <Card title="Contact Me">
+      <Content>
+        Do you have some general feedback? Want to just say hi? Feel free to
+        contact me.
+      </Content>
+      <Content>
+        <form action="POST" name="contact" data-netlify="true">
+          <Content>
+            <TextControl label="Name" name="firstName" />
+          </Content>
+          <Content>
+            <TextControl label="Email Address" name="email" type="email" />
+          </Content>
+          <Content>
+            <TextareaControl label="Message" name="message" />
+          </Content>
+          <Content>
+            <div data-netlify-recaptcha="true"></div>
+          </Content>
+          <Content>
+            <Button type="submit" isPrimary isLarge>
+              Send Message
+            </Button>
+          </Content>
+        </form>
+      </Content>
+    </Card>
+  </div>
+</div>
