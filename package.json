@@ -52,8 +52,6 @@
     "classnames": "^2.2.6",
     "docz": "^2.3.1",
     "feather-icons-react": "^0.4.1",
-    "gatsby-alias-imports": "^1.0.6",
-    "gatsby-plugin-alias-imports": "^1.0.5",
     "gatsby-plugin-google-tagmanager": "^2.3.16",
     "gatsby-plugin-root-import": "^2.0.5",
     "gatsby-theme-docz": "^2.3.1",
