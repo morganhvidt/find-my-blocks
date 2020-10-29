@@ -31,6 +31,7 @@
     "prestart:wp": "rm -rf .cache & node ./parcel/clean.js",
     "start:wp": "node ./parcel/parcel.config.js -f './src/plugin/assets/find-my-blocks.tsx' --env=development",
     "predev": "rm -rf .docz & rm -rf .cache",
+    "prebuild": "npm run clean",
     "build": "docz build",
     "build:wp": "node ./parcel/parcel.config.js -f './src/plugin/assets/find-my-blocks.tsx'",
     "serve": "docz serve",
@@ -46,7 +47,6 @@
     "updateBuildTags": "node ./parcel/updateBuildTags.js"
   },
   "dependencies": {
-    "@emotion/core": "^10.0.14",
     "@emotion/styled": "^10.0.14",
     "@types/classnames": "^2.2.10",
     "@types/lodash-es": "^4.17.3",
