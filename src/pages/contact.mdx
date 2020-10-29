@@ -6,7 +6,6 @@ route: /contact
 import { Card } from "@fmb/components/Card";
 import { Content } from "@fmb/components/Content";
 import { Link } from "@fmb/components/Link";
-import { TextControl, TextareaControl, Button } from "@wordpress/components";
 
 # Contact
 
@@ -65,25 +64,7 @@ or just some general feedback.
         contact me.
       </Content>
       <Content>
-        <form action="POST" name="contact" data-netlify="true">
-          <Content>
-            <TextControl label="Name" name="firstName" />
-          </Content>
-          <Content>
-            <TextControl label="Email Address" name="email" type="email" />
-          </Content>
-          <Content>
-            <TextareaControl label="Message" name="message" />
-          </Content>
-          <Content>
-            <div data-netlify-recaptcha="true"></div>
-          </Content>
-          <Content>
-            <Button type="submit" isPrimary isLarge>
-              Send Message
-            </Button>
-          </Content>
-        </form>
+        <form action="POST" name="contact" data-netlify="true"></form>
       </Content>
     </Card>
   </div>
