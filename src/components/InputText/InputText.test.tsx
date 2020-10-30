@@ -6,34 +6,27 @@ import { InputText } from "./";
 afterEach(cleanup);
 
 it("render correctly", () => {
-  const tree = renderer
-    .create(<InputText onChange={() => undefined} defaultValue="hello" />)
-    .toJSON();
+  const tree = renderer.create(<InputText defaultValue="hello" />).toJSON();
   expect(tree).toMatchSnapshot();
 });
 
-it("calls the onchange function when typed in", () => {
-  const onChange = jest.fn();
+it("renders a textarea if multiline is used", () => {
   const { getByPlaceholderText } = render(
-    <InputText placeholder="Test" onChange={() => onChange()} />
+    <InputText placeholder="placeholder" multiline />
   );
-  const input = getByPlaceholderText("Test");
-  fireEvent.change(input, {
-    target: { value: "Hello" },
-  });
-
-  expect(onChange).toHaveBeenCalled();
+  const input = getByPlaceholderText("placeholder");
+  expect(input).toBeInstanceOf(HTMLTextAreaElement);
 });
 
-it("does nothing if onChange is not set", () => {
-  // eslint-disable-next-line no-unused-vars
-  const onChange = jest.fn();
-  // @ts-ignore
-  const { getByPlaceholderText } = render(<InputText placeholder="Test" />);
-  const input = getByPlaceholderText("Test");
-  fireEvent.change(input, {
-    target: { value: "Hello" },
-  });
+it("calls the onchange function when typed in", () => {
+  const placeholder = "Test";
+  const value = "Hello";
+  const changeHandler = jest.fn();
+  const { getByPlaceholderText } = render(
+    <InputText placeholder={placeholder} onChange={changeHandler} />
+  );
+  const input = getByPlaceholderText(placeholder);
+  fireEvent.change(input, { target: { value: value } });
 
-  expect(onChange).not.toHaveBeenCalled();
+  expect(changeHandler).toHaveBeenCalledWith(value);
 });

@@ -2,13 +2,22 @@
 
 exports[`render correctly 1`] = `
 Array [
-  <input
-    className="input"
-    onChange={[Function]}
-    placeholder="Filter Blocks"
-    type="text"
-    value=""
-  />,
+  <div
+    className="components-base-control"
+  >
+    <div
+      className="components-base-control__field"
+    >
+      <input
+        className="components-text-control__input"
+        id="inspector-text-control-0"
+        onChange={[Function]}
+        placeholder="Filter Blocks"
+        type="text"
+        value=""
+      />
+    </div>
+  </div>,
   <div
     className="nav"
   >
@@ -438,13 +447,22 @@ Array [
 
 exports[`sorts the order of the blocks properly 1`] = `
 Array [
-  <input
-    className="input"
-    onChange={[Function]}
-    placeholder="Filter Blocks"
-    type="text"
-    value=""
-  />,
+  <div
+    className="components-base-control"
+  >
+    <div
+      className="components-base-control__field"
+    >
+      <input
+        className="components-text-control__input"
+        id="inspector-text-control-1"
+        onChange={[Function]}
+        placeholder="Filter Blocks"
+        type="text"
+        value=""
+      />
+    </div>
+  </div>,
   <div
     className="nav"
   >
@@ -874,13 +892,22 @@ Array [
 
 exports[`sorts the order of the blocks properly 2`] = `
 Array [
-  <input
-    className="input"
-    onChange={[Function]}
-    placeholder="Filter Blocks"
-    type="text"
-    value=""
-  />,
+  <div
+    className="components-base-control"
+  >
+    <div
+      className="components-base-control__field"
+    >
+      <input
+        className="components-text-control__input"
+        id="inspector-text-control-2"
+        onChange={[Function]}
+        placeholder="Filter Blocks"
+        type="text"
+        value=""
+      />
+    </div>
+  </div>,
   <div
     className="nav"
   >
@@ -1310,13 +1337,22 @@ Array [
 
 exports[`sorts the order of the blocks properly 3`] = `
 Array [
-  <input
-    className="input"
-    onChange={[Function]}
-    placeholder="Filter Blocks"
-    type="text"
-    value=""
-  />,
+  <div
+    className="components-base-control"
+  >
+    <div
+      className="components-base-control__field"
+    >
+      <input
+        className="components-text-control__input"
+        id="inspector-text-control-3"
+        onChange={[Function]}
+        placeholder="Filter Blocks"
+        type="text"
+        value=""
+      />
+    </div>
+  </div>,
   <div
     className="nav"
   >
@@ -1746,13 +1782,22 @@ Array [
 
 exports[`sorts the order of the blocks properly 4`] = `
 Array [
-  <input
-    className="input"
-    onChange={[Function]}
-    placeholder="Filter Blocks"
-    type="text"
-    value=""
-  />,
+  <div
+    className="components-base-control"
+  >
+    <div
+      className="components-base-control__field"
+    >
+      <input
+        className="components-text-control__input"
+        id="inspector-text-control-4"
+        onChange={[Function]}
+        placeholder="Filter Blocks"
+        type="text"
+        value=""
+      />
+    </div>
+  </div>,
   <div
     className="nav"
   >
@@ -2182,13 +2227,22 @@ Array [
 
 exports[`sorts the order of the blocks properly 5`] = `
 Array [
-  <input
-    className="input"
-    onChange={[Function]}
-    placeholder="Filter Blocks"
-    type="text"
-    value=""
-  />,
+  <div
+    className="components-base-control"
+  >
+    <div
+      className="components-base-control__field"
+    >
+      <input
+        className="components-text-control__input"
+        id="inspector-text-control-5"
+        onChange={[Function]}
+        placeholder="Filter Blocks"
+        type="text"
+        value=""
+      />
+    </div>
+  </div>,
   <div
     className="nav"
   >

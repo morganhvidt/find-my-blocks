@@ -21,27 +21,6 @@ exports[`renders correctly 1`] = `
 </div>
 `;
 
-exports[`renders correctly 2`] = `
-<div>
-  <div
-    class="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
-  >
-    <div
-      class="components-card__header is-shady is-size-small css-1vhqpef-HeaderUI e1q7k77g1"
-    >
-      <strong>
-        Toronto
-      </strong>
-    </div>
-    <div
-      class="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
-    >
-      Go Raps!
-    </div>
-  </div>
-</div>
-`;
-
 exports[`renders without a title 1`] = `
 <div>
   <div
