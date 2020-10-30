@@ -64,7 +64,12 @@ or just some general feedback.
         contact me.
       </Content>
       <Content>
-        <form action="POST" name="contact" data-netlify="true"></form>
+        <form action="POST" name="contact" data-netlify="true">
+          <input name="firstName" placeholder="First Name" />
+          <input name="lastName" placeholder="Last Name" />
+          <input name="email" placeholder="Email Address" />
+          <button type="submit">Submit</button>
+        </form>
       </Content>
     </Card>
   </div>
