@@ -32,7 +32,6 @@ export default {
       heading: defaultFont,
     },
     colors: {
-      primary: "var(--fmb-red--light)",
       sidebar: {
         bg: "var(--fmb-red)",
         navGroup: "#fff",

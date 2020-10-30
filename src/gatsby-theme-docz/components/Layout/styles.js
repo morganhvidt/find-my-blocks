@@ -1,6 +1,7 @@
 export * from "gatsby-theme-docz/src/components/Layout/styles";
 import * as styles from "gatsby-theme-docz/src/components/Layout/styles";
 import { media } from "../../theme/breakpoints";
+import { actionBarWidth } from "../ActionBar/styles";
 
 export const layout = {
   display: "flex",
@@ -8,7 +9,8 @@ export const layout = {
 };
 
 export const actions = {
-  flex: "0 0 75px",
+  position: "relative",
+  flex: `0 0 ${actionBarWidth}px`,
   background: "primary",
 };
 

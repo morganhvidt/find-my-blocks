@@ -9,6 +9,10 @@
     "tsconfig.json",
     "package.json"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eddysims/find-my-blocks.git"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
@@ -51,6 +55,7 @@
     "@types/classnames": "^2.2.10",
     "@types/lodash-es": "^4.17.3",
     "classnames": "^2.2.6",
+    "deepmerge": "^4.2.2",
     "docz": "^2.3.1",
     "feather-icons-react": "^0.4.1",
     "gatsby-plugin-google-tagmanager": "^2.3.16",

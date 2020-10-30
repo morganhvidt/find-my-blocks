@@ -4,6 +4,8 @@ import { jsx } from "theme-ui";
 import { Global } from "@emotion/core";
 import t from "prop-types";
 
+import { ActionBar } from "../ActionBar";
+
 import global from "gatsby-theme-docz/src/theme/global";
 import { Box } from "@fmb/components/Box";
 import { Footer } from "@fmb/components/Footer";
@@ -21,7 +23,9 @@ export const Layout = ({ children }) => {
     <Fragment>
       <Global styles={global} />
       <Box sx={styles.layout}>
-        <Box sx={styles.actions}>Action Bar</Box>
+        <Box sx={styles.actions}>
+          <ActionBar />
+        </Box>
         {!demo && <Box sx={styles.navigation}>navigation</Box>}
         <Box sx={styles.content}>content</Box>
       </Box>
