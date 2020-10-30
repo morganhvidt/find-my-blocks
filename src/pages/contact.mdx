@@ -64,14 +64,17 @@ or just some general feedback.
         contact me.
       </Content>
       <Content>
-        <form action="POST" netlify>
+        <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
           <input name="firstName" placeholder="First Name" />
           <input name="lastName" placeholder="Last Name" />
           <input name="email" placeholder="Email Address" />
           <div data-netlify-recaptcha></div>
+            <input type="hidden" name="form-name" value="contact" />
+
           <input type="submit" value="submit" />
         </form>
       </Content>
     </Card>
+
   </div>
 </div>
