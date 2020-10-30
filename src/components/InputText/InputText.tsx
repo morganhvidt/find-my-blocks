@@ -12,6 +12,10 @@ interface InputTextBaseProps {
    * Default value of the input
    */
   readonly defaultValue?: string;
+  /**
+   * Name of the field. Required for submitting a field
+   */
+  name?: string;
   onChange?(val: string): void;
 }
 
@@ -33,6 +37,7 @@ export const InputText = ({
   defaultValue,
   multiline,
   type = "text",
+  name,
   onChange,
 }: InputTextProps) => {
   const [value, setValue] = useState(defaultValue || "");
@@ -47,6 +52,7 @@ export const InputText = ({
       <input
         type="text"
         value={value}
+        name={name}
         onChange={(e) => handleChange(e.target.value)}
       />
     );
@@ -55,6 +61,7 @@ export const InputText = ({
   const inputProps = {
     placeholder,
     value,
+    name,
     onChange: handleChange,
   };
 

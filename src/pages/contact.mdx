@@ -66,12 +66,19 @@ or just some general feedback.
       </Content>
       <Content>
         <form name="contact" method="post" data-netlify="true">
-          <InputText name="name" placeholder="Name" />
-          <InputText name="email" placeholder="Email Address" type="email" />
-          <InputText name="message" placeholder="Message" multiline />
-          <div data-netlify-recaptcha="true" />
-          <input type="hidden" name="form-name" value="contact" />
-          <input type="submit" value="submit" />
+          <Content>
+            <InputText name="name" placeholder="Name" />
+          </Content>
+          <Content>
+            <InputText name="email" placeholder="Email Address" type="email" />
+          </Content>
+          <Content>
+            <InputText name="message" placeholder="Message" multiline />
+          </Content>
+          <Content>
+            <input type="hidden" name="form-name" value="contact" />
+            <input type="submit" value="submit" />
+          </Content>
         </form>
       </Content>
     </Card>
