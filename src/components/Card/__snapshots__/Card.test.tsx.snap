@@ -1,56 +1,36 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`becomes togglable with the toggle prop 1`] = `
-<div
-  className="card"
->
+exports[`renders correctly 1`] = `
+<div>
   <div
-    className="title togglable"
-    onClick={[Function]}
+    class="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
   >
-    Toronto
-    <svg
-      className="feather feather-chevron-up "
-      fill="none"
-      height={24}
-      stroke="currentColor"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth="2"
-      viewBox="0 0 24 24"
-      width={24}
+    <div
+      class="components-card__header is-shady is-size-small css-1vhqpef-HeaderUI e1q7k77g1"
     >
-      <g
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "<polyline points=\\"18 15 12 9 6 15\\"></polyline>",
-          }
-        }
-      />
-    </svg>
-  </div>
-  <div
-    className="body"
-  >
-    Go Raps!
+      <strong>
+        Toronto
+      </strong>
+    </div>
+    <div
+      class="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
+    >
+      Go Raps!
+    </div>
   </div>
 </div>
 `;
 
-exports[`renders correctly 1`] = `
-<div
-  className="card"
->
+exports[`renders without a title 1`] = `
+<div>
   <div
-    className="title"
-    onClick={[Function]}
+    class="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
   >
-    Toronto
-  </div>
-  <div
-    className="body"
-  >
-    Go Raps!
+    <div
+      class="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
+    >
+      Go Raps!
+    </div>
   </div>
 </div>
 `;

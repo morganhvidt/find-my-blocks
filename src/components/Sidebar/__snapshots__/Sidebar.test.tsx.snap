@@ -2,13 +2,22 @@
 
 exports[`render correctly 1`] = `
 Array [
-  <input
-    className="input"
-    onChange={[Function]}
-    placeholder="Filter Blocks"
-    type="text"
-    value=""
-  />,
+  <div
+    className="components-base-control"
+  >
+    <div
+      className="components-base-control__field"
+    >
+      <input
+        className="components-text-control__input"
+        id="inspector-text-control-0"
+        onChange={[Function]}
+        placeholder="Filter Blocks"
+        type="text"
+        value=""
+      />
+    </div>
+  </div>,
   <div
     className="nav"
   >
@@ -438,13 +447,22 @@ Array [
 
 exports[`sorts the order of the blocks properly 1`] = `
 Array [
-  <input
-    className="input"
-    onChange={[Function]}
-    placeholder="Filter Blocks"
-    type="text"
-    value=""
-  />,
+  <div
+    className="components-base-control"
+  >
+    <div
+      className="components-base-control__field"
+    >
+      <input
+        className="components-text-control__input"
+        id="inspector-text-control-1"
+        onChange={[Function]}
+        placeholder="Filter Blocks"
+        type="text"
+        value=""
+      />
+    </div>
+  </div>,
   <div
     className="nav"
   >
@@ -874,13 +892,22 @@ Array [
 
 exports[`sorts the order of the blocks properly 2`] = `
 Array [
-  <input
-    className="input"
-    onChange={[Function]}
-    placeholder="Filter Blocks"
-    type="text"
-    value=""
-  />,
+  <div
+    className="components-base-control"
+  >
+    <div
+      className="components-base-control__field"
+    >
+      <input
+        className="components-text-control__input"
+        id="inspector-text-control-2"
+        onChange={[Function]}
+        placeholder="Filter Blocks"
+        type="text"
+        value=""
+      />
+    </div>
+  </div>,
   <div
     className="nav"
   >
@@ -1310,13 +1337,22 @@ Array [
 
 exports[`sorts the order of the blocks properly 3`] = `
 Array [
-  <input
-    className="input"
-    onChange={[Function]}
-    placeholder="Filter Blocks"
-    type="text"
-    value=""
-  />,
+  <div
+    className="components-base-control"
+  >
+    <div
+      className="components-base-control__field"
+    >
+      <input
+        className="components-text-control__input"
+        id="inspector-text-control-3"
+        onChange={[Function]}
+        placeholder="Filter Blocks"
+        type="text"
+        value=""
+      />
+    </div>
+  </div>,
   <div
     className="nav"
   >
@@ -1746,13 +1782,22 @@ Array [
 
 exports[`sorts the order of the blocks properly 4`] = `
 Array [
-  <input
-    className="input"
-    onChange={[Function]}
-    placeholder="Filter Blocks"
-    type="text"
-    value=""
-  />,
+  <div
+    className="components-base-control"
+  >
+    <div
+      className="components-base-control__field"
+    >
+      <input
+        className="components-text-control__input"
+        id="inspector-text-control-4"
+        onChange={[Function]}
+        placeholder="Filter Blocks"
+        type="text"
+        value=""
+      />
+    </div>
+  </div>,
   <div
     className="nav"
   >
@@ -1943,7 +1988,7 @@ Array [
       <span
         className="label"
       >
-        acf/pivitol_apexia
+        cgb/miracula_exoblue
       </span>
       Found in 10 posts
       <svg
@@ -1973,7 +2018,7 @@ Array [
       <span
         className="label"
       >
-        cgb/miracula_exoblue
+        acf/pivitol_apexia
       </span>
       Found in 10 posts
       <svg
@@ -2033,36 +2078,6 @@ Array [
       <span
         className="label"
       >
-        cgb/corporana_geoform
-      </span>
-      Found in 5 posts
-      <svg
-        className="feather feather-arrow-right "
-        fill="none"
-        height={24}
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="2"
-        viewBox="0 0 24 24"
-        width={24}
-      >
-        <g
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "<line x1=\\"5\\" y1=\\"12\\" x2=\\"19\\" y2=\\"12\\"></line><polyline points=\\"12 5 19 12 12 19\\"></polyline>",
-            }
-          }
-        />
-      </svg>
-    </a>
-    <a
-      className="button"
-      onClick={[Function]}
-    >
-      <span
-        className="label"
-      >
         nba/remold_eargo
       </span>
       Found in 5 posts
@@ -2094,6 +2109,36 @@ Array [
         className="label"
       >
         acf/aquazure_digigen
+      </span>
+      Found in 5 posts
+      <svg
+        className="feather feather-arrow-right "
+        fill="none"
+        height={24}
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        viewBox="0 0 24 24"
+        width={24}
+      >
+        <g
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<line x1=\\"5\\" y1=\\"12\\" x2=\\"19\\" y2=\\"12\\"></line><polyline points=\\"12 5 19 12 12 19\\"></polyline>",
+            }
+          }
+        />
+      </svg>
+    </a>
+    <a
+      className="button"
+      onClick={[Function]}
+    >
+      <span
+        className="label"
+      >
+        cgb/corporana_geoform
       </span>
       Found in 5 posts
       <svg
@@ -2182,13 +2227,22 @@ Array [
 
 exports[`sorts the order of the blocks properly 5`] = `
 Array [
-  <input
-    className="input"
-    onChange={[Function]}
-    placeholder="Filter Blocks"
-    type="text"
-    value=""
-  />,
+  <div
+    className="components-base-control"
+  >
+    <div
+      className="components-base-control__field"
+    >
+      <input
+        className="components-text-control__input"
+        id="inspector-text-control-5"
+        onChange={[Function]}
+        placeholder="Filter Blocks"
+        type="text"
+        value=""
+      />
+    </div>
+  </div>,
   <div
     className="nav"
   >
@@ -2289,36 +2343,6 @@ Array [
       <span
         className="label"
       >
-        nba/remold_eargo
-      </span>
-      Found in 5 posts
-      <svg
-        className="feather feather-arrow-right "
-        fill="none"
-        height={24}
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="2"
-        viewBox="0 0 24 24"
-        width={24}
-      >
-        <g
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "<line x1=\\"5\\" y1=\\"12\\" x2=\\"19\\" y2=\\"12\\"></line><polyline points=\\"12 5 19 12 12 19\\"></polyline>",
-            }
-          }
-        />
-      </svg>
-    </a>
-    <a
-      className="button"
-      onClick={[Function]}
-    >
-      <span
-        className="label"
-      >
         acf/aquazure_digigen
       </span>
       Found in 5 posts
@@ -2349,7 +2373,37 @@ Array [
       <span
         className="label"
       >
-        acf/pivitol_apexia
+        nba/remold_eargo
+      </span>
+      Found in 5 posts
+      <svg
+        className="feather feather-arrow-right "
+        fill="none"
+        height={24}
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        viewBox="0 0 24 24"
+        width={24}
+      >
+        <g
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<line x1=\\"5\\" y1=\\"12\\" x2=\\"19\\" y2=\\"12\\"></line><polyline points=\\"12 5 19 12 12 19\\"></polyline>",
+            }
+          }
+        />
+      </svg>
+    </a>
+    <a
+      className="button"
+      onClick={[Function]}
+    >
+      <span
+        className="label"
+      >
+        nba/fortean_plasto
       </span>
       Found in 10 posts
       <svg
@@ -2409,7 +2463,7 @@ Array [
       <span
         className="label"
       >
-        nba/fortean_plasto
+        acf/pivitol_apexia
       </span>
       Found in 10 posts
       <svg
@@ -2559,7 +2613,7 @@ Array [
       <span
         className="label"
       >
-        nba/artiq_verton
+        cgb/obliq_locazone
       </span>
       Found in 20 posts
       <svg
@@ -2589,7 +2643,7 @@ Array [
       <span
         className="label"
       >
-        cgb/obliq_locazone
+        nba/artiq_verton
       </span>
       Found in 20 posts
       <svg

@@ -4,6 +4,8 @@ import { Helmet } from "react-helmet";
 import { useConfig, useCurrentDoc } from "docz";
 import favicon from "@fmb/assets/images/favicon.png";
 
+import "@wordpress/components/build-style/style.css";
+
 const Wrapper = ({ children }) => {
   const { title, description } = useConfig();
   const { name, route } = useCurrentDoc();

@@ -6,13 +6,12 @@ import t from "prop-types";
 
 import global from "gatsby-theme-docz/src/theme/global";
 import { Box } from "@fmb/components/Box";
-import { InputText } from "@fmb/components/InputText";
 import { Footer } from "@fmb/components/Footer";
 import { Sidebar } from "../Sidebar";
 import * as styles from "./styles";
 
 export const Layout = ({ children }) => {
-  const [query, setQuery] = useState("");
+  // const [query, setQuery] = useState("");
   const [open, setOpen] = useState(false);
   const nav = useRef();
 
@@ -25,7 +24,7 @@ export const Layout = ({ children }) => {
           <Sidebar
             ref={nav}
             open={open}
-            query={query}
+            // query={query}
             onFocus={() => setOpen(true)}
             onBlur={() => setOpen(false)}
             onClick={() => setOpen(false)}
@@ -39,12 +38,6 @@ export const Layout = ({ children }) => {
               minWidth: 640,
             }}
           >
-            <Box>
-              <InputText
-                placeholder="Type to search..."
-                onChange={(val) => setQuery(val)}
-              />
-            </Box>
             <Box sx={styles.content}>{children}</Box>
             <Box sx={{ flex: "0 0 auto", mt: "auto", fontSize: "14px" }}>
               <Footer />
