@@ -1,7 +1,7 @@
 export * from "gatsby-theme-docz/src/components/Layout/styles";
 import * as styles from "gatsby-theme-docz/src/components/Layout/styles";
-import { media } from "../../theme/breakpoints";
 import { actionBarWidth } from "../ActionBar/styles";
+import { sideBarWidth } from "../Sidebar/styles";
 
 export const layout = {
   display: "flex",
@@ -15,8 +15,8 @@ export const actions = {
 };
 
 export const navigation = {
-  flex: "0 0 500px",
-  background: "lightGrey",
+  position: "relative",
+  flex: `0 0 ${sideBarWidth}px`,
 };
 
 export const wrapper = {

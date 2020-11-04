@@ -89,7 +89,7 @@ function Action({ url, external, color, icon, label }: ActionProps) {
   }
 
   return (
-    <a href={url} {...linkProps}>
+    <a href={url} {...linkProps} target="_blank" rel="noreferrer">
       {icon === "github" ? (
         <Github size={iconSize} />
       ) : (

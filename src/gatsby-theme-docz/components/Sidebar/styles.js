@@ -1,22 +1,30 @@
-export * from "gatsby-theme-docz/src/components/Sidebar/styles";
-import * as styles from "gatsby-theme-docz/src/components/Sidebar/styles";
+export const sideBarWidth = 500;
 
-export const wrapper = ({ open }) => ({
-  ...styles.wrapper(open),
+export const wrapper = {
+  position: "fixed",
+  top: 0,
+  width: sideBarWidth,
   p: 0,
   border: 0,
   display: "flex",
   flex: "1",
-  maxWidth: 640,
-});
+  maxWidth: sideBarWidth,
+  bg: "primary",
+  height: "100vh",
+  overflowY: "scroll",
+
+  "&::-webkit-scrollbar": {
+    display: "none",
+  },
+};
 
 export const logo = {
   display: "block",
-  mb: "2em",
+  mt: 6,
+  mb: 4,
 };
 
 export const container = {
-  maxWidth: "300px",
   margin: "0 auto",
-  padding: "2em 0",
+  px: 3,
 };
