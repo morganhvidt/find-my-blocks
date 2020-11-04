@@ -1,5 +1,3 @@
-export * from "gatsby-theme-docz/src/components/Layout/styles";
-import * as styles from "gatsby-theme-docz/src/components/Layout/styles";
 import { actionBarWidth } from "../ActionBar/styles";
 import { sideBarWidth } from "../Sidebar/styles";
 
@@ -20,11 +18,18 @@ export const navigation = {
 };
 
 export const wrapper = {
-  ...styles.wrapper,
   display: "flex",
 };
 
 export const content = {
   flex: "1",
-  background: "green",
+  minHeight: "100vh",
+};
+
+export const footer = {
+  position: "fixed",
+  zIndex: "0",
+  bottom: 0,
+  right: 0,
+  width: `calc(100% - ${sideBarWidth}px - ${actionBarWidth}px)`,
 };

@@ -1,17 +1,14 @@
 /** @jsx jsx */
+import { jsx, Box, Container } from "theme-ui";
 import { Fragment } from "react";
-import { jsx } from "theme-ui";
 import { Global } from "@emotion/core";
+import { useCurrentDoc } from "docz";
 import t from "prop-types";
-
-import { ActionBar } from "../ActionBar";
-
 import global from "gatsby-theme-docz/src/theme/global";
-import { Box } from "@fmb/components/Box";
 import { Footer } from "@fmb/components/Footer";
+import { ActionBar } from "../ActionBar";
 import { Sidebar } from "../Sidebar";
 import * as styles from "./styles";
-import { useCurrentDoc } from "docz";
 
 export const Layout = ({ children }) => {
   const { demo } = useCurrentDoc();
@@ -28,8 +25,12 @@ export const Layout = ({ children }) => {
             <Sidebar />
           </Box>
         )}
-        <Box sx={styles.content}>{children}</Box>
-        <Footer />
+        <Box sx={styles.content}>
+          <Container>{children}</Container>
+          <Box sx={styles.footer}>
+            <Footer />
+          </Box>
+        </Box>
       </Box>
     </Fragment>
   );
