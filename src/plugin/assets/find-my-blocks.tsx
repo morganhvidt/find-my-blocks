@@ -11,7 +11,7 @@ import { Layout } from "../../components/Layout";
 import { Sidebar, SidebarOrder } from "../../components/Sidebar";
 import { Settings } from "../../components/Settings";
 import { CardList, CardOrder } from "../../components/CardList";
-import { Box } from "../../components/Box";
+import { Box } from "theme-ui";
 import { Loading } from "../../components/Loading";
 import { theme } from "../../theme";
 

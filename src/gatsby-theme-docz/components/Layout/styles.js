@@ -24,6 +24,7 @@ export const wrapper = {
 export const content = {
   flex: "1",
   minHeight: "100vh",
+  bg: "background",
 };
 
 export const footer = {
