@@ -8,11 +8,6 @@ export const container = {
   bg: "primaryDark",
   display: "flex",
   flexDirection: "column",
-  justifyContent: "flex-end",
-};
-
-export const firstLink = {
-  marginBottom: "auto",
 };
 
 export const action = (color: string) => {
@@ -24,6 +19,7 @@ export const action = (color: string) => {
     width: actionBarWidth,
     height: actionBarWidth,
     transition: "background-color 300ms",
+    mt: color === "wordpress" ? "auto" : 0,
 
     svg: {
       stroke: "white",

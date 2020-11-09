@@ -1,74 +1,66 @@
 /** @jsx jsx */
 import { jsx, Box } from "theme-ui";
+import { Link, useConfig } from "docz";
+import { Icon } from "@fmb/components/Icon";
 import * as styles from "./styles";
-import { Github } from "gatsby-theme-docz/src/components/Icons";
-import { Icon } from "@fmb/components/icon";
-import { Link, useConfig, useCurrentDoc } from "docz";
 
 export function ActionBar() {
-  const {
-    repository,
-    themeConfig: { showMarkdownEditButton },
-  } = useConfig();
-  const { edit = true, link } = useCurrentDoc();
-  const showEditButton = showMarkdownEditButton && edit && link;
+  const { repository } = useConfig();
 
-  console.log("repo", repository);
+  const actions = [
+    {
+      url: "/",
+      color: "primary",
+      icon: "home",
+      label: "Find My Blocks | Home",
+    },
+    {
+      url: "https://wordpress.org/plugins/find-my-blocks/",
+      color: "wordpress",
+      icon: "download",
+      label: "Download from WordPress.org",
+      external: true,
+    },
+    {
+      url: repository,
+      color: "github",
+      icon: "github",
+      label: "View Find My Blocks on Github",
+      external: true,
+    },
+  ];
 
   return (
     <Box sx={styles.container}>
-      <Box sx={styles.firstLink}>
-        <Action
-          url="/"
-          color="primary"
-          icon="home"
-          label="Find My Blocks | Home"
-        />
-      </Box>
-
-      {showEditButton && (
-        <Action
-          external
-          url={link}
-          color="lightBlue"
-          icon="edit"
-          label="Edit page"
-        />
-      )}
-
-      <Action
-        external
-        url="https://wordpress.org/plugins/find-my-blocks/"
-        color="wordpress"
-        icon="download"
-        label="Download from WordPress"
-      />
-
-      {repository && (
-        <Action
-          external
-          url={repository}
-          color="github"
-          icon="github"
-          label="View Find My Blocks on Github"
-        />
-      )}
+      {actions.map((action) => {
+        return (
+          <Action
+            key={action.icon}
+            url={action.url}
+            color={action.color}
+            icon={action.icon}
+            label={action.label}
+            external={action.external}
+          />
+        );
+      })}
     </Box>
   );
 }
 
 interface ActionProps {
-  readonly url: string;
-  readonly external?: boolean;
+  readonly url?: string | null;
   readonly color: string;
-  /**
-   * Icon type from WordPress is unstable, needs an `any` here.
-   */
-  readonly icon: any;
+  readonly icon: string;
   readonly label: string;
+  readonly external?: boolean;
 }
 
 function Action({ url, external, color, icon, label }: ActionProps) {
+  if (!url) {
+    return undefined;
+  }
+
   /**
    * Size of the icons to display
    */
@@ -90,11 +82,7 @@ function Action({ url, external, color, icon, label }: ActionProps) {
 
   return (
     <a href={url} {...linkProps} target="_blank" rel="noreferrer">
-      {icon === "github" ? (
-        <Github size={iconSize} />
-      ) : (
-        <Icon icon={icon} size={iconSize} />
-      )}
+      <Icon icon={icon} size={iconSize} />
     </a>
   );
 }
