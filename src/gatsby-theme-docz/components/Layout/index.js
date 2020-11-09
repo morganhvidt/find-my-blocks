@@ -26,7 +26,7 @@ export const Layout = ({ children }) => {
           </Box>
         )}
         <Box sx={styles.content}>
-          <Container>{children}</Container>
+          <Container sx={{ variant: "styles.Container" }}>{children}</Container>
           <Box sx={styles.footer}>
             <Footer />
           </Box>

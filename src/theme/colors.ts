@@ -8,3 +8,7 @@ export const white = "#eee";
 export const github = "#2b3137";
 export const wordpress = "#0073aa";
 export const lightBlue = "#00beea";
+
+export const playground = {
+  border: "primary",
+};

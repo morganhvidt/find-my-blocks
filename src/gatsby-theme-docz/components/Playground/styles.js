@@ -1,8 +1,7 @@
 export * from "gatsby-theme-docz/src/components/Playground/styles";
 import * as styles from "gatsby-theme-docz/src/components/Playground/styles";
 
-export const editor = (theme) => ({
-  ...styles.editor(theme),
+export const editor = () => ({
   padding: 16,
   borderRadius: 0,
   border: 0,
