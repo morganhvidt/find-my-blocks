@@ -7,7 +7,7 @@ interface InputTextBaseProps {
   /**
    * Placeholder text to be displayed in an empty input
    */
-  readonly placeholder?: string;
+  readonly placeholder: string;
   /**
    * Default value of the input
    */
@@ -51,6 +51,7 @@ export const InputText = ({
     return (
       <input
         type="text"
+        aria-label={placeholder}
         value={value}
         name={name}
         onChange={(e) => handleChange(e.target.value)}
@@ -63,6 +64,7 @@ export const InputText = ({
     value,
     name,
     onChange: handleChange,
+    "aria-label": placeholder,
   };
 
   if (multiline) {

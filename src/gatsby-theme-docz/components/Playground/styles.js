@@ -18,20 +18,14 @@ export const preview = {
   px: 3,
   py: 4,
   bg: "playground.bg",
-  border: (t) => `1px solid ${t.colors.grey}`,
-  borderBottom: "none",
-  borderRadius: (t) => `${t.radii.radius}px ${t.radii.radius}px 0 0`,
 };
 
 export const editor = (theme) => ({
   ...styles.editor(theme),
   fontSize: 2,
   py: 3,
+  mt: 1,
   mb: 4,
-  borderLeft: (t) => `1px solid ${t.colors.grey}`,
-  borderRight: (t) => `1px solid ${t.colors.grey}`,
-  borderBottom: (t) => `1px solid ${t.colors.grey}`,
-  borderRadius: (t) => ` 0 0 ${t.radii.radius}px ${t.radii.radius}px`,
 });
 
 export const previewWrapper = {

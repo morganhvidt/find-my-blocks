@@ -1,8 +1,12 @@
+import * as colors from "../colors";
+
 export const light = {
   plain: {
     fontFamily: "monospace",
-    color: "#393A34",
-    backgroundColor: "#f6f8fa",
+    color: colors.wordpress,
+    backgroundColor: colors.WPBackground,
+    fontSize: 14,
+    fontWeight: 500,
   },
   styles: [
     {
@@ -21,13 +25,15 @@ export const light = {
     {
       types: ["string", "attr-value"],
       style: {
-        color: "#e3116c",
+        // peach like `@fmb/components`
+        color: "#C80000",
       },
     },
     {
       types: ["punctuation", "operator"],
       style: {
-        color: "#393A34",
+        // grey like curly brackets
+        color: colors.text,
       },
     },
     {
@@ -50,13 +56,15 @@ export const light = {
     {
       types: ["atrule", "keyword", "attr-name", "selector"],
       style: {
-        color: "#00a4db",
+        // blue like prop titles
+        color: colors.wordpress,
       },
     },
     {
       types: ["function", "deleted", "tag"],
       style: {
-        color: "#d73a49",
+        // yellow like `useState`
+        color: "#047D60",
       },
     },
     {
@@ -68,7 +76,8 @@ export const light = {
     {
       types: ["tag", "selector", "keyword"],
       style: {
-        color: "#00009f",
+        // pink like `import`
+        color: "#9043b5",
       },
     },
   ],

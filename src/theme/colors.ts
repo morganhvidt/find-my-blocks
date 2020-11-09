@@ -1,4 +1,4 @@
-export const background = "#f9f9f9";
+export const background = "#fff";
 export const WPBackground = "#f1f1f1";
 export const text = "#444";
 
