@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Box } from "theme-ui";
+import { jsx } from "theme-ui";
 import { Link, useConfig } from "docz";
 import { Icon } from "@fmb/components/Icon";
 import * as styles from "./styles";
@@ -31,7 +31,7 @@ export function ActionBar() {
   ];
 
   return (
-    <Box sx={styles.container}>
+    <nav sx={styles.container}>
       {actions.map((action) => {
         return (
           <Action
@@ -44,7 +44,7 @@ export function ActionBar() {
           />
         );
       })}
-    </Box>
+    </nav>
   );
 }
 

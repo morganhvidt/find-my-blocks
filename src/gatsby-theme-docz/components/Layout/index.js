@@ -25,12 +25,12 @@ export const Layout = ({ children }) => {
             <Sidebar />
           </Box>
         )}
-        <Box sx={styles.content}>
+        <main sx={styles.content} data-tesid="content">
           <Container sx={{ variant: "styles.Container" }}>{children}</Container>
           <Box sx={styles.footer}>
             <Footer />
           </Box>
-        </Box>
+        </main>
       </Box>
     </Fragment>
   );

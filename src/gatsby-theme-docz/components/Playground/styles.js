@@ -18,6 +18,8 @@ export const preview = {
   px: 3,
   py: 4,
   bg: "playground.bg",
+  border: (t) => `1px solid ${t.colors.grey}`,
+  borderBottom: "none",
   borderRadius: (t) => `${t.radii.radius}px ${t.radii.radius}px 0 0`,
 };
 
@@ -26,6 +28,9 @@ export const editor = (theme) => ({
   fontSize: 2,
   py: 3,
   mb: 4,
+  borderLeft: (t) => `1px solid ${t.colors.grey}`,
+  borderRight: (t) => `1px solid ${t.colors.grey}`,
+  borderBottom: (t) => `1px solid ${t.colors.grey}`,
   borderRadius: (t) => ` 0 0 ${t.radii.radius}px ${t.radii.radius}px`,
 });
 
@@ -34,7 +39,7 @@ export const previewWrapper = {
 
   // Draggable
   "~ span > div": {
-    right: "-9px !important",
+    right: "-10px !important",
     boxShadow: (t) => `
       3px 0 0 0 ${t.colors.playground.bg} inset,
       6px 0 0 0 ${t.colors.playground.border} inset,

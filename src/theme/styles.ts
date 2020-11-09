@@ -13,7 +13,7 @@ export const styles = {
     borderRadius: "radius",
   },
   a: {
-    color: "primary",
+    color: "primaryDark",
 
     "&:hover": {
       textDecoration: "none",

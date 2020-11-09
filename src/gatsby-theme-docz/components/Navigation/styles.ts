@@ -12,7 +12,7 @@ export const miniWrapper = {
 export const heading = {
   color: "white",
   fontSize: 2,
-  fontWeight: "bold",
+  fontWeight: "heading",
   textTransform: "uppercase",
   cursor: "pointer",
   display: "flex",

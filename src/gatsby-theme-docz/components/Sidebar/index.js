@@ -1,5 +1,4 @@
 /** @jsx jsx */
-import { Fragment } from "react";
 import { jsx, Box } from "theme-ui";
 import { useCurrentDoc, Link } from "docz";
 import { Logo } from "@fmb/components/Logo";
@@ -8,7 +7,7 @@ import * as styles from "./styles";
 
 export function Sidebar() {
   return (
-    <Fragment>
+    <nav aria-label="main navigation">
       <Box sx={styles.wrapper} data-testid="sidebar">
         <Box sx={styles.container}>
           <Box sx={styles.logo}>
@@ -18,7 +17,7 @@ export function Sidebar() {
           <Navigation />
         </Box>
       </Box>
-    </Fragment>
+    </nav>
   );
 }
 
@@ -30,8 +29,8 @@ function SidebarLogo() {
   }
 
   return (
-    <Link to="/">
-      <Logo size={125} color="#f1f1f1" />
+    <Link to="/" aria-label="Find My Blocks | Home">
+      <Logo size={125} color="white" />
     </Link>
   );
 }
