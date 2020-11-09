@@ -1,51 +1,44 @@
 export * from "gatsby-theme-docz/src/components/Playground/styles";
 import * as styles from "gatsby-theme-docz/src/components/Playground/styles";
 
-export const editor = () => ({
-  padding: 16,
-  borderRadius: 0,
-  border: 0,
+export const wrapper = () => ({
+  ...styles.wrapper(),
+  width: "100%",
+  bg: "none",
+});
+
+export const wrapperBorder = () => ({});
+
+export const buttons = {
+  display: "none",
+};
+
+export const preview = {
+  m: 0,
+  px: 3,
+  py: 4,
+  bg: "playground.bg",
+  borderRadius: (t) => `${t.radii.radius}px ${t.radii.radius}px 0 0`,
+};
+
+export const editor = (theme) => ({
+  ...styles.editor(theme),
+  fontSize: 2,
+  py: 3,
+  mb: 4,
+  borderRadius: (t) => ` 0 0 ${t.radii.radius}px ${t.radii.radius}px`,
 });
 
 export const previewWrapper = {
   ...styles.previewWrapper,
 
-  "> div": {
-    border: 0,
-    borderRadius: 0,
-  },
-
-  "+ div": {
-    border: 0,
-    borderRadius: 0,
-
-    "* > textarea:focus": {
-      outline: "none",
-    },
-  },
-
+  // Draggable
   "~ span > div": {
-    backgroundColor: "#f1f1f1",
     right: "-9px !important",
-
-    "::before": {
-      content: "''",
-      position: "absolute",
-      top: "50%",
-      left: "50%",
-      transform: "translate(-50%, -50%)",
-      width: "0",
-      height: "90%",
-      borderLeft: "solid 1px transparent",
-      borderColor: "#fff",
-    },
+    boxShadow: (t) => `
+      3px 0 0 0 ${t.colors.playground.bg} inset,
+      6px 0 0 0 ${t.colors.playground.border} inset,
+      9px 0 0 0 ${t.colors.playground.bg} inset
+    `,
   },
-};
-
-export const preview = {
-  ...styles.preview,
-  padding: 16,
-  background: "#f1f1f1",
-  borderRadius: 0,
-  fontSize: 13,
 };

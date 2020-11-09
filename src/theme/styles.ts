@@ -1,6 +1,7 @@
 export const styles = {
   Container: {
-    p: 4,
+    py: 8,
+    px: 4,
     maxWidth: 640,
   },
   inlineCode: {
