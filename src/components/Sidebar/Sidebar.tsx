@@ -1,5 +1,6 @@
-import React, { useState } from "react";
-import { Box } from "../Box";
+/** @jsx jsx */
+import { jsx, Box } from "theme-ui";
+import { Fragment, useState } from "react";
 import { InputText } from "../InputText";
 import { Filter } from "../Filter";
 import { NavigationItem } from "../NavigationItem";
@@ -31,7 +32,7 @@ export const Sidebar = ({
 }: SidebarProps) => {
   const [filter, setFilter] = useState<string>("");
   return (
-    <>
+    <Fragment>
       <InputText
         placeholder="Filter Blocks"
         onChange={(val) => setFilter(val)}
@@ -80,7 +81,7 @@ export const Sidebar = ({
           />
         )}
       </Box>
-    </>
+    </Fragment>
   );
 };
 

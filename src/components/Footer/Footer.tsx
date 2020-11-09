@@ -1,6 +1,5 @@
-import React from "react";
-
-import { Box } from "../Box";
+/** @jsx jsx */
+import { jsx, Box } from "theme-ui";
 import { Link } from "../Link";
 
 import styles from "./Footer.module.css";

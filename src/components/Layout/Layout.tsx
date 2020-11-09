@@ -1,6 +1,6 @@
-import React from "react";
+/** @jsx jsx */
+import { jsx, Box } from "theme-ui";
 import classnames from "classnames";
-import { Box } from "../Box";
 import { Logo } from "../Logo";
 import { Heading } from "../Heading";
 import { Footer } from "../Footer";
