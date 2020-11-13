@@ -21,58 +21,7 @@ import { Sidebar } from "../components/Sidebar";
 ```
 
 <Playground>
-  {() => {
-    const [active, setActive] = useState();
-    const [order, setOrder] = useState("high-low");
-    return (
-      <>
-        <fieldset>
-          <legend>Sort Navigation By:</legend>
-          <input
-            type="radio"
-            name="order"
-            id="a-z"
-            value="a-z"
-            onChange={(e) => setOrder(e.target.value)}
-          />
-          <label htmlFor="a-z">Alphabetically (A-Z)</label>
-          <br />
-          <input
-            type="radio"
-            name="order"
-            id="z-a"
-            value="z-a"
-            onChange={(e) => setOrder(e.target.value)}
-          />
-          <label htmlFor="z-a">Alphabetically (Z-A)</label>
-          <br />
-          <input
-            type="radio"
-            name="order"
-            id="low-high"
-            value="low-high"
-            onChange={(e) => setOrder(e.target.value)}
-          />
-          <label htmlFor="low-high">Number of posts (Low to high)</label>
-          <br />
-          <input
-            type="radio"
-            name="order"
-            id="high-low"
-            value="high-low"
-            onChange={(e) => setOrder(e.target.value)}
-          />
-          <label htmlFor="high-low">Number of posts (High to low)</label>
-        </fieldset>
-        <Sidebar
-          blocks={data}
-          active={active}
-          onClick={(name) => setActive(name)}
-          order={order}
-        />
-      </>
-    );
-  }}
+  <Sidebar onChange={(value) => console.log({ value })} />
 </Playground>
 
 ## Props
