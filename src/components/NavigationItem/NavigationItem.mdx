@@ -10,8 +10,7 @@ import { NavigationItem } from ".";
 
 # NavigationItem
 
-`NavigationItem` is a layout component that is used to show information about a
-block. It is heavily used in the Sidebar component.
+`NavigationItem` allows a user to select a `Block` to display more information.
 
 ## Usage
 
@@ -21,24 +20,51 @@ import { NavigationItem } from "../components/NavigationItem";
 
 <Playground>
   {() => {
-    const [active, setActive] = useState(true);
+    const [active, setActive] = useState(false);
     return (
       <>
         <NavigationItem
           label="Toronto Raptors"
-          postCount={1}
-          active={active}
-          onClick={() => setActive(!active)}
+          count={1}
+          isActive={active}
+          onClick={handleClick}
         />
-        <NavigationItem label="Los Angeles Lakers" postCount={1} />
-        <NavigationItem label="Miami Heat" postCount={2} />
-        <NavigationItem label="Boston Celtics" postCount={3} />
-        <NavigationItem label="Brooklyn Nets" postCount={4} />
+        {active && (
+          <>
+            <hr />
+            <button onClick={handleClick}>Toggle Active</button>
+          </>
+        )}
       </>
     );
+    function handleClick(value) {
+      console.log({ value });
+      setActive(!active);
+    }
   }}
 </Playground>
 
 ## Props
 
 <Props of={NavigationItem} />
+
+## onClick
+
+The `onClick` prop of a `NavigationItem` will return a value equal to the
+`label` of the item.
+
+<Playground>
+  {() => {
+    return (
+      <NavigationItem
+        label="Toronto Raptors"
+        count={10}
+        isActive={false}
+        onClick={handleClick}
+      />
+    );
+    function handleClick(value) {
+      alert(`You've clicked: ${value}`);
+    }
+  }}
+</Playground>

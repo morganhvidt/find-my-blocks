@@ -8,7 +8,7 @@ export const white = "#fff";
 
 export const greyLightest = "#f9f9f9";
 export const greyLight = "#eee";
-export const grey = "#ccc";
+export const grey = "#e2e4e7";
 export const greyDark = "#666";
 
 export const github = "#2b3137";

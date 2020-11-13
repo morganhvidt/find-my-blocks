@@ -1,30 +1,32 @@
-import React from "react";
-import classnames from "classnames";
-import styles from "./NavigationItem.module.css";
-
+/** @jsx jsx */
+import { jsx, Box } from "theme-ui";
 import { Icon } from "../Icon";
+import * as styles from "./styles";
 
 interface NavigationItemProps {
-  label: String;
-  postCount?: Number;
-  active?: Boolean;
-  onClick?(): void;
+  label: string;
+  count: number;
+  isActive: boolean;
+  onClick(val: string): void;
 }
 
 export const NavigationItem = ({
   label,
-  postCount,
-  active,
-  onClick = () => undefined,
+  count,
+  isActive,
+  onClick,
 }: NavigationItemProps) => {
-  const buttonClass = classnames(styles.button, active && styles.active);
-  const labelClass = classnames(styles.label);
-
   return (
-    <a className={buttonClass} onClick={() => onClick()}>
-      <span className={labelClass}>{label}</span>
-      {postCount && `Found in ${postCount} post${postCount !== 1 ? "s" : ""}`}
+    <Box sx={styles.item(isActive)} onClick={handleClick}>
+      {label}
+      <Box sx={styles.count}>
+        Found in {count} post{count !== 1 ? "s" : ""}
+      </Box>
       <Icon icon="arrow-right" />
-    </a>
+    </Box>
   );
+
+  function handleClick() {
+    onClick(label);
+  }
 };

@@ -20,18 +20,14 @@ export const Sidebar = ({ onChange }: SidebarProps) => {
           <Logo size={100} />
         </Box>
       </CardBody>
-
       <CardDivider />
-
       <CardBody>
         <Box sx={{ "*": { m: `${0} !important` } }}>
           <InputText placeholder="Filter blocks" onChange={handleChange} />
         </Box>
       </CardBody>
-
       <CardDivider />
-
-      <CardBody>Menu</CardBody>
+      Menu
     </Card>
   );
 
