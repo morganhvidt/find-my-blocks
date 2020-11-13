@@ -4,6 +4,11 @@ export const styles = {
     px: 4,
     maxWidth: 640,
   },
+  Demo: {
+    p: 4,
+    bg: "WPBackground",
+    minHeight: "100vh",
+  },
   inlineCode: {
     bg: "WPBackground",
     color: "text",
