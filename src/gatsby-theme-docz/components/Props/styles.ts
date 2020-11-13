@@ -12,7 +12,7 @@ export const info = {
   display: "flex",
   alignItems: "center",
   justifyContent: "space-between",
-  bg: "WPBackground",
+  bg: "greyLightest",
   p: 3,
 };
 

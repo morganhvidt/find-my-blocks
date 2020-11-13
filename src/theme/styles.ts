@@ -5,11 +5,11 @@ export const styles = {
     maxWidth: 640,
   },
   inlineCode: {
-    display: "inline-block",
-    bg: "greyLight",
-    color: "greyDark",
-    py: 1,
+    bg: "WPBackground",
+    color: "text",
+    fontSize: 1,
     px: 2,
+    py: 1,
     borderRadius: "radius",
   },
   a: {
@@ -18,5 +18,8 @@ export const styles = {
     "&:hover": {
       textDecoration: "none",
     },
+  },
+  p: {
+    lineHeight: 1.8,
   },
 };

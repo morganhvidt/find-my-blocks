@@ -4,7 +4,7 @@ export const light = {
   plain: {
     fontFamily: "monospace",
     color: colors.wordpress,
-    backgroundColor: colors.WPBackground,
+    backgroundColor: colors.greyLightest,
     fontSize: 14,
     fontWeight: 500,
   },

@@ -1,3 +1,4 @@
+import * as colors from "@fmb/theme/colors";
 export * from "gatsby-theme-docz/src/components/Playground/styles";
 import * as styles from "gatsby-theme-docz/src/components/Playground/styles";
 
@@ -23,9 +24,14 @@ export const preview = {
 export const editor = (theme) => ({
   ...styles.editor(theme),
   fontSize: 2,
-  py: 3,
-  mt: 1,
+  mt: "1px",
   mb: 4,
+  bg: "transparent",
+  backgroundImage: `url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23${colors.WPBackground.replace(
+    "#",
+    ""
+  )}' fill-opacity='1' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E")`,
+  border: (t) => `1px solid ${t.colors.WPBackground}`,
 });
 
 export const previewWrapper = {

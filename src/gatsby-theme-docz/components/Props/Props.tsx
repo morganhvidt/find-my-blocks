@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 /** @jsx jsx */
 import { jsx, Box } from "theme-ui";
 import { PropsComponentProps } from "docz";
