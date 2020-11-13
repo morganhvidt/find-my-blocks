@@ -21,7 +21,10 @@ import { Sidebar } from "../components/Sidebar";
 ```
 
 <Playground>
-  <Sidebar onChange={(value) => console.log({ value })} />
+  <Sidebar
+    onChange={(value) => console.log({ value })}
+    onClick={(value) => console.log({ value })}
+  />
 </Playground>
 
 ## Props

@@ -3,16 +3,18 @@ import { jsx, Box } from "theme-ui";
 import { Card, CardBody, CardDivider } from "@wordpress/components";
 import { Logo } from "../Logo";
 import { InputText } from "../InputText";
+import { NavigationItem } from "../NavigationItem";
 
 interface SidebarProps {
   onChange(val: string): void;
+  onClick(val: string): void;
 }
 
 /**
  * DONT FORGET THE EMPTY STATE
  */
 
-export const Sidebar = ({ onChange }: SidebarProps) => {
+export const Sidebar = ({ onChange, onClick }: SidebarProps) => {
   return (
     <Card>
       <CardBody>
@@ -27,11 +29,33 @@ export const Sidebar = ({ onChange }: SidebarProps) => {
         </Box>
       </CardBody>
       <CardDivider />
-      Menu
+
+      <NavigationItem
+        label="Toronto Raptors"
+        count={1}
+        isActive={false}
+        onClick={handleClick}
+      />
+      <NavigationItem
+        label="Toronto Raptors"
+        count={1}
+        isActive={false}
+        onClick={handleClick}
+      />
+      <NavigationItem
+        label="Toronto Raptors"
+        count={1}
+        isActive={false}
+        onClick={handleClick}
+      />
     </Card>
   );
 
   function handleChange(val: string) {
     onChange(val);
+  }
+
+  function handleClick(val: string) {
+    onClick(val);
   }
 };
