@@ -3,25 +3,55 @@ import { jsx, Box } from "theme-ui";
 import { useState } from "react";
 
 import { Heading } from "../Heading";
-import { InputText } from "../InputText";
+import { Sidebar } from "../Sidebar";
+import { Footer } from "../Footer";
 
 import * as styles from "./styles";
 
-export function App() {
+interface AppProps {
+  blocks: any;
+}
+
+export function App({ blocks }: AppProps) {
   const [query, setQuery] = useState("");
+  const [active, setActive] = useState("");
+
+  /**
+   * Create an array of blocks for the sidebar
+   */
+  const sidebar = blocks.map((block: any) => ({
+    label: block.name,
+    count: block.posts.length,
+  }));
+
   return (
     <Box sx={styles.layout}>
       <Box sx={styles.column}>
-        <InputText onChange={setQuery} placeholder="Filter Blocks" />
+        <Sidebar
+          blocks={sidebar}
+          query={query}
+          onChange={handleSidebarInputChange}
+          onClick={handleSidebarClick}
+        />
       </Box>
       <Box sx={styles.content}>
         <Box>
-          <Heading>acf/block name</Heading>
+          <Heading>{active}</Heading>
         </Box>
         <Box>content - {query}</Box>
-        <Box>footer</Box>
+        <Box>
+          <Footer />
+        </Box>
       </Box>
       <Box sx={{ ...styles.column, mt: 5 }}>settings</Box>
     </Box>
   );
+
+  function handleSidebarInputChange(value: string) {
+    setQuery(value);
+  }
+
+  function handleSidebarClick(value: string) {
+    setActive(value);
+  }
 }

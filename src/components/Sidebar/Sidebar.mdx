@@ -5,9 +5,9 @@ route: /components/sidebar
 ---
 
 import { Playground, Props } from "docz";
-import data from "@fmb/assets/data/data.json";
 import { useState } from "react";
 import { Sidebar } from ".";
+import data from "@fmb/assets/data/data.json";
 
 # Sidebar
 
@@ -21,10 +21,21 @@ import { Sidebar } from "../components/Sidebar";
 ```
 
 <Playground>
-  <Sidebar
-    onChange={(value) => console.log({ value })}
-    onClick={(value) => console.log({ value })}
-  />
+  {() => {
+    const [query, setQuery] = useState("");
+    const blocks = data.map((item) => ({
+      label: item.name,
+      count: item.posts.length,
+    }));
+    return (
+      <Sidebar
+        blocks={blocks}
+        query={query}
+        onChange={setQuery}
+        onClick={(value) => console.log({ value })}
+      />
+    );
+  }}
 </Playground>
 
 ## Props

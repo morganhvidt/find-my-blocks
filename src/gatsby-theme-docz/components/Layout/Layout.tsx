@@ -8,6 +8,7 @@ import { Footer } from "@fmb/components/Footer";
 import { App } from "@fmb/components/App";
 import { ActionBar } from "../ActionBar";
 import { Sidebar } from "../Sidebar";
+import data from "@fmb/assets/data/data.json";
 import * as styles from "./styles";
 
 interface LayoutProps {}
@@ -52,5 +53,5 @@ function LayoutInternals({
 }
 
 function Demo() {
-  return <App />;
+  return <App blocks={data} />;
 }
