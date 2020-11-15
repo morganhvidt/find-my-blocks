@@ -15,11 +15,13 @@ A very common link. Used to link out to other URLs.
 ## Usage
 
 ```ts
-import { Link } from "../components/Link";
+import { Link } from "@fmb/components/Link";
 ```
 
 <Playground>
-  <Link url="https://eddysims.com">Look at this amazing website!</Link>
+  <Link url="https://eddysims.com" external>
+    Look at this amazing website!
+  </Link>
 </Playground>
 
 ## Props
@@ -28,8 +30,8 @@ import { Link } from "../components/Link";
 
 ## With Icon
 
-The `icon` prop uses the `<Icon />` component but without the size and color
-props.
+A link can be prepended with an `icon`. A list of available icons can be found
+in the [Icon](/components/icon) component.
 
 <Playground>
   <Link url="https://eddysims.com" icon="camera">

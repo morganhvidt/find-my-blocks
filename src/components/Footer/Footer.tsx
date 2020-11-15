@@ -1,23 +1,19 @@
 /** @jsx jsx */
 import { jsx, Box } from "theme-ui";
 import { Link } from "../Link";
+import * as styles from "./styles";
 
-import styles from "./Footer.module.css";
-
-export const Footer = () => {
+export function Footer() {
+  const donateLink = "https://find-my-blocks.eddysims.com/donate";
   return (
-    <Box className={styles.footer}>
+    <Box sx={styles.footer}>
       Developed by{" "}
-      <Link url="https://eddysims.com" openInNewTab>
+      <Link url="https://eddysims.com" external>
         Eddy Sims
-      </Link>
-      <Link
-        url="https://find-my-blocks.eddysims.com/donate"
-        icon="heart"
-        openInNewTab
-      >
+      </Link>{" "}
+      <Link url={donateLink} icon="heart" external>
         Make a donation
       </Link>
     </Box>
   );
-};
+}

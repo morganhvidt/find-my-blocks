@@ -1,38 +1,80 @@
-import React from "react";
-
+/** @jsx jsx */
+import { jsx, Link as ThemeUiLink } from "theme-ui";
+import { Fragment } from "react";
+import { Link as GatsbyLink } from "docz";
+// eslint-disable-next-line no-unused-vars
+import { XOR } from "ts-xor";
 import { Icon } from "../Icon";
-import styles from "./Link.module.css";
+import { PropsWithChildren } from "react";
 
-interface LinkProps {
+interface LinkBaseProps {
+  /**
+   * An Icon that can be added before the link
+   */
+  icon?: string;
+}
+
+interface GatsbyLinkProps extends LinkBaseProps {
+  /**
+   * A link that is directed to somewhere on the Find My Blocks website
+   */
+  to: string;
+}
+
+interface BasicLinkProps extends LinkBaseProps {
   /**
    * The URL that the link will point to.
    */
   url: string;
   /**
-   * An Icon that can be added before the link
-   */
-  icon?: string;
-  /**
    * Should the link open in a new tab
    */
-  openInNewTab?: boolean;
-  children: React.ReactNode;
+  external?: boolean;
 }
+
+type LinkProps = XOR<GatsbyLinkProps, BasicLinkProps>;
 
 export const Link = ({
   url,
+  to,
   icon,
-  openInNewTab = false,
+  external = false,
   children,
-}: LinkProps) => {
+}: PropsWithChildren<LinkProps>) => {
+  const linkProps = {
+    sx: {
+      color: "primary",
+      svg: {
+        mr: 1,
+        mb: "-1px",
+      },
+    },
+  };
+
+  if (to) {
+    return (
+      <GatsbyLink to={to} {...linkProps}>
+        <LinkInternals />
+      </GatsbyLink>
+    );
+  }
+
   return (
-    <a
+    <ThemeUiLink
       href={url}
-      className={styles.link}
-      target={openInNewTab ? "_blank" : "_self"}
+      target={external ? "_blank" : "_self"}
+      {...linkProps}
     >
-      {icon && <Icon icon={icon} />}
-      {children}
-    </a>
+      <LinkInternals />
+    </ThemeUiLink>
   );
+
+  function LinkInternals() {
+    return (
+      <Fragment>
+        {icon && <Icon icon={icon} size={14} />}
+        {children}
+      </Fragment>
+    );
+  }
 };

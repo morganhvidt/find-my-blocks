@@ -39,7 +39,7 @@ export function App({ blocks }: AppProps) {
           <Heading>{active}</Heading>
         </Box>
         <Box>content - {query}</Box>
-        <Box>
+        <Box sx={{ mt: 4 }}>
           <Footer />
         </Box>
       </Box>
