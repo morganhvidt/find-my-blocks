@@ -1,12 +1,9 @@
 /** @jsx jsx */
 import { jsx, Box } from "theme-ui";
-import { useState } from "react";
 import { InputText } from "../InputText";
 import { NavigationItem } from "../NavigationItem";
 import { Card, CardBody, CardDivider } from "@wordpress/components";
 import { Logo } from "../Logo";
-import { getLocalStorageItem } from "../../helpers/getLocalStorageItem";
-import { setLocalStorageItem } from "../../helpers/setLocalStorageItem";
 
 export type SidebarOrder = "az" | "za" | "low-high" | "high-low";
 
@@ -17,6 +14,7 @@ interface SidbearItem {
 
 interface SidebarProps {
   readonly blocks: Array<SidbearItem>;
+  readonly active: string;
   readonly query: string;
   onClick(name: string): void;
   onChange(value: string): void;
@@ -24,11 +22,11 @@ interface SidebarProps {
 
 export const Sidebar = ({
   blocks,
+  active,
   onClick = () => undefined,
   onChange,
   query,
 }: SidebarProps) => {
-  const [active, setActive] = useState(getLocalStorageItem("active") || "");
   const filteredItems = blocks.filter((block) => {
     if (!query || query === "") {
       return true;
@@ -74,8 +72,6 @@ export const Sidebar = ({
   }
 
   function handleClick(value: string) {
-    setLocalStorageItem("active", value);
-    setActive(value);
     onClick(value);
   }
 };

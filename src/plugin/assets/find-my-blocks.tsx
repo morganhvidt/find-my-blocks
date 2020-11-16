@@ -15,6 +15,8 @@ import { Settings } from "../../components/Settings";
 import { CardList, CardOrder } from "../../components/CardList";
 import { Box } from "../../components/Box";
 import { Loading } from "../../components/Loading";
+import { getLocalStorageItem } from "../../helpers/getLocalStorageItem";
+import { setLocalStorageItem } from "../../helpers/setLocalStorageItem";
 
 import "./find-my-blocks.foundation.css";
 import styles from "./find-my-blocks.css";
@@ -38,7 +40,7 @@ interface Block {
 
 const FindMyBlocks = () => {
   const [query, setQuery] = useState("");
-  const [active, setActive] = useState<string | null>("");
+  const [active, setActive] = useState(getLocalStorageItem("active") || "");
   const [navOrder, setNavOrder] = useState<SidebarOrder>("az");
   const [showCoreBlocks, setShowCoreBlocks] = useState<boolean>(false);
   const [cardOrder, setCardOrder] = useState<CardOrder>("az");
@@ -49,9 +51,6 @@ const FindMyBlocks = () => {
 
   useEffect(() => {
     if (windowWasReloaded() && hasBlocks) {
-      if (localStorage.getItem("fmb_active")) {
-        setActive(localStorage.getItem("fmb_active"));
-      }
       if (localStorage.getItem("fmb_navOrder")) {
         setNavOrder(localStorage.getItem("fmb_navOrder") as SidebarOrder);
       }
@@ -90,6 +89,7 @@ const FindMyBlocks = () => {
             sidebar={
               <Sidebar
                 blocks={sidebarItems}
+                active={active}
                 onClick={handleMenuItemClick}
                 query={query}
                 onChange={setQuery}
@@ -120,8 +120,8 @@ const FindMyBlocks = () => {
   );
 
   function handleMenuItemClick(value: string) {
+    setLocalStorageItem("active", value);
     setActive(value);
-    localStorage.setItem("fmb_active", value);
     window.scrollTo({
       top: 0,
       behavior: "smooth",
