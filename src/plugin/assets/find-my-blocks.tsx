@@ -19,9 +19,21 @@ import { Loading } from "../../components/Loading";
 import "./find-my-blocks.foundation.css";
 import styles from "./find-my-blocks.css";
 
+interface Post {
+  id: number;
+  title: string;
+  edit_url: string;
+  post_url: string;
+  postType: string;
+  nestedBlockType?: string;
+  count: number;
+  isNested: boolean;
+  isReusable: boolean;
+}
+
 interface Block {
-  name: String;
-  posts: Array<String>;
+  name: string;
+  posts: Array<Post>;
 }
 
 const FindMyBlocks = () => {
@@ -60,6 +72,11 @@ const FindMyBlocks = () => {
 
   console.log("rerender");
 
+  const sidebarItems = blocks.map(({ name, posts }: Block) => ({
+    name,
+    count: posts.length,
+  }));
+
   return (
     <ThemeProvider theme={theme}>
       <div ref={ref}>
@@ -72,9 +89,7 @@ const FindMyBlocks = () => {
             title={active}
             sidebar={
               <Sidebar
-                blocks={blocks}
-                showCoreBlocks={showCoreBlocks}
-                order={navOrder}
+                blocks={sidebarItems}
                 onClick={handleMenuItemClick}
                 query={query}
                 onChange={setQuery}

@@ -8,18 +8,16 @@ import { Logo } from "../Logo";
 
 export type SidebarOrder = "az" | "za" | "low-high" | "high-low";
 
-interface Block {
+interface SidbearItem {
   name: string;
-  posts: Array<String>;
+  count: number;
 }
 
 interface SidebarProps {
-  readonly blocks: Block[];
-  readonly showCoreBlocks?: boolean;
-  readonly order?: SidebarOrder;
+  readonly blocks: Array<SidbearItem>;
+  readonly query: string;
   onClick(name: string): void;
   onChange(value: string): void;
-  query: string;
 }
 
 export const Sidebar = ({
@@ -46,7 +44,7 @@ export const Sidebar = ({
 
       <CardDivider />
 
-      <CardBody>
+      <CardBody size="small">
         <Box sx={{ "*": { m: `${0} !important` } }}>
           <InputText placeholder="Filter Blocks" onChange={handleChange} />
         </Box>
@@ -60,7 +58,7 @@ export const Sidebar = ({
           <NavigationItem
             key={item.name}
             label={item.name}
-            count={item.posts.length}
+            count={item.count}
             active={active === item.name}
             onClick={handleClick}
           />
