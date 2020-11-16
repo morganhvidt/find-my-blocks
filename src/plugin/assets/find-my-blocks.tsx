@@ -25,6 +25,7 @@ interface Block {
 }
 
 const FindMyBlocks = () => {
+  const [query, setQuery] = useState("");
   const [active, setActive] = useState<string | null>("");
   const [navOrder, setNavOrder] = useState<SidebarOrder>("az");
   const [showCoreBlocks, setShowCoreBlocks] = useState<boolean>(false);
@@ -57,6 +58,8 @@ const FindMyBlocks = () => {
     }
   }, [active]);
 
+  console.log("rerender");
+
   return (
     <ThemeProvider theme={theme}>
       <div ref={ref}>
@@ -70,17 +73,11 @@ const FindMyBlocks = () => {
             sidebar={
               <Sidebar
                 blocks={blocks}
-                active={active}
                 showCoreBlocks={showCoreBlocks}
                 order={navOrder}
-                onClick={(name) => {
-                  localStorage.setItem("fmb_active", name);
-                  setActive(name);
-                  window.scrollTo({
-                    top: 0,
-                    behavior: "smooth",
-                  });
-                }}
+                onClick={handleMenuItemClick}
+                query={query}
+                onChange={setQuery}
               />
             }
             settings={
@@ -106,6 +103,15 @@ const FindMyBlocks = () => {
       </div>
     </ThemeProvider>
   );
+
+  function handleMenuItemClick(value: string) {
+    setActive(value);
+    localStorage.setItem("fmb_active", value);
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }
 };
 
 ReactDOM.render(<FindMyBlocks />, document.querySelector("#find-my-blocks"));

@@ -5,10 +5,10 @@ import styles from "./NavigationItem.module.css";
 import { Icon } from "../Icon";
 
 interface NavigationItemProps {
-  label: String;
+  label: string;
   postCount?: Number;
   active?: Boolean;
-  onClick?(): void;
+  onClick(value: string): void;
 }
 
 export const NavigationItem = ({
@@ -21,10 +21,14 @@ export const NavigationItem = ({
   const labelClass = classnames(styles.label);
 
   return (
-    <a className={buttonClass} onClick={() => onClick()}>
+    <a className={buttonClass} onClick={handleClick}>
       <span className={labelClass}>{label}</span>
       {postCount && `Found in ${postCount} post${postCount !== 1 ? "s" : ""}`}
       <Icon icon="arrow-right" />
     </a>
   );
+
+  function handleClick() {
+    onClick(label);
+  }
 };
