@@ -1,1 +1,1 @@
-export { Settings } from "./Settings";
+export { Settings, SettingsState, SettingsReducer } from "./Settings";

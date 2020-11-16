@@ -10,17 +10,34 @@ import {
   CheckboxControl,
 } from "@wordpress/components";
 
-interface SettingsProps {
-  // readonly navOrder: string;
-  // readonly cardOrder: string;
-  // readonly showCoreBlocks: boolean;
-  // readonly initialOpen: boolean;
-  // onNavOrderChange(result: string): void;
-  // onCardOrderChange(result: string): void;
-  // onShowCoreBlocksClick(result: boolean): void;
+export type SettingsSelectOption =
+  | "alphabet-az"
+  | "alphabet-za"
+  | "high-low"
+  | "low-high";
+
+export interface SettingsState {
+  navigationOrder: SettingsSelectOption;
+  cardOrder: SettingsSelectOption;
+  showCoreBlocks: boolean;
 }
 
-export const Settings = () => {
+export type SettingsReducerTypes =
+  | "navigationOrder"
+  | "cardOrder"
+  | "showCoreBlocks";
+
+export interface SettingsReducer {
+  type: SettingsReducerTypes;
+  value: SettingsSelectOption | boolean;
+}
+
+interface SettingsProps {
+  state: SettingsState;
+  onChange(dispatch: SettingsReducer): void;
+}
+
+export const Settings = ({ state, onChange }: SettingsProps) => {
   /**
    * We must check for window when using @wordpress/components
    */
@@ -55,13 +72,15 @@ export const Settings = () => {
         <CardBody>
           <SelectControl
             label="Sort navigation by:"
+            value={state.navigationOrder}
             options={options}
-            onChange={(val) => handleChange(val, "sortNavBy")}
+            onChange={(val) => handleChange(val, "navigationOrder")}
           />
           <SelectControl
             label="Sort cards by:"
+            value={state.cardOrder}
             options={options}
-            onChange={(val) => handleChange(val, "sortCardsBy")}
+            onChange={(val) => handleChange(val, "cardOrder")}
           />
         </CardBody>
       </Card>
@@ -74,6 +93,7 @@ export const Settings = () => {
         <CardBody>
           <CheckboxControl
             label="Show core blocks"
+            checked={state.showCoreBlocks}
             onChange={(val) => handleChange(val, "showCoreBlocks")}
           />
         </CardBody>
@@ -81,7 +101,10 @@ export const Settings = () => {
     </Fragment>
   );
 
-  function handleChange(value: unknown, action: string) {
-    console.log({ action, value });
+  function handleChange(
+    value: boolean | SettingsSelectOption,
+    type: SettingsReducerTypes
+  ) {
+    onChange({ type, value });
   }
 };
