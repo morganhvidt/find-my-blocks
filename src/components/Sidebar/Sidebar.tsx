@@ -5,6 +5,8 @@ import { InputText } from "../InputText";
 import { NavigationItem } from "../NavigationItem";
 import { Card, CardBody, CardDivider } from "@wordpress/components";
 import { Logo } from "../Logo";
+import { getLocalStorageItem } from "../../helpers/getLocalStorageItem";
+import { setLocalStorageItem } from "../../helpers/setLocalStorageItem";
 
 export type SidebarOrder = "az" | "za" | "low-high" | "high-low";
 
@@ -26,7 +28,7 @@ export const Sidebar = ({
   onChange,
   query,
 }: SidebarProps) => {
-  const [active, setActive] = useState("");
+  const [active, setActive] = useState(getLocalStorageItem("active") || "");
   const filteredItems = blocks.filter((block) => {
     if (!query || query === "") {
       return true;
@@ -72,6 +74,7 @@ export const Sidebar = ({
   }
 
   function handleClick(value: string) {
+    setLocalStorageItem("active", value);
     setActive(value);
     onClick(value);
   }

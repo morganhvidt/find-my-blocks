@@ -26,7 +26,7 @@ export const item = (isActive: boolean) => ({
     },
   },
 
-  "&:nth-child(2n+2)": {
+  "&:nth-of-type(2n+2)": {
     bg: isActive ? "primary" : "greyLight",
   },
 });
