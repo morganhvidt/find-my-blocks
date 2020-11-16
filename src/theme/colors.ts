@@ -6,7 +6,7 @@ export const primary = "#ff4b3e";
 export const primaryDark = "#e61e14";
 export const white = "#fff";
 
-export const greyLightest = "#f9f9f9";
+export const greyLightest = "#fafafa";
 export const greyLight = "#eee";
 export const grey = "#e2e4e7";
 export const greyDark = "#666";

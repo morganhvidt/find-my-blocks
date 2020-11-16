@@ -22,7 +22,7 @@ export const NavigationItem = ({
       <Box sx={styles.count}>
         Found in {count} post{count !== 1 ? "s" : ""}
       </Box>
-      <Icon icon="arrow-right" />
+      <Icon icon="arrow-right" size={20} />
     </Box>
   );
 

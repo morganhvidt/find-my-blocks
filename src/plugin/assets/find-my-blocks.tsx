@@ -5,7 +5,7 @@ import { ThemeProvider } from "theme-ui";
 import { App } from "../../components/App";
 import { theme } from "../../theme";
 
-// import { useBlocks, useThrottledResizeObserver } from "../../hooks";
+import { useBlocks } from "../../hooks";
 // import { breakpoints } from "../../helpers/global";
 // import { windowWasReloaded } from "../../helpers/windowWasReloaded";
 
@@ -25,9 +25,10 @@ interface Block {
 }
 
 const FindMyBlocks = () => {
+  const [blocks] = useBlocks();
   return (
     <ThemeProvider theme={theme}>
-      <App />
+      <App blocks={blocks} />
     </ThemeProvider>
   );
   // const [active, setActive] = useState<string | null>("");

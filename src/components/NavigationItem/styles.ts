@@ -4,15 +4,21 @@ export const item = (isActive: boolean) => ({
   color: isActive ? "white" : "inherit",
   pointerEvents: isActive ? "none" : "default",
   position: "relative",
-  px: 4,
-  py: 3,
+  pl: 4,
+  pr: 6,
+  py: 2,
   transition: "background 300ms",
+  fontWeight: "bold",
   borderBottom: (t) => `1px solid ${t.colors.grey}`,
 
   "&:hover": {
     svg: {
       right: 3,
     },
+  },
+
+  "&:nth-child(2n+2)": {
+    bg: isActive ? "primary" : "greyLightest",
   },
 
   svg: {
@@ -26,5 +32,7 @@ export const item = (isActive: boolean) => ({
 });
 
 export const count = {
-  fontSize: 1,
+  fontWeight: "body",
+  mt: "2px",
+  fontSize: "13px",
 };

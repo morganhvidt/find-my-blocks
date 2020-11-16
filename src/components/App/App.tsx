@@ -4,7 +4,7 @@ import { useState } from "react";
 
 import { Heading } from "../Heading";
 import { Sidebar } from "../Sidebar";
-import { Footer } from "../Footer";
+// import { Footer } from "../Footer";
 
 import * as styles from "./styles";
 
@@ -39,9 +39,7 @@ export function App({ blocks }: AppProps) {
           <Heading>{active}</Heading>
         </Box>
         <Box>content - {query}</Box>
-        <Box sx={{ mt: 4 }}>
-          <Footer />
-        </Box>
+        <Box sx={{ mt: 4 }}>{/* <Footer /> */}</Box>
       </Box>
       <Box sx={{ ...styles.column, mt: 5 }}>settings</Box>
     </Box>
