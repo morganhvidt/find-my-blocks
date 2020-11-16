@@ -28,7 +28,7 @@ export interface SettingsAction {
 export const initialSettings = {
   navigationOrder: getLocalStorageItem("navigationOrder") || "",
   cardOrder: getLocalStorageItem("cardOrder") || "",
-  showCoreBlocks: getLocalStorageItem("showCoreBlocks") || true,
+  showCoreBlocks: getLocalStorageItem("showCoreBlocks"),
 };
 
 export function settingsReducer(
