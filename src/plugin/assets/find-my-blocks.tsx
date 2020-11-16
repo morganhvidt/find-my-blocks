@@ -12,8 +12,8 @@ import { Layout } from "../../components/Layout";
 import { Sidebar } from "../../components/Sidebar";
 import {
   Settings,
-  SettingsState,
-  SettingsReducer,
+  initialSettings,
+  settingsReducer,
 } from "../../components/Settings";
 import { Loading } from "../../components/Loading";
 
@@ -40,42 +40,31 @@ interface Block {
   posts: Array<Post>;
 }
 
-function settingsReducer(state: SettingsState, action: SettingsReducer) {
-  setLocalStorageItem(action.type, action.value);
-
-  switch (action.type) {
-    case "navigationOrder": {
-      return { ...state, navigationOrder: action.value };
-    }
-    case "cardOrder": {
-      return { ...state, cardOrder: action.value };
-    }
-    case "showCoreBlocks": {
-      return { ...state, showCoreBlocks: action.value };
-    }
-    default:
-      throw new Error();
-  }
-}
-
 const FindMyBlocks = () => {
   const [blocks] = useBlocks();
   const hasBlocks = blocks != undefined && blocks.length > 1;
   const [query, setQuery] = useState("");
   const [active, setActive] = useState(getLocalStorageItem("active") || "");
 
-  const [settings, dispatch] = useReducer(settingsReducer, {
-    navigationOrder: getLocalStorageItem("navigationOrder") || "",
-    cardOrder: getLocalStorageItem("cardOrder") || "",
-    showCoreBlocks: getLocalStorageItem("showCoreBlocks") || true,
-  });
+  // @ts-ignore
+  const [settings, dispatch] = useReducer(settingsReducer, initialSettings);
 
   console.log("rerender");
 
-  const sidebarItems = blocks.map(({ name, posts }: Block) => ({
-    name,
-    count: posts.length,
-  }));
+  const sidebarItems = blocks
+    .filter((block: Block) => {
+      const isCoreBlock =
+        block.name.includes("core/") || block.name.includes("core-embed/");
+      if (!settings.showCoreBlocks && isCoreBlock) {
+        return false;
+      }
+
+      return true;
+    })
+    .map(({ name, posts }: Block) => ({
+      name,
+      count: posts.length,
+    }));
 
   return (
     <ThemeProvider theme={theme}>

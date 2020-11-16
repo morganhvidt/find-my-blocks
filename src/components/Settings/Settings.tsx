@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
 import { Fragment } from "react";
-import { Icon } from "../Icon";
 import {
   Card,
   CardBody,
@@ -9,32 +8,17 @@ import {
   SelectControl,
   CheckboxControl,
 } from "@wordpress/components";
-
-export type SettingsSelectOption =
-  | "alphabet-az"
-  | "alphabet-za"
-  | "high-low"
-  | "low-high";
-
-export interface SettingsState {
-  navigationOrder: SettingsSelectOption;
-  cardOrder: SettingsSelectOption;
-  showCoreBlocks: boolean;
-}
-
-export type SettingsReducerTypes =
-  | "navigationOrder"
-  | "cardOrder"
-  | "showCoreBlocks";
-
-export interface SettingsReducer {
-  type: SettingsReducerTypes;
-  value: SettingsSelectOption | boolean;
-}
+import { Icon } from "../Icon";
+import {
+  SettingsState,
+  SettingsAction,
+  SettingsActionOptions,
+  SettingsSortOptions,
+} from "./settingsReducer";
 
 interface SettingsProps {
   state: SettingsState;
-  onChange(dispatch: SettingsReducer): void;
+  onChange(dispatch: SettingsAction): void;
 }
 
 export const Settings = ({ state, onChange }: SettingsProps) => {
@@ -102,8 +86,8 @@ export const Settings = ({ state, onChange }: SettingsProps) => {
   );
 
   function handleChange(
-    value: boolean | SettingsSelectOption,
-    type: SettingsReducerTypes
+    value: boolean | SettingsSortOptions,
+    type: SettingsActionOptions
   ) {
     onChange({ type, value });
   }
