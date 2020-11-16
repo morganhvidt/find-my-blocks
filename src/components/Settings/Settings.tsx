@@ -1,94 +1,87 @@
-import React from "react";
-// @ts-ignore
-import { cog } from "@wordpress/icons";
+/** @jsx jsx */
+import { jsx } from "theme-ui";
+import { Fragment } from "react";
+import { Icon } from "../Icon";
 import {
-  Panel,
-  PanelRow,
-  PanelBody,
+  Card,
+  CardBody,
+  CardHeader,
   SelectControl,
   CheckboxControl,
 } from "@wordpress/components";
 
-import styles from "./Settings.module.css";
-
 interface SettingsProps {
-  readonly navOrder: string;
-  readonly cardOrder: string;
-  readonly showCoreBlocks: boolean;
-  readonly initialOpen: boolean;
-  onNavOrderChange(result: string): void;
-  onCardOrderChange(result: string): void;
-  onShowCoreBlocksClick(result: boolean): void;
+  // readonly navOrder: string;
+  // readonly cardOrder: string;
+  // readonly showCoreBlocks: boolean;
+  // readonly initialOpen: boolean;
+  // onNavOrderChange(result: string): void;
+  // onCardOrderChange(result: string): void;
+  // onShowCoreBlocksClick(result: boolean): void;
 }
 
-export const Settings = ({
-  navOrder,
-  cardOrder,
-  showCoreBlocks,
-  initialOpen = true,
-  onNavOrderChange = () => undefined,
-  onCardOrderChange = () => undefined,
-  onShowCoreBlocksClick = () => undefined,
-}: SettingsProps) => {
+export const Settings = () => {
   /**
    * We must check for window when using @wordpress/components
    */
-  if (typeof window === "undefined") return <></>;
+  if (typeof window === "undefined") return <Fragment></Fragment>;
 
-  const alphabetical = [
-    { label: "Alphabetically (A-Z)", value: "az" },
-    { label: "Alphabetically (Z-A)", value: "za" },
-  ];
-
-  const blockTypes = [
+  const options = [
     {
-      type: "core",
-      checked: showCoreBlocks,
-      onChange: (val: boolean) => onShowCoreBlocksClick(val),
+      label: "Alphabetically (A-Z)",
+      value: "alphabet-az",
+    },
+    {
+      label: "Alphabetically (Z-A)",
+      value: "alphabet-za",
+    },
+    {
+      label: "Most Popular",
+      value: "high-low",
+    },
+    {
+      label: "Least Popular",
+      value: "low-high",
     },
   ];
 
   return (
-    <Panel>
-      <PanelBody title="Settings" icon={cog} initialOpen={initialOpen}>
-        <PanelRow>
-          <SelectControl
-            label="Sort navigation:"
-            value={navOrder}
-            options={[
-              ...alphabetical,
-              { label: "Most Popular", value: "high-low" },
-              { label: "Least Popular", value: "low-high" },
-            ]}
-            onChange={(val) => onNavOrderChange(val)}
-            className={styles.select}
-          />
-        </PanelRow>
-        <PanelRow>
-          <SelectControl
-            label="Sort cards:"
-            value={cardOrder}
-            options={[
-              ...alphabetical,
-              { label: "Most Popular", value: "popular" },
-              { label: "Reusable First", value: "reusable" },
-            ]}
-            onChange={(val) => onCardOrderChange(val)}
-            className={styles.select}
-          />
-        </PanelRow>
+    <Fragment>
+      <Card size="small" sx={{ mb: 3 }}>
+        <CardHeader>
+          <strong>Settings</strong> <Icon icon="settings" size={16} />
+        </CardHeader>
 
-        <h4>Show/hide block types</h4>
+        <CardBody>
+          <SelectControl
+            label="Sort navigation by:"
+            options={options}
+            onChange={(val) => handleChange(val, "sortNavBy")}
+          />
+          <SelectControl
+            label="Sort cards by:"
+            options={options}
+            onChange={(val) => handleChange(val, "sortCardsBy")}
+          />
+        </CardBody>
+      </Card>
 
-        {blockTypes.map(({ type, checked, onChange }) => (
+      <Card>
+        <CardHeader>
+          <strong>Show/hide block types</strong> <Icon icon="eye" size={16} />
+        </CardHeader>
+
+        <CardBody>
           <CheckboxControl
-            key={type}
-            label={`Show ${type} blocks`}
-            checked={checked}
-            onChange={(val) => onChange(val)}
+            label="Show core blocks"
+            onChange={(val) => handleChange(val, "showCoreBlocks")}
           />
-        ))}
-      </PanelBody>
-    </Panel>
+        </CardBody>
+      </Card>
+    </Fragment>
   );
+
+  function handleChange(value: unknown, action: string) {
+    console.log({ action, value });
+  }
 };
