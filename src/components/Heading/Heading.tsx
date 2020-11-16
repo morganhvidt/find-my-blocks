@@ -1,7 +1,5 @@
-import React from "react";
-import classnames from "classnames";
-import { Box } from "../Box";
-import styles from "./Heading.module.css";
+/** @jsx jsx */
+import { jsx, Heading as ThemeUIHeading } from "theme-ui";
 
 interface HeadingProps {
   readonly level?: 1 | 2 | 3 | 4 | 5 | 6;
@@ -9,10 +7,9 @@ interface HeadingProps {
 }
 
 export const Heading = ({ children, level = 1 }: HeadingProps) => {
-  const HeadingClass = classnames(styles.heading, styles[`h${level}`]);
   return (
-    <Box tag={`h${level}`} className={HeadingClass}>
+    <ThemeUIHeading as={`h${level}`} sx={{ textTransform: "uppercase" }}>
       {children}
-    </Box>
+    </ThemeUIHeading>
   );
 };

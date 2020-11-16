@@ -1,6 +1,6 @@
 .layout {
   display: grid;
-  grid-gap: 2em;
+  grid-gap: 3em;
   grid-template-areas:
     'logo .'
     'menu settings'
@@ -14,11 +14,11 @@
 
 .large {
   grid-template-areas:
-    'logo heading .'
+    'menu heading settings'
     'menu cards settings'
     'menu . settings'
     'footer footer footer';
-  grid-template-columns: 275px 1fr 250px;
+  grid-template-columns: 275px 1fr 275px;
 }
 
 .logo {
