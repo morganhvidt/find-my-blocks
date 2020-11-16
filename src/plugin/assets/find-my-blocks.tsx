@@ -1,6 +1,9 @@
-/* eslint-disable max-lines */
-import React, { useState, useEffect } from "react";
+/** @jsx jsx */
+import { jsx } from "theme-ui";
+import { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
+import { ThemeProvider } from "theme-ui";
+import { theme } from "../../theme";
 
 import { useBlocks, useThrottledResizeObserver } from "../../hooks";
 import { breakpoints } from "../../helpers/global";
@@ -55,51 +58,53 @@ const FindMyBlocks = () => {
   }, [active]);
 
   return (
-    <div ref={ref}>
-      {!hasBlocks ? (
-        <Box className={styles.loading}>
-          <Loading />
-        </Box>
-      ) : (
-        <Layout
-          title={active}
-          sidebar={
-            <Sidebar
-              blocks={blocks}
-              active={active}
-              showCoreBlocks={showCoreBlocks}
-              order={navOrder}
-              onClick={(name) => {
-                localStorage.setItem("fmb_active", name);
-                setActive(name);
-                window.scrollTo({
-                  top: 0,
-                  behavior: "smooth",
-                });
-              }}
-            />
-          }
-          settings={
-            <Settings
-              navOrder={navOrder}
-              cardOrder={cardOrder}
-              initialOpen={width >= breakpoints.large}
-              showCoreBlocks={showCoreBlocks}
-              onNavOrderChange={(val: SidebarOrder) => {
-                localStorage.setItem("fmb_navOrder", val);
-                setNavOrder(val);
-              }}
-              onCardOrderChange={(val: CardOrder) => {
-                localStorage.setItem("fmb_cardOrder", val);
-                setCardOrder(val);
-              }}
-              onShowCoreBlocksClick={(val) => setShowCoreBlocks(val)}
-            />
-          }
-          cards={<CardList cards={cards} order={cardOrder} />}
-        />
-      )}
-    </div>
+    <ThemeProvider theme={theme}>
+      <div ref={ref}>
+        {!hasBlocks ? (
+          <Box className={styles.loading}>
+            <Loading />
+          </Box>
+        ) : (
+          <Layout
+            title={active}
+            sidebar={
+              <Sidebar
+                blocks={blocks}
+                active={active}
+                showCoreBlocks={showCoreBlocks}
+                order={navOrder}
+                onClick={(name) => {
+                  localStorage.setItem("fmb_active", name);
+                  setActive(name);
+                  window.scrollTo({
+                    top: 0,
+                    behavior: "smooth",
+                  });
+                }}
+              />
+            }
+            settings={
+              <Settings
+                navOrder={navOrder}
+                cardOrder={cardOrder}
+                initialOpen={width >= breakpoints.large}
+                showCoreBlocks={showCoreBlocks}
+                onNavOrderChange={(val: SidebarOrder) => {
+                  localStorage.setItem("fmb_navOrder", val);
+                  setNavOrder(val);
+                }}
+                onCardOrderChange={(val: CardOrder) => {
+                  localStorage.setItem("fmb_cardOrder", val);
+                  setCardOrder(val);
+                }}
+                onShowCoreBlocksClick={(val) => setShowCoreBlocks(val)}
+              />
+            }
+            cards={<CardList cards={cards} order={cardOrder} />}
+          />
+        )}
+      </div>
+    </ThemeProvider>
   );
 };
 
