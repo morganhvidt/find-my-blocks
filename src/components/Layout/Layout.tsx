@@ -1,7 +1,6 @@
 import React from "react";
 import classnames from "classnames";
 import { Box } from "../Box";
-import { Logo } from "../Logo";
 import { Heading } from "../Heading";
 import { Footer } from "../Footer";
 import styles from "./Layout.module.css";
@@ -25,9 +24,6 @@ export const Layout = ({ sidebar, settings, title, cards }: LayoutProps) => {
 
   return (
     <div className={className} ref={ref}>
-      <Box className={styles.logo}>
-        <Logo size={75} />
-      </Box>
       {sidebar && <Box className={styles.sidebar}>{sidebar}</Box>}
       {settings && <Box className={styles.settings}>{settings}</Box>}
       {title && (

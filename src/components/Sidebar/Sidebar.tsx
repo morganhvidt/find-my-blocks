@@ -1,9 +1,12 @@
-import React, { useState } from "react";
-import { Box } from "../Box";
+/** @jsx jsx */
+import { jsx, Box } from "theme-ui";
+import { useState } from "react";
 import { InputText } from "../InputText";
 import { Filter } from "../Filter";
 import { NavigationItem } from "../NavigationItem";
 import { Tag } from "../Tag";
+import { Card, CardBody, CardDivider } from "@wordpress/components";
+import { Logo } from "../Logo";
 
 import styles from "./Sidebar.module.css";
 
@@ -30,12 +33,28 @@ export const Sidebar = ({
   onClick = () => undefined,
 }: SidebarProps) => {
   const [filter, setFilter] = useState<string>("");
+
   return (
-    <>
-      <InputText
-        placeholder="Filter Blocks"
-        onChange={(val) => setFilter(val)}
-      />
+    <Card>
+      <CardBody size="large">
+        <Box sx={{ textAlign: "center" }}>
+          <Logo size={80} />
+        </Box>
+      </CardBody>
+
+      <CardDivider />
+
+      <CardBody>
+        <Box sx={{ "*": { m: `${0} !important` } }}>
+          <InputText
+            placeholder="Filter Blocks"
+            onChange={(val) => setFilter(val)}
+          />
+        </Box>
+      </CardBody>
+
+      <CardDivider />
+
       <Box className={styles.nav}>
         {blocks && (
           <Filter
@@ -80,7 +99,7 @@ export const Sidebar = ({
           />
         )}
       </Box>
-    </>
+    </Card>
   );
 };
 
