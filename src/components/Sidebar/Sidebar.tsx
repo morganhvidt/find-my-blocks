@@ -1,15 +1,34 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui";
+import { jsx, Box } from "theme-ui";
+import { useState } from "react";
+
 import { Card as WPCard, CardBody, CardDivider } from "@wordpress/components";
 
+import { Logo } from "../Logo";
+import { InputText } from "../InputText";
+
 export function Sidebar() {
+  const [query, setQuery] = useState("");
+
   return (
     <WPCard size="small">
-      <CardBody size="large">Logo</CardBody>
+      <CardBody size="large">
+        <Box sx={{ textAlign: "center" }}>
+          <Logo size={80} />
+        </Box>
+      </CardBody>
       <CardDivider />
-      <CardBody>Search</CardBody>
+      <CardBody>
+        <Box sx={{ "*": { mb: `${0} !important` } }}>
+          <InputText
+            placeholder="Filter Blocks"
+            onChange={setQuery}
+            defaultValue={query}
+          />
+        </Box>
+      </CardBody>
       <CardDivider />
-      <CardBody>Menu</CardBody>
+      <CardBody>menu | {query}</CardBody>
     </WPCard>
   );
 }

@@ -9,7 +9,7 @@ const theme = {
   colors: {
     background: "#f1f1f1",
     color: "#444",
-    primary: "#f9e09f",
+    primary: "#ff4b3e",
   },
   spacing: [0, 4, 8, 16, 24, 32, 40, 48],
 };
