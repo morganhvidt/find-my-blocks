@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx, ThemeProvider, Box } from "theme-ui";
 import { Block } from "./app.types";
+import { Sidebar } from "../../components/Sidebar";
 
 import * as styles from "./style";
 
@@ -21,8 +22,7 @@ export function App({ blocks }: AppProps) {
   return (
     <ThemeProvider theme={theme}>
       <Box sx={styles.app}>
-        <Box sx={{ color: "primary" }}>Hello World</Box>
-        <br />
+        <Sidebar />
         <pre>{JSON.stringify(blocks, null, 2)}</pre>
       </Box>
     </ThemeProvider>
