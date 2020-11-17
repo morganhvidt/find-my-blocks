@@ -2,6 +2,7 @@
 import { jsx, ThemeProvider, Box } from "theme-ui";
 import { Block } from "./app.types";
 import { Sidebar } from "../../components/Sidebar";
+import { sortSidebarItems } from "../../helpers/sortSidebarItems";
 
 import * as styles from "./style";
 
@@ -27,7 +28,7 @@ export function App({ blocks }: AppProps) {
   return (
     <ThemeProvider theme={theme}>
       <Box sx={styles.app}>
-        <Sidebar items={sidebarItems} />
+        <Sidebar items={sortSidebarItems(sidebarItems, "count-low-high")} />
         <pre>{JSON.stringify(blocks, null, 2)}</pre>
       </Box>
     </ThemeProvider>

@@ -12,7 +12,7 @@ import {
 import { Logo } from "../Logo";
 import { InputText } from "../InputText";
 
-interface MenuItem {
+export interface MenuItem {
   readonly name: string;
   readonly count: number;
 }
