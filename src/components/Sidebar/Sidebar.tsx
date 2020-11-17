@@ -2,16 +2,12 @@
 import { jsx, Box } from "theme-ui";
 import { useState } from "react";
 
-import {
-  Card as WPCard,
-  CardBody,
-  CardDivider,
-  Notice,
-} from "@wordpress/components";
+import { Card as WPCard, CardBody, CardDivider } from "@wordpress/components";
 
 import { Logo } from "../Logo";
 import { InputText } from "../InputText";
 import { NavigationItem } from "../NavigationItem";
+import { Icon } from "../Icon";
 
 export interface MenuItem {
   readonly name: string;
@@ -54,14 +50,7 @@ export function Sidebar({ items, activeBlock, onClick }: SidebarProps) {
       <CardDivider />
 
       {/* Empty State */}
-      {!filteredItems ||
-        (filteredItems.length < 1 && (
-          <CardBody>
-            <Notice status="error" isDismissible={false}>
-              No results found
-            </Notice>
-          </CardBody>
-        ))}
+      {!filteredItems || (filteredItems.length < 1 && <EmptyState />)}
 
       {/* Results State */}
       {filteredItems &&
@@ -82,4 +71,17 @@ export function Sidebar({ items, activeBlock, onClick }: SidebarProps) {
   function handleClick(blockName: string) {
     onClick(blockName);
   }
+}
+
+function EmptyState() {
+  return (
+    <CardBody>
+      <Box sx={{ textAlign: "center" }}>
+        <Box sx={{ mb: 2 }}>
+          <Icon icon="frown" size={35} />
+        </Box>
+        <Box>No Results Found</Box>
+      </Box>
+    </CardBody>
+  );
 }
