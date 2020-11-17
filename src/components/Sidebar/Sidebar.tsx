@@ -11,6 +11,7 @@ import {
 
 import { Logo } from "../Logo";
 import { InputText } from "../InputText";
+import { NavigationItem } from "../NavigationItem";
 
 export interface MenuItem {
   readonly name: string;
@@ -51,28 +52,34 @@ export function Sidebar({ items, activeBlock, onClick }: SidebarProps) {
         </Box>
       </CardBody>
       <CardDivider />
-      <CardBody>
-        {/* Empty State */}
-        {!filteredItems ||
-          (filteredItems.length < 1 && (
-            <div>
-              <Notice status="error" isDismissible={false}>
-                No results found
-              </Notice>
-            </div>
-          ))}
 
-        {/* Results State */}
-        {filteredItems &&
-          filteredItems.map(({ name, count }: MenuItem) => {
-            return (
-              <Box key={name} onClick={() => onClick(name)}>
-                name: {name} | count: {count} |{" "}
-                {activeBlock === name ? "ACTIVE" : ""}
-              </Box>
-            );
-          })}
-      </CardBody>
+      {/* Empty State */}
+      {!filteredItems ||
+        (filteredItems.length < 1 && (
+          <CardBody>
+            <Notice status="error" isDismissible={false}>
+              No results found
+            </Notice>
+          </CardBody>
+        ))}
+
+      {/* Results State */}
+      {filteredItems &&
+        filteredItems.map(({ name, count }: MenuItem) => {
+          return (
+            <NavigationItem
+              key={name}
+              name={name}
+              count={count}
+              active={activeBlock === name}
+              onClick={handleClick}
+            />
+          );
+        })}
     </WPCard>
   );
+
+  function handleClick(blockName: string) {
+    onClick(blockName);
+  }
 }

@@ -15,6 +15,8 @@ const theme = {
     background: "#f1f1f1",
     color: "#444",
     primary: "#ff4b3e",
+    grey: "#e2e4e7",
+    greyLight: "#fafafa",
   },
   spacing: [0, 4, 8, 16, 24, 32, 40, 48],
   fonts: {
