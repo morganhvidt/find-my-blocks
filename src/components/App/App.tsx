@@ -19,10 +19,15 @@ interface AppProps {
 }
 
 export function App({ blocks }: AppProps) {
+  const sidebarItems = blocks.map((block) => ({
+    name: block.name,
+    count: block.posts.length,
+  }));
+
   return (
     <ThemeProvider theme={theme}>
       <Box sx={styles.app}>
-        <Sidebar />
+        <Sidebar items={sidebarItems} />
         <pre>{JSON.stringify(blocks, null, 2)}</pre>
       </Box>
     </ThemeProvider>
