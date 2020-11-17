@@ -50,6 +50,7 @@
     "@emotion/styled": "^10.0.14",
     "@types/classnames": "^2.2.10",
     "@types/lodash-es": "^4.17.3",
+    "@types/theme-ui": "^0.3.7",
     "classnames": "^2.2.6",
     "docz": "^2.3.1",
     "feather-icons-react": "^0.4.1",
@@ -60,6 +61,7 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^6.1.0",
+    "theme-ui": "^0.3.1",
     "ts-xor": "^1.0.8"
   },
   "devDependencies": {
