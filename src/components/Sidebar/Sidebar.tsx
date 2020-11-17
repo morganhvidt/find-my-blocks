@@ -18,10 +18,12 @@ export interface MenuItem {
 }
 
 interface SidebarProps {
-  items: Array<MenuItem>;
+  readonly items: Array<MenuItem>;
+  readonly activeBlock: string;
+  onClick(blockName: string): void;
 }
 
-export function Sidebar({ items }: SidebarProps) {
+export function Sidebar({ items, activeBlock, onClick }: SidebarProps) {
   const [query, setQuery] = useState("");
 
   const filteredItems = items.filter((item) => {
@@ -64,8 +66,9 @@ export function Sidebar({ items }: SidebarProps) {
         {filteredItems &&
           filteredItems.map(({ name, count }: MenuItem) => {
             return (
-              <Box key={name}>
-                name: {name} | count: {count}
+              <Box key={name} onClick={() => onClick(name)}>
+                name: {name} | count: {count} |{" "}
+                {activeBlock === name ? "ACTIVE" : ""}
               </Box>
             );
           })}
