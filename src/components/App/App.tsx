@@ -7,6 +7,7 @@ import { Sidebar } from "../../components/Sidebar";
 import { Heading } from "../../components/Heading";
 import { Settings } from "../../components/Settings";
 import { CardList } from "../../components/CardList";
+import { Footer } from "../../components/Footer";
 
 import { sortSidebarItems } from "../../helpers/sortSidebarItems";
 
@@ -92,9 +93,10 @@ export function App({ blocks }: AppProps) {
         <Box>
           <Settings />
         </Box>
-        <Box sx={styles.footer}>Footer</Box>
+        <Box sx={styles.footer}>
+          <Footer />
+        </Box>
       </Box>
-      <pre>{JSON.stringify(blocks, null, 2)}</pre>
     </ThemeProvider>
   );
 
