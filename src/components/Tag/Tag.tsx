@@ -1,31 +1,26 @@
-import React from "react";
-import classnames from "classnames";
+/** @jsx jsx */
+import { jsx, Box } from "theme-ui";
 
 import { Icon } from "../Icon";
 
-import styles from "./Tag.module.css";
+import * as styles from "./styles";
 
+export type TagVariations = "info" | "warning" | "error" | "default";
 interface TagProps {
   icon?: string;
-  variation: "info" | "warning" | "error" | "default";
-  children: React.ReactNode;
+  variation: TagVariations;
+  label: string;
 }
 
-export const Tag = ({ icon, variation = "default", children }: TagProps) => {
-  const tagClass = classnames(
-    styles.tag,
-    styles[variation],
-    icon && styles.hasIcon
-  );
-
+export const Tag = ({ variation = "default", icon, label }: TagProps) => {
   return (
-    <div className={tagClass}>
+    <Box sx={styles.tag(variation)}>
       {icon && (
-        <div className={styles.icon}>
-          <Icon icon={icon} />
-        </div>
+        <Box sx={styles.icon(variation)}>
+          <Icon icon={icon} size={16} />
+        </Box>
       )}
-      {children}
-    </div>
+      <Box sx={styles.label}>{label}</Box>
+    </Box>
   );
 };
