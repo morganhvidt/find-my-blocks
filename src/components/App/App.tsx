@@ -2,6 +2,7 @@
 import { jsx, ThemeProvider, Box } from "theme-ui";
 import { useReducer, useState } from "react";
 import { Block } from "./app.types";
+import { localStorageReducer } from "./localStorageReducer";
 
 import { Sidebar } from "../../components/Sidebar";
 import { Heading } from "../../components/Heading";
@@ -61,49 +62,8 @@ interface AppProps {
   blocks: Array<Block>;
 }
 
-interface State {
-  activeBlock: string;
-  navOrder: string;
-  cardOrder: string;
-  showCoreBlocks: boolean;
-}
-
-export type ActionTypes =
-  | "showCoreBlocks"
-  | "activeBlock"
-  | "navOrder"
-  | "cardOrder";
-export interface Action {
-  type: ActionTypes;
-  value: string | boolean;
-}
-
-function reducer(state: State, action: Action) {
-  switch (action.type) {
-    case "showCoreBlocks": {
-      return { ...state, showCoreBlocks: action.value };
-    }
-    case "activeBlock": {
-      console.log("set active local storage");
-      return { ...state, activeBlock: action.value };
-    }
-    case "navOrder": {
-      console.log("set nav order local storage");
-      return { ...state, navOrder: action.value };
-    }
-    case "cardOrder": {
-      console.log("set card order local storage");
-      return { ...state, cardOrder: action.value };
-    }
-    default:
-      throw Error();
-  }
-}
-
 export function App({ blocks }: AppProps) {
-  // Ignoring due to some wierdness with strings and booleans in a reducer.
-  // @ts-ignore
-  const [state, dispatch] = useReducer(reducer, {
+  const [state, dispatch] = useReducer(localStorageReducer, {
     activeBlock: "",
     navOrder: "",
     cardOrder: "",

@@ -1,7 +1,10 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
 import { Fragment } from "react";
-import { Action, ActionTypes } from "../App/App";
+import {
+  LocalStorageAction,
+  LocalStorageActionTypes,
+} from "../App/localStorageReducer";
 
 import {
   CheckboxControl,
@@ -15,7 +18,7 @@ import {
 import * as styles from "./styles";
 
 interface SettingsProps {
-  onChange({ type, value }: Action): void;
+  onChange({ type, value }: LocalStorageAction): void;
 }
 
 export const Settings = ({ onChange }: SettingsProps) => {
@@ -61,6 +64,8 @@ export const Settings = ({ onChange }: SettingsProps) => {
         <PanelRow>
           <CheckboxControl
             label="Show core blocks"
+            // Ignoring due to weirdness with useReducer string/boolean mix
+            // @ts-ignore
             onChange={(value: boolean) => handleChange("showCoreBlocks", value)}
           />
         </PanelRow>
@@ -83,7 +88,7 @@ export const Settings = ({ onChange }: SettingsProps) => {
     </Panel>
   );
 
-  function handleChange(type: ActionTypes, value: string | boolean) {
+  function handleChange(type: LocalStorageActionTypes, value: string) {
     onChange({ type, value });
   }
 
