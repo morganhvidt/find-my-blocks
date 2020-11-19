@@ -5,6 +5,7 @@ import { media } from "../../theme/breakpoints";
 export const main = {
   ...styles.main,
   background: "#fefefe",
+  outline: (t) => console.log("theme", t),
 };
 
 export const wrapper = {

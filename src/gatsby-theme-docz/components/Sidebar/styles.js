@@ -8,6 +8,7 @@ export const wrapper = ({ open }) => ({
   display: "flex",
   flex: "1",
   maxWidth: 640,
+  bg: "primary",
 });
 
 export const logo = {

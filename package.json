@@ -52,6 +52,7 @@
     "@types/lodash-es": "^4.17.3",
     "@types/theme-ui": "^0.3.7",
     "classnames": "^2.2.6",
+    "deepmerge": "^4.2.2",
     "docz": "^2.3.1",
     "feather-icons-react": "^0.4.1",
     "gatsby-plugin-google-tagmanager": "^2.3.16",

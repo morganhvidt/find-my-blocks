@@ -14,9 +14,6 @@ const projectPlugin = () =>
     },
   });
 
-const defaultFont =
-  "-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif";
-
 export default {
   title: "Find My Blocks",
   description:
@@ -26,20 +23,4 @@ export default {
   src: "src",
   menu: ["Find My Blocks", "Design System", "Components"],
   plugins: [projectPlugin()],
-  themeConfig: {
-    fonts: {
-      body: defaultFont,
-      heading: defaultFont,
-    },
-    colors: {
-      primary: "var(--fmb-red--light)",
-      sidebar: {
-        bg: "var(--fmb-red)",
-        navGroup: "#fff",
-        navLinkActive: "#fff",
-        tocLink: "#eee",
-        tocLinkActive: "#fff",
-      },
-    },
-  },
 };
