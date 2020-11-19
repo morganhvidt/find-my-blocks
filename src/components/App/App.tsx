@@ -62,20 +62,38 @@ interface AppProps {
 }
 
 interface State {
-  eddy: string;
   activeBlock: string;
+  navOrder: string;
+  cardOrder: string;
+  showCoreBlocks: boolean;
 }
 
-interface Action {
-  type: "activeBlock";
-  value: string;
+export type ActionTypes =
+  | "showCoreBlocks"
+  | "activeBlock"
+  | "navOrder"
+  | "cardOrder";
+export interface Action {
+  type: ActionTypes;
+  value: string | boolean;
 }
 
 function reducer(state: State, action: Action) {
   switch (action.type) {
+    case "showCoreBlocks": {
+      return { ...state, showCoreBlocks: action.value };
+    }
     case "activeBlock": {
-      console.log("set local storage");
+      console.log("set active local storage");
       return { ...state, activeBlock: action.value };
+    }
+    case "navOrder": {
+      console.log("set nav order local storage");
+      return { ...state, navOrder: action.value };
+    }
+    case "cardOrder": {
+      console.log("set card order local storage");
+      return { ...state, cardOrder: action.value };
     }
     default:
       throw Error();
@@ -83,9 +101,13 @@ function reducer(state: State, action: Action) {
 }
 
 export function App({ blocks }: AppProps) {
+  // Ignoring due to some wierdness with strings and booleans in a reducer.
+  // @ts-ignore
   const [state, dispatch] = useReducer(reducer, {
-    eddy: "sims",
     activeBlock: "",
+    navOrder: "",
+    cardOrder: "",
+    showCoreBlocks: true,
   });
 
   console.log({ state });
@@ -118,7 +140,7 @@ export function App({ blocks }: AppProps) {
           <CardList cards={cards} />
         </Box>
         <Box>
-          <Settings />
+          <Settings onChange={handleSettingsChange} />
         </Box>
         <Box sx={styles.footer}>
           <Footer />
@@ -130,5 +152,9 @@ export function App({ blocks }: AppProps) {
   function handleSidebarClick(blockName: string) {
     setActiveBlock(blockName);
     dispatch({ type: "activeBlock", value: blockName });
+  }
+
+  function handleSettingsChange(value: any) {
+    dispatch(value);
   }
 }

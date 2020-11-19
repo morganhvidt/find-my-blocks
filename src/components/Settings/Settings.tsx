@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
 import { Fragment } from "react";
+import { Action, ActionTypes } from "../App/App";
 
 import {
   CheckboxControl,
@@ -13,7 +14,11 @@ import {
 
 import * as styles from "./styles";
 
-export const Settings = () => {
+interface SettingsProps {
+  onChange({ type, value }: Action): void;
+}
+
+export const Settings = ({ onChange }: SettingsProps) => {
   /**
    * We must check for window when using @wordpress/components
    */
@@ -35,7 +40,7 @@ export const Settings = () => {
               { value: "count-high-low", label: "Most popular" },
               { value: "count-low-high", label: "Least popular" },
             ]}
-            onChange={(value: string) => handleChange("navigation", value)}
+            onChange={(value: string) => handleChange("navOrder", value)}
           />
         </PanelRow>
         <PanelRow>
@@ -47,7 +52,7 @@ export const Settings = () => {
               { value: "reusable", label: "Reusable first" },
               { value: "nested", label: "Nested first" },
             ]}
-            onChange={(value: string) => handleChange("cards", value)}
+            onChange={(value: string) => handleChange("cardOrder", value)}
           />
         </PanelRow>
       </PanelBody>
@@ -56,7 +61,7 @@ export const Settings = () => {
         <PanelRow>
           <CheckboxControl
             label="Show core blocks"
-            onChange={(value: boolean) => handleChange("core", value)}
+            onChange={(value: boolean) => handleChange("showCoreBlocks", value)}
           />
         </PanelRow>
       </PanelBody>
@@ -78,8 +83,8 @@ export const Settings = () => {
     </Panel>
   );
 
-  function handleChange(type: string, value: string | boolean) {
-    console.log({ type, value });
+  function handleChange(type: ActionTypes, value: string | boolean) {
+    onChange({ type, value });
   }
 
   function handleClick() {
