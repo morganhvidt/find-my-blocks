@@ -1,100 +1,87 @@
-import React, { useState } from "react";
-import { Box } from "../Box";
+/** @jsx jsx */
+import { jsx, Box } from "theme-ui";
+import { useState } from "react";
+
+import { Card as WPCard, CardBody, CardDivider } from "@wordpress/components";
+
+import { Logo } from "../Logo";
 import { InputText } from "../InputText";
-import { Filter } from "../Filter";
 import { NavigationItem } from "../NavigationItem";
-import { Tag } from "../Tag";
+import { Icon } from "../Icon";
 
-import styles from "./Sidebar.module.css";
-
-export type SidebarOrder = "az" | "za" | "low-high" | "high-low";
-
-interface Block {
-  name: string;
-  posts: Array<String>;
+export interface MenuItem {
+  readonly name: string;
+  readonly count: number;
 }
 
 interface SidebarProps {
-  readonly blocks: Block[];
-  readonly active?: string | null;
-  readonly showCoreBlocks?: boolean;
-  readonly order?: SidebarOrder;
-  onClick(name: string): void;
+  readonly items: Array<MenuItem>;
+  readonly activeBlock: string;
+  onClick(blockName: string): void;
 }
 
-export const Sidebar = ({
-  blocks,
-  active,
-  showCoreBlocks = false,
-  order = "az",
-  onClick = () => undefined,
-}: SidebarProps) => {
-  const [filter, setFilter] = useState<string>("");
+export function Sidebar({ items, activeBlock, onClick }: SidebarProps) {
+  const [query, setQuery] = useState("");
+
+  const filteredItems = items.filter((item) => {
+    if (!query || query === "") {
+      return true;
+    }
+    return item.name.includes(query);
+  });
+
   return (
-    <>
-      <InputText
-        placeholder="Filter Blocks"
-        onChange={(val) => setFilter(val)}
-      />
-      <Box className={styles.nav}>
-        {blocks && (
-          <Filter
-            data={blocks}
-            value={filter}
-            match="name"
-            renderedResults={(results) => {
-              let sorted = sortResults(results, order);
-              if (!showCoreBlocks) {
-                sorted = sorted.filter((block: Block) => {
-                  if (
-                    !block.name.includes("core/") &&
-                    !block.name.includes("core-embed/")
-                  ) {
-                    return block;
-                  }
-                });
-              }
-
-              if (results == undefined || sorted.length < 1) {
-                return (
-                  <Box className={styles.empty}>
-                    <Tag variation="error" icon="alert-octagon">
-                      No results found
-                    </Tag>
-                  </Box>
-                );
-              }
-
-              const blocks = sorted.map(({ name, posts }) => (
-                <NavigationItem
-                  key={name as string}
-                  label={name}
-                  postCount={posts.length}
-                  active={name === active}
-                  onClick={() => onClick(name)}
-                />
-              ));
-
-              return blocks;
-            }}
+    <WPCard size="small">
+      <CardBody size="large">
+        <Box sx={{ textAlign: "center" }}>
+          <Logo size={80} />
+        </Box>
+      </CardBody>
+      <CardDivider />
+      <CardBody>
+        <Box sx={{ "*": { mb: `${0} !important` } }}>
+          <InputText
+            placeholder="Filter Blocks"
+            onChange={setQuery}
+            defaultValue={query}
           />
-        )}
-      </Box>
-    </>
-  );
-};
+        </Box>
+      </CardBody>
+      <CardDivider />
 
-function sortResults(d: any, order: string) {
-  if (order === "az") {
-    d.sort((a: Block, b: Block) => (a.name > b.name ? 1 : -1));
-  } else if (order === "za") {
-    d.sort((a: Block, b: Block) => (a.name < b.name ? 1 : -1));
-  } else if (order === "low-high") {
-    d.sort((a: Block, b: Block) => (a.posts.length > b.posts.length ? 1 : -1));
-  } else if (order === "high-low") {
-    d.sort((a: Block, b: Block) => (a.posts.length < b.posts.length ? 1 : -1));
-  } else {
-    d.sort((a: Block, b: Block) => (a.name > b.name ? 1 : -1));
+      {/* Empty State */}
+      {!filteredItems || (filteredItems.length < 1 && <EmptyState />)}
+
+      {/* Results State */}
+      {filteredItems &&
+        filteredItems.map(({ name, count }: MenuItem) => {
+          return (
+            <NavigationItem
+              key={name}
+              name={name}
+              count={count}
+              active={activeBlock === name}
+              onClick={handleClick}
+            />
+          );
+        })}
+    </WPCard>
+  );
+
+  function handleClick(blockName: string) {
+    onClick(blockName);
   }
-  return d;
+}
+
+function EmptyState() {
+  return (
+    <CardBody>
+      <Box sx={{ textAlign: "center" }}>
+        <Box sx={{ mb: 2 }}>
+          <Icon icon="frown" size={35} />
+        </Box>
+        <Box>No Results Found</Box>
+      </Box>
+    </CardBody>
+  );
 }

@@ -29,10 +29,6 @@ if ( ! function_exists( 'find_my_blocks_enqueue_scripts' ) ) :
 			'jquery',
 		);
 
-		$style_deps = array(
-			'wp-components',
-		);
-
 		/**
 		 * We need to enqueue `wp-edit-post` and `jquery`
 		 * so they are loaded into the DOM
@@ -45,12 +41,7 @@ if ( ! function_exists( 'find_my_blocks_enqueue_scripts' ) ) :
 			true
 		);
 
-		wp_enqueue_style(
-			'find-my-blocks-style',
-			plugin_dir_url( __DIR__ ) . 'find-my-blocks.css',
-			$style_deps,
-			filemtime( plugin_dir_path( __DIR__ ) . 'find-my-blocks.css' )
-		);
+		wp_enqueue_style('wp-components');
 	}
 
 	add_action( 'admin_enqueue_scripts', 'find_my_blocks_enqueue_scripts' );

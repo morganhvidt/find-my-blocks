@@ -1,6 +1,7 @@
-import React from "react";
-
-import { logos } from "./logo.ignore";
+/** @jsx jsx */
+import { jsx } from "theme-ui";
+import { Fragment } from "react";
+import { logos } from "./logo.svg";
 
 interface LogoProps {
   /**
@@ -11,17 +12,17 @@ interface LogoProps {
    * Set a custom color for the logo. This should be a
    * value that can be read by css
    */
-  color?: string;
+  color?: "primary" | "white";
   /**
    * By default, the logo will fill its area. If you would like to specify
    * a size, you can do so with the size prop.
    */
-  size?: number | string;
+  size?: number;
 }
 
 export const Logo = ({
   version = "full",
-  color = "var(--fmb-red)",
+  color = "primary",
   size,
 }: LogoProps) => {
   const createMarkup = (markup: string) => {
@@ -29,17 +30,17 @@ export const Logo = ({
   };
 
   if (!logos[version]) {
-    return <React.Fragment />;
+    return <Fragment />;
   }
 
   return (
     <svg
-      style={{
+      sx={{
         width: "auto",
         height: size,
+        fill: color,
       }}
       viewBox={logos[version].viewbox}
-      fill={color}
       xmlns="http://www.w3.org/2000/svg"
     >
       <g dangerouslySetInnerHTML={createMarkup(logos[version]["markup"])} />

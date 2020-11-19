@@ -1,94 +1,104 @@
-import React from "react";
-// @ts-ignore
-import { cog } from "@wordpress/icons";
+/** @jsx jsx */
+import { jsx } from "theme-ui";
+import { Fragment } from "react";
 import {
-  Panel,
-  PanelRow,
-  PanelBody,
-  SelectControl,
+  LocalStorageAction,
+  LocalStorageActionTypes,
+  LocalStorageState,
+} from "../App/localStorageReducer";
+
+import {
   CheckboxControl,
+  Panel,
+  PanelBody,
+  PanelRow,
+  SelectControl,
+  Button,
 } from "@wordpress/components";
 
-import styles from "./Settings.module.css";
+import * as styles from "./styles";
 
 interface SettingsProps {
-  readonly navOrder: string;
-  readonly cardOrder: string;
-  readonly showCoreBlocks: boolean;
-  readonly initialOpen: boolean;
-  onNavOrderChange(result: string): void;
-  onCardOrderChange(result: string): void;
-  onShowCoreBlocksClick(result: boolean): void;
+  state: LocalStorageState;
+  onChange({ type, value }: LocalStorageAction): void;
 }
 
-export const Settings = ({
-  navOrder,
-  cardOrder,
-  showCoreBlocks,
-  initialOpen = true,
-  onNavOrderChange = () => undefined,
-  onCardOrderChange = () => undefined,
-  onShowCoreBlocksClick = () => undefined,
-}: SettingsProps) => {
+export const Settings = ({ onChange, state }: SettingsProps) => {
   /**
    * We must check for window when using @wordpress/components
    */
-  if (typeof window === "undefined") return <></>;
+  if (typeof window === "undefined") return <Fragment />;
 
-  const alphabetical = [
-    { label: "Alphabetically (A-Z)", value: "az" },
-    { label: "Alphabetically (Z-A)", value: "za" },
-  ];
-
-  const blockTypes = [
-    {
-      type: "core",
-      checked: showCoreBlocks,
-      onChange: (val: boolean) => onShowCoreBlocksClick(val),
-    },
+  const alphabeticalOptions = [
+    { value: "alphabetical-a-z", label: "Alphabetical (a-z)" },
+    { value: "alphabetical-z-a", label: "Alphabetical (z-a)" },
   ];
 
   return (
-    <Panel>
-      <PanelBody title="Settings" icon={cog} initialOpen={initialOpen}>
+    <Panel sx={styles.settings} header="Settings">
+      <PanelBody>
         <PanelRow>
           <SelectControl
-            label="Sort navigation:"
-            value={navOrder}
+            label="Sort navigation by:"
+            value={state.navOrder}
             options={[
-              ...alphabetical,
-              { label: "Most Popular", value: "high-low" },
-              { label: "Least Popular", value: "low-high" },
+              ...alphabeticalOptions,
+              { value: "count-high-low", label: "Most popular" },
+              { value: "count-low-high", label: "Least popular" },
             ]}
-            onChange={(val) => onNavOrderChange(val)}
-            className={styles.select}
+            onChange={(value: string) => handleChange("navOrder", value)}
           />
         </PanelRow>
         <PanelRow>
           <SelectControl
-            label="Sort cards:"
-            value={cardOrder}
+            label="Sort cards by:"
+            value={state.cardOrder}
             options={[
-              ...alphabetical,
-              { label: "Most Popular", value: "popular" },
-              { label: "Reusable First", value: "reusable" },
+              ...alphabeticalOptions,
+              { value: "count-high-low", label: "Most popular" },
+              { value: "reusable", label: "Reusable first" },
+              { value: "nested", label: "Nested first" },
             ]}
-            onChange={(val) => onCardOrderChange(val)}
-            className={styles.select}
+            onChange={(value: string) => handleChange("cardOrder", value)}
           />
         </PanelRow>
+      </PanelBody>
 
-        <h4>Show/hide block types</h4>
-
-        {blockTypes.map(({ type, checked, onChange }) => (
+      <PanelBody title="Show/hide blocks" icon="visibility">
+        <PanelRow>
           <CheckboxControl
-            key={type}
-            label={`Show ${type} blocks`}
-            checked={checked}
-            onChange={(val) => onChange(val)}
+            label="Show core blocks"
+            checked={state.showCoreBlocks}
+            onChange={(value: boolean) => handleChange("showCoreBlocks", value)}
           />
-        ))}
+        </PanelRow>
+      </PanelBody>
+
+      <PanelBody title="Advanced Settings" icon="admin-generic">
+        <PanelRow sx={styles.help}>
+          <CheckboxControl
+            label="Include drafts in query"
+            help="Warning: Enabling this feature could slow down the loading of the plugin depending on how many drafts your website has."
+            onChange={() => console.log("change")}
+          />
+        </PanelRow>
+        <PanelRow>
+          <Button isPrimary onClick={handleClick} sx={{ mt: 2 }}>
+            Save Settings
+          </Button>
+        </PanelRow>
       </PanelBody>
     </Panel>
   );
+
+  function handleChange(
+    type: LocalStorageActionTypes,
+    value: string | boolean
+  ) {
+    onChange({ type, value });
+  }
+
+  function handleClick() {
+    alert("save options");
+  }
 };
