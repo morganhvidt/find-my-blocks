@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, ThemeProvider, Box } from "theme-ui";
-import { useState } from "react";
+import { useReducer, useState } from "react";
 import { Block } from "./app.types";
 
 import { Sidebar } from "../../components/Sidebar";
@@ -61,7 +61,34 @@ interface AppProps {
   blocks: Array<Block>;
 }
 
+interface State {
+  eddy: string;
+  activeBlock: string;
+}
+
+interface Action {
+  type: "activeBlock";
+  value: string;
+}
+
+function reducer(state: State, action: Action) {
+  switch (action.type) {
+    case "activeBlock": {
+      console.log("set local storage");
+      return { ...state, activeBlock: action.value };
+    }
+    default:
+      throw Error();
+  }
+}
+
 export function App({ blocks }: AppProps) {
+  const [state, dispatch] = useReducer(reducer, {
+    eddy: "sims",
+    activeBlock: "",
+  });
+
+  console.log({ state });
   const [activeBlock, setActiveBlock] = useState("");
 
   const sidebarItems = blocks.map((block) => ({
@@ -102,5 +129,6 @@ export function App({ blocks }: AppProps) {
 
   function handleSidebarClick(blockName: string) {
     setActiveBlock(blockName);
+    dispatch({ type: "activeBlock", value: blockName });
   }
 }
