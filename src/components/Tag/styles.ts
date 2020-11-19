@@ -1,4 +1,4 @@
-import { theme } from "../App/App";
+import { theme } from "../../theme";
 import { TagVariations } from "./Tag";
 
 export const tag = (variation: TagVariations) => ({
