@@ -1,11 +1,12 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
+import { Fragment } from "react";
 import { Post } from "../App/app.types";
 
 import {
   Card as WPCard,
   CardBody,
-  CardFooter,
+  CardDivider,
   CardHeader,
 } from "@wordpress/components";
 import { Content } from "../Content";
@@ -42,15 +43,17 @@ export const Card = ({ card }: CardProps) => {
           </Link>
         </Content>
       </CardBody>
-      <CardFooter>
-        {tags.map((tag) => {
-          return (
-            <Tag key={tag.label} variation={tag.variation}>
-              {tag.label}
-            </Tag>
-          );
-        })}
-      </CardFooter>
+
+      {tags.length > 0 && (
+        <Fragment>
+          <CardDivider />
+          <CardBody>
+            {tags.map((tag) => {
+              return <Tag key={tag.label} {...tag} />;
+            })}
+          </CardBody>
+        </Fragment>
+      )}
     </WPCard>
   );
 
@@ -68,14 +71,14 @@ export const Card = ({ card }: CardProps) => {
     if (card.count > 1) {
       tags.push({
         label: `${card.count} usages in post`,
-        icon: "plus-square",
+        icon: "plus-circle",
         variation: "info",
       });
     }
 
     if (card.isNested) {
       tags.push({
-        label: `Nested in <strong>${card.nestedBlockType}</strong>`,
+        label: `Nested in: ${card.nestedBlockType}`,
         icon: "layers",
         variation: "info",
       });
