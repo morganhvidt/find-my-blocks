@@ -1,5 +1,4 @@
 import themeStyles from "gatsby-theme-docz/src/theme/styles";
-import "@fmb/plugin/assets/find-my-blocks.foundation.css";
 
 const styles = {
   ...themeStyles,

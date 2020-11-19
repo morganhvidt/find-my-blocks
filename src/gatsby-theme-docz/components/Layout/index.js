@@ -1,11 +1,10 @@
 /** @jsx jsx */
 import { useRef, useState } from "react";
-import { jsx } from "theme-ui";
+import { jsx, Box } from "theme-ui";
 import { Global } from "@emotion/core";
 import t from "prop-types";
 
 import global from "gatsby-theme-docz/src/theme/global";
-import { Box } from "@fmb/components/Box";
 import { Footer } from "@fmb/components/Footer";
 import { Sidebar } from "../Sidebar";
 import * as styles from "./styles";
@@ -18,7 +17,7 @@ export const Layout = ({ children }) => {
   return (
     <Box sx={{ "& > div": { flex: "1 1 auto" } }} data-testid="layout">
       <Global styles={global} />
-      <Box tag="main" sx={styles.main}>
+      <Box sx={styles.main}>
         {/* <Header onOpen={() => setOpen(s => !s)} /> */}
         <Box sx={styles.wrapper}>
           <Sidebar
