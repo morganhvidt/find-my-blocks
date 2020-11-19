@@ -19,4 +19,6 @@ export type SortOrder =
   | "alphabetical-a-z"
   | "alphabetical-z-a"
   | "count-high-low"
-  | "count-low-high";
+  | "count-low-high"
+  | "reusable"
+  | "nested";

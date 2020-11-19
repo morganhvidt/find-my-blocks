@@ -5,6 +5,7 @@ import { Block } from "./app.types";
 
 import { Sidebar } from "../../components/Sidebar";
 import { Heading } from "../../components/Heading";
+import { Settings } from "../../components/Settings";
 
 import { sortSidebarItems } from "../../helpers/sortSidebarItems";
 
@@ -22,6 +23,9 @@ const theme = {
   fonts: {
     heading:
       "-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif",
+  },
+  radii: {
+    radius: "3px",
   },
 };
 
@@ -53,7 +57,9 @@ export function App({ blocks }: AppProps) {
           </Box>
         )}
         <Box sx={styles.content}>Content</Box>
-        <Box sx={styles.settings}>Settings</Box>
+        <Box>
+          <Settings />
+        </Box>
         <Box sx={styles.footer}>Footer</Box>
       </Box>
       <pre>{JSON.stringify(blocks, null, 2)}</pre>
