@@ -14,10 +14,6 @@ export const heading = {
   mb: -3,
 };
 
-export const content = {
-  bg: "skyblue",
-};
-
 export const footer = {
   gridColumn: "2 / 4",
   gridRow: "4/5",

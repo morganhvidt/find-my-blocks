@@ -6,6 +6,7 @@ import { Block } from "./app.types";
 import { Sidebar } from "../../components/Sidebar";
 import { Heading } from "../../components/Heading";
 import { Settings } from "../../components/Settings";
+import { CardList } from "../../components/CardList";
 
 import { sortSidebarItems } from "../../helpers/sortSidebarItems";
 
@@ -41,6 +42,9 @@ export function App({ blocks }: AppProps) {
     count: block.posts.length,
   }));
 
+  const activeItem = blocks.find((block) => block.name === activeBlock);
+  const cards = activeItem ? activeItem.posts : [];
+
   return (
     <ThemeProvider theme={theme}>
       <Box sx={styles.app}>
@@ -56,7 +60,9 @@ export function App({ blocks }: AppProps) {
             <Heading>{activeBlock}</Heading>
           </Box>
         )}
-        <Box sx={styles.content}>Content</Box>
+        <Box>
+          <CardList cards={cards} />
+        </Box>
         <Box>
           <Settings />
         </Box>

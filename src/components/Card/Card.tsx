@@ -1,32 +1,32 @@
-import React, { PropsWithChildren } from "react";
-import { Card as WPCard, CardHeader, CardBody } from "@wordpress/components";
+/** @jsx jsx */
+import { jsx } from "theme-ui";
+import { Post } from "../App/app.types";
+
+import {
+  Card as WPCard,
+  CardBody,
+  CardFooter,
+  CardHeader,
+} from "@wordpress/components";
+import { Content } from "../Content";
 
 interface CardProps {
-  title?: string;
+  card: Post;
 }
 
-export const Card = ({ children, title }: PropsWithChildren<CardProps>) => {
-  /**
-   * We must check for window when using @wordpress/components
-   *
-   * In the case of Card, we still want content to render.
-   */
-  if (typeof window === "undefined") {
-    return (
-      <>
-        {title}: {children}
-      </>
-    );
-  }
-
+export const Card = ({ card }: CardProps) => {
   return (
     <WPCard size="small">
-      {title && (
-        <CardHeader isShady>
-          <strong>{title}</strong>
-        </CardHeader>
-      )}
-      <CardBody>{children}</CardBody>
+      <CardHeader isShady>
+        <strong>{card.title}</strong>
+      </CardHeader>
+      <CardBody>
+        <Content>
+          Post type: <strong>{card.postType}</strong>
+        </Content>
+      </CardBody>
+      <pre>{JSON.stringify(card, undefined, 2)}</pre>
+      <CardFooter>Hello</CardFooter>
     </WPCard>
   );
 };
