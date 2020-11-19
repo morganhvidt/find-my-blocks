@@ -4,6 +4,7 @@ import { Fragment } from "react";
 import {
   LocalStorageAction,
   LocalStorageActionTypes,
+  LocalStorageState,
 } from "../App/localStorageReducer";
 
 import {
@@ -18,10 +19,11 @@ import {
 import * as styles from "./styles";
 
 interface SettingsProps {
+  state: LocalStorageState;
   onChange({ type, value }: LocalStorageAction): void;
 }
 
-export const Settings = ({ onChange }: SettingsProps) => {
+export const Settings = ({ onChange, state }: SettingsProps) => {
   /**
    * We must check for window when using @wordpress/components
    */
@@ -38,6 +40,7 @@ export const Settings = ({ onChange }: SettingsProps) => {
         <PanelRow>
           <SelectControl
             label="Sort navigation by:"
+            value={state.navOrder}
             options={[
               ...alphabeticalOptions,
               { value: "count-high-low", label: "Most popular" },
@@ -49,6 +52,7 @@ export const Settings = ({ onChange }: SettingsProps) => {
         <PanelRow>
           <SelectControl
             label="Sort cards by:"
+            value={state.cardOrder}
             options={[
               ...alphabeticalOptions,
               { value: "count-high-low", label: "Most popular" },
@@ -64,8 +68,7 @@ export const Settings = ({ onChange }: SettingsProps) => {
         <PanelRow>
           <CheckboxControl
             label="Show core blocks"
-            // Ignoring due to weirdness with useReducer string/boolean mix
-            // @ts-ignore
+            checked={state.showCoreBlocks}
             onChange={(value: boolean) => handleChange("showCoreBlocks", value)}
           />
         </PanelRow>
@@ -88,7 +91,10 @@ export const Settings = ({ onChange }: SettingsProps) => {
     </Panel>
   );
 
-  function handleChange(type: LocalStorageActionTypes, value: string) {
+  function handleChange(
+    type: LocalStorageActionTypes,
+    value: string | boolean
+  ) {
     onChange({ type, value });
   }
 

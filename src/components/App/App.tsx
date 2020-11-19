@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, ThemeProvider, Box } from "theme-ui";
-import { useReducer, useState } from "react";
+import { useReducer } from "react";
 import { Block } from "./app.types";
 import { localStorageReducer } from "./localStorageReducer";
 
@@ -11,6 +11,8 @@ import { CardList } from "../../components/CardList";
 import { Footer } from "../../components/Footer";
 
 import { sortSidebarItems } from "../../helpers/sortSidebarItems";
+import { sortCardItems } from "../../helpers/sortCardItems";
+import { getLocalStorageItem } from "../../helpers/getLocalStorageItem";
 
 import * as styles from "./style";
 
@@ -63,22 +65,29 @@ interface AppProps {
 }
 
 export function App({ blocks }: AppProps) {
+  // @ts-ignore
   const [state, dispatch] = useReducer(localStorageReducer, {
-    activeBlock: "",
-    navOrder: "",
-    cardOrder: "",
-    showCoreBlocks: true,
+    activeBlock: getLocalStorageItem("activeBlock"),
+    navOrder: getLocalStorageItem("navOrder"),
+    cardOrder: getLocalStorageItem("cardOrder"),
+    showCoreBlocks: getLocalStorageItem("showCoreBlocks"),
   });
 
-  console.log({ state });
-  const [activeBlock, setActiveBlock] = useState("");
+  const sidebarItems = blocks
+    .filter((block) => {
+      if (!state.showCoreBlocks) {
+        return (
+          !block.name.includes("core/") && !block.name.includes("core-embed/")
+        );
+      }
+      return true;
+    })
+    .map((block) => ({
+      name: block.name,
+      count: block.posts.length,
+    }));
 
-  const sidebarItems = blocks.map((block) => ({
-    name: block.name,
-    count: block.posts.length,
-  }));
-
-  const activeItem = blocks.find((block) => block.name === activeBlock);
+  const activeItem = blocks.find((block) => block.name === state.activeBlock);
   const cards = activeItem ? activeItem.posts : [];
 
   return (
@@ -86,21 +95,21 @@ export function App({ blocks }: AppProps) {
       <Box sx={styles.app}>
         <Box sx={styles.sidebar}>
           <Sidebar
-            items={sortSidebarItems(sidebarItems, "count-high-low")}
-            activeBlock={activeBlock}
+            items={sortSidebarItems(sidebarItems, state.navOrder)}
+            activeBlock={state.activeBlock}
             onClick={handleSidebarClick}
           />
         </Box>
-        {activeBlock && (
+        {state.activeBlock && (
           <Box sx={styles.heading}>
-            <Heading>{activeBlock}</Heading>
+            <Heading>{state.activeBlock}</Heading>
           </Box>
         )}
         <Box>
-          <CardList cards={cards} />
+          <CardList cards={sortCardItems(cards, state.cardOrder)} />
         </Box>
         <Box>
-          <Settings onChange={handleSettingsChange} />
+          <Settings onChange={handleSettingsChange} state={state} />
         </Box>
         <Box sx={styles.footer}>
           <Footer />
@@ -110,11 +119,12 @@ export function App({ blocks }: AppProps) {
   );
 
   function handleSidebarClick(blockName: string) {
-    setActiveBlock(blockName);
+    // @ts-ignore
     dispatch({ type: "activeBlock", value: blockName });
   }
 
   function handleSettingsChange(value: any) {
+    // @ts-ignore
     dispatch(value);
   }
 }
