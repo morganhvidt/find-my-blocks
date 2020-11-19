@@ -17,7 +17,7 @@ export function CardList({ cards }: CardListProps) {
   }
 
   return (
-    <Box>
+    <Box sx={styles.cards}>
       {cards.map((card) => {
         return <Card key={card.id} card={card} />;
       })}

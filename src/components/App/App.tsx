@@ -50,7 +50,7 @@ export function App({ blocks }: AppProps) {
       <Box sx={styles.app}>
         <Box sx={styles.sidebar}>
           <Sidebar
-            items={sortSidebarItems(sidebarItems, "count-low-high")}
+            items={sortSidebarItems(sidebarItems, "count-high-low")}
             activeBlock={activeBlock}
             onClick={handleSidebarClick}
           />
