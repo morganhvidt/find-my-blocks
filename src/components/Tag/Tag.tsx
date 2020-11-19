@@ -5,9 +5,10 @@ import { Icon } from "../Icon";
 
 import styles from "./Tag.module.css";
 
+export type TagVariations = "info" | "warning" | "error" | "default";
 interface TagProps {
   icon?: string;
-  variation: "info" | "warning" | "error" | "default";
+  variation: TagVariations;
   children: React.ReactNode;
 }
 
