@@ -5,16 +5,17 @@ exports[`render correctly 1`] = `
   className="cards"
 >
   <div
-    className="card"
+    className="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
   >
     <div
-      className="title"
-      onClick={[Function]}
+      className="components-card__header is-shady is-size-small css-1vhqpef-HeaderUI e1q7k77g1"
     >
-      Barnes Blankenship
+      <strong>
+        Barnes Blankenship
+      </strong>
     </div>
     <div
-      className="body"
+      className="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
     >
       <div
         className="content medium"
@@ -148,16 +149,17 @@ exports[`render correctly 1`] = `
     </div>
   </div>
   <div
-    className="card"
+    className="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
   >
     <div
-      className="title"
-      onClick={[Function]}
+      className="components-card__header is-shady is-size-small css-1vhqpef-HeaderUI e1q7k77g1"
     >
-      Casey Larson
+      <strong>
+        Casey Larson
+      </strong>
     </div>
     <div
-      className="body"
+      className="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
     >
       <div
         className="content medium"
@@ -259,16 +261,17 @@ exports[`render correctly 1`] = `
     </div>
   </div>
   <div
-    className="card"
+    className="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
   >
     <div
-      className="title"
-      onClick={[Function]}
+      className="components-card__header is-shady is-size-small css-1vhqpef-HeaderUI e1q7k77g1"
     >
-      Franks Olson
+      <strong>
+        Franks Olson
+      </strong>
     </div>
     <div
-      className="body"
+      className="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
     >
       <div
         className="content medium"
@@ -337,16 +340,17 @@ exports[`render correctly 1`] = `
     </div>
   </div>
   <div
-    className="card"
+    className="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
   >
     <div
-      className="title"
-      onClick={[Function]}
+      className="components-card__header is-shady is-size-small css-1vhqpef-HeaderUI e1q7k77g1"
     >
-      Jodi Gilbert
+      <strong>
+        Jodi Gilbert
+      </strong>
     </div>
     <div
-      className="body"
+      className="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
     >
       <div
         className="content medium"
@@ -480,16 +484,17 @@ exports[`render correctly 1`] = `
     </div>
   </div>
   <div
-    className="card"
+    className="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
   >
     <div
-      className="title"
-      onClick={[Function]}
+      className="components-card__header is-shady is-size-small css-1vhqpef-HeaderUI e1q7k77g1"
     >
-      Josefa Oneal
+      <strong>
+        Josefa Oneal
+      </strong>
     </div>
     <div
-      className="body"
+      className="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
     >
       <div
         className="content medium"
@@ -623,16 +628,17 @@ exports[`render correctly 1`] = `
     </div>
   </div>
   <div
-    className="card"
+    className="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
   >
     <div
-      className="title"
-      onClick={[Function]}
+      className="components-card__header is-shady is-size-small css-1vhqpef-HeaderUI e1q7k77g1"
     >
-      Katharine Harrison
+      <strong>
+        Katharine Harrison
+      </strong>
     </div>
     <div
-      className="body"
+      className="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
     >
       <div
         className="content medium"
@@ -734,16 +740,17 @@ exports[`render correctly 1`] = `
     </div>
   </div>
   <div
-    className="card"
+    className="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
   >
     <div
-      className="title"
-      onClick={[Function]}
+      className="components-card__header is-shady is-size-small css-1vhqpef-HeaderUI e1q7k77g1"
     >
-      Katy Foster
+      <strong>
+        Katy Foster
+      </strong>
     </div>
     <div
-      className="body"
+      className="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
     >
       <div
         className="content medium"
@@ -877,16 +884,17 @@ exports[`render correctly 1`] = `
     </div>
   </div>
   <div
-    className="card"
+    className="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
   >
     <div
-      className="title"
-      onClick={[Function]}
+      className="components-card__header is-shady is-size-small css-1vhqpef-HeaderUI e1q7k77g1"
     >
-      Kerri Jacobson
+      <strong>
+        Kerri Jacobson
+      </strong>
     </div>
     <div
-      className="body"
+      className="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
     >
       <div
         className="content medium"
@@ -988,16 +996,17 @@ exports[`render correctly 1`] = `
     </div>
   </div>
   <div
-    className="card"
+    className="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
   >
     <div
-      className="title"
-      onClick={[Function]}
+      className="components-card__header is-shady is-size-small css-1vhqpef-HeaderUI e1q7k77g1"
     >
-      Odonnell Lara
+      <strong>
+        Odonnell Lara
+      </strong>
     </div>
     <div
-      className="body"
+      className="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
     >
       <div
         className="content medium"
@@ -1131,16 +1140,17 @@ exports[`render correctly 1`] = `
     </div>
   </div>
   <div
-    className="card"
+    className="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
   >
     <div
-      className="title"
-      onClick={[Function]}
+      className="components-card__header is-shady is-size-small css-1vhqpef-HeaderUI e1q7k77g1"
     >
-      Osborne Buck
+      <strong>
+        Osborne Buck
+      </strong>
     </div>
     <div
-      className="body"
+      className="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
     >
       <div
         className="content medium"
@@ -1274,16 +1284,17 @@ exports[`render correctly 1`] = `
     </div>
   </div>
   <div
-    className="card"
+    className="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
   >
     <div
-      className="title"
-      onClick={[Function]}
+      className="components-card__header is-shady is-size-small css-1vhqpef-HeaderUI e1q7k77g1"
     >
-      Weber Norton
+      <strong>
+        Weber Norton
+      </strong>
     </div>
     <div
-      className="body"
+      className="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
     >
       <div
         className="content medium"
@@ -1462,16 +1473,17 @@ exports[`sorts the order of the cards properly 1`] = `
   className="cards"
 >
   <div
-    className="card"
+    className="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
   >
     <div
-      className="title"
-      onClick={[Function]}
+      className="components-card__header is-shady is-size-small css-1vhqpef-HeaderUI e1q7k77g1"
     >
-      Barnes Blankenship
+      <strong>
+        Barnes Blankenship
+      </strong>
     </div>
     <div
-      className="body"
+      className="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
     >
       <div
         className="content medium"
@@ -1605,16 +1617,17 @@ exports[`sorts the order of the cards properly 1`] = `
     </div>
   </div>
   <div
-    className="card"
+    className="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
   >
     <div
-      className="title"
-      onClick={[Function]}
+      className="components-card__header is-shady is-size-small css-1vhqpef-HeaderUI e1q7k77g1"
     >
-      Casey Larson
+      <strong>
+        Casey Larson
+      </strong>
     </div>
     <div
-      className="body"
+      className="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
     >
       <div
         className="content medium"
@@ -1716,16 +1729,17 @@ exports[`sorts the order of the cards properly 1`] = `
     </div>
   </div>
   <div
-    className="card"
+    className="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
   >
     <div
-      className="title"
-      onClick={[Function]}
+      className="components-card__header is-shady is-size-small css-1vhqpef-HeaderUI e1q7k77g1"
     >
-      Franks Olson
+      <strong>
+        Franks Olson
+      </strong>
     </div>
     <div
-      className="body"
+      className="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
     >
       <div
         className="content medium"
@@ -1794,16 +1808,17 @@ exports[`sorts the order of the cards properly 1`] = `
     </div>
   </div>
   <div
-    className="card"
+    className="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
   >
     <div
-      className="title"
-      onClick={[Function]}
+      className="components-card__header is-shady is-size-small css-1vhqpef-HeaderUI e1q7k77g1"
     >
-      Jodi Gilbert
+      <strong>
+        Jodi Gilbert
+      </strong>
     </div>
     <div
-      className="body"
+      className="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
     >
       <div
         className="content medium"
@@ -1937,16 +1952,17 @@ exports[`sorts the order of the cards properly 1`] = `
     </div>
   </div>
   <div
-    className="card"
+    className="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
   >
     <div
-      className="title"
-      onClick={[Function]}
+      className="components-card__header is-shady is-size-small css-1vhqpef-HeaderUI e1q7k77g1"
     >
-      Josefa Oneal
+      <strong>
+        Josefa Oneal
+      </strong>
     </div>
     <div
-      className="body"
+      className="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
     >
       <div
         className="content medium"
@@ -2080,16 +2096,17 @@ exports[`sorts the order of the cards properly 1`] = `
     </div>
   </div>
   <div
-    className="card"
+    className="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
   >
     <div
-      className="title"
-      onClick={[Function]}
+      className="components-card__header is-shady is-size-small css-1vhqpef-HeaderUI e1q7k77g1"
     >
-      Katharine Harrison
+      <strong>
+        Katharine Harrison
+      </strong>
     </div>
     <div
-      className="body"
+      className="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
     >
       <div
         className="content medium"
@@ -2191,16 +2208,17 @@ exports[`sorts the order of the cards properly 1`] = `
     </div>
   </div>
   <div
-    className="card"
+    className="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
   >
     <div
-      className="title"
-      onClick={[Function]}
+      className="components-card__header is-shady is-size-small css-1vhqpef-HeaderUI e1q7k77g1"
     >
-      Katy Foster
+      <strong>
+        Katy Foster
+      </strong>
     </div>
     <div
-      className="body"
+      className="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
     >
       <div
         className="content medium"
@@ -2334,16 +2352,17 @@ exports[`sorts the order of the cards properly 1`] = `
     </div>
   </div>
   <div
-    className="card"
+    className="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
   >
     <div
-      className="title"
-      onClick={[Function]}
+      className="components-card__header is-shady is-size-small css-1vhqpef-HeaderUI e1q7k77g1"
     >
-      Kerri Jacobson
+      <strong>
+        Kerri Jacobson
+      </strong>
     </div>
     <div
-      className="body"
+      className="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
     >
       <div
         className="content medium"
@@ -2445,16 +2464,17 @@ exports[`sorts the order of the cards properly 1`] = `
     </div>
   </div>
   <div
-    className="card"
+    className="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
   >
     <div
-      className="title"
-      onClick={[Function]}
+      className="components-card__header is-shady is-size-small css-1vhqpef-HeaderUI e1q7k77g1"
     >
-      Odonnell Lara
+      <strong>
+        Odonnell Lara
+      </strong>
     </div>
     <div
-      className="body"
+      className="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
     >
       <div
         className="content medium"
@@ -2588,16 +2608,17 @@ exports[`sorts the order of the cards properly 1`] = `
     </div>
   </div>
   <div
-    className="card"
+    className="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
   >
     <div
-      className="title"
-      onClick={[Function]}
+      className="components-card__header is-shady is-size-small css-1vhqpef-HeaderUI e1q7k77g1"
     >
-      Osborne Buck
+      <strong>
+        Osborne Buck
+      </strong>
     </div>
     <div
-      className="body"
+      className="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
     >
       <div
         className="content medium"
@@ -2731,16 +2752,17 @@ exports[`sorts the order of the cards properly 1`] = `
     </div>
   </div>
   <div
-    className="card"
+    className="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
   >
     <div
-      className="title"
-      onClick={[Function]}
+      className="components-card__header is-shady is-size-small css-1vhqpef-HeaderUI e1q7k77g1"
     >
-      Weber Norton
+      <strong>
+        Weber Norton
+      </strong>
     </div>
     <div
-      className="body"
+      className="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
     >
       <div
         className="content medium"
@@ -2881,16 +2903,17 @@ exports[`sorts the order of the cards properly 2`] = `
   className="cards"
 >
   <div
-    className="card"
+    className="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
   >
     <div
-      className="title"
-      onClick={[Function]}
+      className="components-card__header is-shady is-size-small css-1vhqpef-HeaderUI e1q7k77g1"
     >
-      Barnes Blankenship
+      <strong>
+        Barnes Blankenship
+      </strong>
     </div>
     <div
-      className="body"
+      className="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
     >
       <div
         className="content medium"
@@ -3024,16 +3047,17 @@ exports[`sorts the order of the cards properly 2`] = `
     </div>
   </div>
   <div
-    className="card"
+    className="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
   >
     <div
-      className="title"
-      onClick={[Function]}
+      className="components-card__header is-shady is-size-small css-1vhqpef-HeaderUI e1q7k77g1"
     >
-      Casey Larson
+      <strong>
+        Casey Larson
+      </strong>
     </div>
     <div
-      className="body"
+      className="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
     >
       <div
         className="content medium"
@@ -3135,16 +3159,17 @@ exports[`sorts the order of the cards properly 2`] = `
     </div>
   </div>
   <div
-    className="card"
+    className="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
   >
     <div
-      className="title"
-      onClick={[Function]}
+      className="components-card__header is-shady is-size-small css-1vhqpef-HeaderUI e1q7k77g1"
     >
-      Franks Olson
+      <strong>
+        Franks Olson
+      </strong>
     </div>
     <div
-      className="body"
+      className="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
     >
       <div
         className="content medium"
@@ -3213,16 +3238,17 @@ exports[`sorts the order of the cards properly 2`] = `
     </div>
   </div>
   <div
-    className="card"
+    className="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
   >
     <div
-      className="title"
-      onClick={[Function]}
+      className="components-card__header is-shady is-size-small css-1vhqpef-HeaderUI e1q7k77g1"
     >
-      Jodi Gilbert
+      <strong>
+        Jodi Gilbert
+      </strong>
     </div>
     <div
-      className="body"
+      className="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
     >
       <div
         className="content medium"
@@ -3356,16 +3382,17 @@ exports[`sorts the order of the cards properly 2`] = `
     </div>
   </div>
   <div
-    className="card"
+    className="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
   >
     <div
-      className="title"
-      onClick={[Function]}
+      className="components-card__header is-shady is-size-small css-1vhqpef-HeaderUI e1q7k77g1"
     >
-      Josefa Oneal
+      <strong>
+        Josefa Oneal
+      </strong>
     </div>
     <div
-      className="body"
+      className="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
     >
       <div
         className="content medium"
@@ -3499,16 +3526,17 @@ exports[`sorts the order of the cards properly 2`] = `
     </div>
   </div>
   <div
-    className="card"
+    className="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
   >
     <div
-      className="title"
-      onClick={[Function]}
+      className="components-card__header is-shady is-size-small css-1vhqpef-HeaderUI e1q7k77g1"
     >
-      Katharine Harrison
+      <strong>
+        Katharine Harrison
+      </strong>
     </div>
     <div
-      className="body"
+      className="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
     >
       <div
         className="content medium"
@@ -3610,16 +3638,17 @@ exports[`sorts the order of the cards properly 2`] = `
     </div>
   </div>
   <div
-    className="card"
+    className="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
   >
     <div
-      className="title"
-      onClick={[Function]}
+      className="components-card__header is-shady is-size-small css-1vhqpef-HeaderUI e1q7k77g1"
     >
-      Katy Foster
+      <strong>
+        Katy Foster
+      </strong>
     </div>
     <div
-      className="body"
+      className="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
     >
       <div
         className="content medium"
@@ -3753,16 +3782,17 @@ exports[`sorts the order of the cards properly 2`] = `
     </div>
   </div>
   <div
-    className="card"
+    className="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
   >
     <div
-      className="title"
-      onClick={[Function]}
+      className="components-card__header is-shady is-size-small css-1vhqpef-HeaderUI e1q7k77g1"
     >
-      Kerri Jacobson
+      <strong>
+        Kerri Jacobson
+      </strong>
     </div>
     <div
-      className="body"
+      className="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
     >
       <div
         className="content medium"
@@ -3864,16 +3894,17 @@ exports[`sorts the order of the cards properly 2`] = `
     </div>
   </div>
   <div
-    className="card"
+    className="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
   >
     <div
-      className="title"
-      onClick={[Function]}
+      className="components-card__header is-shady is-size-small css-1vhqpef-HeaderUI e1q7k77g1"
     >
-      Odonnell Lara
+      <strong>
+        Odonnell Lara
+      </strong>
     </div>
     <div
-      className="body"
+      className="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
     >
       <div
         className="content medium"
@@ -4007,16 +4038,17 @@ exports[`sorts the order of the cards properly 2`] = `
     </div>
   </div>
   <div
-    className="card"
+    className="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
   >
     <div
-      className="title"
-      onClick={[Function]}
+      className="components-card__header is-shady is-size-small css-1vhqpef-HeaderUI e1q7k77g1"
     >
-      Osborne Buck
+      <strong>
+        Osborne Buck
+      </strong>
     </div>
     <div
-      className="body"
+      className="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
     >
       <div
         className="content medium"
@@ -4150,16 +4182,17 @@ exports[`sorts the order of the cards properly 2`] = `
     </div>
   </div>
   <div
-    className="card"
+    className="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
   >
     <div
-      className="title"
-      onClick={[Function]}
+      className="components-card__header is-shady is-size-small css-1vhqpef-HeaderUI e1q7k77g1"
     >
-      Weber Norton
+      <strong>
+        Weber Norton
+      </strong>
     </div>
     <div
-      className="body"
+      className="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
     >
       <div
         className="content medium"
@@ -4300,16 +4333,17 @@ exports[`sorts the order of the cards properly 3`] = `
   className="cards"
 >
   <div
-    className="card"
+    className="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
   >
     <div
-      className="title"
-      onClick={[Function]}
+      className="components-card__header is-shady is-size-small css-1vhqpef-HeaderUI e1q7k77g1"
     >
-      Barnes Blankenship
+      <strong>
+        Barnes Blankenship
+      </strong>
     </div>
     <div
-      className="body"
+      className="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
     >
       <div
         className="content medium"
@@ -4443,16 +4477,17 @@ exports[`sorts the order of the cards properly 3`] = `
     </div>
   </div>
   <div
-    className="card"
+    className="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
   >
     <div
-      className="title"
-      onClick={[Function]}
+      className="components-card__header is-shady is-size-small css-1vhqpef-HeaderUI e1q7k77g1"
     >
-      Casey Larson
+      <strong>
+        Casey Larson
+      </strong>
     </div>
     <div
-      className="body"
+      className="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
     >
       <div
         className="content medium"
@@ -4554,16 +4589,17 @@ exports[`sorts the order of the cards properly 3`] = `
     </div>
   </div>
   <div
-    className="card"
+    className="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
   >
     <div
-      className="title"
-      onClick={[Function]}
+      className="components-card__header is-shady is-size-small css-1vhqpef-HeaderUI e1q7k77g1"
     >
-      Franks Olson
+      <strong>
+        Franks Olson
+      </strong>
     </div>
     <div
-      className="body"
+      className="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
     >
       <div
         className="content medium"
@@ -4632,16 +4668,17 @@ exports[`sorts the order of the cards properly 3`] = `
     </div>
   </div>
   <div
-    className="card"
+    className="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
   >
     <div
-      className="title"
-      onClick={[Function]}
+      className="components-card__header is-shady is-size-small css-1vhqpef-HeaderUI e1q7k77g1"
     >
-      Jodi Gilbert
+      <strong>
+        Jodi Gilbert
+      </strong>
     </div>
     <div
-      className="body"
+      className="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
     >
       <div
         className="content medium"
@@ -4775,16 +4812,17 @@ exports[`sorts the order of the cards properly 3`] = `
     </div>
   </div>
   <div
-    className="card"
+    className="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
   >
     <div
-      className="title"
-      onClick={[Function]}
+      className="components-card__header is-shady is-size-small css-1vhqpef-HeaderUI e1q7k77g1"
     >
-      Josefa Oneal
+      <strong>
+        Josefa Oneal
+      </strong>
     </div>
     <div
-      className="body"
+      className="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
     >
       <div
         className="content medium"
@@ -4918,16 +4956,17 @@ exports[`sorts the order of the cards properly 3`] = `
     </div>
   </div>
   <div
-    className="card"
+    className="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
   >
     <div
-      className="title"
-      onClick={[Function]}
+      className="components-card__header is-shady is-size-small css-1vhqpef-HeaderUI e1q7k77g1"
     >
-      Katharine Harrison
+      <strong>
+        Katharine Harrison
+      </strong>
     </div>
     <div
-      className="body"
+      className="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
     >
       <div
         className="content medium"
@@ -5029,16 +5068,17 @@ exports[`sorts the order of the cards properly 3`] = `
     </div>
   </div>
   <div
-    className="card"
+    className="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
   >
     <div
-      className="title"
-      onClick={[Function]}
+      className="components-card__header is-shady is-size-small css-1vhqpef-HeaderUI e1q7k77g1"
     >
-      Katy Foster
+      <strong>
+        Katy Foster
+      </strong>
     </div>
     <div
-      className="body"
+      className="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
     >
       <div
         className="content medium"
@@ -5172,16 +5212,17 @@ exports[`sorts the order of the cards properly 3`] = `
     </div>
   </div>
   <div
-    className="card"
+    className="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
   >
     <div
-      className="title"
-      onClick={[Function]}
+      className="components-card__header is-shady is-size-small css-1vhqpef-HeaderUI e1q7k77g1"
     >
-      Kerri Jacobson
+      <strong>
+        Kerri Jacobson
+      </strong>
     </div>
     <div
-      className="body"
+      className="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
     >
       <div
         className="content medium"
@@ -5283,16 +5324,17 @@ exports[`sorts the order of the cards properly 3`] = `
     </div>
   </div>
   <div
-    className="card"
+    className="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
   >
     <div
-      className="title"
-      onClick={[Function]}
+      className="components-card__header is-shady is-size-small css-1vhqpef-HeaderUI e1q7k77g1"
     >
-      Odonnell Lara
+      <strong>
+        Odonnell Lara
+      </strong>
     </div>
     <div
-      className="body"
+      className="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
     >
       <div
         className="content medium"
@@ -5426,16 +5468,17 @@ exports[`sorts the order of the cards properly 3`] = `
     </div>
   </div>
   <div
-    className="card"
+    className="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
   >
     <div
-      className="title"
-      onClick={[Function]}
+      className="components-card__header is-shady is-size-small css-1vhqpef-HeaderUI e1q7k77g1"
     >
-      Osborne Buck
+      <strong>
+        Osborne Buck
+      </strong>
     </div>
     <div
-      className="body"
+      className="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
     >
       <div
         className="content medium"
@@ -5569,16 +5612,17 @@ exports[`sorts the order of the cards properly 3`] = `
     </div>
   </div>
   <div
-    className="card"
+    className="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
   >
     <div
-      className="title"
-      onClick={[Function]}
+      className="components-card__header is-shady is-size-small css-1vhqpef-HeaderUI e1q7k77g1"
     >
-      Weber Norton
+      <strong>
+        Weber Norton
+      </strong>
     </div>
     <div
-      className="body"
+      className="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
     >
       <div
         className="content medium"
@@ -5719,16 +5763,17 @@ exports[`sorts the order of the cards properly 4`] = `
   className="cards"
 >
   <div
-    className="card"
+    className="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
   >
     <div
-      className="title"
-      onClick={[Function]}
+      className="components-card__header is-shady is-size-small css-1vhqpef-HeaderUI e1q7k77g1"
     >
-      Casey Larson
+      <strong>
+        Casey Larson
+      </strong>
     </div>
     <div
-      className="body"
+      className="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
     >
       <div
         className="content medium"
@@ -5830,16 +5875,17 @@ exports[`sorts the order of the cards properly 4`] = `
     </div>
   </div>
   <div
-    className="card"
+    className="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
   >
     <div
-      className="title"
-      onClick={[Function]}
+      className="components-card__header is-shady is-size-small css-1vhqpef-HeaderUI e1q7k77g1"
     >
-      Weber Norton
+      <strong>
+        Weber Norton
+      </strong>
     </div>
     <div
-      className="body"
+      className="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
     >
       <div
         className="content medium"
@@ -5973,16 +6019,17 @@ exports[`sorts the order of the cards properly 4`] = `
     </div>
   </div>
   <div
-    className="card"
+    className="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
   >
     <div
-      className="title"
-      onClick={[Function]}
+      className="components-card__header is-shady is-size-small css-1vhqpef-HeaderUI e1q7k77g1"
     >
-      Osborne Buck
+      <strong>
+        Osborne Buck
+      </strong>
     </div>
     <div
-      className="body"
+      className="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
     >
       <div
         className="content medium"
@@ -6116,16 +6163,17 @@ exports[`sorts the order of the cards properly 4`] = `
     </div>
   </div>
   <div
-    className="card"
+    className="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
   >
     <div
-      className="title"
-      onClick={[Function]}
+      className="components-card__header is-shady is-size-small css-1vhqpef-HeaderUI e1q7k77g1"
     >
-      Jodi Gilbert
+      <strong>
+        Jodi Gilbert
+      </strong>
     </div>
     <div
-      className="body"
+      className="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
     >
       <div
         className="content medium"
@@ -6259,16 +6307,17 @@ exports[`sorts the order of the cards properly 4`] = `
     </div>
   </div>
   <div
-    className="card"
+    className="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
   >
     <div
-      className="title"
-      onClick={[Function]}
+      className="components-card__header is-shady is-size-small css-1vhqpef-HeaderUI e1q7k77g1"
     >
-      Josefa Oneal
+      <strong>
+        Josefa Oneal
+      </strong>
     </div>
     <div
-      className="body"
+      className="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
     >
       <div
         className="content medium"
@@ -6402,16 +6451,17 @@ exports[`sorts the order of the cards properly 4`] = `
     </div>
   </div>
   <div
-    className="card"
+    className="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
   >
     <div
-      className="title"
-      onClick={[Function]}
+      className="components-card__header is-shady is-size-small css-1vhqpef-HeaderUI e1q7k77g1"
     >
-      Katharine Harrison
+      <strong>
+        Katharine Harrison
+      </strong>
     </div>
     <div
-      className="body"
+      className="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
     >
       <div
         className="content medium"
@@ -6513,127 +6563,17 @@ exports[`sorts the order of the cards properly 4`] = `
     </div>
   </div>
   <div
-    className="card"
+    className="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
   >
     <div
-      className="title"
-      onClick={[Function]}
+      className="components-card__header is-shady is-size-small css-1vhqpef-HeaderUI e1q7k77g1"
     >
-      Kerri Jacobson
+      <strong>
+        Katy Foster
+      </strong>
     </div>
     <div
-      className="body"
-    >
-      <div
-        className="content medium"
-      >
-        Post Type: 
-        <strong>
-          aliquip_pariatur
-        </strong>
-      </div>
-      <div
-        className="content large"
-      >
-        <a
-          className="link"
-          href="https://find-my-blocks/eddysims.com/wp-admin/post.php=40&action=edit"
-          target="_blank"
-        >
-          <svg
-            className="feather feather-edit "
-            fill="none"
-            height={24}
-            stroke="currentColor"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-            width={24}
-          >
-            <g
-              dangerouslySetInnerHTML={
-                Object {
-                  "__html": "<path d=\\"M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34\\"></path><polygon points=\\"18 2 22 6 12 16 8 16 8 12 18 2\\"></polygon>",
-                }
-              }
-            />
-          </svg>
-          Edit Post
-        </a>
-        <a
-          className="link"
-          href="https://find-my-blocks/eddysims.com/proident/in"
-          target="_blank"
-        >
-          <svg
-            className="feather feather-eye "
-            fill="none"
-            height={24}
-            stroke="currentColor"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-            width={24}
-          >
-            <g
-              dangerouslySetInnerHTML={
-                Object {
-                  "__html": "<path d=\\"M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z\\"></path><circle cx=\\"12\\" cy=\\"12\\" r=\\"3\\"></circle>",
-                }
-              }
-            />
-          </svg>
-          View Post
-        </a>
-      </div>
-      <div
-        className="content small"
-      >
-        <div
-          className="tag info hasIcon"
-        >
-          <div
-            className="icon"
-          >
-            <svg
-              className="feather feather-plus-circle "
-              fill="none"
-              height={24}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={24}
-            >
-              <g
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "<circle cx=\\"12\\" cy=\\"12\\" r=\\"10\\"></circle><line x1=\\"12\\" y1=\\"8\\" x2=\\"12\\" y2=\\"16\\"></line><line x1=\\"8\\" y1=\\"12\\" x2=\\"16\\" y2=\\"12\\"></line>",
-                  }
-                }
-              />
-            </svg>
-          </div>
-          3
-           usages in post
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    className="card"
-  >
-    <div
-      className="title"
-      onClick={[Function]}
-    >
-      Katy Foster
-    </div>
-    <div
-      className="body"
+      className="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
     >
       <div
         className="content medium"
@@ -6767,16 +6707,129 @@ exports[`sorts the order of the cards properly 4`] = `
     </div>
   </div>
   <div
-    className="card"
+    className="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
   >
     <div
-      className="title"
-      onClick={[Function]}
+      className="components-card__header is-shady is-size-small css-1vhqpef-HeaderUI e1q7k77g1"
     >
-      Odonnell Lara
+      <strong>
+        Kerri Jacobson
+      </strong>
     </div>
     <div
-      className="body"
+      className="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
+    >
+      <div
+        className="content medium"
+      >
+        Post Type: 
+        <strong>
+          aliquip_pariatur
+        </strong>
+      </div>
+      <div
+        className="content large"
+      >
+        <a
+          className="link"
+          href="https://find-my-blocks/eddysims.com/wp-admin/post.php=40&action=edit"
+          target="_blank"
+        >
+          <svg
+            className="feather feather-edit "
+            fill="none"
+            height={24}
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            viewBox="0 0 24 24"
+            width={24}
+          >
+            <g
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "<path d=\\"M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34\\"></path><polygon points=\\"18 2 22 6 12 16 8 16 8 12 18 2\\"></polygon>",
+                }
+              }
+            />
+          </svg>
+          Edit Post
+        </a>
+        <a
+          className="link"
+          href="https://find-my-blocks/eddysims.com/proident/in"
+          target="_blank"
+        >
+          <svg
+            className="feather feather-eye "
+            fill="none"
+            height={24}
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            viewBox="0 0 24 24"
+            width={24}
+          >
+            <g
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "<path d=\\"M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z\\"></path><circle cx=\\"12\\" cy=\\"12\\" r=\\"3\\"></circle>",
+                }
+              }
+            />
+          </svg>
+          View Post
+        </a>
+      </div>
+      <div
+        className="content small"
+      >
+        <div
+          className="tag info hasIcon"
+        >
+          <div
+            className="icon"
+          >
+            <svg
+              className="feather feather-plus-circle "
+              fill="none"
+              height={24}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={24}
+            >
+              <g
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "<circle cx=\\"12\\" cy=\\"12\\" r=\\"10\\"></circle><line x1=\\"12\\" y1=\\"8\\" x2=\\"12\\" y2=\\"16\\"></line><line x1=\\"8\\" y1=\\"12\\" x2=\\"16\\" y2=\\"12\\"></line>",
+                  }
+                }
+              />
+            </svg>
+          </div>
+          3
+           usages in post
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
+  >
+    <div
+      className="components-card__header is-shady is-size-small css-1vhqpef-HeaderUI e1q7k77g1"
+    >
+      <strong>
+        Odonnell Lara
+      </strong>
+    </div>
+    <div
+      className="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
     >
       <div
         className="content medium"
@@ -6910,16 +6963,17 @@ exports[`sorts the order of the cards properly 4`] = `
     </div>
   </div>
   <div
-    className="card"
+    className="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
   >
     <div
-      className="title"
-      onClick={[Function]}
+      className="components-card__header is-shady is-size-small css-1vhqpef-HeaderUI e1q7k77g1"
     >
-      Barnes Blankenship
+      <strong>
+        Barnes Blankenship
+      </strong>
     </div>
     <div
-      className="body"
+      className="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
     >
       <div
         className="content medium"
@@ -7053,16 +7107,17 @@ exports[`sorts the order of the cards properly 4`] = `
     </div>
   </div>
   <div
-    className="card"
+    className="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
   >
     <div
-      className="title"
-      onClick={[Function]}
+      className="components-card__header is-shady is-size-small css-1vhqpef-HeaderUI e1q7k77g1"
     >
-      Franks Olson
+      <strong>
+        Franks Olson
+      </strong>
     </div>
     <div
-      className="body"
+      className="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
     >
       <div
         className="content medium"
@@ -7138,731 +7193,17 @@ exports[`sorts the order of the cards properly 5`] = `
   className="cards"
 >
   <div
-    className="card"
+    className="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
   >
     <div
-      className="title"
-      onClick={[Function]}
+      className="components-card__header is-shady is-size-small css-1vhqpef-HeaderUI e1q7k77g1"
     >
-      Barnes Blankenship
+      <strong>
+        Osborne Buck
+      </strong>
     </div>
     <div
-      className="body"
-    >
-      <div
-        className="content medium"
-      >
-        Post Type: 
-        <strong>
-          duis_non
-        </strong>
-      </div>
-      <div
-        className="content large"
-      >
-        <a
-          className="link"
-          href="https://find-my-blocks/eddysims.com/wp-admin/post.php=178&action=edit"
-          target="_blank"
-        >
-          <svg
-            className="feather feather-edit "
-            fill="none"
-            height={24}
-            stroke="currentColor"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-            width={24}
-          >
-            <g
-              dangerouslySetInnerHTML={
-                Object {
-                  "__html": "<path d=\\"M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34\\"></path><polygon points=\\"18 2 22 6 12 16 8 16 8 12 18 2\\"></polygon>",
-                }
-              }
-            />
-          </svg>
-          Edit Post
-        </a>
-        <a
-          className="link"
-          href="https://find-my-blocks/eddysims.com/mollit/et"
-          target="_blank"
-        >
-          <svg
-            className="feather feather-eye "
-            fill="none"
-            height={24}
-            stroke="currentColor"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-            width={24}
-          >
-            <g
-              dangerouslySetInnerHTML={
-                Object {
-                  "__html": "<path d=\\"M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z\\"></path><circle cx=\\"12\\" cy=\\"12\\" r=\\"3\\"></circle>",
-                }
-              }
-            />
-          </svg>
-          View Post
-        </a>
-      </div>
-      <div
-        className="content medium"
-      >
-        <div
-          className="tag warning hasIcon"
-        >
-          <div
-            className="icon"
-          >
-            <svg
-              className="feather feather-alert-triangle "
-              fill="none"
-              height={24}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={24}
-            >
-              <g
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "<path d=\\"M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z\\"></path><line x1=\\"12\\" y1=\\"9\\" x2=\\"12\\" y2=\\"13\\"></line><line x1=\\"12\\" y1=\\"17\\" x2=\\"12\\" y2=\\"17\\"></line>",
-                  }
-                }
-              />
-            </svg>
-          </div>
-          Reusable block
-        </div>
-      </div>
-      <div
-        className="content small"
-      >
-        <div
-          className="tag info hasIcon"
-        >
-          <div
-            className="icon"
-          >
-            <svg
-              className="feather feather-plus-circle "
-              fill="none"
-              height={24}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={24}
-            >
-              <g
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "<circle cx=\\"12\\" cy=\\"12\\" r=\\"10\\"></circle><line x1=\\"12\\" y1=\\"8\\" x2=\\"12\\" y2=\\"16\\"></line><line x1=\\"8\\" y1=\\"12\\" x2=\\"16\\" y2=\\"12\\"></line>",
-                  }
-                }
-              />
-            </svg>
-          </div>
-          2
-           usages in post
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    className="card"
-  >
-    <div
-      className="title"
-      onClick={[Function]}
-    >
-      Odonnell Lara
-    </div>
-    <div
-      className="body"
-    >
-      <div
-        className="content medium"
-      >
-        Post Type: 
-        <strong>
-          eiusmod_nisi
-        </strong>
-      </div>
-      <div
-        className="content large"
-      >
-        <a
-          className="link"
-          href="https://find-my-blocks/eddysims.com/wp-admin/post.php=599&action=edit"
-          target="_blank"
-        >
-          <svg
-            className="feather feather-edit "
-            fill="none"
-            height={24}
-            stroke="currentColor"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-            width={24}
-          >
-            <g
-              dangerouslySetInnerHTML={
-                Object {
-                  "__html": "<path d=\\"M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34\\"></path><polygon points=\\"18 2 22 6 12 16 8 16 8 12 18 2\\"></polygon>",
-                }
-              }
-            />
-          </svg>
-          Edit Post
-        </a>
-        <a
-          className="link"
-          href="https://find-my-blocks/eddysims.com/aute/amet"
-          target="_blank"
-        >
-          <svg
-            className="feather feather-eye "
-            fill="none"
-            height={24}
-            stroke="currentColor"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-            width={24}
-          >
-            <g
-              dangerouslySetInnerHTML={
-                Object {
-                  "__html": "<path d=\\"M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z\\"></path><circle cx=\\"12\\" cy=\\"12\\" r=\\"3\\"></circle>",
-                }
-              }
-            />
-          </svg>
-          View Post
-        </a>
-      </div>
-      <div
-        className="content medium"
-      >
-        <div
-          className="tag warning hasIcon"
-        >
-          <div
-            className="icon"
-          >
-            <svg
-              className="feather feather-alert-triangle "
-              fill="none"
-              height={24}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={24}
-            >
-              <g
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "<path d=\\"M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z\\"></path><line x1=\\"12\\" y1=\\"9\\" x2=\\"12\\" y2=\\"13\\"></line><line x1=\\"12\\" y1=\\"17\\" x2=\\"12\\" y2=\\"17\\"></line>",
-                  }
-                }
-              />
-            </svg>
-          </div>
-          Reusable block
-        </div>
-      </div>
-      <div
-        className="content small"
-      >
-        <div
-          className="tag info hasIcon"
-        >
-          <div
-            className="icon"
-          >
-            <svg
-              className="feather feather-plus-circle "
-              fill="none"
-              height={24}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={24}
-            >
-              <g
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "<circle cx=\\"12\\" cy=\\"12\\" r=\\"10\\"></circle><line x1=\\"12\\" y1=\\"8\\" x2=\\"12\\" y2=\\"16\\"></line><line x1=\\"8\\" y1=\\"12\\" x2=\\"16\\" y2=\\"12\\"></line>",
-                  }
-                }
-              />
-            </svg>
-          </div>
-          2
-           usages in post
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    className="card"
-  >
-    <div
-      className="title"
-      onClick={[Function]}
-    >
-      Katy Foster
-    </div>
-    <div
-      className="body"
-    >
-      <div
-        className="content medium"
-      >
-        Post Type: 
-        <strong>
-          aliqua_duis
-        </strong>
-      </div>
-      <div
-        className="content large"
-      >
-        <a
-          className="link"
-          href="https://find-my-blocks/eddysims.com/wp-admin/post.php=738&action=edit"
-          target="_blank"
-        >
-          <svg
-            className="feather feather-edit "
-            fill="none"
-            height={24}
-            stroke="currentColor"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-            width={24}
-          >
-            <g
-              dangerouslySetInnerHTML={
-                Object {
-                  "__html": "<path d=\\"M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34\\"></path><polygon points=\\"18 2 22 6 12 16 8 16 8 12 18 2\\"></polygon>",
-                }
-              }
-            />
-          </svg>
-          Edit Post
-        </a>
-        <a
-          className="link"
-          href="https://find-my-blocks/eddysims.com/proident/culpa"
-          target="_blank"
-        >
-          <svg
-            className="feather feather-eye "
-            fill="none"
-            height={24}
-            stroke="currentColor"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-            width={24}
-          >
-            <g
-              dangerouslySetInnerHTML={
-                Object {
-                  "__html": "<path d=\\"M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z\\"></path><circle cx=\\"12\\" cy=\\"12\\" r=\\"3\\"></circle>",
-                }
-              }
-            />
-          </svg>
-          View Post
-        </a>
-      </div>
-      <div
-        className="content medium"
-      >
-        <div
-          className="tag warning hasIcon"
-        >
-          <div
-            className="icon"
-          >
-            <svg
-              className="feather feather-alert-triangle "
-              fill="none"
-              height={24}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={24}
-            >
-              <g
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "<path d=\\"M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z\\"></path><line x1=\\"12\\" y1=\\"9\\" x2=\\"12\\" y2=\\"13\\"></line><line x1=\\"12\\" y1=\\"17\\" x2=\\"12\\" y2=\\"17\\"></line>",
-                  }
-                }
-              />
-            </svg>
-          </div>
-          Reusable block
-        </div>
-      </div>
-      <div
-        className="content small"
-      >
-        <div
-          className="tag info hasIcon"
-        >
-          <div
-            className="icon"
-          >
-            <svg
-              className="feather feather-plus-circle "
-              fill="none"
-              height={24}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={24}
-            >
-              <g
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "<circle cx=\\"12\\" cy=\\"12\\" r=\\"10\\"></circle><line x1=\\"12\\" y1=\\"8\\" x2=\\"12\\" y2=\\"16\\"></line><line x1=\\"8\\" y1=\\"12\\" x2=\\"16\\" y2=\\"12\\"></line>",
-                  }
-                }
-              />
-            </svg>
-          </div>
-          3
-           usages in post
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    className="card"
-  >
-    <div
-      className="title"
-      onClick={[Function]}
-    >
-      Josefa Oneal
-    </div>
-    <div
-      className="body"
-    >
-      <div
-        className="content medium"
-      >
-        Post Type: 
-        <strong>
-          esse_consequat
-        </strong>
-      </div>
-      <div
-        className="content large"
-      >
-        <a
-          className="link"
-          href="https://find-my-blocks/eddysims.com/wp-admin/post.php=555&action=edit"
-          target="_blank"
-        >
-          <svg
-            className="feather feather-edit "
-            fill="none"
-            height={24}
-            stroke="currentColor"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-            width={24}
-          >
-            <g
-              dangerouslySetInnerHTML={
-                Object {
-                  "__html": "<path d=\\"M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34\\"></path><polygon points=\\"18 2 22 6 12 16 8 16 8 12 18 2\\"></polygon>",
-                }
-              }
-            />
-          </svg>
-          Edit Post
-        </a>
-        <a
-          className="link"
-          href="https://find-my-blocks/eddysims.com/cillum/ipsum"
-          target="_blank"
-        >
-          <svg
-            className="feather feather-eye "
-            fill="none"
-            height={24}
-            stroke="currentColor"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-            width={24}
-          >
-            <g
-              dangerouslySetInnerHTML={
-                Object {
-                  "__html": "<path d=\\"M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z\\"></path><circle cx=\\"12\\" cy=\\"12\\" r=\\"3\\"></circle>",
-                }
-              }
-            />
-          </svg>
-          View Post
-        </a>
-      </div>
-      <div
-        className="content medium"
-      >
-        <div
-          className="tag warning hasIcon"
-        >
-          <div
-            className="icon"
-          >
-            <svg
-              className="feather feather-alert-triangle "
-              fill="none"
-              height={24}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={24}
-            >
-              <g
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "<path d=\\"M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z\\"></path><line x1=\\"12\\" y1=\\"9\\" x2=\\"12\\" y2=\\"13\\"></line><line x1=\\"12\\" y1=\\"17\\" x2=\\"12\\" y2=\\"17\\"></line>",
-                  }
-                }
-              />
-            </svg>
-          </div>
-          Reusable block
-        </div>
-      </div>
-      <div
-        className="content small"
-      >
-        <div
-          className="tag info hasIcon"
-        >
-          <div
-            className="icon"
-          >
-            <svg
-              className="feather feather-plus-circle "
-              fill="none"
-              height={24}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={24}
-            >
-              <g
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "<circle cx=\\"12\\" cy=\\"12\\" r=\\"10\\"></circle><line x1=\\"12\\" y1=\\"8\\" x2=\\"12\\" y2=\\"16\\"></line><line x1=\\"8\\" y1=\\"12\\" x2=\\"16\\" y2=\\"12\\"></line>",
-                  }
-                }
-              />
-            </svg>
-          </div>
-          14
-           usages in post
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    className="card"
-  >
-    <div
-      className="title"
-      onClick={[Function]}
-    >
-      Jodi Gilbert
-    </div>
-    <div
-      className="body"
-    >
-      <div
-        className="content medium"
-      >
-        Post Type: 
-        <strong>
-          dolore_ut
-        </strong>
-      </div>
-      <div
-        className="content large"
-      >
-        <a
-          className="link"
-          href="https://find-my-blocks/eddysims.com/wp-admin/post.php=556&action=edit"
-          target="_blank"
-        >
-          <svg
-            className="feather feather-edit "
-            fill="none"
-            height={24}
-            stroke="currentColor"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-            width={24}
-          >
-            <g
-              dangerouslySetInnerHTML={
-                Object {
-                  "__html": "<path d=\\"M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34\\"></path><polygon points=\\"18 2 22 6 12 16 8 16 8 12 18 2\\"></polygon>",
-                }
-              }
-            />
-          </svg>
-          Edit Post
-        </a>
-        <a
-          className="link"
-          href="https://find-my-blocks/eddysims.com/non/voluptate"
-          target="_blank"
-        >
-          <svg
-            className="feather feather-eye "
-            fill="none"
-            height={24}
-            stroke="currentColor"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-            width={24}
-          >
-            <g
-              dangerouslySetInnerHTML={
-                Object {
-                  "__html": "<path d=\\"M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z\\"></path><circle cx=\\"12\\" cy=\\"12\\" r=\\"3\\"></circle>",
-                }
-              }
-            />
-          </svg>
-          View Post
-        </a>
-      </div>
-      <div
-        className="content medium"
-      >
-        <div
-          className="tag warning hasIcon"
-        >
-          <div
-            className="icon"
-          >
-            <svg
-              className="feather feather-alert-triangle "
-              fill="none"
-              height={24}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={24}
-            >
-              <g
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "<path d=\\"M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z\\"></path><line x1=\\"12\\" y1=\\"9\\" x2=\\"12\\" y2=\\"13\\"></line><line x1=\\"12\\" y1=\\"17\\" x2=\\"12\\" y2=\\"17\\"></line>",
-                  }
-                }
-              />
-            </svg>
-          </div>
-          Reusable block
-        </div>
-      </div>
-      <div
-        className="content small"
-      >
-        <div
-          className="tag info hasIcon"
-        >
-          <div
-            className="icon"
-          >
-            <svg
-              className="feather feather-plus-circle "
-              fill="none"
-              height={24}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={24}
-            >
-              <g
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "<circle cx=\\"12\\" cy=\\"12\\" r=\\"10\\"></circle><line x1=\\"12\\" y1=\\"8\\" x2=\\"12\\" y2=\\"16\\"></line><line x1=\\"8\\" y1=\\"12\\" x2=\\"16\\" y2=\\"12\\"></line>",
-                  }
-                }
-              />
-            </svg>
-          </div>
-          16
-           usages in post
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    className="card"
-  >
-    <div
-      className="title"
-      onClick={[Function]}
-    >
-      Osborne Buck
-    </div>
-    <div
-      className="body"
+      className="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
     >
       <div
         className="content medium"
@@ -7996,16 +7337,305 @@ exports[`sorts the order of the cards properly 5`] = `
     </div>
   </div>
   <div
-    className="card"
+    className="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
   >
     <div
-      className="title"
-      onClick={[Function]}
+      className="components-card__header is-shady is-size-small css-1vhqpef-HeaderUI e1q7k77g1"
     >
-      Weber Norton
+      <strong>
+        Jodi Gilbert
+      </strong>
     </div>
     <div
-      className="body"
+      className="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
+    >
+      <div
+        className="content medium"
+      >
+        Post Type: 
+        <strong>
+          dolore_ut
+        </strong>
+      </div>
+      <div
+        className="content large"
+      >
+        <a
+          className="link"
+          href="https://find-my-blocks/eddysims.com/wp-admin/post.php=556&action=edit"
+          target="_blank"
+        >
+          <svg
+            className="feather feather-edit "
+            fill="none"
+            height={24}
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            viewBox="0 0 24 24"
+            width={24}
+          >
+            <g
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "<path d=\\"M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34\\"></path><polygon points=\\"18 2 22 6 12 16 8 16 8 12 18 2\\"></polygon>",
+                }
+              }
+            />
+          </svg>
+          Edit Post
+        </a>
+        <a
+          className="link"
+          href="https://find-my-blocks/eddysims.com/non/voluptate"
+          target="_blank"
+        >
+          <svg
+            className="feather feather-eye "
+            fill="none"
+            height={24}
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            viewBox="0 0 24 24"
+            width={24}
+          >
+            <g
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "<path d=\\"M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z\\"></path><circle cx=\\"12\\" cy=\\"12\\" r=\\"3\\"></circle>",
+                }
+              }
+            />
+          </svg>
+          View Post
+        </a>
+      </div>
+      <div
+        className="content medium"
+      >
+        <div
+          className="tag warning hasIcon"
+        >
+          <div
+            className="icon"
+          >
+            <svg
+              className="feather feather-alert-triangle "
+              fill="none"
+              height={24}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={24}
+            >
+              <g
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "<path d=\\"M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z\\"></path><line x1=\\"12\\" y1=\\"9\\" x2=\\"12\\" y2=\\"13\\"></line><line x1=\\"12\\" y1=\\"17\\" x2=\\"12\\" y2=\\"17\\"></line>",
+                  }
+                }
+              />
+            </svg>
+          </div>
+          Reusable block
+        </div>
+      </div>
+      <div
+        className="content small"
+      >
+        <div
+          className="tag info hasIcon"
+        >
+          <div
+            className="icon"
+          >
+            <svg
+              className="feather feather-plus-circle "
+              fill="none"
+              height={24}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={24}
+            >
+              <g
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "<circle cx=\\"12\\" cy=\\"12\\" r=\\"10\\"></circle><line x1=\\"12\\" y1=\\"8\\" x2=\\"12\\" y2=\\"16\\"></line><line x1=\\"8\\" y1=\\"12\\" x2=\\"16\\" y2=\\"12\\"></line>",
+                  }
+                }
+              />
+            </svg>
+          </div>
+          16
+           usages in post
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
+  >
+    <div
+      className="components-card__header is-shady is-size-small css-1vhqpef-HeaderUI e1q7k77g1"
+    >
+      <strong>
+        Josefa Oneal
+      </strong>
+    </div>
+    <div
+      className="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
+    >
+      <div
+        className="content medium"
+      >
+        Post Type: 
+        <strong>
+          esse_consequat
+        </strong>
+      </div>
+      <div
+        className="content large"
+      >
+        <a
+          className="link"
+          href="https://find-my-blocks/eddysims.com/wp-admin/post.php=555&action=edit"
+          target="_blank"
+        >
+          <svg
+            className="feather feather-edit "
+            fill="none"
+            height={24}
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            viewBox="0 0 24 24"
+            width={24}
+          >
+            <g
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "<path d=\\"M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34\\"></path><polygon points=\\"18 2 22 6 12 16 8 16 8 12 18 2\\"></polygon>",
+                }
+              }
+            />
+          </svg>
+          Edit Post
+        </a>
+        <a
+          className="link"
+          href="https://find-my-blocks/eddysims.com/cillum/ipsum"
+          target="_blank"
+        >
+          <svg
+            className="feather feather-eye "
+            fill="none"
+            height={24}
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            viewBox="0 0 24 24"
+            width={24}
+          >
+            <g
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "<path d=\\"M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z\\"></path><circle cx=\\"12\\" cy=\\"12\\" r=\\"3\\"></circle>",
+                }
+              }
+            />
+          </svg>
+          View Post
+        </a>
+      </div>
+      <div
+        className="content medium"
+      >
+        <div
+          className="tag warning hasIcon"
+        >
+          <div
+            className="icon"
+          >
+            <svg
+              className="feather feather-alert-triangle "
+              fill="none"
+              height={24}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={24}
+            >
+              <g
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "<path d=\\"M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z\\"></path><line x1=\\"12\\" y1=\\"9\\" x2=\\"12\\" y2=\\"13\\"></line><line x1=\\"12\\" y1=\\"17\\" x2=\\"12\\" y2=\\"17\\"></line>",
+                  }
+                }
+              />
+            </svg>
+          </div>
+          Reusable block
+        </div>
+      </div>
+      <div
+        className="content small"
+      >
+        <div
+          className="tag info hasIcon"
+        >
+          <div
+            className="icon"
+          >
+            <svg
+              className="feather feather-plus-circle "
+              fill="none"
+              height={24}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={24}
+            >
+              <g
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "<circle cx=\\"12\\" cy=\\"12\\" r=\\"10\\"></circle><line x1=\\"12\\" y1=\\"8\\" x2=\\"12\\" y2=\\"16\\"></line><line x1=\\"8\\" y1=\\"12\\" x2=\\"16\\" y2=\\"12\\"></line>",
+                  }
+                }
+              />
+            </svg>
+          </div>
+          14
+           usages in post
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
+  >
+    <div
+      className="components-card__header is-shady is-size-small css-1vhqpef-HeaderUI e1q7k77g1"
+    >
+      <strong>
+        Weber Norton
+      </strong>
+    </div>
+    <div
+      className="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
     >
       <div
         className="content medium"
@@ -8139,23 +7769,24 @@ exports[`sorts the order of the cards properly 5`] = `
     </div>
   </div>
   <div
-    className="card"
+    className="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
   >
     <div
-      className="title"
-      onClick={[Function]}
+      className="components-card__header is-shady is-size-small css-1vhqpef-HeaderUI e1q7k77g1"
     >
-      Franks Olson
+      <strong>
+        Katy Foster
+      </strong>
     </div>
     <div
-      className="body"
+      className="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
     >
       <div
         className="content medium"
       >
         Post Type: 
         <strong>
-          minim_id
+          aliqua_duis
         </strong>
       </div>
       <div
@@ -8163,7 +7794,7 @@ exports[`sorts the order of the cards properly 5`] = `
       >
         <a
           className="link"
-          href="https://find-my-blocks/eddysims.com/wp-admin/post.php=697&action=edit"
+          href="https://find-my-blocks/eddysims.com/wp-admin/post.php=738&action=edit"
           target="_blank"
         >
           <svg
@@ -8189,7 +7820,7 @@ exports[`sorts the order of the cards properly 5`] = `
         </a>
         <a
           className="link"
-          href="https://find-my-blocks/eddysims.com/in/ut"
+          href="https://find-my-blocks/eddysims.com/proident/culpa"
           target="_blank"
         >
           <svg
@@ -8214,19 +7845,485 @@ exports[`sorts the order of the cards properly 5`] = `
           View Post
         </a>
       </div>
+      <div
+        className="content medium"
+      >
+        <div
+          className="tag warning hasIcon"
+        >
+          <div
+            className="icon"
+          >
+            <svg
+              className="feather feather-alert-triangle "
+              fill="none"
+              height={24}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={24}
+            >
+              <g
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "<path d=\\"M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z\\"></path><line x1=\\"12\\" y1=\\"9\\" x2=\\"12\\" y2=\\"13\\"></line><line x1=\\"12\\" y1=\\"17\\" x2=\\"12\\" y2=\\"17\\"></line>",
+                  }
+                }
+              />
+            </svg>
+          </div>
+          Reusable block
+        </div>
+      </div>
+      <div
+        className="content small"
+      >
+        <div
+          className="tag info hasIcon"
+        >
+          <div
+            className="icon"
+          >
+            <svg
+              className="feather feather-plus-circle "
+              fill="none"
+              height={24}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={24}
+            >
+              <g
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "<circle cx=\\"12\\" cy=\\"12\\" r=\\"10\\"></circle><line x1=\\"12\\" y1=\\"8\\" x2=\\"12\\" y2=\\"16\\"></line><line x1=\\"8\\" y1=\\"12\\" x2=\\"16\\" y2=\\"12\\"></line>",
+                  }
+                }
+              />
+            </svg>
+          </div>
+          3
+           usages in post
+        </div>
+      </div>
     </div>
   </div>
   <div
-    className="card"
+    className="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
   >
     <div
-      className="title"
-      onClick={[Function]}
+      className="components-card__header is-shady is-size-small css-1vhqpef-HeaderUI e1q7k77g1"
     >
-      Kerri Jacobson
+      <strong>
+        Odonnell Lara
+      </strong>
     </div>
     <div
-      className="body"
+      className="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
+    >
+      <div
+        className="content medium"
+      >
+        Post Type: 
+        <strong>
+          eiusmod_nisi
+        </strong>
+      </div>
+      <div
+        className="content large"
+      >
+        <a
+          className="link"
+          href="https://find-my-blocks/eddysims.com/wp-admin/post.php=599&action=edit"
+          target="_blank"
+        >
+          <svg
+            className="feather feather-edit "
+            fill="none"
+            height={24}
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            viewBox="0 0 24 24"
+            width={24}
+          >
+            <g
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "<path d=\\"M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34\\"></path><polygon points=\\"18 2 22 6 12 16 8 16 8 12 18 2\\"></polygon>",
+                }
+              }
+            />
+          </svg>
+          Edit Post
+        </a>
+        <a
+          className="link"
+          href="https://find-my-blocks/eddysims.com/aute/amet"
+          target="_blank"
+        >
+          <svg
+            className="feather feather-eye "
+            fill="none"
+            height={24}
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            viewBox="0 0 24 24"
+            width={24}
+          >
+            <g
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "<path d=\\"M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z\\"></path><circle cx=\\"12\\" cy=\\"12\\" r=\\"3\\"></circle>",
+                }
+              }
+            />
+          </svg>
+          View Post
+        </a>
+      </div>
+      <div
+        className="content medium"
+      >
+        <div
+          className="tag warning hasIcon"
+        >
+          <div
+            className="icon"
+          >
+            <svg
+              className="feather feather-alert-triangle "
+              fill="none"
+              height={24}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={24}
+            >
+              <g
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "<path d=\\"M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z\\"></path><line x1=\\"12\\" y1=\\"9\\" x2=\\"12\\" y2=\\"13\\"></line><line x1=\\"12\\" y1=\\"17\\" x2=\\"12\\" y2=\\"17\\"></line>",
+                  }
+                }
+              />
+            </svg>
+          </div>
+          Reusable block
+        </div>
+      </div>
+      <div
+        className="content small"
+      >
+        <div
+          className="tag info hasIcon"
+        >
+          <div
+            className="icon"
+          >
+            <svg
+              className="feather feather-plus-circle "
+              fill="none"
+              height={24}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={24}
+            >
+              <g
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "<circle cx=\\"12\\" cy=\\"12\\" r=\\"10\\"></circle><line x1=\\"12\\" y1=\\"8\\" x2=\\"12\\" y2=\\"16\\"></line><line x1=\\"8\\" y1=\\"12\\" x2=\\"16\\" y2=\\"12\\"></line>",
+                  }
+                }
+              />
+            </svg>
+          </div>
+          2
+           usages in post
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
+  >
+    <div
+      className="components-card__header is-shady is-size-small css-1vhqpef-HeaderUI e1q7k77g1"
+    >
+      <strong>
+        Barnes Blankenship
+      </strong>
+    </div>
+    <div
+      className="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
+    >
+      <div
+        className="content medium"
+      >
+        Post Type: 
+        <strong>
+          duis_non
+        </strong>
+      </div>
+      <div
+        className="content large"
+      >
+        <a
+          className="link"
+          href="https://find-my-blocks/eddysims.com/wp-admin/post.php=178&action=edit"
+          target="_blank"
+        >
+          <svg
+            className="feather feather-edit "
+            fill="none"
+            height={24}
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            viewBox="0 0 24 24"
+            width={24}
+          >
+            <g
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "<path d=\\"M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34\\"></path><polygon points=\\"18 2 22 6 12 16 8 16 8 12 18 2\\"></polygon>",
+                }
+              }
+            />
+          </svg>
+          Edit Post
+        </a>
+        <a
+          className="link"
+          href="https://find-my-blocks/eddysims.com/mollit/et"
+          target="_blank"
+        >
+          <svg
+            className="feather feather-eye "
+            fill="none"
+            height={24}
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            viewBox="0 0 24 24"
+            width={24}
+          >
+            <g
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "<path d=\\"M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z\\"></path><circle cx=\\"12\\" cy=\\"12\\" r=\\"3\\"></circle>",
+                }
+              }
+            />
+          </svg>
+          View Post
+        </a>
+      </div>
+      <div
+        className="content medium"
+      >
+        <div
+          className="tag warning hasIcon"
+        >
+          <div
+            className="icon"
+          >
+            <svg
+              className="feather feather-alert-triangle "
+              fill="none"
+              height={24}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={24}
+            >
+              <g
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "<path d=\\"M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z\\"></path><line x1=\\"12\\" y1=\\"9\\" x2=\\"12\\" y2=\\"13\\"></line><line x1=\\"12\\" y1=\\"17\\" x2=\\"12\\" y2=\\"17\\"></line>",
+                  }
+                }
+              />
+            </svg>
+          </div>
+          Reusable block
+        </div>
+      </div>
+      <div
+        className="content small"
+      >
+        <div
+          className="tag info hasIcon"
+        >
+          <div
+            className="icon"
+          >
+            <svg
+              className="feather feather-plus-circle "
+              fill="none"
+              height={24}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={24}
+            >
+              <g
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "<circle cx=\\"12\\" cy=\\"12\\" r=\\"10\\"></circle><line x1=\\"12\\" y1=\\"8\\" x2=\\"12\\" y2=\\"16\\"></line><line x1=\\"8\\" y1=\\"12\\" x2=\\"16\\" y2=\\"12\\"></line>",
+                  }
+                }
+              />
+            </svg>
+          </div>
+          2
+           usages in post
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
+  >
+    <div
+      className="components-card__header is-shady is-size-small css-1vhqpef-HeaderUI e1q7k77g1"
+    >
+      <strong>
+        Casey Larson
+      </strong>
+    </div>
+    <div
+      className="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
+    >
+      <div
+        className="content medium"
+      >
+        Post Type: 
+        <strong>
+          ea_exercitation
+        </strong>
+      </div>
+      <div
+        className="content large"
+      >
+        <a
+          className="link"
+          href="https://find-my-blocks/eddysims.com/wp-admin/post.php=937&action=edit"
+          target="_blank"
+        >
+          <svg
+            className="feather feather-edit "
+            fill="none"
+            height={24}
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            viewBox="0 0 24 24"
+            width={24}
+          >
+            <g
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "<path d=\\"M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34\\"></path><polygon points=\\"18 2 22 6 12 16 8 16 8 12 18 2\\"></polygon>",
+                }
+              }
+            />
+          </svg>
+          Edit Post
+        </a>
+        <a
+          className="link"
+          href="https://find-my-blocks/eddysims.com/magna/cillum"
+          target="_blank"
+        >
+          <svg
+            className="feather feather-eye "
+            fill="none"
+            height={24}
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            viewBox="0 0 24 24"
+            width={24}
+          >
+            <g
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "<path d=\\"M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z\\"></path><circle cx=\\"12\\" cy=\\"12\\" r=\\"3\\"></circle>",
+                }
+              }
+            />
+          </svg>
+          View Post
+        </a>
+      </div>
+      <div
+        className="content small"
+      >
+        <div
+          className="tag info hasIcon"
+        >
+          <div
+            className="icon"
+          >
+            <svg
+              className="feather feather-plus-circle "
+              fill="none"
+              height={24}
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              width={24}
+            >
+              <g
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "<circle cx=\\"12\\" cy=\\"12\\" r=\\"10\\"></circle><line x1=\\"12\\" y1=\\"8\\" x2=\\"12\\" y2=\\"16\\"></line><line x1=\\"8\\" y1=\\"12\\" x2=\\"16\\" y2=\\"12\\"></line>",
+                  }
+                }
+              />
+            </svg>
+          </div>
+          25
+           usages in post
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
+  >
+    <div
+      className="components-card__header is-shady is-size-small css-1vhqpef-HeaderUI e1q7k77g1"
+    >
+      <strong>
+        Kerri Jacobson
+      </strong>
+    </div>
+    <div
+      className="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
     >
       <div
         className="content medium"
@@ -8328,16 +8425,96 @@ exports[`sorts the order of the cards properly 5`] = `
     </div>
   </div>
   <div
-    className="card"
+    className="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
   >
     <div
-      className="title"
-      onClick={[Function]}
+      className="components-card__header is-shady is-size-small css-1vhqpef-HeaderUI e1q7k77g1"
     >
-      Katharine Harrison
+      <strong>
+        Franks Olson
+      </strong>
     </div>
     <div
-      className="body"
+      className="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
+    >
+      <div
+        className="content medium"
+      >
+        Post Type: 
+        <strong>
+          minim_id
+        </strong>
+      </div>
+      <div
+        className="content large"
+      >
+        <a
+          className="link"
+          href="https://find-my-blocks/eddysims.com/wp-admin/post.php=697&action=edit"
+          target="_blank"
+        >
+          <svg
+            className="feather feather-edit "
+            fill="none"
+            height={24}
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            viewBox="0 0 24 24"
+            width={24}
+          >
+            <g
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "<path d=\\"M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34\\"></path><polygon points=\\"18 2 22 6 12 16 8 16 8 12 18 2\\"></polygon>",
+                }
+              }
+            />
+          </svg>
+          Edit Post
+        </a>
+        <a
+          className="link"
+          href="https://find-my-blocks/eddysims.com/in/ut"
+          target="_blank"
+        >
+          <svg
+            className="feather feather-eye "
+            fill="none"
+            height={24}
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            viewBox="0 0 24 24"
+            width={24}
+          >
+            <g
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "<path d=\\"M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z\\"></path><circle cx=\\"12\\" cy=\\"12\\" r=\\"3\\"></circle>",
+                }
+              }
+            />
+          </svg>
+          View Post
+        </a>
+      </div>
+    </div>
+  </div>
+  <div
+    className="components-card is-size-small css-1xs3c37-CardUI e1q7k77g0"
+  >
+    <div
+      className="components-card__header is-shady is-size-small css-1vhqpef-HeaderUI e1q7k77g1"
+    >
+      <strong>
+        Katharine Harrison
+      </strong>
+    </div>
+    <div
+      className="components-card__body is-size-small css-xmjzce-BodyUI e1q7k77g3"
     >
       <div
         className="content medium"
@@ -8433,117 +8610,6 @@ exports[`sorts the order of the cards properly 5`] = `
             </svg>
           </div>
           10
-           usages in post
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    className="card"
-  >
-    <div
-      className="title"
-      onClick={[Function]}
-    >
-      Casey Larson
-    </div>
-    <div
-      className="body"
-    >
-      <div
-        className="content medium"
-      >
-        Post Type: 
-        <strong>
-          ea_exercitation
-        </strong>
-      </div>
-      <div
-        className="content large"
-      >
-        <a
-          className="link"
-          href="https://find-my-blocks/eddysims.com/wp-admin/post.php=937&action=edit"
-          target="_blank"
-        >
-          <svg
-            className="feather feather-edit "
-            fill="none"
-            height={24}
-            stroke="currentColor"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-            width={24}
-          >
-            <g
-              dangerouslySetInnerHTML={
-                Object {
-                  "__html": "<path d=\\"M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34\\"></path><polygon points=\\"18 2 22 6 12 16 8 16 8 12 18 2\\"></polygon>",
-                }
-              }
-            />
-          </svg>
-          Edit Post
-        </a>
-        <a
-          className="link"
-          href="https://find-my-blocks/eddysims.com/magna/cillum"
-          target="_blank"
-        >
-          <svg
-            className="feather feather-eye "
-            fill="none"
-            height={24}
-            stroke="currentColor"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-            width={24}
-          >
-            <g
-              dangerouslySetInnerHTML={
-                Object {
-                  "__html": "<path d=\\"M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z\\"></path><circle cx=\\"12\\" cy=\\"12\\" r=\\"3\\"></circle>",
-                }
-              }
-            />
-          </svg>
-          View Post
-        </a>
-      </div>
-      <div
-        className="content small"
-      >
-        <div
-          className="tag info hasIcon"
-        >
-          <div
-            className="icon"
-          >
-            <svg
-              className="feather feather-plus-circle "
-              fill="none"
-              height={24}
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              width={24}
-            >
-              <g
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "<circle cx=\\"12\\" cy=\\"12\\" r=\\"10\\"></circle><line x1=\\"12\\" y1=\\"8\\" x2=\\"12\\" y2=\\"16\\"></line><line x1=\\"8\\" y1=\\"12\\" x2=\\"16\\" y2=\\"12\\"></line>",
-                  }
-                }
-              />
-            </svg>
-          </div>
-          25
            usages in post
         </div>
       </div>

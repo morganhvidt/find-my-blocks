@@ -1,10 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`render correctly 1`] = `
-<input
-  className="input"
-  onChange={[Function]}
-  type="text"
-  value="hello"
-/>
+<div
+  className="components-base-control"
+>
+  <div
+    className="components-base-control__field"
+  >
+    <input
+      className="components-text-control__input"
+      id="inspector-text-control-0"
+      onChange={[Function]}
+      type="text"
+      value="hello"
+    />
+  </div>
+</div>
 `;

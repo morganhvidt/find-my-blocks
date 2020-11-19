@@ -4,10 +4,17 @@ menu: Components
 route: /components/input-text
 ---
 
+import { useState } from "react";
 import { Playground, Props } from "docz";
 import { InputText } from ".";
 
 # InputText
+
+`InputText` is a wrapper around
+[Gutenberg TextControl](https://github.com/WordPress/gutenberg/tree/master/packages/components/src/text-control)
+component and
+[Gutenberg TextareaControl](https://github.com/WordPress/gutenberg/tree/master/packages/components/src/textarea-control)
+component.
 
 `InputText` is used as a text input. It is used to accept a users text
 interactions.
@@ -15,13 +22,36 @@ interactions.
 ## Usage
 
 ```ts
-import { InputText } from "../components/InputText";
+import { InputText } from "@fmb/components/InputText";
 ```
 
 <Playground>
-  <InputText placeholder="Type Here" />
+  {() => {
+    const [value, setValue] = useState("");
+    return (
+      <div>
+        <InputText
+          placeholder="Who is your favorite basketball team?"
+          onChange={handleChange}
+        />
+        Your favorite team is: {value}
+      </div>
+    );
+    function handleChange(newVal) {
+      setValue(newVal);
+    }
+  }}
 </Playground>
 
 ## Props
 
 <Props of={InputText} />
+
+## Multiline
+
+To have the `InputText` render as a textarea instead of an input, use the
+`multiline` prop.
+
+<Playground>
+  <InputText multiline />
+</Playground>
