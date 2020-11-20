@@ -1,9 +1,0 @@
-@import url('https://fonts.googleapis.com/css?family=Inconsolata&display=swap');
-
-html {
-  box-sizing: border-box;
-}
-
-html * {
-  box-sizing: inherit;
-}

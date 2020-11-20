@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, Box } from "theme-ui";
-import { useState } from "react";
+import { useState, Fragment } from "react";
 
 import { Card as WPCard, CardBody, CardDivider } from "@wordpress/components";
 
@@ -22,6 +22,8 @@ interface SidebarProps {
 
 export function Sidebar({ items, activeBlock, onClick }: SidebarProps) {
   const [query, setQuery] = useState("");
+
+  if (typeof window === "undefined") return <Fragment />;
 
   const filteredItems = items.filter((item) => {
     if (!query || query === "") {

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, Fragment } from "react";
 // eslint-disable-next-line no-unused-vars
 import { XOR } from "ts-xor";
 import { TextareaControl, TextControl } from "@wordpress/components";
@@ -42,21 +42,7 @@ export const InputText = ({
 }: InputTextProps) => {
   const [value, setValue] = useState(defaultValue || "");
 
-  /**
-   * We must check for window when using @wordpress/components
-   *
-   * In the case of InputText, we want to return a basic input.
-   */
-  if (typeof window === "undefined") {
-    return (
-      <input
-        type="text"
-        value={value}
-        name={name}
-        onChange={(e) => handleChange(e.target.value)}
-      />
-    );
-  }
+  if (typeof window === "undefined") return <Fragment />;
 
   const inputProps = {
     placeholder,

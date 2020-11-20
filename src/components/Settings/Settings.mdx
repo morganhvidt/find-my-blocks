@@ -20,10 +20,17 @@ import { Settings } from "../components/Settings";
 ```
 
 <Playground>
-  <Settings
-    onNavOrderChange={(val) => alert(`Sort Nav by ${val}`)}
-    onCardOrderChange={(val) => alert(`Sort cards by ${val}`)}
-  />
+  {() => {
+    const state = {
+      navOrder: "",
+      cardOrder: "",
+      showCoreBlocks: "",
+    };
+    return <Settings state={state} onChange={handleChange} />;
+    function handleChange(val) {
+      console.log(val);
+    }
+  }}
 </Playground>
 
 ## Props

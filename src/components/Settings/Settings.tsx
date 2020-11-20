@@ -24,9 +24,6 @@ interface SettingsProps {
 }
 
 export const Settings = ({ onChange, state }: SettingsProps) => {
-  /**
-   * We must check for window when using @wordpress/components
-   */
   if (typeof window === "undefined") return <Fragment />;
 
   const alphabeticalOptions = [
