@@ -25,6 +25,8 @@ interface TagProps {
 export const Card = ({ card }: CardProps) => {
   const tags: Array<TagProps> = getTags();
 
+  if (typeof window === "undefined") return <Fragment />;
+
   return (
     <WPCard size="small">
       <CardHeader isShady>

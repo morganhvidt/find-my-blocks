@@ -1,10 +1,13 @@
 /** @jsx jsx */
 import { jsx, Box } from "theme-ui";
+import { Fragment } from "react";
 import { Card, CardBody } from "@wordpress/components";
 
 import { Link } from "../Link";
 
 export const Footer = () => {
+  if (typeof window === "undefined") return <Fragment />;
+
   return (
     <Card>
       <CardBody>
