@@ -25,15 +25,31 @@ import { NavigationItem } from "../components/NavigationItem";
     return (
       <>
         <NavigationItem
-          label="Toronto Raptors"
-          postCount={1}
+          name="Toronto Raptors"
+          count={1}
           active={active}
           onClick={() => setActive(!active)}
         />
-        <NavigationItem label="Los Angeles Lakers" postCount={1} />
-        <NavigationItem label="Miami Heat" postCount={2} />
-        <NavigationItem label="Boston Celtics" postCount={3} />
-        <NavigationItem label="Brooklyn Nets" postCount={4} />
+        <NavigationItem
+          name="Los Angeles Lakers"
+          count={1}
+          onClick={() => setActive(!active)}
+        />
+        <NavigationItem
+          name="Miami Heat"
+          count={2}
+          onClick={() => setActive(!active)}
+        />
+        <NavigationItem
+          name="Boston Celtics"
+          count={3}
+          onClick={() => setActive(!active)}
+        />
+        <NavigationItem
+          name="Brooklyn Nets"
+          count={4}
+          onClick={() => setActive(!active)}
+        />
       </>
     );
   }}
