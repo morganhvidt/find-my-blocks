@@ -35,15 +35,13 @@
     "build": "docz build",
     "build:wp": "node ./parcel/parcel.config.js -f './src/plugin/assets/find-my-blocks.tsx'",
     "serve": "docz serve",
-    "clean": "rm -rf .docz .cache & npm run build:cssTypes",
+    "clean": "rm -rf .docz .cache",
     "lint:js": "eslint --ext js --ext jsx --ext ts --ext tsx .",
     "lint:css": "stylelint 'src/**/*.css'",
     "lint:css:fix": "npm run lint:css -- --fix",
     "lint:mdx": "prettier './src/**/*.{md,mdx}' --prose-wrap always --write",
-    "prelint": "npm run build:cssTypes",
     "lint": "npm run lint:js & npm run lint:css",
     "test": "jest './src' --verbose --coverage",
-    "build:cssTypes": "tcm src",
     "updateBuildTags": "node ./parcel/updateBuildTags.js"
   },
   "dependencies": {
@@ -99,7 +97,6 @@
     "stylelint-config-css-modules": "^2.2.0",
     "stylelint-config-property-sort-order-smacss": "^6.0.0",
     "stylelint-config-standard": "^19.0.0",
-    "typed-css-modules": "^0.6.3",
     "use-resize-observer": "^6.1.0-alpha.3"
   }
 }
