@@ -19,7 +19,7 @@
   "phpcs.executablePath": "./vendor/bin/phpcs",
   "phpcs.standard": "WordPress",
   "files.exclude": {
-    "**/.github": true,
+    // "**/.github": true,
     "**/.docz": true,
     "**/.wordpress-org": true,
     "**/coverage": true,
