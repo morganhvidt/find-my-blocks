@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, Box } from "theme-ui";
-import { useReducer } from "react";
+import { useReducer, useMemo } from "react";
 import { Block } from "./app.types";
 import { localStorageReducer } from "./localStorageReducer";
 
@@ -29,7 +29,11 @@ export function App({ blocks }: AppProps) {
     showCoreBlocks: getLocalStorageItem("showCoreBlocks"),
   });
 
-  console.log({ state });
+  const activeItem = blocks.find((block) => block.name === state.activeBlock);
+
+  const cards = useMemo(() => {
+    return sortCardItems(activeItem ? activeItem.posts : [], state.cardOrder);
+  }, [state.activeBlock, state.cardOrder]);
 
   const sidebarItems = blocks
     .filter((block) => {
@@ -44,9 +48,6 @@ export function App({ blocks }: AppProps) {
       name: block.name,
       count: block.posts.length,
     }));
-
-  const activeItem = blocks.find((block) => block.name === state.activeBlock);
-  const cards = activeItem ? activeItem.posts : [];
 
   return (
     <Box sx={styles.app}>
@@ -63,7 +64,7 @@ export function App({ blocks }: AppProps) {
         </Box>
       )}
       <Box>
-        <CardList cards={sortCardItems(cards, state.cardOrder)} />
+        <CardList cards={cards} />
       </Box>
       <Box>
         <Settings onChange={handleSettingsChange} state={state} />
