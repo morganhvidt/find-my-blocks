@@ -41,6 +41,17 @@ if ( ! function_exists( 'find_my_blocks_enqueue_scripts' ) ) :
 			true
 		);
 
+		wp_localize_script(
+			'find-my-blocks-script',
+			'find_my_blocks_globals',
+			[
+				'ajax_url' => admin_url( 'admin-ajax.php' ),
+				'nonce'    => wp_create_nonce( 'find_my_blocks_nonce' ),
+				'action'   => 'find_my_blocks_save_settings',
+				'settings' => get_option( 'find_my_blocks_settings' )
+			]
+		);
+
 		wp_enqueue_style('wp-components');
 	}
 

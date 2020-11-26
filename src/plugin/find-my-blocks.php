@@ -80,3 +80,4 @@ endif;
 require plugin_dir_path( __FILE__ ) . 'inc/settings-page.php';
 require plugin_dir_path( __FILE__ ) . 'inc/enqueue.php';
 require plugin_dir_path( __FILE__ ) . 'inc/register-route.php';
+require plugin_dir_path( __FILE__ ) . 'inc/save-settings.php';
