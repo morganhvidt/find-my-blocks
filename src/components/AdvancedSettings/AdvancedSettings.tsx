@@ -33,8 +33,9 @@ export function AdvancedSettings() {
 
   useLayoutEffect(() => {
     const { settings } = find_my_blocks_globals;
+    console.log("settings", settings);
     if (settings.drafts) {
-      setDrafts(settings.drafts);
+      setDrafts(settings.drafts == "true" ? true : false);
     }
   }, []);
 
