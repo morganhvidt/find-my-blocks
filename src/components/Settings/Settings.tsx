@@ -13,8 +13,9 @@ import {
   PanelBody,
   PanelRow,
   SelectControl,
-  Button,
 } from "@wordpress/components";
+
+import { AdvancedSettings } from "../AdvancedSettings";
 
 import * as styles from "./styles";
 
@@ -71,20 +72,7 @@ export const Settings = ({ onChange, state }: SettingsProps) => {
         </PanelRow>
       </PanelBody>
 
-      <PanelBody title="Advanced Settings" icon="admin-generic">
-        <PanelRow sx={styles.help}>
-          <CheckboxControl
-            label="Include drafts in query"
-            help="Warning: Enabling this feature could slow down the loading of the plugin depending on how many drafts your website has."
-            onChange={() => console.log("change")}
-          />
-        </PanelRow>
-        <PanelRow>
-          <Button isPrimary onClick={handleClick} sx={{ mt: 2 }}>
-            Save Settings
-          </Button>
-        </PanelRow>
-      </PanelBody>
+      <AdvancedSettings />
     </Panel>
   );
 
@@ -93,9 +81,5 @@ export const Settings = ({ onChange, state }: SettingsProps) => {
     value: string | boolean
   ) {
     onChange({ type, value });
-  }
-
-  function handleClick() {
-    alert("save options");
   }
 };
