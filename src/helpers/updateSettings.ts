@@ -1,11 +1,15 @@
 declare var jQuery: any;
 declare var find_my_blocks_globals: any;
 
-export function updateSettings(data: object) {
+export function updateSettings(data: any) {
   const $ = jQuery;
   const { ajax_url, nonce, action } = find_my_blocks_globals;
 
-  const settings = { ...data };
+  const settings = {
+    include_drafts: data.includeDrafts,
+  };
+
+  console.log(settings);
 
   $.ajax({
     type: "post",
@@ -18,7 +22,6 @@ export function updateSettings(data: object) {
       settings,
     },
     success: (response: any) => {
-      console.log("response", response);
       if (response.type === "success") {
         return;
       } else {

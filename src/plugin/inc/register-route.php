@@ -63,7 +63,7 @@ if ( ! function_exists( 'find_my_blocks_route_callback' ) ) :
 		foreach ( $post_types as $key => $post_type ) {
 			$valid_statuses = array( 'publish', 'private', 'pending', 'future' );
 
-			if ( $settings[ 'drafts' ] == "true" ) {
+			if ( $settings[ 'include_drafts' ] == "true" ) {
 				array_push( $valid_statuses, 'draft' );
 			}
 

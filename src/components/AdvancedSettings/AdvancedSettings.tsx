@@ -28,23 +28,21 @@ interface NoticeProps {
 }
 
 export function AdvancedSettings() {
-  const [drafts, setDrafts] = useState(false);
+  const [includeDrafts, setIncludeDrafts] = useState(false);
   const [message, setMessage] = useState<NoticeProps | undefined>();
 
   useLayoutEffect(() => {
-    const { settings } = find_my_blocks_globals;
-    console.log("settings", settings);
-    if (settings.drafts) {
-      setDrafts(settings.drafts == "true" ? true : false);
+    const {
+      settings: { include_drafts },
+    } = find_my_blocks_globals;
+
+    if (include_drafts == "true") {
+      setIncludeDrafts(true);
     }
   }, []);
 
   const handleClick = throttle(() => {
-    const settings = {
-      drafts,
-    };
-
-    updateSettings(settings);
+    updateSettings({ includeDrafts });
     setMessage({
       message: "Settings successfully updated.",
       actions: [
@@ -74,9 +72,9 @@ export function AdvancedSettings() {
             label="Include drafts in query"
             help="Warning: Enabling this feature could slow down the loading of the plugin depending on how many drafts your website has."
             onChange={(val) => {
-              setDrafts(val);
+              setIncludeDrafts(val);
             }}
-            checked={drafts}
+            checked={includeDrafts}
           />
         </PanelRow>
         <PanelRow>
