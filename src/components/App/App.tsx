@@ -1,6 +1,6 @@
 /** @jsx jsx */
-import { jsx, ThemeProvider, Box } from "theme-ui";
-import { useReducer } from "react";
+import { jsx, Box } from "theme-ui";
+import { useReducer, useMemo } from "react";
 import { Block } from "./app.types";
 import { localStorageReducer } from "./localStorageReducer";
 
@@ -14,7 +14,6 @@ import { sortSidebarItems } from "../../helpers/sortSidebarItems";
 import { sortCardItems } from "../../helpers/sortCardItems";
 import { getLocalStorageItem } from "../../helpers/getLocalStorageItem";
 
-import { theme } from "../../theme";
 import * as styles from "./style";
 
 interface AppProps {
@@ -30,7 +29,11 @@ export function App({ blocks }: AppProps) {
     showCoreBlocks: getLocalStorageItem("showCoreBlocks"),
   });
 
-  console.log({ state });
+  const activeItem = blocks.find((block) => block.name === state.activeBlock);
+
+  const cards = useMemo(() => {
+    return sortCardItems(activeItem ? activeItem.posts : [], state.cardOrder);
+  }, [state.activeBlock, state.cardOrder]);
 
   const sidebarItems = blocks
     .filter((block) => {
@@ -46,35 +49,30 @@ export function App({ blocks }: AppProps) {
       count: block.posts.length,
     }));
 
-  const activeItem = blocks.find((block) => block.name === state.activeBlock);
-  const cards = activeItem ? activeItem.posts : [];
-
   return (
-    <ThemeProvider theme={theme}>
-      <Box sx={styles.app}>
-        <Box sx={styles.sidebar}>
-          <Sidebar
-            items={sortSidebarItems(sidebarItems, state.navOrder)}
-            activeBlock={state.activeBlock}
-            onClick={handleSidebarClick}
-          />
-        </Box>
-        {state.activeBlock && (
-          <Box sx={styles.heading}>
-            <Heading>{state.activeBlock}</Heading>
-          </Box>
-        )}
-        <Box>
-          <CardList cards={sortCardItems(cards, state.cardOrder)} />
-        </Box>
-        <Box>
-          <Settings onChange={handleSettingsChange} state={state} />
-        </Box>
-        <Box sx={styles.footer}>
-          <Footer />
-        </Box>
+    <Box sx={styles.app}>
+      <Box sx={styles.sidebar}>
+        <Sidebar
+          items={sortSidebarItems(sidebarItems, state.navOrder)}
+          activeBlock={state.activeBlock}
+          onClick={handleSidebarClick}
+        />
       </Box>
-    </ThemeProvider>
+      {state.activeBlock && (
+        <Box sx={styles.heading}>
+          <Heading>{state.activeBlock}</Heading>
+        </Box>
+      )}
+      <Box>
+        <CardList cards={cards} />
+      </Box>
+      <Box>
+        <Settings onChange={handleSettingsChange} state={state} />
+      </Box>
+      <Box sx={styles.footer}>
+        <Footer />
+      </Box>
+    </Box>
   );
 
   function handleSidebarClick(blockName: string) {

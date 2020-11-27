@@ -39,6 +39,7 @@ if ( ! function_exists( 'find_my_blocks_route_callback' ) ) :
 	 */
 	function find_my_blocks_route_callback( WP_REST_Request $request ) {
 		$blocks = array();
+		$settings = get_option( 'find_my_blocks_settings' );
 
 		/**
 		 * Get an array of all of our post types, then we will
@@ -60,10 +61,17 @@ if ( ! function_exists( 'find_my_blocks_route_callback' ) ) :
 		$post_ids = array();
 
 		foreach ( $post_types as $key => $post_type ) {
+			$valid_statuses = array( 'publish', 'private', 'pending', 'future' );
+
+			if ( $settings[ 'include_drafts' ] == "true" ) {
+				array_push( $valid_statuses, 'draft' );
+			}
+
 			$posts = get_posts(
 				array(
 					'posts_per_page' => -1,
 					'post_type'      => $post_type,
+					'post_status'    => $valid_statuses,
 				)
 			);
 
@@ -167,6 +175,7 @@ function find_blocks( $block, &$blocks, &$post, $nested_block_name = null ) {
 			'isNested'        => $nested_block_name !== null,
 			'nestedBlockType' => $nested_block_name,
 			'postType'        => $post->post_type,
+			'status'          => $post->post_status,
 			'post_url'        => get_permalink( $post->ID ),
 			'edit_url'        => home_url( '/wp-admin/post.php?post=' . $post->ID . '&action=edit' ),
 		);

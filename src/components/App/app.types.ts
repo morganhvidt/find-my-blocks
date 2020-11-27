@@ -6,6 +6,7 @@ export interface Post {
   readonly post_url: string;
   readonly isReusable: boolean;
   readonly isNested: boolean;
+  readonly status: "publish" | "private" | "pending" | "future" | "draft";
   readonly nestedBlockType: string;
   readonly count: number;
 }

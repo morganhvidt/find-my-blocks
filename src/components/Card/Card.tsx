@@ -37,6 +37,9 @@ export const Card = ({ card }: CardProps) => {
           Post type: <strong>{card.postType}</strong>
         </Content>
         <Content>
+          Post status: <strong>{card.status}</strong>
+        </Content>
+        <Content>
           <Link url={card.edit_url} icon="edit">
             Edit Post
           </Link>
