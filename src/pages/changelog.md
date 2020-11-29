@@ -5,7 +5,14 @@ route: /changelog
 
 # Changelog
 
-2.3.0
+3.0.0
+
+- Changes to use WordPress components and match WordPress styling
+- Includes private, pending, and future status posts in main query
+- Allows the ability to optionally include drafts
+- Fixes a 🐛 where cards would change order for no reason
+
+  2.3.0
 
 - Checks for nested blocks.
 - Adds a tag to a card if the block is nested
