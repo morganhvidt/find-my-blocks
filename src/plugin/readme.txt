@@ -22,7 +22,7 @@ hassle for developers. It can become hard to keep track of what posts/pages a
 block is used on, or how many times it has used. This makes maintaining
 Gutenberg websites quite difficult.
 
-Find my blocks is a tool that is here to help. With Find My Blocks you can see:
+Find my blocks is a tool that is here to help. With Find My Blocks you can get:
 
 - A list of all the block types that are being used on your WordPress website.
 - The amount of times a specific block type has been used on your WordPress
