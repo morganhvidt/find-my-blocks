@@ -9,8 +9,6 @@ export function updateSettings(data: any) {
     include_drafts: data.includeDrafts,
   };
 
-  console.log(settings);
-
   $.ajax({
     type: "post",
     dataType: "json",
