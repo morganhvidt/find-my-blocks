@@ -28,6 +28,7 @@
 babel.config.js
 doczrc.js
 gatsby-node.js
+gatsby-config.js
 gatsby-ssr.js
 jest.config.js
 package-lock.json
