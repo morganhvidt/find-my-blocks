@@ -1,6 +1,6 @@
 import deepmerge from "deepmerge";
 import themeStyles from "gatsby-theme-docz/src/theme/index";
 import { theme } from "@fmb/theme/index";
-console.log(theme);
+import * as colors from "./colors";
 
-export default deepmerge(themeStyles, theme);
+export default deepmerge.all([themeStyles, { colors }, theme]);

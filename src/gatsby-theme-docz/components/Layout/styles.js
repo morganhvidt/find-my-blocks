@@ -1,6 +1,7 @@
 export * from "gatsby-theme-docz/src/components/Layout/styles";
 import * as styles from "gatsby-theme-docz/src/components/Layout/styles";
 import { media } from "../../theme/breakpoints";
+import { actionBarWidth } from "../../components/ActionBar/styles";
 
 export const main = {
   ...styles.main,
@@ -9,8 +10,8 @@ export const main = {
 };
 
 export const wrapper = {
-  ...styles.wrapper,
-  display: "flex",
+  display: "grid",
+  gridTemplateColumns: `${actionBarWidth} 500px 1fr`,
 };
 
 export const content = {
