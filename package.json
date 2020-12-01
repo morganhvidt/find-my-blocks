@@ -1,8 +1,12 @@
 {
   "private": true,
-  "name": "docz-example-typescript",
-  "version": "2.0.0-rc.41",
+  "name": "find-my-blocks",
+  "version": "1.0.0",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eddysims/find-my-blocks.git"
+  },
   "files": [
     "src/",
     "doczrc.js",

@@ -7,6 +7,7 @@ import t from "prop-types";
 import global from "gatsby-theme-docz/src/theme/global";
 import { Footer } from "@fmb/components/Footer";
 import { Sidebar } from "../Sidebar";
+import { ActionBar } from "../ActionBar";
 import * as styles from "./styles";
 
 export const Layout = ({ children }) => {
@@ -20,6 +21,7 @@ export const Layout = ({ children }) => {
       <Box sx={styles.main}>
         {/* <Header onOpen={() => setOpen(s => !s)} /> */}
         <Box sx={styles.wrapper}>
+          <ActionBar />
           <Sidebar
             ref={nav}
             open={open}
