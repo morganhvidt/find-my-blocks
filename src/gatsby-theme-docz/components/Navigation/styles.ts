@@ -7,9 +7,8 @@ export const main = {
   alignItems: "center",
   color: "primary",
   textTransform: "uppercase",
-  fontFamily: "heading",
   fontSize: 3,
-  fontWeight: 200,
+  fontWeight: "light",
   textDecoration: "none",
   cursor: "pointer",
 };
@@ -29,10 +28,11 @@ export const subLinks = {
 export const subLink = (active: boolean) => ({
   display: "flex",
   alignItems: "center",
-  color: active ? "color" : "grey",
-  fontSize: 2,
+  color: active ? "primary" : "nav.sub",
+  fontSize: 3,
+  fontWeight: "light",
   textDecoration: "none",
-  mt: 1,
+  mt: 2,
   ml: 1,
 });
 
@@ -45,13 +45,16 @@ export const subIcon = {
 
 export const smallLinks = {
   ml: 3,
-  mt: 1,
-  mb: 2,
+  mt: 2,
+  mb: 3,
   fontSize: 1,
   lineHeight: 2,
 };
 
 export const smallLink = {
-  color: "text",
+  color: "nav.small",
   textDecoration: "none",
+  display: "flex",
+  alignItems: "center",
+  gap: 2,
 };

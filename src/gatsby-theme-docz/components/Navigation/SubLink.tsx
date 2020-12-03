@@ -21,11 +21,10 @@ export function SubLink({ item }: SubLinkProps) {
   return (
     <Fragment>
       <Link to={route} sx={styles.subLink(active)}>
-        {active && (
-          <Box sx={styles.subIcon}>
-            <Icon icon="corner-down-right" size={14} />
-          </Box>
-        )}
+        <Box sx={styles.subIcon}>
+          <Icon icon="arrow-right" size={14} />
+        </Box>
+
         {item.name}
       </Link>
       {active && headings && (
@@ -34,7 +33,7 @@ export function SubLink({ item }: SubLinkProps) {
             return (
               <Box key={slug}>
                 <Link to={`#${slug}`} sx={styles.smallLink}>
-                  {value}
+                  <Icon icon="circle" size={8} /> {value}
                 </Link>
               </Box>
             );
