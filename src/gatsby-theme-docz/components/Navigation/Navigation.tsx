@@ -5,11 +5,11 @@ import { useMenus, useCurrentDoc } from "docz";
 import { MainLink } from "./MainLink";
 
 import * as styles from "./styles";
+import { LinkGroup } from "./LinkGroup";
 
 export function Navigation() {
   const menus = useMenus();
   const doc = useCurrentDoc();
-  console.log({ menus });
 
   return (
     <Box>
@@ -19,7 +19,7 @@ export function Navigation() {
           return (
             <Box sx={styles.wrapper} key={menu.id}>
               {menu.menu ? (
-                "group"
+                <LinkGroup menu={menu} />
               ) : (
                 <MainLink
                   icon="chevrons-right"
