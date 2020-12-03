@@ -1,5 +1,7 @@
 export const wrapper = {
   bg: "white",
+  display: "flex",
+  flexDirection: "column",
 };
 
 export const logo = {
@@ -12,6 +14,7 @@ export const navigation = {
   maxWidth: 300,
   m: "0 auto",
   pt: 5,
+  flex: "1",
 };
 
 // export * from "gatsby-theme-docz/src/components/Sidebar/styles";

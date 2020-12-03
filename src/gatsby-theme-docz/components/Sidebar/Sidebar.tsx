@@ -4,6 +4,8 @@ import { useCurrentDoc, Link } from "docz";
 
 import { Logo } from "@fmb/components/Logo";
 
+import { Navigation } from "../Navigation";
+
 import * as styles from "./styles";
 
 export function Sidebar() {
@@ -19,7 +21,9 @@ export function Sidebar() {
           </Link>
         )}
       </Box>
-      <Box sx={styles.navigation}>NAVIGATIONS</Box>
+      <Box sx={styles.navigation}>
+        <Navigation />
+      </Box>
     </Box>
   );
 }
