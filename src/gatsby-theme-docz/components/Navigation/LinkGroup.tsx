@@ -17,7 +17,7 @@ export function LinkGroup({ menu }: LinkGroupProps) {
 
   return (
     <Box>
-      <MainLink active={true} icon={open ? "x" : "plus"}>
+      <MainLink active={true} icon={open ? "x" : "plus"} onClick={handleClick}>
         {menu.name}
       </MainLink>
       {open && (
@@ -26,7 +26,7 @@ export function LinkGroup({ menu }: LinkGroupProps) {
             menu.menu.map((group) => {
               return (
                 <Box key={group.id}>
-                  <Box>{group.name} - secondary</Box>
+                  <Box>{group.name}</Box>
                   {/* {group.headings &&
                     group.headings.map((heading: Heading) => {
                       return (
@@ -40,4 +40,8 @@ export function LinkGroup({ menu }: LinkGroupProps) {
       )}
     </Box>
   );
+
+  function handleClick() {
+    setOpen(!open);
+  }
 }

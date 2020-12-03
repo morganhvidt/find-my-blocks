@@ -11,6 +11,7 @@ export const main = {
   fontSize: 2,
   fontWeight: "bold",
   textDecoration: "none",
+  cursor: "pointer",
 };
 
 export const icon = {

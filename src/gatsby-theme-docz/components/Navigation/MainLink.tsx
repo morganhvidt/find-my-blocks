@@ -1,7 +1,8 @@
 /** @jsx jsx */
 import { jsx, Box } from "theme-ui";
 import { Fragment, PropsWithChildren } from "react";
-// import { XOR } from "ts-xor";
+// eslint-disable-next-line no-unused-vars
+import { XOR } from "ts-xor";
 import { Link } from "docz";
 
 import { Icon } from "@fmb/components/Icon";
@@ -14,15 +15,22 @@ interface BaseMainLinkProps {
 }
 
 interface LinkMainLinkProps extends BaseMainLinkProps {
-  readonly to?: string;
+  readonly to: string;
 }
+
+interface ClickMainLinkProps extends BaseMainLinkProps {
+  onClick(): void;
+}
+
+type MainLinkProps = XOR<LinkMainLinkProps, ClickMainLinkProps>;
 
 export function MainLink({
   icon,
   active,
-  children,
   to,
-}: PropsWithChildren<LinkMainLinkProps>) {
+  onClick,
+  children,
+}: PropsWithChildren<MainLinkProps>) {
   const linkProps = {
     sx: styles.main,
   };
@@ -38,7 +46,7 @@ export function MainLink({
   }
 
   return (
-    <Box sx={styles.main}>
+    <Box sx={styles.main} onClick={onClick}>
       <Internals {...internalProps} />
     </Box>
   );
