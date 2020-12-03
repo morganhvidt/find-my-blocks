@@ -1,5 +1,4 @@
 /** @jsx jsx */
-import { useRef, useState } from "react";
 import { jsx, Box } from "theme-ui";
 import { Global } from "@emotion/core";
 import t from "prop-types";
@@ -11,10 +10,6 @@ import { ActionBar } from "../ActionBar";
 import * as styles from "./styles";
 
 export const Layout = ({ children }) => {
-  // const [query, setQuery] = useState("");
-  const [open, setOpen] = useState(false);
-  const nav = useRef();
-
   return (
     <Box sx={{ "& > div": { flex: "1 1 auto" } }} data-testid="layout">
       <Global styles={global} />
@@ -22,14 +17,7 @@ export const Layout = ({ children }) => {
         {/* <Header onOpen={() => setOpen(s => !s)} /> */}
         <Box sx={styles.wrapper}>
           <ActionBar />
-          <Sidebar
-            ref={nav}
-            open={open}
-            // query={query}
-            onFocus={() => setOpen(true)}
-            onBlur={() => setOpen(false)}
-            onClick={() => setOpen(false)}
-          />
+          <Sidebar />
           <Box
             sx={{
               display: "flex",
@@ -37,6 +25,7 @@ export const Layout = ({ children }) => {
               minHeight: "100vh",
               flex: "1",
               minWidth: 640,
+              bg: "background",
             }}
           >
             <Box sx={styles.content}>{children}</Box>
