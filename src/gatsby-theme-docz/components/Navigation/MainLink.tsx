@@ -15,11 +15,11 @@ interface BaseMainLinkProps {
 }
 
 interface LinkMainLinkProps extends BaseMainLinkProps {
-  readonly to: string;
+  readonly to?: string;
 }
 
 interface ClickMainLinkProps extends BaseMainLinkProps {
-  onClick(): void;
+  onClick?(): void;
 }
 
 type MainLinkProps = XOR<LinkMainLinkProps, ClickMainLinkProps>;

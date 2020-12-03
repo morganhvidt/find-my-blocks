@@ -1,9 +1,10 @@
 /** @jsx jsx */
 import { jsx, Box } from "theme-ui";
 import { useState } from "react";
-import { MenuItem, Heading } from "docz";
+import { MenuItem, useCurrentDoc } from "docz";
 
 import { MainLink } from "./MainLink";
+import { SubLink } from "./SubLink";
 
 import * as styles from "./styles";
 
@@ -12,8 +13,8 @@ interface LinkGroupProps {
 }
 
 export function LinkGroup({ menu }: LinkGroupProps) {
-  console.log({ menu });
-  const [open, setOpen] = useState(true);
+  const doc = useCurrentDoc();
+  const [open, setOpen] = useState(doc.menu === menu.name);
 
   return (
     <Box>
@@ -21,21 +22,9 @@ export function LinkGroup({ menu }: LinkGroupProps) {
         {menu.name}
       </MainLink>
       {open && (
-        <Box>
+        <Box sx={styles.subLinks}>
           {menu.menu &&
-            menu.menu.map((group) => {
-              return (
-                <Box key={group.id}>
-                  <Box>{group.name}</Box>
-                  {/* {group.headings &&
-                    group.headings.map((heading: Heading) => {
-                      return (
-                        <Box key={heading.slug}>{heading.value} - small</Box>
-                      );
-                    })} */}
-                </Box>
-              );
-            })}
+            menu.menu.map((group) => <SubLink key={group.id} item={group} />)}
         </Box>
       )}
     </Box>

@@ -15,7 +15,6 @@ export function Navigation() {
     <Box>
       {menus &&
         menus.map((menu) => {
-          console.log({ menu });
           return (
             <Box sx={styles.wrapper} key={menu.id}>
               {menu.menu ? (
