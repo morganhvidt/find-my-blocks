@@ -21,6 +21,6 @@ export const logo = {
 export const navigation = {
   maxWidth: 300,
   m: "0 auto",
-  pt: 5,
+  py: 5,
   flex: "1",
 };

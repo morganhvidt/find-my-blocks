@@ -5,8 +5,6 @@ import fonts from "./fonts";
 import fontWeights from "./fontWeights";
 import * as colors from "./colors";
 
-console.log({ colors });
-
 export default deepmerge.all([
   themeStyles,
   { colors, fonts, fontWeights },
