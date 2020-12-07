@@ -18,7 +18,7 @@ const heading = (level: 1 | 2 | 3 | 4 | 5 | 6) => {
         <Heading as={`h${level}`} sx={styles.heading}>
           <Link href={`#${id}`} sx={styles.link}>
             <Box>
-              <Icon icon="link-2" size={24} />
+              <Icon icon="link-2" size={28} />
             </Box>
             {children}
           </Link>

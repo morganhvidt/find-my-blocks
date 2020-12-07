@@ -65,4 +65,13 @@ export const styles = {
       textAlign: "right",
     },
   },
+
+  ul: {
+    mb: 0,
+    ml: 4,
+    listStyle: "circle",
+  },
+  li: {
+    mb: 1,
+  },
 };
