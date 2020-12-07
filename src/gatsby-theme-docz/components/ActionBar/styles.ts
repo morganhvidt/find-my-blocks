@@ -72,6 +72,16 @@ function linkStyles(variant: string) {
           display: "none",
         },
       };
+
+    case "x":
+      return {
+        bg: "white",
+        color: "primary",
+
+        [media.desktop]: {
+          display: "none",
+        },
+      };
     default:
       return base;
   }

@@ -9,10 +9,11 @@ import { Icon } from "@fmb/components/Icon";
 import * as styles from "./styles";
 
 interface ActionBarProps {
+  readonly open: boolean;
   onClick(): void;
 }
 
-export function ActionBar({ onClick }: ActionBarProps) {
+export function ActionBar({ open, onClick }: ActionBarProps) {
   const { repository } = useConfig();
   const actions = getActions();
 
@@ -38,7 +39,7 @@ export function ActionBar({ onClick }: ActionBarProps) {
     });
 
     actions.push({
-      icon: "menu",
+      icon: open ? "x" : "menu",
       onClick: handleClick,
       label: "Menu",
     });

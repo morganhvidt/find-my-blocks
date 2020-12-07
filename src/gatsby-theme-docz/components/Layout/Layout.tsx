@@ -20,7 +20,7 @@ export const Layout = ({ children }: PropsWithChildren<LayoutProps>) => {
       <Global styles={global} />
       <Box sx={styles.main}>
         <Box sx={styles.actions}>
-          <ActionBar onClick={handleClick} />
+          <ActionBar onClick={handleClick} open={menuOpen} />
         </Box>
         <Box sx={styles.sidebar(menuOpen)}>
           <Sidebar />
