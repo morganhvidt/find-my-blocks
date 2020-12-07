@@ -29,7 +29,7 @@ export const Layout = ({ children }: PropsWithChildren<LayoutProps>) => {
         <Box sx={styles.content}>
           <Container sx={{ variant: "styles.Container" }}>{children}</Container>
           <Box sx={styles.footer}>
-            <Footer />
+            <Footer version="website" />
           </Box>
         </Box>
       </Box>
