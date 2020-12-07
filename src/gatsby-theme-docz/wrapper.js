@@ -24,7 +24,7 @@ const Wrapper = ({ children }) => {
           <title>{title}</title>
         )}
         <meta name="description" content={description} />
-        EDDYD
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" type="image/png" href={favicon} />
       </Helmet>
       {children}
