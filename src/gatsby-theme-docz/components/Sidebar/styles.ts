@@ -4,6 +4,7 @@ export const wrapper = {
   flexDirection: "column",
   position: "sticky",
   top: 0,
+  zIndex: 10,
   overflowY: "scroll",
   height: "100%",
 

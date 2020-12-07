@@ -22,11 +22,8 @@ export const sidebar = (open: boolean) => ({
   zIndex: 1,
   height: "100vh",
   width: `calc(90% - ${actionBarWidth})`,
+  maxWidth: sidebarWidth,
   transition: "left 300ms",
-
-  [media.mobile]: {
-    width: sidebarWidth,
-  },
 
   [media.desktop]: {
     position: "sticky",
@@ -34,6 +31,20 @@ export const sidebar = (open: boolean) => ({
   },
 });
 
+export const overlay = {
+  position: "fixed",
+  top: 0,
+  left: 0,
+  width: "100%",
+  height: "100vh",
+  bg: "background",
+  opacity: ".75",
+  zIndex: 1,
+
+  [media.desktop]: {
+    display: "none",
+  },
+};
 export const content = {
   flex: 1,
   display: "flex",

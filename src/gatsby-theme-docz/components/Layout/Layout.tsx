@@ -24,6 +24,7 @@ export const Layout = ({ children }: PropsWithChildren<LayoutProps>) => {
         </Box>
         <Box sx={styles.sidebar(menuOpen)}>
           <Sidebar />
+          {menuOpen && <Box sx={styles.overlay} />}
         </Box>
         <Box sx={styles.content}>
           <Container sx={{ variant: "styles.Container" }}>{children}</Container>
