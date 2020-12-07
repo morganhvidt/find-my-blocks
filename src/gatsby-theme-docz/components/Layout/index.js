@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx, Box } from "theme-ui";
+import { useState } from "react";
 import { Global } from "@emotion/core";
 import t from "prop-types";
 
@@ -10,13 +11,14 @@ import { ActionBar } from "../ActionBar";
 import * as styles from "./styles";
 
 export const Layout = ({ children }) => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <Box sx={{ "& > div": { flex: "1 1 auto" } }} data-testid="layout">
       <Global styles={global} />
       <Box sx={styles.main}>
-        {/* <Header onOpen={() => setOpen(s => !s)} /> */}
         <Box sx={styles.wrapper}>
-          <ActionBar />
+          <ActionBar onClick={handleClick} />
           <Sidebar />
           <Box
             sx={{
@@ -37,6 +39,10 @@ export const Layout = ({ children }) => {
       </Box>
     </Box>
   );
+
+  function handleClick() {
+    setMenuOpen(!menuOpen);
+  }
 };
 
 Layout.propTypes = {

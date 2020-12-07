@@ -8,7 +8,11 @@ import { Icon } from "@fmb/components/Icon";
 
 import * as styles from "./styles";
 
-export function ActionBar() {
+interface ActionBarProps {
+  onClick(): void;
+}
+
+export function ActionBar({ onClick }: ActionBarProps) {
   const { repository } = useConfig();
   const actions = getActions();
 
@@ -21,7 +25,7 @@ export function ActionBar() {
   );
 
   function handleClick() {
-    console.log("click");
+    onClick && onClick();
   }
 
   function getActions() {

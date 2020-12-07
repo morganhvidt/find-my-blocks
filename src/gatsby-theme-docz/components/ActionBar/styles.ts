@@ -11,7 +11,6 @@ export const wrapper = {
 };
 
 export const link = (variant: string) => ({
-  "-webkit-appearance": "none",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -21,6 +20,7 @@ export const link = (variant: string) => ({
   color: "white",
   border: "none",
   borderRadius: "square",
+  WebkitAppearance: "none",
   ...linkStyles(variant),
 });
 
