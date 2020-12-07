@@ -5,7 +5,7 @@ export const wrapper = {
   position: "sticky",
   top: 0,
   overflowY: "scroll",
-  maxHeight: "100vh",
+  height: "100%",
 
   "&::-webkit-scrollbar": {
     display: "none",
