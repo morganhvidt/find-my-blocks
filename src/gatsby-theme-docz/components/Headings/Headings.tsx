@@ -1,8 +1,10 @@
 /** @jsx jsx */
-import { jsx, Box, Link } from "theme-ui";
+import { jsx, Box, Link, Heading } from "theme-ui";
 import { Fragment, PropsWithChildren } from "react";
 
-import { Heading } from "@fmb/components/Heading";
+import { Icon } from "@fmb/components/Icon";
+
+import * as styles from "./styles";
 
 interface ComponentProps {
   readonly id: string;
@@ -13,8 +15,13 @@ const heading = (level: 1 | 2 | 3 | 4 | 5 | 6) => {
     return (
       <Fragment>
         <Box id={id} />
-        <Heading level={level}>
-          <Link href={`#${id}`}>{children}</Link>
+        <Heading as={`h${level}`} sx={styles.heading}>
+          <Link href={`#${id}`} sx={styles.link}>
+            <Box>
+              <Icon icon="link-2" size={24} />
+            </Box>
+            {children}
+          </Link>
         </Heading>
       </Fragment>
     );
