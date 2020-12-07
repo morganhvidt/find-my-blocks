@@ -17,5 +17,4 @@ export const heading = {
 export const footer = {
   gridColumn: "2 / 4",
   gridRow: "4/5",
-  bg: "aqua",
 };
