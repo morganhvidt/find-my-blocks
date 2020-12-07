@@ -1,3 +1,5 @@
+import { media } from "../../theme/breakpoints";
+
 export const actionBarWidth = "50px";
 
 export const wrapper = {
@@ -18,24 +20,28 @@ export const link = (variant: string) => ({
   height: actionBarWidth,
   transition: "background 300ms, color 300ms",
   color: "white",
+  border: "none",
+  borderRadius: "square",
+  WebkitAppearance: "none",
   ...linkStyles(variant),
 });
 
 function linkStyles(variant: string) {
+  const base = {
+    bg: "primary",
+
+    "&:hover": {
+      color: "primary",
+      bg: "white",
+    },
+  };
   if (!variant) {
-    return {};
+    return base;
   }
 
   switch (variant) {
     case "home":
-      return {
-        bg: "primary",
-
-        "&:hover": {
-          color: "primary",
-          bg: "white",
-        },
-      };
+      return base;
 
     case "download":
       return {
@@ -57,7 +63,26 @@ function linkStyles(variant: string) {
           bg: "white",
         },
       };
+
+    case "menu":
+      return {
+        ...base,
+
+        [media.desktop]: {
+          display: "none",
+        },
+      };
+
+    case "x":
+      return {
+        bg: "white",
+        color: "primary",
+
+        [media.desktop]: {
+          display: "none",
+        },
+      };
     default:
-      return {};
+      return base;
   }
 }
