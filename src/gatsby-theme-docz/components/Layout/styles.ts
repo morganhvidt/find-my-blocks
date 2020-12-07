@@ -45,7 +45,9 @@ export const overlay = {
     display: "none",
   },
 };
+
 export const content = {
+  bg: "background",
   flex: 1,
   display: "flex",
   flexDirection: "column",
