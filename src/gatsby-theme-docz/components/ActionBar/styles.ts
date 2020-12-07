@@ -11,6 +11,7 @@ export const wrapper = {
 };
 
 export const link = (variant: string) => ({
+  "-webkit-appearance": "none",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -18,24 +19,27 @@ export const link = (variant: string) => ({
   height: actionBarWidth,
   transition: "background 300ms, color 300ms",
   color: "white",
+  border: "none",
+  borderRadius: "square",
   ...linkStyles(variant),
 });
 
 function linkStyles(variant: string) {
+  const base = {
+    bg: "primary",
+
+    "&:hover": {
+      color: "primary",
+      bg: "white",
+    },
+  };
   if (!variant) {
-    return {};
+    return base;
   }
 
   switch (variant) {
     case "home":
-      return {
-        bg: "primary",
-
-        "&:hover": {
-          color: "primary",
-          bg: "white",
-        },
-      };
+      return base;
 
     case "download":
       return {
@@ -57,7 +61,10 @@ function linkStyles(variant: string) {
           bg: "white",
         },
       };
+
+    case "menu":
+      return base;
     default:
-      return {};
+      return base;
   }
 }

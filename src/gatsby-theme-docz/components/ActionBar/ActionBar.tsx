@@ -1,5 +1,7 @@
 /** @jsx jsx */
-import { jsx, Box, Link as ThemeUiLink } from "theme-ui";
+import { jsx, Box, Link as ThemeUiLink, Button } from "theme-ui";
+// eslint-disable-next-line no-unused-vars
+import { XOR } from "ts-xor";
 import { Link as DoczLink, useConfig } from "docz";
 
 import { Icon } from "@fmb/components/Icon";
@@ -18,6 +20,10 @@ export function ActionBar() {
     </Box>
   );
 
+  function handleClick() {
+    console.log("click");
+  }
+
   function getActions() {
     const actions = [];
 
@@ -27,7 +33,11 @@ export function ActionBar() {
       label: "Find my blocks - Home",
     });
 
-    // TODO: Add in the menu icon and click
+    actions.push({
+      icon: "menu",
+      onClick: handleClick,
+      label: "Menu",
+    });
 
     actions.push({
       icon: "download",
@@ -49,14 +59,29 @@ export function ActionBar() {
   }
 }
 
-interface ActionButtonProps {
+interface ActionButtonBaseProps {
   readonly icon: string;
   readonly label: string;
+}
+
+interface ActionButtonLinkProps extends ActionButtonBaseProps {
   readonly url: string;
   readonly external?: boolean;
 }
 
-function ActionButton({ icon, label, url, external }: ActionButtonProps) {
+interface ActionButtonButtonProps extends ActionButtonBaseProps {
+  onClick(): void;
+}
+
+type ActionButtonProps = XOR<ActionButtonLinkProps, ActionButtonButtonProps>;
+
+function ActionButton({
+  icon,
+  label,
+  url,
+  external,
+  onClick,
+}: ActionButtonProps) {
   const actionProps = {
     sx: styles.link(icon),
     "aria-label": label,
@@ -67,6 +92,14 @@ function ActionButton({ icon, label, url, external }: ActionButtonProps) {
       <ThemeUiLink href={url} target="_blank" {...actionProps}>
         <Icon icon={icon} />
       </ThemeUiLink>
+    );
+  }
+
+  if (onClick) {
+    return (
+      <Button onClick={onClick} {...actionProps}>
+        <Icon icon={icon} />
+      </Button>
     );
   }
 
