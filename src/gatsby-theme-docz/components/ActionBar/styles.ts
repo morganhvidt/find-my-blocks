@@ -1,3 +1,5 @@
+import { media } from "../../theme/breakpoints";
+
 export const actionBarWidth = "50px";
 
 export const wrapper = {
@@ -63,7 +65,13 @@ function linkStyles(variant: string) {
       };
 
     case "menu":
-      return base;
+      return {
+        ...base,
+
+        [media.desktop]: {
+          display: "none",
+        },
+      };
     default:
       return base;
   }
