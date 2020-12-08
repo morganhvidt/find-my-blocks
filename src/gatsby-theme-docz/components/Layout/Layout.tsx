@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Box, Container } from "theme-ui";
+import { jsx, Box, Container, Link } from "theme-ui";
 import { PropsWithChildren, useState, Fragment } from "react";
 import { Global } from "@emotion/core";
 
@@ -18,6 +18,9 @@ export const Layout = ({ children }: PropsWithChildren<LayoutProps>) => {
   return (
     <Fragment>
       <Global styles={global} />
+      <Link href="#main" sx={styles.skip}>
+        Skip to content
+      </Link>
       <Box sx={styles.main}>
         <Box sx={styles.actions}>
           <ActionBar onClick={handleClick} open={menuOpen} />
@@ -26,7 +29,7 @@ export const Layout = ({ children }: PropsWithChildren<LayoutProps>) => {
           <Sidebar />
           {menuOpen && <Box sx={styles.overlay} />}
         </Box>
-        <Box sx={styles.content}>
+        <Box sx={styles.content} as="main" id="main">
           <Container sx={{ variant: "styles.Container" }}>{children}</Container>
           <Box sx={styles.footer}>
             <Footer version="website" />

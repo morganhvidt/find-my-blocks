@@ -57,3 +57,20 @@ export const footer = {
   mt: "auto",
   fontSize: 1,
 };
+
+export const skip = {
+  position: "absolute",
+  top: 3,
+  left: "-999em",
+  border: (t) => `1px solid ${t.colors.grey}`,
+  borderRadius: "radius",
+  zIndex: 999,
+  bg: "white",
+  p: 2,
+  color: "primary",
+
+  "&:focus": {
+    left: 3,
+    boxShadow: `0 0 5px rgba(0,0,0,0.7)`,
+  },
+};

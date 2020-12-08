@@ -12,7 +12,7 @@ export function Sidebar() {
   const { route } = useCurrentDoc();
   return (
     <Box sx={styles.wrapper}>
-      <Box sx={styles.logo}>
+      <Box sx={styles.logo} as="header">
         {route === "/" ? (
           <Logo size={100} />
         ) : (
@@ -21,7 +21,7 @@ export function Sidebar() {
           </Link>
         )}
       </Box>
-      <Box sx={styles.navigation}>
+      <Box sx={styles.navigation} as="nav" aria-label="Main navigation">
         <Navigation />
       </Box>
     </Box>

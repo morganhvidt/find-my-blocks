@@ -18,7 +18,7 @@ export function ActionBar({ open, onClick }: ActionBarProps) {
   const actions = getActions();
 
   return (
-    <Box sx={styles.wrapper}>
+    <Box sx={styles.wrapper} as="nav" aria-label="Page actions">
       {actions.map((action) => (
         <ActionButton key={action.icon} {...action} />
       ))}
