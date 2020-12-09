@@ -1,0 +1,91 @@
+version: 2.1
+orbs:
+  node: circleci/node@4.1.0
+
+references:
+  container_config: &container_config
+    docker:
+      - image: circleci/node:10
+    working_directory: ~/find-my-blocks
+
+  restore_cache: &restore_cache
+    restore_cache:
+      keys:
+        - node-v1-{{ checksum "package.json" }}
+        - node-v1-
+  
+  install_packages: &install_packages
+    run:
+      name: install npm dependecies
+      command: npm ci
+
+  save_cache: &save_cache
+    key: node-v1-{{ checksum "package.json" }}
+      paths:
+        - node_modules
+
+jobs:
+  install_dependecies: 
+    docker:
+      - image: circleci/node:10
+
+    steps:
+      - checkout
+      - *restore_cache:
+      - *install_packages
+      - *save_cache
+
+  lint:
+    docker:
+      - image: circleci/node:10
+
+    steps:
+      - checkout
+      - *restore_cache:
+      - *install_packages
+      - *save_cache
+      - run:
+          name: lint
+          command: npm run lint
+
+  test:
+    docker:
+      - image: circleci/node:10
+
+    steps:
+      - checkout
+      - *restore_cache:
+      - *install_packages
+      - *save_cache
+      - run:
+          name: unit test
+          command: npm run test
+
+  build_docs:
+    docker:
+      - image: circleci/node:10
+
+    steps:
+      - checkout
+      - *restore_cache:
+      - *install_packages
+      - *save_cache
+      - run:
+          name: build docs
+          command: npm run build
+
+
+workflows:
+  version: 2.1
+  pre_release_checks:
+    jobs:
+      - install_dependecies
+      - lint
+        requires:
+            - install_dependecies
+      - test
+        requires:
+          - install_dependecies
+      - build_docs
+        requires:
+          - install_dependecies
