@@ -28,7 +28,6 @@ jobs:
   install_dependecies: 
     docker:
       - image: circleci/node:10
-
     steps:
       - checkout
       - *restore_cache:
@@ -38,7 +37,6 @@ jobs:
   lint:
     docker:
       - image: circleci/node:10
-
     steps:
       - checkout
       - *restore_cache:
@@ -51,7 +49,6 @@ jobs:
   test:
     docker:
       - image: circleci/node:10
-
     steps:
       - checkout
       - *restore_cache:
@@ -64,7 +61,6 @@ jobs:
   build_docs:
     docker:
       - image: circleci/node:10
-
     steps:
       - checkout
       - *restore_cache:
