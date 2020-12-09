@@ -7,6 +7,11 @@ references:
     docker:
       - image: circleci/node:10
 
+  restore_cache: &restore_cache
+    restore_cache:
+      keys:
+        - node-v1-{{ checksum "package.json" }}
+        - node-v1-
 
 
 jobs:
@@ -15,11 +20,7 @@ jobs:
 
     steps:
       - checkout
-
-      - restore_cache:
-          keys:
-            - node-v1-{{ checksum "package.json" }}
-            - node-v1-
+      - *restore_cache
 
       - run: npm install
 
