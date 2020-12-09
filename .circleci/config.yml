@@ -21,8 +21,8 @@ references:
 
   save_cache: &save_cache
     key: node-v1-{{ checksum "package.json" }}
-      paths:
-        - node_modules
+    paths:
+      - node_modules
 
 jobs:
   install_dependecies: 
