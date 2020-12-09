@@ -16,67 +16,41 @@ references:
   install_deps: &install_deps
     run: npm install
 
-  save_cache: &save_cache
-    key: node-v1-{{ checksum "package.json" }}
-    paths:
-      - node_modules
-
 jobs:
   lint:
     <<: *container_config
-
     steps:
       - checkout
       - *restore_cache
       - *install_deps
-      - *save_cache
-
-      - run:
-          name: lint
-          command: npm run lint
-
-  test_unit:
-    docker:
-      - image: circleci/node:10
-
-    steps:
-      - checkout
-
-      - restore_cache:
-          keys:
-            - node-v1-{{ checksum "package.json" }}
-            - node-v1-
-
-      - run: npm install
-
       - save_cache:
           key: node-v1-{{ checksum "package.json" }}
           paths:
             - node_modules
-
       - run:
-          name: unit_test
+          name: lint
+          command: npm run lint
+
+  test:
+    <<: *container_config
+    steps:
+      - checkout
+      - *restore_cache
+      - *install_deps
+      - save_cache:
+          key: node-v1-{{ checksum "package.json" }}
+          paths:
+            - node_modules
+      - run:
+          name: test
           command: npm run test
 
   build:
-    docker:
-      # Specify the version you desire here
-      - image: circleci/node:10
-   
-    environment:
-      - NODE_ENV: production
-
+    <<: *container_config
     steps:
       - checkout
-
-      - restore_cache:
-          keys:
-            # you can increment the "v1" prefix to invalidate all caches at once.
-            - node-v1-{{ checksum "package.json" }}
-            - node-v1-
-
-      - run: npm install
-
+      - *restore_cache
+      - *install_deps
       - save_cache:
           key: node-v1-{{ checksum "package.json" }}
           paths:
