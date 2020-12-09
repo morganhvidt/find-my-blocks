@@ -58,17 +58,17 @@ jobs:
           name: unit test
           command: npm run test
 
-  build_docs:
-    docker:
-      - image: circleci/node:10
-    steps:
-      - checkout
-      - *restore_cache
-      - *install_packages
-      - *save_cache
-      - run:
-        name: build docs
-        command: npm run build
+    build_docs:
+        docker:
+            - image: circleci/node:10
+        steps:
+            - checkout
+            - *restore_cache
+            - *install_packages
+            - *save_cache
+            - run:
+                name: build docs
+                command: npm run build
 
 workflows:
   version: 2.1
