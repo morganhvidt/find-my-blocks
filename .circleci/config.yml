@@ -43,8 +43,8 @@ jobs:
       - *install_packages
       - *save_cache
       - run:
-          name: lint
-          command: npm run lint
+        name: lint
+        command: npm run lint
 
   test:
     docker:
@@ -55,8 +55,8 @@ jobs:
       - *install_packages
       - *save_cache
       - run:
-          name: unit test
-          command: npm run test
+        name: unit test
+        command: npm run test
 
   build_docs:
     docker:
@@ -67,8 +67,8 @@ jobs:
       - *install_packages
       - *save_cache
       - run:
-          name: build docs
-          command: npm run build
+        name: build docs
+        command: npm run build
 
 
 workflows:
