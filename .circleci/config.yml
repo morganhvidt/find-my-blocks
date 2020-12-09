@@ -30,7 +30,7 @@ jobs:
       - image: circleci/node:10
     steps:
       - checkout
-      - *restore_cache:
+      - *restore_cache
       - *install_packages
       - *save_cache
 
@@ -39,7 +39,7 @@ jobs:
       - image: circleci/node:10
     steps:
       - checkout
-      - *restore_cache:
+      - *restore_cache
       - *install_packages
       - *save_cache
       - run:
@@ -51,7 +51,7 @@ jobs:
       - image: circleci/node:10
     steps:
       - checkout
-      - *restore_cache:
+      - *restore_cache
       - *install_packages
       - *save_cache
       - run:
@@ -63,7 +63,7 @@ jobs:
       - image: circleci/node:10
     steps:
       - checkout
-      - *restore_cache:
+      - *restore_cache
       - *install_packages
       - *save_cache
       - run:
@@ -78,3 +78,4 @@ workflows:
       - lint
       - test
       - build_docs
+
