@@ -59,12 +59,10 @@ jobs:
           name: build the code
           command: npm run build
 
-  
-
 workflows:
   version: 2
   lint_and_deploy:
     jobs:
       - lint
-      - test_unit
+      - test
       - build
