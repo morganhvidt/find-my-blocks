@@ -7,8 +7,10 @@ interface HeadingProps {
 }
 
 export const Heading = ({ children, level = 1 }: HeadingProps) => {
+  const heading = `h${level}` as "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+
   return (
-    <ThemeUiHeading as={`h${level}`} sx={{ textTransform: "uppercase" }}>
+    <ThemeUiHeading as={heading} sx={{ textTransform: "uppercase" }}>
       {children}
     </ThemeUiHeading>
   );

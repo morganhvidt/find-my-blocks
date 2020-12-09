@@ -1,0 +1,68 @@
+version: 2
+orbs:
+  cypress: cypress-io/cypress@1
+
+references:
+  container_config: &container_config
+    docker:
+      - image: circleci/node:10
+
+  restore_cache: &restore_cache
+    restore_cache:
+      keys:
+        - node-v1-{{ checksum "package.json" }}
+        - node-v1-
+
+  install_deps: &install_deps
+    run: npm install
+
+jobs:
+  lint:
+    <<: *container_config
+    steps:
+      - checkout
+      - *restore_cache
+      - *install_deps
+      - save_cache:
+          key: node-v1-{{ checksum "package.json" }}
+          paths:
+            - node_modules
+      - run:
+          name: lint
+          command: npm run lint
+
+  test:
+    <<: *container_config
+    steps:
+      - checkout
+      - *restore_cache
+      - *install_deps
+      - save_cache:
+          key: node-v1-{{ checksum "package.json" }}
+          paths:
+            - node_modules
+      - run:
+          name: test
+          command: npm run test
+
+  build:
+    <<: *container_config
+    steps:
+      - checkout
+      - *restore_cache
+      - *install_deps
+      - save_cache:
+          key: node-v1-{{ checksum "package.json" }}
+          paths:
+            - node_modules
+      - run:
+          name: build the code
+          command: npm run build
+
+workflows:
+  version: 2
+  lint_and_deploy:
+    jobs:
+      - lint
+      - test
+      - build
