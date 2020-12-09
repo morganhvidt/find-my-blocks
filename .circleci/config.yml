@@ -13,6 +13,14 @@ references:
         - node-v1-{{ checksum "package.json" }}
         - node-v1-
 
+    install_deps: &install_deps
+      run: npm install
+
+    save_cache: &save_cache
+      key: node-v1-{{ checksum "package.json" }}
+      paths:
+        - node_modules
+
 
 jobs:
   lint:
@@ -21,14 +29,8 @@ jobs:
     steps:
       - checkout
       - *restore_cache
-
-      - run: npm install
-
-      - save_cache:
-          key: node-v1-{{ checksum "package.json" }}
-          paths:
-            - node_modules
-
+      - *install_deps
+      - *save_cache
       - run:
           name: lint
           command: npm run lint
