@@ -1,4 +1,4 @@
-version: 2.1
+version: 2
 orbs:
   node: circleci/node@4.1.0
 
@@ -62,7 +62,7 @@ jobs:
                 command: npm run build
 
 workflows:
-  version: 2.1
+  version: 2
   pre_release_checks:
     jobs:
       - lint
