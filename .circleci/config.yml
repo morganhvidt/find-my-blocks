@@ -75,13 +75,6 @@ workflows:
   version: 2.1
   pre_release_checks:
     jobs:
-      - install_dependecies
-      - lint:
-          requires:
-            - install_dependecies
-      - test:
-        requires:
-          - install_dependecies
-      - build_docs:
-        requires:
-          - install_dependecies
+      - lint
+      - test
+      - build_docs
