@@ -80,12 +80,12 @@ workflows:
   pre_release_checks:
     jobs:
       - install_dependecies
-      - lint
+      - lint:
           requires:
             - install_dependecies
-      - test
+      - test:
         requires:
           - install_dependecies
-      - build_docs
+      - build_docs:
         requires:
           - install_dependecies
