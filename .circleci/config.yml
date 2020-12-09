@@ -25,17 +25,17 @@ references:
       - node_modules
 
 jobs:
-  lint:
-    docker:
-      - image: circleci/node:10
-    steps:
-      - checkout
-      - *restore_cache
-      - *install_packages
-      - *save_cache
-      - run:
-          name: lint
-          command: npm run lint
+    lint:
+        docker:
+            - image: circleci/node:10
+        steps:
+            - checkout
+            - *restore_cache
+            - *install_packages
+            - *save_cache
+            - run:
+                name: lint
+                command: npm run lint
 
   test:
     docker:
