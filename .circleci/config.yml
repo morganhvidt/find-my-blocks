@@ -11,9 +11,9 @@ jobs:
       - checkout
 
       - restore_cache:
-          keys:
-            - node-v1-{{ checksum "package.json" }}
-            - node-v1-
+        keys:
+          - node-v1-{{ checksum "package.json" }}
+          - node-v1-
 
       - run: npm install
 
