@@ -25,15 +25,6 @@ references:
       - node_modules
 
 jobs:
-    install_dependecies:
-        docker:
-            - image: circleci/node:10
-        steps:
-            - checkout
-            - *restore_cache
-            - *install_packages
-            - *save_cache
-
   lint:
     docker:
       - image: circleci/node:10
