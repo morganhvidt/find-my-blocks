@@ -34,9 +34,7 @@ if ( ! function_exists( 'fmb_activation_notice' ) ) :
 	 */
 	function fmb_activation_notice() {
 		/* Check transient, if available display notice */
-		if ( get_transient( 'fmb-activation-notice' ) ) {
-			$str = 'Thank you for using Find My Blocks. Go to the';
-			?>
+		if ( get_transient( 'fmb-activation-notice' ) ) { ?>
 				<div class="updated notice is-dismissible">
 					<p>
 						<?php
@@ -65,8 +63,8 @@ if ( ! function_exists( 'find_my_blocks_add_reusable_to_admin_menu' ) ) :
 	 */
 	function find_my_blocks_add_reusable_to_admin_menu() {
 		add_menu_page(
-			'Reusable Blocks',
-			'Reusable Blocks',
+			esc_html__( 'Reusable Blocks', 'find-my-blocks' ),
+			esc_html__( 'Reusable Blocks', 'find-my-blocks' ),
 			'edit_posts',
 			'edit.php?post_type=wp_block',
 			'',
