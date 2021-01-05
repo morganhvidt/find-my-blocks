@@ -40,6 +40,7 @@ if ( ! function_exists( 'find_my_blocks_route_callback' ) ) :
 	function find_my_blocks_route_callback( WP_REST_Request $request ) {
 		$blocks = array();
 		$settings = get_option( 'find_my_blocks_settings' );
+		$blockName = $request->get_param( 'name' );
 
 		/**
 		 * Get an array of all of our post types, then we will
@@ -95,6 +96,17 @@ if ( ! function_exists( 'find_my_blocks_route_callback' ) ) :
 			foreach ( $post_blocks as $block ) {
 				find_blocks( $block, $blocks, $post );
 			}
+		}
+
+		/**
+		 * Filter blocks based on GET parameter name
+		 */
+		if ( ! empty( $blockName ) ) {
+			$blocks = array_filter( $blocks,
+				function ( $v ) use ( $blockName ) {
+					return $v['name'] === $blockName;
+				}
+			);
 		}
 
 		$data = array(
