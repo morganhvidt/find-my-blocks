@@ -12,10 +12,6 @@ const { OUTDIR, DEV_URL } = process.env;
 const NODE_ENV = argv.env || "production";
 const NEED_DEV_URL = NODE_ENV !== "production" && DEV_URL === undefined;
 
-console.log("=======");
-console.log(NODE_ENV);
-console.log("=======");
-
 /**
  * If the DEV_URL is not set, stop here
  */
