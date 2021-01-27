@@ -25,16 +25,17 @@ if (NEED_DEV_URL) wordpress.needsDevUrl();
  */
 const runBundle = async (files) => {
   const options = {
-    outDir:
-      NODE_ENV !== "production"
-        ? OUTDIR
-        : path.join(__dirname, "../allthestuff"),
+    outDir: NODE_ENV !== "production" ? OUTDIR : path.join(__dirname, "../"),
     hmr: false,
   };
   const bundler = new Bundler(files, options);
 
   await bundler.bundle();
   await wordpress.build(bundler.options.outDir);
+
+  if (NODE_ENV === "production") {
+    process.exit(0);
+  }
 
   if (NODE_ENV !== "production") {
     console.clear();
