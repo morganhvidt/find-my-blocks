@@ -42,6 +42,10 @@ Yes, this plugin will work with all blocks registered and used on your site.
 
 == Changelog ==
 
+**3.1.1**
+
+- Fixes a 🐛 that was causing the plugin to not load on some sites.
+
 **3.1.0**
 
 - Allows for filtering by block name on the API endpoint. (`/wp-json/find-my-blocks/blocks?name=core/button`)
