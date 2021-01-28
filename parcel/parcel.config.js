@@ -2,6 +2,7 @@ require("dotenv").config();
 const argv = require("minimist")(process.argv.slice(2));
 const Bundler = require("parcel-bundler");
 const path = require("path");
+const chalk = require("chalk");
 
 /**
  * Get some functions that we use for WordPress development
@@ -12,6 +13,7 @@ const { OUTDIR, DEV_URL } = process.env;
 const NODE_ENV = argv.env || "production";
 const NEED_DEV_URL = NODE_ENV !== "production" && DEV_URL === undefined;
 
+const outDir = NODE_ENV !== "production" ? OUTDIR : path.join(__dirname, "../");
 /**
  * If the DEV_URL is not set, stop here
  */
@@ -25,7 +27,7 @@ if (NEED_DEV_URL) wordpress.needsDevUrl();
  */
 const runBundle = async (files) => {
   const options = {
-    outDir: NODE_ENV !== "production" ? OUTDIR : path.join(__dirname, "../"),
+    outDir: outDir,
     hmr: false,
   };
   const bundler = new Bundler(files, options);
@@ -33,15 +35,15 @@ const runBundle = async (files) => {
   await bundler.bundle();
   await wordpress.build(bundler.options.outDir);
 
-  if (NODE_ENV === "production") {
-    process.exit(0);
-  }
-
   if (NODE_ENV !== "production") {
     console.clear();
     wordpress.browserInit();
     wordpress.runWatcher(bundler);
     bundler.on("bundled", async () => wordpress.browserReload());
+  }
+
+  if (NODE_ENV === "production") {
+    process.exit(0);
   }
 };
 

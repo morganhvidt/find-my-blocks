@@ -42,7 +42,7 @@ Yes, this plugin will work with all blocks registered and used on your site.
 
 == Changelog ==
 
-**3.1.1**
+**3.1.3**
 
 - Fixes a 🐛 that was causing the plugin to not load on some sites.
 

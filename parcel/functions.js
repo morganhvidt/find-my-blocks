@@ -31,14 +31,17 @@ const browserReload = () => browserSync.reload();
  * @param {string} to - Path to destination directory
  * @param {boolean} reload - Should we run browser sync reload
  */
-const moveFile = (from, to, reload = false) => {
+const moveFile = async (from, to, reload = false) => {
   const slug = from.replace(`${source}/`, "");
   to = `${to}/${slug}`;
 
-  fs.copy(from, to)
-    .then(console.log(chalk.bgGreenBright.black(`✔ ${slug} moved.`)))
-    .then(reload && browserReload())
-    .catch((err) => console.error(err));
+  try {
+    fs.copySync(from, to);
+    console.log(chalk.bgGreenBright.black(`✔ ${slug} moved.`));
+    reload && browserReload();
+  } catch (err) {
+    console.error(err);
+  }
 };
 
 /**
@@ -81,7 +84,7 @@ const runWatcher = ({ options: { outDir } }) => {
 const build = async (dest) => {
   const stream = fg.stream(watchFiles);
   for await (const entry of stream) {
-    moveFile(entry, dest);
+    await moveFile(entry, dest);
   }
 };
 
