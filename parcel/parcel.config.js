@@ -2,7 +2,6 @@ require("dotenv").config();
 const argv = require("minimist")(process.argv.slice(2));
 const Bundler = require("parcel-bundler");
 const path = require("path");
-const chalk = require("chalk");
 
 /**
  * Get some functions that we use for WordPress development
