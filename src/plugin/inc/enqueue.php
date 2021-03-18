@@ -48,7 +48,8 @@ if ( ! function_exists( 'find_my_blocks_enqueue_scripts' ) ) :
 				'ajax_url' => admin_url( 'admin-ajax.php' ),
 				'nonce'    => wp_create_nonce( 'find_my_blocks_nonce' ),
 				'action'   => 'find_my_blocks_save_settings',
-				'settings' => get_option( 'find_my_blocks_settings' )
+				'settings' => get_option( 'find_my_blocks_settings' ),
+				'site_url' => get_site_url()
 			]
 		);
 

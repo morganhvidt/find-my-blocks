@@ -42,6 +42,10 @@ Yes, this plugin will work with all blocks registered and used on your site.
 
 == Changelog ==
 
+**3.2.0**
+
+- Adds the `site_url()` to the fetch url.
+
 **3.1.3**
 
 - Fixes a 🐛 that was causing the plugin to not load on some sites.
