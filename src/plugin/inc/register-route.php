@@ -189,7 +189,7 @@ function find_blocks( $block, &$blocks, &$post, $nested_block_name = null ) {
 			'postType'        => $post->post_type,
 			'status'          => $post->post_status,
 			'post_url'        => get_permalink( $post->ID ),
-			'edit_url'        => home_url( '/wp-admin/post.php?post=' . $post->ID . '&action=edit' ),
+			'edit_url'        => get_admin_url() . 'post.php?post=' . $post->ID . '&action=edit',
 		);
 	} else {
 		$post_key = find_my_blocks_search_for_block_key( $blocks[ $block_key ]['posts'], 'id', $post->ID );
