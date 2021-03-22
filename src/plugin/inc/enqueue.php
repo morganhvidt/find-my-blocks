@@ -49,7 +49,7 @@ if ( ! function_exists( 'find_my_blocks_enqueue_scripts' ) ) :
 				'nonce'    => wp_create_nonce( 'find_my_blocks_nonce' ),
 				'action'   => 'find_my_blocks_save_settings',
 				'settings' => get_option( 'find_my_blocks_settings' ),
-				'site_url' => get_site_url()
+				'site_url' => get_rest_url()
 			]
 		);
 

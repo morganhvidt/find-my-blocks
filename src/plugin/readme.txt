@@ -42,6 +42,10 @@ Yes, this plugin will work with all blocks registered and used on your site.
 
 == Changelog ==
 
+**3.4.0**
+
+- Uses `get_rest_url` for the fetch url.
+
 **3.3.0**
 
 - Uses `get_admin_url` for the `edit` link to avoid redirect loops.
