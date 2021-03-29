@@ -6,9 +6,9 @@ export const useBlocks = () => {
   const [blocks, setBlocks] = useState([]);
 
   useLayoutEffect(() => {
-    let fetchUrl = "/find-my-blocks/blocks";
+    let fetchUrl = "find-my-blocks/blocks";
     if (find_my_blocks_globals.site_url) {
-      fetchUrl = `${find_my_blocks_globals.site_url}/${fetchUrl}`;
+      fetchUrl = find_my_blocks_globals.site_url + fetchUrl;
     }
 
     fetch(fetchUrl)
