@@ -1,6 +1,6 @@
 === Find My Blocks ===
 Contributors: edeesims
-Donate link: https://www.paypal.com/paypalme2/eddysims
+Donate link: https://www.buymeacoffee.com/eddysims
 Tags: gutenberg, developer, blocks, custom blocks
 Requires at least: 5.0
 Tested up to: 5.7
@@ -42,7 +42,12 @@ Yes, this plugin will work with all blocks registered and used on your site.
 
 == Changelog ==
 
-**3.4.0**
+**3.3.2**
+
+- Fixes the broken wp-json url
+- Updates the donate link to a BuyMeACoffee Link
+
+**3.3.1**
 
 - Uses `get_rest_url` for the fetch url.
 

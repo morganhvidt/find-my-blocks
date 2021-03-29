@@ -26,7 +26,7 @@ export const Footer = ({ version = "app" }: FooterProps) => {
       <CardBody>
         <Box sx={{ textAlign: "right" }}>
           Developed by <Link url="https://eddysims.com">Eddy Sims</Link>
-          <Link url="https://find-my-blocks.eddysims.com/donate" icon="heart">
+          <Link url="https://www.buymeacoffee.com/eddysims" icon="heart">
             Make a donation
           </Link>
         </Box>
