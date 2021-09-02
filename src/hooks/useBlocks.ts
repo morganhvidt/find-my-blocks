@@ -11,7 +11,13 @@ export const useBlocks = () => {
       fetchUrl = find_my_blocks_globals.site_url + fetchUrl;
     }
 
-    fetch(fetchUrl)
+    fetch(fetchUrl, {
+      credentials: "include",
+      headers: {
+        "content-type": "application/json",
+        "X-WP-Nonce": find_my_blocks_globals.nonce,
+      },
+    })
       .then((res) => res.json())
       .then(({ blocks }) => {
         setBlocks(blocks);

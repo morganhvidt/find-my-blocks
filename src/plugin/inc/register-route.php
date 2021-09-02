@@ -22,7 +22,9 @@ if ( ! function_exists( 'find_my_blocks_register_route' ) ) :
 			array(
 				'methods'             => WP_REST_Server::READABLE,
 				'callback'            => 'find_my_blocks_route_callback',
-				'permission_callback' => '__return_true',
+				'permission_callback' => function() {
+					return current_user_can('edit_others_posts');
+				}
 			)
 		);
 	}

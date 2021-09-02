@@ -46,7 +46,7 @@ if ( ! function_exists( 'find_my_blocks_enqueue_scripts' ) ) :
 			'find_my_blocks_globals',
 			[
 				'ajax_url' => admin_url( 'admin-ajax.php' ),
-				'nonce'    => wp_create_nonce( 'find_my_blocks_nonce' ),
+				'nonce'    => wp_create_nonce('wp_rest'),
 				'action'   => 'find_my_blocks_save_settings',
 				'settings' => get_option( 'find_my_blocks_settings' ),
 				'site_url' => get_rest_url()
