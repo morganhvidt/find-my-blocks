@@ -21,15 +21,15 @@ const getAndReadFile = (path) => {
 /**
  * Updates the version of the plugin based on the tag
  */
-const updatePluginVersion = async () => {
+const updatePluginVersion = async (filePath) => {
   console.log(chalk.bgGreen.black(`⮕ Updating plugin version to ${tag}`));
 
-  const file = path.join(root, "find-my-blocks.php");
+  const file = path.join(root, filePath);
   let result = getAndReadFile(file);
   result = result.replace(/{% VERSION %}/g, tag);
   fs.writeFileSync(file, result, "utf8");
 
-  console.log(chalk.bgGreen.black("⮕ Plugin Version Updated"));
+  console.log(chalk.bgGreen.black(`⮕ ${filePath} Version Updated`));
 };
 
 /**
@@ -41,7 +41,8 @@ const updateBuildTags = async () => {
   if (!tag) {
     console.log(chalk.bgYellow.black("⮕ No tag. Skipping plugin version"));
   } else {
-    await updatePluginVersion();
+    await updatePluginVersion("find-my-blocks.php");
+    await updatePluginVersion("readme.txt");
   }
 
   console.log(chalk.bgGreen.black("⮕ Updated plugin version"));
