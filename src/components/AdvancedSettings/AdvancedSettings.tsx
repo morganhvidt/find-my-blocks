@@ -36,7 +36,7 @@ export function AdvancedSettings() {
       settings: { include_drafts },
     } = find_my_blocks_globals;
 
-    if (include_drafts == "true") {
+    if (include_drafts) {
       setIncludeDrafts(true);
     }
   }, []);
