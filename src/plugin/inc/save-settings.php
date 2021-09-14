@@ -4,7 +4,7 @@ if ( ! function_exists( 'find_my_blocks_save_settings' ) ) :
 	function find_my_blocks_save_settings() {
 		check_ajax_referer( 'wp_rest' );
 
-		$new_settings = sanitize_option('find-my-blocks', $_REQUEST['settings']);
+		$new_settings = sanitize_option('find_my_blocks_settings', $_REQUEST['settings']);
 		$current_settings = get_option( 'find_my_blocks_settings' );
 
 		if( is_array( $current_settings ) ) {
@@ -30,9 +30,6 @@ endif;
 if ( !function_exists( 'sanitize_find_my_blocks_settings') ) {
 	function sanitize_find_my_blocks_settings( $data ) {
 
-		$json_data = sanitize_text_field( json_encode( $data ) );
-		$new_data = json_decode( $json_data );
-
 		if (!is_array( $data )) {
 			wp_die( 'Invalid entry, go back and try again.' );
 		}
@@ -45,6 +42,5 @@ if ( !function_exists( 'sanitize_find_my_blocks_settings') ) {
 
 		return $result;
 	}
-
-	add_filter( 'sanitize_option_find-my-blocks', 'sanitize_find_my_blocks_settings' );
 }
+add_filter( 'sanitize_option_find_my_blocks_settings', 'sanitize_find_my_blocks_settings' );
