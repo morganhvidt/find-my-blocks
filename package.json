@@ -43,15 +43,10 @@
     "@types/theme-ui": "^0.3.7",
     "classnames": "^2.2.6",
     "deepmerge": "^4.2.2",
-    "docz": "^2.3.1",
     "feather-icons-react": "^0.4.1",
-    "gatsby-plugin-google-tagmanager": "^2.3.16",
-    "gatsby-plugin-root-import": "^2.0.5",
-    "gatsby-theme-docz": "^2.3.1",
     "lodash": "^4.17.15",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-helmet": "^6.1.0",
     "theme-ui": "^0.3.1",
     "ts-xor": "^1.0.8"
   },
@@ -85,6 +80,7 @@
     "postcss-modules": "^1.5.0",
     "prettier": "^2.0.5",
     "react-test-renderer": "^16.13.1",
+    "typescript": "^4.4.3",
     "use-resize-observer": "^6.1.0-alpha.3"
   }
 }
