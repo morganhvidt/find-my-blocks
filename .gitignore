@@ -2,7 +2,6 @@
 .DS_Store
 
 .cache/**
-.docz/**
 
 node_modules/**
 coverage/**
