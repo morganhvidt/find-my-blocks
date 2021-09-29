@@ -9,7 +9,6 @@
   },
   "files": [
     "src/",
-    "doczrc.js",
     "tsconfig.json",
     "package.json"
   ],
@@ -27,16 +26,10 @@
     ]
   },
   "scripts": {
-    "prestart": "npm run clean",
-    "start": "docz dev",
-    "prestart:wp": "rm -rf .cache & node ./parcel/clean.js",
-    "start:wp": "node ./parcel/parcel.config.js -f './src/plugin/assets/find-my-blocks.tsx' --env=development",
-    "predev": "rm -rf .docz & rm -rf .cache",
-    "prebuild": "npm run clean",
-    "build": "docz build",
-    "build:wp": "node ./parcel/parcel.config.js -f './src/plugin/assets/find-my-blocks.tsx'",
+    "prestart": "node ./parcel/clean.js",
+    "start": "node ./parcel/parcel.config.js -f './src/plugin/assets/find-my-blocks.tsx' --env=development",
+    "build": "node ./parcel/parcel.config.js -f './src/plugin/assets/find-my-blocks.tsx'",
     "serve": "docz serve",
-    "clean": "rm -rf .docz .cache",
     "lint:js": "eslint --ext js --ext jsx --ext ts --ext tsx .",
     "lint:mdx": "prettier './src/**/*.{md,mdx}' --prose-wrap always --write",
     "lint": "npm run lint:js",
