@@ -30,16 +30,4 @@ module.exports = {
     "import/no-default-export": "error",
     "import/no-named-default": "error",
   },
-  overrides: [
-    {
-      files: [
-        "**/doczrc.js",
-      "./src/gatsby-theme-docz/**/*",
-      "./src/pages/**/*"
-      ],
-      rules: {
-        "import/no-default-export": "off",
-      },
-    },
-  ],
 };
