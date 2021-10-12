@@ -1,6 +1,4 @@
-/** @jsx jsx */
-import { jsx, Box } from "theme-ui";
-import { useReducer, useMemo } from "react";
+import React, { useReducer, useMemo } from "react";
 import { Block } from "./app.types";
 import { localStorageReducer } from "./localStorageReducer";
 
@@ -14,7 +12,8 @@ import { sortSidebarItems } from "../../helpers/sortSidebarItems";
 import { sortCardItems } from "../../helpers/sortCardItems";
 import { getLocalStorageItem } from "../../helpers/getLocalStorageItem";
 
-import * as styles from "./style";
+// @ts-expect-error
+import * as styles from "./App.module.css";
 
 interface AppProps {
   blocks: Array<Block>;
@@ -50,29 +49,29 @@ export function App({ blocks }: AppProps) {
     }));
 
   return (
-    <Box sx={styles.app}>
-      <Box sx={styles.sidebar}>
+    <div className={styles.app}>
+      <div className={styles.sidebar}>
         <Sidebar
           items={sortSidebarItems(sidebarItems, state.navOrder)}
           activeBlock={state.activeBlock}
           onClick={handleSidebarClick}
         />
-      </Box>
+      </div>
       {state.activeBlock && (
-        <Box sx={styles.heading}>
+        <div className={styles.heading}>
           <Heading>{state.activeBlock}</Heading>
-        </Box>
+        </div>
       )}
-      <Box>
+      <div>
         <CardList cards={cards} />
-      </Box>
-      <Box>
+      </div>
+      <div>
         <Settings onChange={handleSettingsChange} state={state} />
-      </Box>
-      <Box sx={styles.footer}>
+      </div>
+      <div className={styles.footer}>
         <Footer />
-      </Box>
-    </Box>
+      </div>
+    </div>
   );
 
   function handleSidebarClick(blockName: string) {
