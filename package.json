@@ -27,8 +27,8 @@
   },
   "scripts": {
     "prestart": "npm run clean && node ./parcel/clean.js",
-    "start": "node ./parcel/parcel.config.js -f './src/plugin/assets/find-my-blocks.tsx' --env=development",
-    "build": "node ./parcel/parcel.config.js -f './src/plugin/assets/find-my-blocks.tsx'",
+    "start": "NODE_ENV=development node ./parcel/parcel.config.js -f './src/plugin/assets/find-my-blocks.tsx'",
+    "build": "NODE_ENV=production node ./parcel/parcel.config.js -f './src/plugin/assets/find-my-blocks.tsx'",
     "clean": "rm -rf ./cache",
     "lint:js": "eslint --ext js --ext jsx --ext ts --ext tsx .",
     "lint:mdx": "prettier './src/**/*.{md,mdx}' --prose-wrap always --write",
