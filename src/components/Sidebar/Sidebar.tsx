@@ -1,6 +1,4 @@
-/** @jsx jsx */
-import { jsx, Box } from "theme-ui";
-import { useState, Fragment } from "react";
+import React, { useState, Fragment } from "react";
 
 import { Card as WPCard, CardBody, CardDivider } from "@wordpress/components";
 
@@ -8,6 +6,9 @@ import { Logo } from "../Logo";
 import { InputText } from "../InputText";
 import { NavigationItem } from "../NavigationItem";
 import { Icon } from "../Icon";
+
+// @ts-expect-error
+import * as styles from "./Sidebar.module.css";
 
 export interface MenuItem {
   readonly name: string;
@@ -17,7 +18,8 @@ export interface MenuItem {
 interface SidebarProps {
   readonly items: Array<MenuItem>;
   readonly activeBlock: string;
-  onClick(blockName: string): void;
+  // eslint-disable-next-line no-unused-vars
+  onClick(val: string): void;
 }
 
 export function Sidebar({ items, activeBlock, onClick }: SidebarProps) {
@@ -35,19 +37,17 @@ export function Sidebar({ items, activeBlock, onClick }: SidebarProps) {
   return (
     <WPCard size="small">
       <CardBody size="large">
-        <Box sx={{ textAlign: "center" }}>
+        <div className={styles.logo}>
           <Logo size={80} />
-        </Box>
+        </div>
       </CardBody>
       <CardDivider />
       <CardBody>
-        <Box sx={{ "*": { mb: `${0} !important` } }}>
-          <InputText
-            placeholder="Filter Blocks"
-            onChange={setQuery}
-            defaultValue={query}
-          />
-        </Box>
+        <InputText
+          placeholder="Filter Blocks"
+          onChange={setQuery}
+          defaultValue={query}
+        />
       </CardBody>
       <CardDivider />
 
@@ -78,12 +78,12 @@ export function Sidebar({ items, activeBlock, onClick }: SidebarProps) {
 function EmptyState() {
   return (
     <CardBody>
-      <Box sx={{ textAlign: "center" }}>
-        <Box sx={{ mb: 2 }}>
+      <div className={styles.logo}>
+        <div className={styles.icon}>
           <Icon icon="frown" size={35} />
-        </Box>
-        <Box>No Results Found</Box>
-      </Box>
+        </div>
+        <div>No Results Found</div>
+      </div>
     </CardBody>
   );
 }
