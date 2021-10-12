@@ -1,0 +1,34 @@
+.wrapper {
+  text-align: center;
+}
+
+.loading {
+  animation: hueRotate 6s linear infinite both;
+}
+
+.loading svg {
+  margin: 0 4px;
+  animation: hueRotate 6s linear infinite both;
+}
+
+.loading svg:nth-of-type(2) {
+  animation-delay: 2s;
+}
+
+.loading svg:nth-of-type(3) {
+  animation-delay: 4s;
+}
+
+.text {
+  margin-top: 8px;
+  font-weight: bold;
+}
+
+@keyframes hueRotate {
+  from {
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(360deg);
+  }
+}

@@ -1,18 +1,18 @@
-/** @jsx jsx */
-import { jsx, Box } from "theme-ui";
+import React from "react";
 import { Logo } from "../Logo";
 
-import * as styles from "./styles";
+// @ts-expect-error
+import * as styles from "./Loading.module.css";
 
 export const Loading = () => {
   return (
-    <Box sx={{ textAlign: "center" }}>
-      <Box sx={styles.loading}>
+    <div className={styles.wrapper}>
+      <div className={styles.loading}>
         <Logo size={25} version="pin" />
         <Logo size={25} version="pin" />
         <Logo size={25} version="pin" />
-      </Box>
-      <Box sx={{ mt: 2, fontWeight: "bold" }}>Loading</Box>
-    </Box>
+      </div>
+      <div className={styles.text}>Loading</div>
+    </div>
   );
 };
