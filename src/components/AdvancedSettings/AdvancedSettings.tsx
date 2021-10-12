@@ -1,9 +1,8 @@
-/** @jsx jsx */
-import { jsx } from "theme-ui";
-import { Fragment, useLayoutEffect, useState } from "react";
+import React, { useLayoutEffect, useState } from "react";
 import { throttle } from "lodash";
 
-import * as styles from "./styles";
+// @ts-expect-error
+import * as styles from "./AdvancedSettings.module.css";
 
 import {
   CheckboxControl,
@@ -55,19 +54,19 @@ export function AdvancedSettings() {
   }, 1000);
 
   return (
-    <Fragment>
+    <>
       <PanelBody title="Advanced Settings" icon="admin-generic">
         {message && (
           <Notice
             status={message.status || "success"}
             actions={message.actions || []}
             onRemove={() => setMessage(undefined)}
-            sx={{ mx: -3, mb: 3, pr: `16px !important` }}
+            className={styles.notice}
           >
             {message.message}
           </Notice>
         )}
-        <PanelRow sx={styles.help}>
+        <PanelRow className={styles.help}>
           <CheckboxControl
             label="Include drafts in query"
             help="Warning: Enabling this feature could slow down the loading of the plugin depending on how many drafts your website has."
@@ -78,11 +77,16 @@ export function AdvancedSettings() {
           />
         </PanelRow>
         <PanelRow>
-          <Button type="submit" isPrimary onClick={handleClick} sx={{ mt: 2 }}>
+          <Button
+            type="submit"
+            isPrimary
+            onClick={handleClick}
+            className={styles.save}
+          >
             Save Settings
           </Button>
         </PanelRow>
       </PanelBody>
-    </Fragment>
+    </>
   );
 }
