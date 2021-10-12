@@ -1,16 +1,8 @@
-/** @jsx jsx */
-import { jsx, Box } from "theme-ui";
-import { PropsWithChildren } from "react";
-import * as styles from "./styles";
+import React, { PropsWithChildren } from "react";
 
-interface ContentProps {
-  spacing?: "small" | "medium" | "large";
-  children: React.ReactNode;
-}
+// @ts-expect-error
+import * as styles from "./Content.module.css";
 
-export const Content = ({
-  spacing = "medium",
-  children,
-}: PropsWithChildren<ContentProps>) => {
-  return <Box sx={styles.content(spacing)}>{children}</Box>;
+export const Content = ({ children }: PropsWithChildren<unknown>) => {
+  return <div className={styles.content}>{children}</div>;
 };
