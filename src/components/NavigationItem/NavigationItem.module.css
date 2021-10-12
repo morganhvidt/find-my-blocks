@@ -1,0 +1,39 @@
+.item {
+  background: #fff;
+  cursor: pointer;
+  position: relative;
+  padding: 8px 24px 8px 16px;
+  font-size: 12px;
+  transition: background 300ms;
+  border-bottom: 1px solid #e2e4e7;
+}
+
+.item:nth-of-type(2n+2) {
+  background: #fafafa;
+}
+
+.item.active {
+  background: #E22F22;
+  cursor: default;
+  color: white;
+  pointer-events: none;
+}
+
+.item svg {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-top: 1px;
+  right: 16px;
+  transition: right 300ms;
+}
+
+.item:hover svg {
+  right: 8px;
+}
+
+.name {
+  font-weight: bold;
+  margin-bottom: 2px;
+  font-size: 13px;
+}
