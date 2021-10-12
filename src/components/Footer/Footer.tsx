@@ -1,35 +1,21 @@
-/** @jsx jsx */
-import { jsx, Box } from "theme-ui";
-import { Fragment } from "react";
+import React from "react";
 import { Card, CardBody } from "@wordpress/components";
 
 import { Link } from "../Link";
 
-import * as styles from "./styles";
+// @ts-expect-error
+import * as styles from "./Footer.module.css";
 
-interface FooterProps {
-  /**
-   * @default 'app'
-   */
-  readonly version?: "app" | "website";
-}
-
-export const Footer = ({ version = "app" }: FooterProps) => {
-  if (typeof window === "undefined") return <Fragment />;
-
-  const footerStyles = {
-    ...(version === "website" && styles.website),
-  };
-
+export const Footer = () => {
   return (
-    <Card sx={footerStyles}>
+    <Card>
       <CardBody>
-        <Box sx={{ textAlign: "right" }}>
+        <div className={styles.footer}>
           Developed by <Link url="https://eddysims.com">Eddy Sims</Link>
           <Link url="https://www.buymeacoffee.com/eddysims" icon="heart">
             Make a donation
           </Link>
-        </Box>
+        </div>
       </CardBody>
     </Card>
   );
