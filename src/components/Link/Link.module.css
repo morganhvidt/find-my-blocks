@@ -1,0 +1,10 @@
+.link {
+  margin-right: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.link:hover {
+  text-decoration: none;
+}
