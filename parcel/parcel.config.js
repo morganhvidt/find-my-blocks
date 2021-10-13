@@ -8,8 +8,7 @@ const path = require("path");
  */
 const wordpress = require("./functions");
 
-const { OUTDIR, DEV_URL } = process.env;
-const NODE_ENV = argv.env || "production";
+const { OUTDIR, DEV_URL, NODE_ENV } = process.env;
 const NEED_DEV_URL = NODE_ENV !== "production" && DEV_URL === undefined;
 
 const outDir = NODE_ENV !== "production" ? OUTDIR : path.join(__dirname, "../");

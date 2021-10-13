@@ -27,8 +27,8 @@
   },
   "scripts": {
     "prestart": "npm run clean && node ./parcel/clean.js",
-    "start": "node ./parcel/parcel.config.js -f './src/plugin/assets/find-my-blocks.tsx' --env=development",
-    "build": "node ./parcel/parcel.config.js -f './src/plugin/assets/find-my-blocks.tsx'",
+    "start": "NODE_ENV=development node ./parcel/parcel.config.js -f './src/plugin/assets/find-my-blocks.tsx'",
+    "build": "NODE_ENV=production node ./parcel/parcel.config.js -f './src/plugin/assets/find-my-blocks.tsx'",
     "clean": "rm -rf ./cache",
     "lint:js": "eslint --ext js --ext jsx --ext ts --ext tsx .",
     "lint:mdx": "prettier './src/**/*.{md,mdx}' --prose-wrap always --write",
@@ -37,10 +37,8 @@
     "updateBuildTags": "node ./parcel/updateBuildTags.js"
   },
   "dependencies": {
-    "@emotion/styled": "^10.0.14",
     "@types/classnames": "^2.2.10",
     "@types/lodash-es": "^4.17.3",
-    "@types/theme-ui": "^0.3.7",
     "@wordpress/components": "^17.0.0",
     "classnames": "^2.2.6",
     "deepmerge": "^4.2.2",
@@ -48,7 +46,6 @@
     "lodash": "^4.17.15",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "theme-ui": "^0.3.1",
     "ts-xor": "^1.0.8"
   },
   "devDependencies": {
@@ -60,12 +57,15 @@
     "@types/react": "^17.0.25",
     "@types/react-dom": "^17.0.9",
     "@types/wordpress__components": "^14.0.3",
+    "@typescript-eslint/parser": "^5.0.0",
     "browser-sync": "^2.26.7",
     "chalk": "^3.0.0",
     "dotenv": "^8.2.0",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-import": "^2.25.1",
     "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.26.1",
     "eslint-plugin-typescript": "^0.14.0",
     "fast-glob": "^3.2.2",
     "fs-extra": "^9.0.0",

@@ -16,6 +16,7 @@ interface InputTextBaseProps {
    * Name of the field. Required for submitting a field
    */
   name?: string;
+  // eslint-disable-next-line no-unused-vars
   onChange?(val: string): void;
 }
 

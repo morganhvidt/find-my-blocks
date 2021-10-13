@@ -1,10 +1,10 @@
-/** @jsx jsx */
-import { jsx, Link as ThemeUiLink } from "theme-ui";
+import React from "react";
 
 import { Icon } from "../Icon";
 import { PropsWithChildren } from "react";
 
-import * as styles from "./styles";
+// @ts-expect-error
+import * as styles from "./Link.module.css";
 
 interface LinkProps {
   readonly url: string;
@@ -13,9 +13,9 @@ interface LinkProps {
 
 export function Link({ url, icon, children }: PropsWithChildren<LinkProps>) {
   return (
-    <ThemeUiLink href={url} sx={styles.link} target="_blank">
+    <a href={url} className={styles.link} target="_blank" rel="noreferrer">
       {icon && <Icon icon={icon} size={14} />}
       {children}
-    </ThemeUiLink>
+    </a>
   );
 }

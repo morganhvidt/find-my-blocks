@@ -1,6 +1,4 @@
-/** @jsx jsx */
-import { jsx } from "theme-ui";
-import { Fragment } from "react";
+import React from "react";
 import { Post } from "../App/app.types";
 
 import {
@@ -25,8 +23,6 @@ interface TagProps {
 export const Card = ({ card }: CardProps) => {
   const tags: Array<TagProps> = getTags();
 
-  if (typeof window === "undefined") return <Fragment />;
-
   return (
     <WPCard size="small">
       <CardHeader isShady>
@@ -50,14 +46,14 @@ export const Card = ({ card }: CardProps) => {
       </CardBody>
 
       {tags.length > 0 && (
-        <Fragment>
+        <>
           <CardDivider />
           <CardBody>
             {tags.map((tag) => {
               return <Tag key={tag.label} {...tag} />;
             })}
           </CardBody>
-        </Fragment>
+        </>
       )}
     </WPCard>
   );

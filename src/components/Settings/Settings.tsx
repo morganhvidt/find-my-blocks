@@ -1,6 +1,4 @@
-/** @jsx jsx */
-import { jsx } from "theme-ui";
-import { Fragment } from "react";
+import React from "react";
 import {
   LocalStorageAction,
   LocalStorageActionTypes,
@@ -17,23 +15,23 @@ import {
 
 import { AdvancedSettings } from "../AdvancedSettings";
 
-import * as styles from "./styles";
+//@ts-expect-error
+import * as styles from "./Settings.module.css";
 
 interface SettingsProps {
   state: LocalStorageState;
+  // eslint-disable-next-line no-unused-vars
   onChange({ type, value }: LocalStorageAction): void;
 }
 
 export const Settings = ({ onChange, state }: SettingsProps) => {
-  if (typeof window === "undefined") return <Fragment />;
-
   const alphabeticalOptions = [
     { value: "alphabetical-a-z", label: "Alphabetical (a-z)" },
     { value: "alphabetical-z-a", label: "Alphabetical (z-a)" },
   ];
 
   return (
-    <Panel sx={styles.settings} header="Settings">
+    <Panel className={styles.settings} header="Settings">
       <PanelBody>
         <PanelRow>
           <SelectControl
