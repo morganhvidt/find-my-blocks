@@ -41,7 +41,6 @@
     "@types/lodash-es": "^4.17.3",
     "@wordpress/components": "^17.0.0",
     "classnames": "^2.2.6",
-    "deepmerge": "^4.2.2",
     "feather-icons-react": "^0.4.1",
     "lodash": "^4.17.15",
     "react": "^17.0.2",
