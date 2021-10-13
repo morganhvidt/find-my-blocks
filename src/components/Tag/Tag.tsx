@@ -1,11 +1,12 @@
-/** @jsx jsx */
-import { jsx, Box } from "theme-ui";
+import React from "react";
+import classNames from "classnames";
 
 import { Icon } from "../Icon";
 
-import * as styles from "./styles";
+// @ts-expect-error
+import * as styles from "./Tag.module.css";
 
-export type TagVariations = "info" | "warning" | "error" | "default";
+type TagVariations = "info" | "warning" | "error" | "default";
 interface TagProps {
   icon?: string;
   variation: TagVariations;
@@ -13,14 +14,15 @@ interface TagProps {
 }
 
 export const Tag = ({ variation = "default", icon, label }: TagProps) => {
+  const tagClass = classNames(styles.tag, styles[variation]);
   return (
-    <Box sx={styles.tag(variation)}>
+    <div className={tagClass}>
       {icon && (
-        <Box sx={styles.icon(variation)}>
+        <div className={styles.icon}>
           <Icon icon={icon} size={16} />
-        </Box>
+        </div>
       )}
-      <Box sx={styles.label}>{label}</Box>
-    </Box>
+      <div className={styles.label}>{label}</div>
+    </div>
   );
 };
