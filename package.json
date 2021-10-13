@@ -41,12 +41,10 @@
     "@types/lodash-es": "^4.17.3",
     "@wordpress/components": "^17.0.0",
     "classnames": "^2.2.6",
-    "deepmerge": "^4.2.2",
     "feather-icons-react": "^0.4.1",
     "lodash": "^4.17.15",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "ts-xor": "^1.0.8"
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.9.0",
@@ -78,7 +76,6 @@
     "parcel-bundler": "^1.12.4",
     "postcss-modules": "^1.5.0",
     "prettier": "^2.0.5",
-    "typescript": "^4.4.3",
-    "use-resize-observer": "^6.1.0-alpha.3"
+    "typescript": "^4.4.3"
   }
 }

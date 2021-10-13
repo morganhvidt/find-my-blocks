@@ -1,9 +1,13 @@
 import React, { useState, Fragment } from "react";
 
-import { Card as WPCard, CardBody, CardDivider } from "@wordpress/components";
+import {
+  Card as WPCard,
+  CardBody,
+  CardDivider,
+  TextControl,
+} from "@wordpress/components";
 
 import { Logo } from "../Logo";
-import { InputText } from "../InputText";
 import { NavigationItem } from "../NavigationItem";
 import { Icon } from "../Icon";
 
@@ -43,10 +47,11 @@ export function Sidebar({ items, activeBlock, onClick }: SidebarProps) {
       </CardBody>
       <CardDivider />
       <CardBody>
-        <InputText
+        <TextControl
+          className={styles.search}
           placeholder="Filter Blocks"
           onChange={setQuery}
-          defaultValue={query}
+          value={query}
         />
       </CardBody>
       <CardDivider />
