@@ -2,6 +2,10 @@
   text-align: center;;
 }
 
+.search > div {
+  margin-bottom: 0;
+}
+
 .icon {
   margin-bottom: 16px;
 }
