@@ -37,10 +37,8 @@
     "updateBuildTags": "node ./parcel/updateBuildTags.js"
   },
   "dependencies": {
-    "@emotion/styled": "^10.0.14",
     "@types/classnames": "^2.2.10",
     "@types/lodash-es": "^4.17.3",
-    "@types/theme-ui": "^0.3.7",
     "@wordpress/components": "^17.0.0",
     "classnames": "^2.2.6",
     "deepmerge": "^4.2.2",
@@ -48,7 +46,6 @@
     "lodash": "^4.17.15",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "theme-ui": "^0.3.1",
     "ts-xor": "^1.0.8"
   },
   "devDependencies": {
