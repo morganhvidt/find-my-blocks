@@ -21,7 +21,7 @@ if ( ! function_exists( 'find_my_blocks_register_options_page' ) ) :
 			'edit_posts',
 			'find-my-blocks',
 			'find_my_blocks_register_options_page_markup',
-			0
+			1
 		);
 	}
 
