@@ -72,7 +72,7 @@ export const Card = ({ card }: CardProps) => {
     if (card.count > 1) {
       tags.push({
         label: `${card.count} usages in post`,
-        icon: "plus-circle",
+        icon: "list",
         variation: "info",
       });
     }

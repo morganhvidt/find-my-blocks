@@ -42,6 +42,10 @@ Yes, this plugin will work with all blocks registered and used on your site.
 
 == Changelog ==
 
+**3.5.3**
+
+- Changes the icon for "# of usages in Post" for clarity
+
 **3.3.2**
 
 - Fixes the broken wp-json url
