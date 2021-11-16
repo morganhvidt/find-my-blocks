@@ -42,6 +42,10 @@ Yes, this plugin will work with all blocks registered and used on your site.
 
 == Changelog ==
 
+**3.5.4**
+
+- Fixes a bug with PHP 5
+
 **3.5.3**
 
 - Changes the icon for "# of usages in Post" for clarity

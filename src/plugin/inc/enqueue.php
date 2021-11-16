@@ -59,7 +59,7 @@ if ( ! function_exists( 'find_my_blocks_enqueue_scripts' ) ) :
 			'find-my-blocks-style',
 			plugin_dir_url( __DIR__ ) . 'find-my-blocks.css',
 			null,
-			filemtime( plugin_dir_path( __DIR__ ) . 'find-my-blocks.css' ),
+			filemtime( plugin_dir_path( __DIR__ ) . 'find-my-blocks.css' )
 		);
 	}
 
