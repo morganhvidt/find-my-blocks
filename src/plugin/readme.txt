@@ -1,7 +1,7 @@
 === Find My Blocks ===
 Contributors: edeesims
 Donate link: https://www.buymeacoffee.com/eddysims
-Tags: gutenberg, developer, blocks, custom blocks
+Tags: gutenberg, developer, blocks, custom blocks, adopt me
 Requires at least: 5.0
 Tested up to: 5.8
 Stable tag: {% VERSION %}
