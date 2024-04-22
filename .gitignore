@@ -1,7 +1,7 @@
-.env
+node_modules
+dist
+vendor
+production
+src/library
 .DS_Store
-
-.cache/**
-
-node_modules/**
-coverage/**
+.vscode

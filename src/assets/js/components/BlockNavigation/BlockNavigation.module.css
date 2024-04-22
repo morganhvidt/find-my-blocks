@@ -1,0 +1,21 @@
+.navigation ul {
+  list-style: none;
+  padding: 0;
+}
+.navigation li {
+  cursor: pointer;
+  font-weight: 500;
+}
+.subtitle {
+  font-size: 0.8rem;
+  color: #6c757d;
+  display: block;
+  font-weight: 400;
+}
+.active {
+  background-color: var(--wp-components-color-accent, var(--wp-admin-theme-color, #3858e9));
+  color: white;
+}
+.active .subtitle {
+  color: rgb(243, 243, 243);
+}

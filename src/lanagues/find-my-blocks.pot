@@ -1,0 +1,276 @@
+# Copyright (C) 2024 Morgan Hvidt
+# This file is distributed under the GPLv2.
+msgid ""
+msgstr ""
+"Project-Id-Version: Find My Blocks 4.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/find-my-blocks\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-04-18T02:19:22+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.9.0\n"
+"X-Domain: find-my-blocks\n"
+
+#. Plugin Name of the plugin
+msgid "Find My Blocks"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://findmyblocks.com/"
+msgstr ""
+
+#. Description of the plugin
+msgid "Locate instances of WordPress blocks across your entire site."
+msgstr ""
+
+#. Author of the plugin
+msgid "Morgan Hvidt"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://morganhvidt.com/"
+msgstr ""
+
+#: assets/js/find-my-blocks.js:1
+#: assets/js/find-my-blocks.js:61
+msgid "Re-scan"
+msgstr ""
+
+#: assets/js/find-my-blocks.js:1
+#: assets/js/find-my-blocks.js:62
+msgid "Search"
+msgstr ""
+
+#: assets/js/find-my-blocks.js:1
+#: assets/js/find-my-blocks.js:67
+msgid "Quick Links"
+msgstr ""
+
+#: assets/js/find-my-blocks.js:1
+#: assets/js/find-my-blocks.js:73
+msgid "Reusable Patterns"
+msgstr ""
+
+#: assets/js/find-my-blocks.js:1
+#: assets/js/find-my-blocks.js:76
+msgid "Support"
+msgstr ""
+
+#: assets/js/find-my-blocks.js:1
+#: assets/js/find-my-blocks.js:82
+msgid "Review on wp.org"
+msgstr ""
+
+#: assets/js/find-my-blocks.js:1
+#: assets/js/find-my-blocks.js:89
+msgid "Support forum"
+msgstr ""
+
+#: assets/js/find-my-blocks.js:1
+#: assets/js/find-my-blocks.js:176
+msgid "Conditional"
+msgstr ""
+
+#: assets/js/find-my-blocks.js:1
+#: assets/js/find-my-blocks.js:179
+msgid "via"
+msgstr ""
+
+#: assets/js/find-my-blocks.js:1
+#: assets/js/find-my-blocks.js:192
+msgid "Reusable block"
+msgstr ""
+
+#: assets/js/find-my-blocks.js:1
+#: assets/js/find-my-blocks.js:208
+msgid "Nested in: "
+msgstr ""
+
+#: assets/js/find-my-blocks.js:1
+#: assets/js/find-my-blocks.js:146
+msgid "Preview"
+msgstr ""
+
+#: assets/js/find-my-blocks.js:1
+#: assets/js/find-my-blocks.js:154
+msgid "Edit"
+msgstr ""
+
+#: assets/js/find-my-blocks.js:1
+#: assets/js/find-my-blocks.js:222
+msgid "No block selected"
+msgstr ""
+
+#: assets/js/find-my-blocks.js:1
+#: assets/js/find-my-blocks.js:223
+msgid "Please select a block from the menu to see more info."
+msgstr ""
+
+#: assets/js/find-my-blocks.js:1
+#: assets/js/find-my-blocks.js:270
+msgid "Found in"
+msgstr ""
+
+#: assets/js/find-my-blocks.js:1
+#: assets/js/find-my-blocks.js:272
+msgid "locations"
+msgstr ""
+
+#: assets/js/find-my-blocks.js:1
+#: assets/js/find-my-blocks.js:273
+msgid "location"
+msgstr ""
+
+#: assets/js/find-my-blocks.js:1
+#: assets/js/find-my-blocks.js:491
+msgid "Search aborted or timeout reached - Please try lower the amount of posts to search per request."
+msgstr ""
+
+#: assets/js/find-my-blocks.js:1
+#: assets/js/find-my-blocks.js:499
+msgid "Abort/timeout error. Try choosing a lower amount of posts to search per request."
+msgstr ""
+
+#: assets/js/find-my-blocks.js:1
+#: assets/js/find-my-blocks.js:396
+msgid "Search aborted by user"
+msgstr ""
+
+#: assets/js/find-my-blocks.js:1
+#: assets/js/find-my-blocks.js:820
+msgid "Searching for your blocks..."
+msgstr ""
+
+#: assets/js/find-my-blocks.js:1
+#: assets/js/find-my-blocks.js:822
+msgid "Progress:"
+msgstr ""
+
+#: assets/js/find-my-blocks.js:1
+#: assets/js/find-my-blocks.js:825
+msgid "Scanning batch"
+msgstr ""
+
+#: assets/js/find-my-blocks.js:1
+#: assets/js/find-my-blocks.js:826
+msgid "out of"
+msgstr ""
+
+#: assets/js/find-my-blocks.js:1
+#: assets/js/find-my-blocks.js:829
+msgid "Total block instances detected:"
+msgstr ""
+
+#: assets/js/find-my-blocks.js:1
+#: assets/js/find-my-blocks.js:831
+msgid "in"
+msgstr ""
+
+#: assets/js/find-my-blocks.js:1
+#: assets/js/find-my-blocks.js:832
+#: assets/js/find-my-blocks.js:882
+msgid "locations."
+msgstr ""
+
+#: assets/js/find-my-blocks.js:1
+#: assets/js/find-my-blocks.js:840
+msgid "Abort Search"
+msgstr ""
+
+#: assets/js/find-my-blocks.js:1
+#: assets/js/find-my-blocks.js:855
+msgid "Filters"
+msgstr ""
+
+#: assets/js/find-my-blocks.js:1
+#: assets/js/find-my-blocks.js:860
+msgid "Found Blocks"
+msgstr ""
+
+#: assets/js/find-my-blocks.js:1
+#: assets/js/find-my-blocks.js:862
+msgid "The below blocks have been detected during the scan."
+msgstr ""
+
+#: assets/js/find-my-blocks.js:1
+#: assets/js/find-my-blocks.js:879
+msgid "Instances of the"
+msgstr ""
+
+#: assets/js/find-my-blocks.js:1
+#: assets/js/find-my-blocks.js:881
+msgid "block has been found in these"
+msgstr ""
+
+#: assets/js/find-my-blocks.js:1
+#: assets/js/find-my-blocks.js:900
+msgid "Get Started"
+msgstr ""
+
+#: assets/js/find-my-blocks.js:1
+#: assets/js/find-my-blocks.js:902
+msgid "Find My Blocks will search through all your posts and pages to find the WordPress blocks."
+msgstr ""
+
+#: assets/js/find-my-blocks.js:1
+#: assets/js/find-my-blocks.js:911
+msgid "Warning! Choose the performance level that matches your server. Fetching too may posts at once  may temporarily crash your site."
+msgstr ""
+
+#: assets/js/find-my-blocks.js:1
+#: assets/js/find-my-blocks.js:920
+msgid "Low (Recommended for most sites, 10 post per run)"
+msgstr ""
+
+#: assets/js/find-my-blocks.js:1
+#: assets/js/find-my-blocks.js:927
+msgid "Standard (100 posts per run)"
+msgstr ""
+
+#: assets/js/find-my-blocks.js:1
+#: assets/js/find-my-blocks.js:931
+msgid "Ultra (500 posts per run)"
+msgstr ""
+
+#: assets/js/find-my-blocks.js:1
+#: assets/js/find-my-blocks.js:943
+msgid "Start Search"
+msgstr ""
+
+#: assets/js/find-my-blocks.js:1
+#: assets/js/find-my-blocks.js:947
+msgid "Block Tools & Resources"
+msgstr ""
+
+#: assets/js/find-my-blocks.js:1
+#: assets/js/find-my-blocks.js:949
+msgid "Create faster & better WordPress sites with block tutorials from experts."
+msgstr ""
+
+#: assets/js/find-my-blocks.js:1
+#: assets/js/find-my-blocks.js:978
+msgid "(Developer) "
+msgstr ""
+
+#: assets/js/find-my-blocks.js:1
+#: assets/js/find-my-blocks.js:983
+msgid "Support Development"
+msgstr ""
+
+#: assets/js/find-my-blocks.js:1
+#: assets/js/find-my-blocks.js:985
+msgid "I'm building Find My Blocks in my free time. If you find it useful, please consider donating, or contributing to the project."
+msgstr ""
+
+#: assets/js/find-my-blocks.js:1
+#: assets/js/find-my-blocks.js:997
+msgid "Contribute on Github"
+msgstr ""
+
+#: assets/js/find-my-blocks.js:1
+#: assets/js/find-my-blocks.js:1005
+msgid "Donate to development"
+msgstr ""

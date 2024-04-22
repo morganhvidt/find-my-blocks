@@ -1,0 +1,32 @@
+{
+	"name": "morganhvidt/find-my-blocks",
+	"description": "The Find My Block plugin for WordPress - Composer installs coding standards.",
+	"authors": [
+		{
+			"name": "Morgan Hvidt",
+			"homepage": "https://morganhvidt.com/"
+		}
+	],
+	"type": "wordpress-plugin",
+	"license": "GPL-2.0",
+	"require-dev": {
+		"wp-coding-standards/wpcs": "^3.0"
+	},
+	"scripts": {
+		"post-install-cmd": [
+			"\"vendor/bin/phpcs\" --config-set default_standard WordPress",
+			"\"vendor/bin/phpcbf\" --config-set default_standard WordPress"
+		],
+		"post-update-cmd": [
+			"\"vendor/bin/phpcs\" --config-set default_standard WordPress",
+			"\"vendor/bin/phpcbf\" --config-set default_standard WordPress"
+		]
+	},
+	"config": {
+		"allow-plugins": {
+			"composer/installers": true,
+			"dealerdirect/phpcodesniffer-composer-installer": true,
+			"oomphinc/composer-installers-extender": true
+		}
+	}
+}

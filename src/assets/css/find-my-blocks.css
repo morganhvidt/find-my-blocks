@@ -1,0 +1,133 @@
+.fmb-badge {
+  border: 0.5px solid #e22f22;
+  padding: 5px 12px;
+  background: white;
+  border-radius: 3px;
+  color: #e22f22;
+}
+.fmb-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.fmb-bento-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 10px 35px;
+  box-sizing: border-box;
+  margin-left: -20px;  /*  Fix centering with the admin sidebar. */
+  min-width: 100%;
+}
+.fmb-bento-grid {
+  max-width: 1300px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 20px;
+}
+.fmb-grid-results-page {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: auto auto;
+  gap: 30px;
+  padding-right: 20px; /*  Fix centering with the admin sidebar. */
+  max-width: 1300px;
+}
+.fmb-box {
+  border: 1px solid #ccc;
+  padding: 35px 25px;
+  background: #ffffff;
+  height: fit-content;
+}
+.fmb-box-full {
+  grid-column: 1 / -1;
+}
+
+.fmb-box h2 {
+  margin: 10px 0 15px 0;
+}
+.fmb-box p {
+  margin: 0 0 10px;
+}
+.fmb-bento-container ul {
+  padding-left: 5px;
+}
+.fmb-bento-container ul li {
+  margin-bottom: 5px;
+}
+.fmb-performance-control .components-base-control__field {
+  padding: 20px;
+ }
+.fmb-finder-container {
+  display: flex;
+  align-items: flex-start; /* Align children to the top */
+  height: 100%;
+  width: 90%;
+  max-width: 1300px;
+}
+.fmb-side-navigation {
+  max-height: 600px;
+  overflow-y: auto; 
+}
+.fmb-box h2 {
+  font-size: 14px;
+}
+.fmb-side-navigation li {
+  padding: 10px 20px;
+  cursor: pointer;
+  border:#ccc solid 1px;
+}
+.fmb-card-grid {
+  height: fit-content;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  overflow-y: auto; 
+  grid-template-rows: auto;
+  align-items: start;
+  margin-bottom: 10px;
+  margin-top: 30px;
+}
+.fmb-card {
+  background-color: white;
+  min-height: 200px; 
+  align-self: start;
+}
+.fmb-card-title {
+  font-weight: 600;
+}
+.fmb-card-meta {
+  margin-top: 5px;
+  display: block;
+  font-size: 0.8rem;
+  color: #41464b;
+  padding-right: 5px;
+}
+.fmb-card-meta code {
+  font-size: 10px;
+}
+.fmb-search-filters {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+  .fmb-bento-box, .fmb-container  {
+    grid-template-columns: 1fr; 
+  }
+  .fmb-container {
+    min-height: auto; 
+    flex: 1; 
+    padding: 30px;
+  }
+  .fmb-bento-grid {
+    grid-template-columns: 1fr;
+  }
+  .fmb-card-grid, .fmb-grid-results-page {
+    grid-template-columns: 1fr;
+  } 
+}

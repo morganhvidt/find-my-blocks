@@ -1,0 +1,30 @@
+.wrapper {
+  margin-left: -20px;
+  position: relative;
+}
+.header {
+  padding: 5px 20px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 0 rgba(213, 213, 213, 0.5), 0 1px 2px #eee;
+  margin-bottom: 25px;
+  text-align: center;
+  position: relative;
+}
+.container {
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  width: auto;
+  height: 40px;
+}
+.headerNavigation {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}

@@ -1,0 +1,70 @@
+.tag {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 4px;
+  padding: 5px 10px;
+  border: 1px solid;
+  border-radius: 3px;
+}
+
+.help {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.tag.default {
+  background: #fafafa;
+  color: #444;
+  border-color: #e2e4e7;
+}
+
+.tag.info {
+  background: #e5f5fa;
+  color: #29809a;
+  border-color: #bbe6f3;
+}
+
+.tag.warning {
+  background: #f8efae;
+  color: #7d6f04;
+  border-color: #eed202;
+}
+
+.tag.error {
+  background: #ff4b3e;
+  color: #fafafa;
+  border-color: #eb756d;
+}
+
+.tag:first-of-type {
+  margin-top: 0;
+}
+
+.label {
+  padding: 8px;
+}
+
+.icon {
+  padding: 4px 8px;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+}
+
+.default .icon {
+  background: #fff;
+}
+
+.info .icon {
+  background: #beeffe;
+}
+
+.warning .icon {
+  background: #eed202;
+}
+
+.error .icon {
+  background: #eb756d;
+}
