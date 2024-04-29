@@ -3,7 +3,7 @@
  * Plugin Name: Find My Blocks
  * Plugin URI: https://findmyblocks.com/
  * Description: Locate instances of WordPress blocks across your entire site.
- * Version: 4.0.0-beta2
+ * Version: XPLUGIN_VERSION
  * Requires at least: 5.0
  * Requires PHP: 7.4
  * Author: Morgan Hvidt
@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 if ( ! defined( 'FMB_VERSION' ) ) {
-	define( 'FMB_VERSION', '4.0.0-beta2' );
+	define( 'FMB_VERSION', 'XPLUGIN_VERSION' );
 }
 
 /**

@@ -2,14 +2,14 @@
 Contributors: morganhvidt, edeesims
 Donate link: https://morganhvidt.com/donate
 Tags: gutenberg, find, blocks, search blocks, locator
+Stable tag: 4.0.0
 Requires at least: 5.0
-Tested up to: 6.4
-Stable tag: 3.5.5
-Requires PHP: 5.2.4
+Tested up to: 6.5
+Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Find My Blocks is a tool to list all the blocks that are used on you WordPress site and what posts/pages they are used on.
+Find My Blocks will search and list all the blocks used across your WordPress site.
 
 == Description ==
 
@@ -23,12 +23,12 @@ Save your time by scanning your entire WordPress site (including posts, pages an
 
 - 📍 Find & replace blocks safely with quick edit and preview links.
 - 🧱 WordPress Full Site Editing support. Block Templates & Template parts will be searched.
-- ⚡️ Performance settings for low (share hosting) to high-end hosting.
+- ⚡️ Performance settings for low (shared hosting) to high-end hosting.
 - 🤝 100% free & open source.
  
 ## Which blocks can be located? 
 
-Find My Blocks will batch loop through your posts (more more) to detect instances for blocks.
+Find My Blocks will batch loop through your posts (and more) to detect instances of blocks.
 
 - WordPress Core blocks (paragraphs, images, group blocks and so on)
 - Blocks added by third-party plugins (Even if they are uninstalled)
@@ -73,13 +73,13 @@ Once it's done you'll see all found blocks!
 
 Yes, this plugin will work with all blocks registered and used on your site.
 
-= Can it find blocks form uninstalled plugins? =
+= Can it find WordPress blocks from uninstalled plugins? =
 
-Yes, you don't have to worry about wether a third-party plugin is installed or not. Find My Blocks will look at all your WordPress post. Old blocks names are still stored within the post, therefore they will still be located and listed for you on the results page.
+Yes, you don't have to worry about whether a third-party plugin is installed or not. Find My Blocks will look at all your WordPress posts. Old block names are still stored within the post, therefore they will still be located and listed for you on the results page.
 
 = What Post Types does it search? =
 
-Find My Blocks will automatically determine which Post Types have the WordPress editor enabled. Therefore only the nessarary posts will be searched. You'll be able to identify which post type each block belongs to on the result page.
+Find My Blocks will automatically determine which Post Types have the WordPress editor enabled. Therefore only the necessary posts will be searched. You'll be able to identify which post type each block belongs to on the result page.
 
 = Who is behind this plugin? =
 
@@ -87,13 +87,19 @@ Morgan Hvidt is the current developer for Find My Blocks. You can follow him on 
 
 A special thanks to [Edeesims](https://profiles.wordpress.org/edeesims/) who originally created the Find My Blocks plugin.
 
+== Screenshots ==
+
+1. Find My Blocks - Start Search
+2. Find My Blocks - Searching Progress
+3. Find My Blocks - Found Blocks within WordPress Content.
+
 == Changelog ==
 
 = 4.0.0 =
 
 **Major update**
 
-__Hi everyone, I've adopted Find My Blocks and completely rebuilt the plugin. Please consider leaving a review or let me know if run into any issues. - Morgan__ - 
+__Hi everyone, I've adopted Find My Blocks and completely rebuilt the plugin. Please consider leaving a review or let me know if you run into any issues. - Morgan__ - 
 
 - **Optimized Batch Search**: Improved search performance tailored to server capabilities, works well on shared hosting.
 - **Smart Post Type Detection**: Automatic recognition of post types using the Block Editor.
@@ -223,3 +229,4 @@ Clean Up and Maintenance
 = 1.0.0 =
 
 - Initial Release
+
