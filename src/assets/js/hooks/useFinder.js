@@ -73,18 +73,20 @@ export const useFinder = ({
     abortControllerRef.current = controller; // Keep a reference to the controller
 
     let currentPage = 1;
+    let totalPages = 0;
     let totalPosts = 0;
     let totalScannedPosts = 0;
     let localBatchResults = []; // Local variable to keep track of batch results.
     let totalBlockInstances = 0; // Keep track of total block instances detected.
-    let hadError = false;
+    let searchStatus = "in_process"; // Track the search status
 
     try {
       while (
-        (totalScannedPosts < totalPosts || currentPage === 1) &&
-        !abortControllerRef.current.signal.aborted
+        (currentPage <= totalPages || currentPage === 1) &&
+        !abortControllerRef.current.signal.aborted &&
+        searchStatus === "in_process" // Check if the search is still in process
       ) {
-        const timeoutId = setTimeout(() => controller.abort(), 15000); // Set a 10-second timeout
+        const timeoutId = setTimeout(() => controller.abort(), 15000); // Abort the search after 15 seconds of inactivity.
 
         const queryString = new URLSearchParams({
           ...searchArgs,
@@ -97,65 +99,59 @@ export const useFinder = ({
             signal: controller.signal,
           });
 
-          clearTimeout(timeoutId); // Clear the timeout if the request completes
+          clearTimeout(timeoutId);
 
           // Add a 1 second delay between requests to avoid server overload.
           await new Promise((resolve) => setTimeout(resolve, 1000));
 
-          if (searchResponse?.data) {
-            const { blocks, scanned_posts, total_posts, total_pages } =
-              searchResponse.data;
+          // Exit early if no data is returned.
+          if (!searchResponse?.data) {
+            throw new Error("No data returned from the server.");
+          }
 
-            // Total Posts shouldn't change after the first request.
-            if (currentPage === 1) {
-              totalPosts = total_posts;
-            }
+          const { blocks, scanned_posts, total_posts, total_pages } =
+            searchResponse.data;
 
-            totalBlockInstances += blocks.reduce(
-              (sum, block) => sum + block.posts.length,
-              0
-            );
+          if (currentPage === 1) {
+            totalPages = total_pages;
+            totalPosts = total_posts;
+          }
 
-            totalScannedPosts += scanned_posts;
+          totalBlockInstances += blocks.reduce(
+            (sum, block) => sum + block.posts.length,
+            0
+          );
 
-            // Update progress state.
-            setProgress({
-              currentPage,
-              totalPages: total_pages,
-              percentage: Math.round((currentPage / total_pages) * 100),
-              totalBlocks: totalBlockInstances,
-              totalPosts: totalPosts,
-              totalScannedPosts: totalScannedPosts,
-            });
+          totalScannedPosts += scanned_posts;
 
-            // Add the new blocks to the local variable
-            localBatchResults = localBatchResults.concat(blocks);
+          setProgress({
+            currentPage,
+            totalPages: totalPages,
+            percentage: Math.round((currentPage / totalPages) * 100),
+            totalBlocks: totalBlockInstances,
+            totalPosts: totalPosts,
+            totalScannedPosts: totalScannedPosts, // Some might have been skipped server side.
+          });
 
-            currentPage++;
+          localBatchResults = localBatchResults.concat(blocks);
 
-            if (currentPage > total_pages) {
-              break;
-            }
-          } else {
-            break; // Exit loop if no data is returned
+          currentPage++;
+
+          if (currentPage > total_pages) {
+            searchStatus = "completed"; // All pages of the WP_Query has been scanned.
+            break;
           }
         } catch (error) {
-          clearTimeout(timeoutId); // Ensure the timeout is cleared on error as well
+          clearTimeout(timeoutId);
 
           if (error.name === "AbortError") {
             console.error(
-              __(
-                "Search aborted or timeout reached - Please try lower the amount of posts to search per request.",
-                "find-my-blocks"
-              ),
+              "Search aborted or timeout reached - Please try lower the amount of posts to search per request.",
               error
             );
             setError(
               new Error(
-                __(
-                  "Abort/timeout error. Try choosing a lower amount of posts to search per request.",
-                  "find-my-blocks"
-                )
+                "Abort/timeout error. Try choosing a lower amount of posts to search per request."
               )
             );
           } else {
@@ -163,28 +159,30 @@ export const useFinder = ({
             setError(error);
           }
 
-          break; // Exit loop on any error
+          searchStatus = "failed"; // Update the search status to failed
+          break;
         }
       }
     } finally {
       abortControllerRef.current = null;
 
-      // Check if the error indicates an aborted search before resetting
-      if (!error) {
-        if (localBatchResults.length > 0) {
-          const mergedBlocks = mergeBlocks(localBatchResults);
+      if (searchStatus === "completed" && localBatchResults.length > 0) {
+        const mergedBlocks = mergeBlocks(localBatchResults);
+        const sortedBlocks = changeBlockSorting(sortOrder, mergedBlocks);
 
-          // Re-sort the blocks if the search was successful
-          const sortedBlocks = changeBlockSorting(sortOrder, mergedBlocks);
+        setFilters(filtersDefault);
+        setFoundBlocks(sortedBlocks);
+        setCachedFoundBlocks(sortedBlocks);
+      } else {
+        setError(
+          new Error("Search completed with no results or an error occurred.")
+        );
 
-          setFilters(filtersDefault);
-          setFoundBlocks(sortedBlocks);
-          setCachedFoundBlocks(sortedBlocks);
-        } else {
-          console.log(error);
-          reset(); // Call the reset function if no results were found or if there was an error other than an aborted search
-        }
+        reset();
       }
+
+      // Add a 1 second delay to view the finished search stats.
+      await new Promise((resolve) => setTimeout(resolve, 1000));
 
       setIsLoading(false);
     }
