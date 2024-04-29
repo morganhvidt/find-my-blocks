@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-04-18T02:19:22+00:00\n"
+"POT-Creation-Date: 2024-04-29T04:15:50+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.9.0\n"
 "X-Domain: find-my-blocks\n"
@@ -35,242 +35,247 @@ msgid "https://morganhvidt.com/"
 msgstr ""
 
 #: assets/js/find-my-blocks.js:1
-#: assets/js/find-my-blocks.js:61
-msgid "Re-scan"
-msgstr ""
-
-#: assets/js/find-my-blocks.js:1
-#: assets/js/find-my-blocks.js:62
-msgid "Search"
-msgstr ""
-
-#: assets/js/find-my-blocks.js:1
-#: assets/js/find-my-blocks.js:67
-msgid "Quick Links"
-msgstr ""
-
-#: assets/js/find-my-blocks.js:1
-#: assets/js/find-my-blocks.js:73
-msgid "Reusable Patterns"
-msgstr ""
-
-#: assets/js/find-my-blocks.js:1
-#: assets/js/find-my-blocks.js:76
-msgid "Support"
-msgstr ""
-
-#: assets/js/find-my-blocks.js:1
-#: assets/js/find-my-blocks.js:82
-msgid "Review on wp.org"
-msgstr ""
-
-#: assets/js/find-my-blocks.js:1
-#: assets/js/find-my-blocks.js:89
-msgid "Support forum"
-msgstr ""
-
-#: assets/js/find-my-blocks.js:1
-#: assets/js/find-my-blocks.js:176
-msgid "Conditional"
-msgstr ""
-
-#: assets/js/find-my-blocks.js:1
-#: assets/js/find-my-blocks.js:179
-msgid "via"
-msgstr ""
-
-#: assets/js/find-my-blocks.js:1
-#: assets/js/find-my-blocks.js:192
-msgid "Reusable block"
-msgstr ""
-
-#: assets/js/find-my-blocks.js:1
-#: assets/js/find-my-blocks.js:208
-msgid "Nested in: "
-msgstr ""
-
-#: assets/js/find-my-blocks.js:1
-#: assets/js/find-my-blocks.js:146
-msgid "Preview"
-msgstr ""
-
-#: assets/js/find-my-blocks.js:1
-#: assets/js/find-my-blocks.js:154
-msgid "Edit"
-msgstr ""
-
-#: assets/js/find-my-blocks.js:1
-#: assets/js/find-my-blocks.js:222
-msgid "No block selected"
-msgstr ""
-
-#: assets/js/find-my-blocks.js:1
-#: assets/js/find-my-blocks.js:223
-msgid "Please select a block from the menu to see more info."
-msgstr ""
-
-#: assets/js/find-my-blocks.js:1
-#: assets/js/find-my-blocks.js:270
+#: assets/js/find-my-blocks.js:57
 msgid "Found in"
 msgstr ""
 
 #: assets/js/find-my-blocks.js:1
-#: assets/js/find-my-blocks.js:272
+#: assets/js/find-my-blocks.js:59
 msgid "locations"
 msgstr ""
 
 #: assets/js/find-my-blocks.js:1
-#: assets/js/find-my-blocks.js:273
+#: assets/js/find-my-blocks.js:60
 msgid "location"
 msgstr ""
 
 #: assets/js/find-my-blocks.js:1
-#: assets/js/find-my-blocks.js:491
+#: assets/js/find-my-blocks.js:104
+msgid "Re-scan"
+msgstr ""
+
+#: assets/js/find-my-blocks.js:1
+#: assets/js/find-my-blocks.js:105
+msgid "Search"
+msgstr ""
+
+#: assets/js/find-my-blocks.js:1
+#: assets/js/find-my-blocks.js:110
+msgid "Quick Links"
+msgstr ""
+
+#: assets/js/find-my-blocks.js:1
+#: assets/js/find-my-blocks.js:116
+msgid "Reusable Patterns"
+msgstr ""
+
+#: assets/js/find-my-blocks.js:1
+#: assets/js/find-my-blocks.js:119
+msgid "Support"
+msgstr ""
+
+#: assets/js/find-my-blocks.js:1
+#: assets/js/find-my-blocks.js:125
+msgid "Review on wp.org"
+msgstr ""
+
+#: assets/js/find-my-blocks.js:1
+#: assets/js/find-my-blocks.js:132
+msgid "Support forum"
+msgstr ""
+
+#: assets/js/find-my-blocks.js:1
+#: assets/js/find-my-blocks.js:219
+msgid "Conditional"
+msgstr ""
+
+#: assets/js/find-my-blocks.js:1
+#: assets/js/find-my-blocks.js:222
+msgid "via"
+msgstr ""
+
+#: assets/js/find-my-blocks.js:1
+#: assets/js/find-my-blocks.js:235
+msgid "Synced Pattern"
+msgstr ""
+
+#: assets/js/find-my-blocks.js:1
+#: assets/js/find-my-blocks.js:251
+msgid "Nested in: "
+msgstr ""
+
+#: assets/js/find-my-blocks.js:1
+#: assets/js/find-my-blocks.js:189
+msgid "Preview"
+msgstr ""
+
+#: assets/js/find-my-blocks.js:1
+#: assets/js/find-my-blocks.js:197
+msgid "Edit"
+msgstr ""
+
+#: assets/js/find-my-blocks.js:1
+#: assets/js/find-my-blocks.js:265
+msgid "No locations found"
+msgstr ""
+
+#: assets/js/find-my-blocks.js:1
+#: assets/js/find-my-blocks.js:266
+msgid "Please select a block from the menu, or check the filters."
+msgstr ""
+
+#: assets/js/find-my-blocks.js:1
+#: assets/js/find-my-blocks.js:498
 msgid "Search aborted or timeout reached - Please try lower the amount of posts to search per request."
 msgstr ""
 
 #: assets/js/find-my-blocks.js:1
-#: assets/js/find-my-blocks.js:499
+#: assets/js/find-my-blocks.js:506
 msgid "Abort/timeout error. Try choosing a lower amount of posts to search per request."
 msgstr ""
 
 #: assets/js/find-my-blocks.js:1
-#: assets/js/find-my-blocks.js:396
+#: assets/js/find-my-blocks.js:399
 msgid "Search aborted by user"
 msgstr ""
 
 #: assets/js/find-my-blocks.js:1
-#: assets/js/find-my-blocks.js:820
+#: assets/js/find-my-blocks.js:1139
+msgid "Only blocks with visibility changed by the Conditional Blocks plugin"
+msgstr ""
+
+#: assets/js/find-my-blocks.js:1
+#: assets/js/find-my-blocks.js:854
 msgid "Searching for your blocks..."
 msgstr ""
 
 #: assets/js/find-my-blocks.js:1
-#: assets/js/find-my-blocks.js:822
+#: assets/js/find-my-blocks.js:856
 msgid "Progress:"
 msgstr ""
 
 #: assets/js/find-my-blocks.js:1
-#: assets/js/find-my-blocks.js:825
+#: assets/js/find-my-blocks.js:859
 msgid "Scanning batch"
 msgstr ""
 
 #: assets/js/find-my-blocks.js:1
-#: assets/js/find-my-blocks.js:826
+#: assets/js/find-my-blocks.js:860
 msgid "out of"
 msgstr ""
 
 #: assets/js/find-my-blocks.js:1
-#: assets/js/find-my-blocks.js:829
+#: assets/js/find-my-blocks.js:863
 msgid "Total block instances detected:"
 msgstr ""
 
 #: assets/js/find-my-blocks.js:1
-#: assets/js/find-my-blocks.js:831
+#: assets/js/find-my-blocks.js:865
 msgid "in"
 msgstr ""
 
 #: assets/js/find-my-blocks.js:1
-#: assets/js/find-my-blocks.js:832
-#: assets/js/find-my-blocks.js:882
+#: assets/js/find-my-blocks.js:866
+#: assets/js/find-my-blocks.js:920
 msgid "locations."
 msgstr ""
 
 #: assets/js/find-my-blocks.js:1
-#: assets/js/find-my-blocks.js:840
+#: assets/js/find-my-blocks.js:874
 msgid "Abort Search"
 msgstr ""
 
 #: assets/js/find-my-blocks.js:1
-#: assets/js/find-my-blocks.js:855
+#: assets/js/find-my-blocks.js:889
 msgid "Filters"
 msgstr ""
 
 #: assets/js/find-my-blocks.js:1
-#: assets/js/find-my-blocks.js:860
+#: assets/js/find-my-blocks.js:897
 msgid "Found Blocks"
 msgstr ""
 
 #: assets/js/find-my-blocks.js:1
-#: assets/js/find-my-blocks.js:862
+#: assets/js/find-my-blocks.js:899
 msgid "The below blocks have been detected during the scan."
 msgstr ""
 
 #: assets/js/find-my-blocks.js:1
-#: assets/js/find-my-blocks.js:879
+#: assets/js/find-my-blocks.js:917
 msgid "Instances of the"
 msgstr ""
 
 #: assets/js/find-my-blocks.js:1
-#: assets/js/find-my-blocks.js:881
+#: assets/js/find-my-blocks.js:919
 msgid "block has been found in these"
 msgstr ""
 
 #: assets/js/find-my-blocks.js:1
-#: assets/js/find-my-blocks.js:900
+#: assets/js/find-my-blocks.js:939
 msgid "Get Started"
 msgstr ""
 
 #: assets/js/find-my-blocks.js:1
-#: assets/js/find-my-blocks.js:902
-msgid "Find My Blocks will search through all your posts and pages to find the WordPress blocks."
+#: assets/js/find-my-blocks.js:941
+msgid "Find My Blocks will search through all your templates, posts and pages to find the WordPress blocks."
 msgstr ""
 
 #: assets/js/find-my-blocks.js:1
-#: assets/js/find-my-blocks.js:911
-msgid "Warning! Choose the performance level that matches your server. Fetching too may posts at once  may temporarily crash your site."
+#: assets/js/find-my-blocks.js:950
+msgid "Warning! Choose the performance level that matches your server. Fetching too may posts at once may temporarily crash your site."
 msgstr ""
 
 #: assets/js/find-my-blocks.js:1
-#: assets/js/find-my-blocks.js:920
+#: assets/js/find-my-blocks.js:959
 msgid "Low (Recommended for most sites, 10 post per run)"
 msgstr ""
 
 #: assets/js/find-my-blocks.js:1
-#: assets/js/find-my-blocks.js:927
+#: assets/js/find-my-blocks.js:966
 msgid "Standard (100 posts per run)"
 msgstr ""
 
 #: assets/js/find-my-blocks.js:1
-#: assets/js/find-my-blocks.js:931
+#: assets/js/find-my-blocks.js:970
 msgid "Ultra (500 posts per run)"
 msgstr ""
 
 #: assets/js/find-my-blocks.js:1
-#: assets/js/find-my-blocks.js:943
+#: assets/js/find-my-blocks.js:982
 msgid "Start Search"
 msgstr ""
 
 #: assets/js/find-my-blocks.js:1
-#: assets/js/find-my-blocks.js:947
+#: assets/js/find-my-blocks.js:986
 msgid "Block Tools & Resources"
 msgstr ""
 
 #: assets/js/find-my-blocks.js:1
-#: assets/js/find-my-blocks.js:949
+#: assets/js/find-my-blocks.js:988
 msgid "Create faster & better WordPress sites with block tutorials from experts."
 msgstr ""
 
 #: assets/js/find-my-blocks.js:1
-#: assets/js/find-my-blocks.js:978
+#: assets/js/find-my-blocks.js:1017
 msgid "(Developer) "
 msgstr ""
 
 #: assets/js/find-my-blocks.js:1
-#: assets/js/find-my-blocks.js:983
+#: assets/js/find-my-blocks.js:1022
 msgid "Support Development"
 msgstr ""
 
 #: assets/js/find-my-blocks.js:1
-#: assets/js/find-my-blocks.js:985
+#: assets/js/find-my-blocks.js:1024
 msgid "I'm building Find My Blocks in my free time. If you find it useful, please consider donating, or contributing to the project."
 msgstr ""
 
 #: assets/js/find-my-blocks.js:1
-#: assets/js/find-my-blocks.js:997
+#: assets/js/find-my-blocks.js:1036
 msgid "Contribute on Github"
 msgstr ""
 
 #: assets/js/find-my-blocks.js:1
-#: assets/js/find-my-blocks.js:1005
+#: assets/js/find-my-blocks.js:1044
 msgid "Donate to development"
 msgstr ""
