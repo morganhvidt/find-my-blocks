@@ -11,7 +11,7 @@ const WP_PLUGINS = [
     name: "Find My Blocks",
     slug: "find-my-blocks",
     author: "Morgan Hvidt",
-    version: "4.0.0",
+    version: "4.0.1",
     description: "",
     text_domain: "find-my-blocks",
     prefix: "fmb",

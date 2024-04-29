@@ -95,6 +95,11 @@ A special thanks to [Edeesims](https://profiles.wordpress.org/edeesims/) who ori
 
 == Changelog ==
 
+
+= 4.0.1 =
+
+- Improvement: Reliability during scan - use WP_Query pages instead total scanned posts because some posts might be skipped.
+
 = 4.0.0 =
 
 **Major update**
