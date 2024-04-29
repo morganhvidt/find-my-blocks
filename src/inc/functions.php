@@ -55,8 +55,16 @@ function fmb_search_posts_for_blocks( $args = [] ) {
 		// Get the content of the current post
 		$post_content = $post->post_content;
 
+		if ( empty( $post_content ) ) {
+			continue;
+		}
+
 		// Parse blocks from the post content
 		$blocks = parse_blocks( $post_content );
+
+		if ( empty( $blocks ) ) {
+			continue;
+		}
 
 		// Initialize an array to store block names
 		$block_names = [];
