@@ -2,7 +2,7 @@
 Contributors: morganhvidt, edeesims
 Donate link: https://morganhvidt.com/donate
 Tags: gutenberg, find, blocks, search blocks, locator
-Stable tag: 4.0.0
+Stable tag: 4.0.1
 Requires at least: 5.0
 Tested up to: 6.5
 Requires PHP: 7.4
