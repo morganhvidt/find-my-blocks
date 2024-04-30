@@ -16,8 +16,6 @@ export const FindMyBlocksProvider = ({ children }) => {
 
   const finder = useFinder({
     searchArgs,
-    cachedFoundBlocks: preferences?.cachedFoundBlocks ?? [],
-    setCachedFoundBlocks: preferences.setCachedFoundBlocks,
   });
 
   const contextValue = {

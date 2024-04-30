@@ -4,17 +4,27 @@
 import { useState, useEffect, useRef } from "@wordpress/element";
 import { __ } from "@wordpress/i18n";
 import apiFetch from "@wordpress/api-fetch";
+import useIndexedDB from "./useIndexedDB.js";
+
 /**
  * Fetch the blocks from the server.
- * the blocks contain the following fields.
+ * The blocks contain the following fields.
  *
  * count, edit_url, id, isNested, isReusable, nestedBlockType, postType, post_url, status, title
  */
-export const useFinder = ({
-  searchArgs = {},
-  cachedFoundBlocks = [],
-  setCachedFoundBlocks,
-}) => {
+export const useFinder = ({ searchArgs = {} }) => {
+  const [cachedFoundBlocks, setCacheFoundBlocks] = useIndexedDB(
+    "find_my_blocks",
+    "caches",
+    "found_blocks"
+  );
+
+  const [cacheVersion, setCacheVersion] = useIndexedDB(
+    "find_my_blocks",
+    "caches",
+    "version"
+  );
+
   const filtersDefault = {
     name: false,
     blockProvider: false,
@@ -172,7 +182,8 @@ export const useFinder = ({
 
         setFilters(filtersDefault);
         setFoundBlocks(sortedBlocks);
-        setCachedFoundBlocks(sortedBlocks);
+        setCacheFoundBlocks(sortedBlocks);
+        setCacheVersion(fmbGlobal.version);
       } else {
         setError(
           new Error("Search completed with no results or an error occurred.")
@@ -196,7 +207,8 @@ export const useFinder = ({
       abortControllerRef.current.abort();
     }
     setFoundBlocks([]);
-    setCachedFoundBlocks([]);
+    setCacheVersion(false);
+    setCacheFoundBlocks([]);
     setIsLoading(false);
     setError(null);
     setProgress({
@@ -212,12 +224,18 @@ export const useFinder = ({
 
   let firstLoad = true;
 
+  // Set the found blocks from cache if available on initial load.
   useEffect(() => {
-    if (firstLoad && cachedFoundBlocks && cachedFoundBlocks.length > 0) {
+    if (
+      firstLoad &&
+      cachedFoundBlocks &&
+      cachedFoundBlocks.length > 0 &&
+      cacheVersion === fmbGlobal.version
+    ) {
       firstLoad = false;
       setFoundBlocks(changeBlockSorting(sortOrder, cachedFoundBlocks));
     }
-  }, [cachedFoundBlocks]);
+  }, [cachedFoundBlocks, cacheVersion]);
 
   const changeBlockSorting = (order, foundBlocks) => {
     // First, sort the blocks

@@ -14,16 +14,9 @@ export const usePreferences = () => {
     "fmb_posts_per_run",
     10
   );
-  const [cachedFoundBlocks, setCachedFoundBlocks] = useLocalStorage(
-    "fmb_found_blocks",
-    false
-  );
+
   const [selectedProvider, setSelectedProvider] = useLocalStorage(
     "fmb_selected_provider",
-    false
-  );
-  const [versionCache, setVersionCache] = useLocalStorage(
-    "fmb_version_cache",
     false
   );
   const [conditionalBlocks, setConditionalBlocks] = useLocalStorage(
@@ -32,15 +25,6 @@ export const usePreferences = () => {
   );
 
   return {
-    cachedFoundBlocks:
-      fmbGlobal.version === versionCache ? cachedFoundBlocks : false,
-    setCachedFoundBlocks: (value) => {
-      setVersionCache(fmbGlobal.version);
-      setSelectedProvider(false);
-      setSelectedBlock(false);
-      setConditionalBlocks(false);
-      setCachedFoundBlocks(value);
-    },
     selectedBlock,
     setSelectedBlock,
     selectedProvider,
