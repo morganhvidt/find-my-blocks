@@ -34,7 +34,7 @@ export const useFinder = ({ searchArgs = {} }) => {
   const [foundBlocks, setFoundBlocks] = useState([]);
   const [filters, setFilters] = useState(filtersDefault);
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState(null);
+  const [searchError, setSearchError] = useState(null);
   const [progress, setProgress] = useState({
     currentPage: 0,
     totalPages: 0,
@@ -55,7 +55,7 @@ export const useFinder = ({ searchArgs = {} }) => {
     if (abortControllerRef.current) {
       abortControllerRef.current.abort();
       console.log("Search aborted by user.");
-      setError(new Error(__("Search aborted by user", "find-my-blocks"))); // Set an error state indicating the search was aborted
+      setSearchError(__("Search aborted by user", "find-my-blocks")); // Set an error state indicating the search was aborted
     }
   };
 
@@ -159,14 +159,26 @@ export const useFinder = ({ searchArgs = {} }) => {
               "Search aborted or timeout reached - Please try lower the amount of posts to search per request.",
               error
             );
-            setError(
-              new Error(
-                "Abort/timeout error. Try choosing a lower amount of posts to search per request."
+            setSearchError(
+              __(
+                "Abort/timeout error. Try choosing a lower amount of posts to search per request.",
+                "find-my-blocks"
               )
             );
           } else {
-            console.error("Error fetching blocks:", error);
-            setError(error);
+            const errorInfo =
+              typeof error === "object"
+                ? JSON.stringify(error)
+                : error.toString();
+
+            setSearchError(
+              __(
+                `Search Error, please submit on the support forum:`,
+                "find-my-blocks"
+              ) +
+                " " +
+                errorInfo
+            );
           }
 
           searchStatus = "failed"; // Update the search status to failed
@@ -185,11 +197,8 @@ export const useFinder = ({ searchArgs = {} }) => {
         setCacheFoundBlocks(sortedBlocks);
         setCacheVersion(fmbGlobal.version);
       } else {
-        setError(
-          new Error("Search completed with no results or an error occurred.")
-        );
-
-        reset();
+        const skipErrorRest = true;
+        reset(skipErrorRest);
       }
 
       // Add a 1 second delay to view the finished search stats.
@@ -202,7 +211,7 @@ export const useFinder = ({ searchArgs = {} }) => {
   /**
    * Reset the search state to its initial values.
    */
-  const reset = () => {
+  const reset = (skipErrorRest = false) => {
     if (abortControllerRef.current) {
       abortControllerRef.current.abort();
     }
@@ -210,7 +219,9 @@ export const useFinder = ({ searchArgs = {} }) => {
     setCacheVersion(false);
     setCacheFoundBlocks([]);
     setIsLoading(false);
-    setError(null);
+    if (!skipErrorRest) {
+      setSearchError(null);
+    }
     setProgress({
       currentPage: 0,
       totalPages: 0,
@@ -306,7 +317,7 @@ export const useFinder = ({ searchArgs = {} }) => {
     withFilters,
     setFilters,
     isLoading,
-    error,
+    searchError,
     startSearch,
     abortSearch,
     progress,
