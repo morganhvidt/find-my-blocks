@@ -29,7 +29,7 @@ const PageHeader = ({ children }) => {
               href="https://wordpress.org/support/plugin/find-my-blocks/reviews/"
               target="_blank"
             >
-              {__("Submit review", "find-my-blocks")}
+              {__("Submit Review", "find-my-blocks")}
             </ExternalLink>
             <Button
               onClick={() => (foundBlocks.length > 0 ? reset() : startSearch())}

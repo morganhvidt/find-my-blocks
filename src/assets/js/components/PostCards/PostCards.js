@@ -31,7 +31,7 @@ export const Card = ({ post, blockName }) => {
         <div>
           <Button
             target="_blank"
-            isTertiary
+            variant="tertiary"
             href={post.post_url}
             size={"small"}
           >
@@ -39,7 +39,7 @@ export const Card = ({ post, blockName }) => {
           </Button>
           <Button
             target="_blank"
-            isTertiary
+            variant="tertiary"
             href={post.edit_url}
             size={"small"}
           >

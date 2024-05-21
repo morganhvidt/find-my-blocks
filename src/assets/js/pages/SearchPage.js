@@ -57,7 +57,7 @@ function SearchPage() {
             <Button
               onClick={() => abortSearch()}
               isDestructive
-              isPrimary
+              variant="primary"
               disabled={!isLoading}
             >
               {__("Abort Search", "find-my-blocks")}
@@ -165,7 +165,7 @@ function SearchPage() {
 
             <Button
               onClick={() => startSearch()}
-              isPrimary
+              variant="primary"
               disabled={isLoading}
             >
               {__("Start Search", "find-my-blocks")}
