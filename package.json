@@ -15,7 +15,8 @@
     "postinstall": "composer install"
   },
   "dependencies": {
-    "@wordpress/scripts": "^27.6.0"
+    "@wordpress/scripts": "^27.6.0",
+    "virtua": "^0.31.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.0.0",
