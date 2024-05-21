@@ -275,40 +275,42 @@ export const useFinder = ({ searchArgs = {} }) => {
   };
 
   const withFilters = (blocks) => {
-    if (filters.name) {
-      blocks = blocks.filter((block) =>
-        block.name.toLowerCase().includes(filters.name.toLowerCase())
-      );
-    }
+    const nameFilter = filters.name ? filters.name.toLowerCase() : "";
+    const blockProviderFilter = filters.blockProvider
+      ? filters.blockProvider.toLowerCase()
+      : "";
 
-    if (filters.blockProvider) {
-      blocks = blocks.filter((block) =>
-        block.name
-          .split("/")[0]
-          .toLowerCase()
-          .includes(filters.blockProvider.toLowerCase())
-      );
-    }
+    return blocks.reduce((filteredBlocks, block) => {
+      // Check if block matches the name filter
+      const matchesName = nameFilter
+        ? block.name.toLowerCase().includes(nameFilter)
+        : true;
 
-    /**
-     * Conditional Blocks Integration.
-     */
-    if (filters.hasConditionalBlocks) {
-      blocks = blocks
-        .map((block) => {
-          // Filter out posts that do not have hasConditionalBlocks
-          const filteredPosts = block.posts.filter(
-            (post) => post.hasConditionalBlocks
-          );
-          // Return the block with the filtered posts, or null if no posts left
-          return filteredPosts.length > 0
-            ? { ...block, posts: filteredPosts }
-            : null;
-        })
-        .filter((block) => block !== null); // Remove blocks that have no posts left
-    }
+      // Check if block matches the block provider filter
+      const matchesBlockProvider = blockProviderFilter
+        ? block.name.split("/")[0].toLowerCase().includes(blockProviderFilter)
+        : true;
 
-    return blocks;
+      // If block doesn't match filters, skip it
+      if (!matchesName || !matchesBlockProvider) {
+        return filteredBlocks;
+      }
+
+      // Filter posts for conditional blocks if needed
+      let posts = block.posts;
+      if (filters.hasConditionalBlocks) {
+        posts = posts.filter((post) => post.hasConditionalBlocks);
+      }
+
+      // If there are no posts left after filtering, skip the block
+      if (filters.hasConditionalBlocks && posts.length === 0) {
+        return filteredBlocks;
+      }
+
+      // Add the block with filtered posts to the result
+      filteredBlocks.push({ ...block, posts });
+      return filteredBlocks;
+    }, []);
   };
 
   return {
