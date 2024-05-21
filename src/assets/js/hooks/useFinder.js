@@ -192,7 +192,6 @@ export const useFinder = ({ searchArgs = {} }) => {
         const mergedBlocks = mergeBlocks(localBatchResults);
         const sortedBlocks = changeBlockSorting(sortOrder, mergedBlocks);
 
-        setFilters(filtersDefault);
         setFoundBlocks(sortedBlocks);
         setCacheFoundBlocks(sortedBlocks);
         setCacheVersion(fmbGlobal.version);
@@ -216,6 +215,7 @@ export const useFinder = ({ searchArgs = {} }) => {
       abortControllerRef.current.abort();
     }
     setFoundBlocks([]);
+    setFilters(filtersDefault);
     setCacheVersion(false);
     setCacheFoundBlocks([]);
     setIsLoading(false);
@@ -317,6 +317,7 @@ export const useFinder = ({ searchArgs = {} }) => {
     reset,
     foundBlocks,
     withFilters,
+    filters,
     setFilters,
     isLoading,
     searchError,

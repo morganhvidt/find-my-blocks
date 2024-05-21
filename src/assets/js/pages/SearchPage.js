@@ -311,15 +311,9 @@ function BlockProviderFilter() {
  * Conditional Blocks Integration.
  */
 const ConditionalBlocksFilter = () => {
-  const { finder, preferences } = useFindMyBlocks();
-
-  const [isChecked, setChecked] = useState(
-    preferences?.conditionalBlocks ? true : false
-  );
+  const { finder } = useFindMyBlocks();
 
   const handleChange = (value) => {
-    setChecked(value ? true : false);
-    preferences?.setConditionalBlocks(value ? true : false);
     finder.setFilters((prev) => ({
       ...prev,
       hasConditionalBlocks: value ? true : false,
@@ -333,7 +327,7 @@ const ConditionalBlocksFilter = () => {
         "Only blocks with visibility changed by the Conditional Blocks plugin",
         "find-my-blocks"
       )}
-      checked={isChecked}
+      checked={finder?.filters?.hasConditionalBlocks}
       onChange={handleChange}
     />
   );
