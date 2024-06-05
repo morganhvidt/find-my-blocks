@@ -42,7 +42,7 @@ A production ready zip file will be created within `/production/zip/`.
 ## Feature wishlist
 
 - [ ] Standardize & refactor filters so third-parties can add their own checkboxes.
-- [ ] Remove useLocalStorage & usePreferences in favor of useIndexedDB.
+- [X] Remove useLocalStorage & usePreferences in favor of useIndexedDB.
 
 ## Who is behind this?
 

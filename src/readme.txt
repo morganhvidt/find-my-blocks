@@ -2,7 +2,7 @@
 Contributors: morganhvidt, edeesims
 Donate link: https://morganhvidt.com/donate
 Tags: gutenberg, find, blocks, search blocks, locator
-Stable tag: 4.0.1
+Stable tag: 4.0.2
 Requires at least: 5.0
 Tested up to: 6.5
 Requires PHP: 7.4
@@ -95,6 +95,13 @@ A special thanks to [Edeesims](https://profiles.wordpress.org/edeesims/) who ori
 
 == Changelog ==
 
+= 4.0.2 =
+
+Find My Blocks now works better than ever on large sites with 10,000+ blocks found. 
+
+- Replaced LocalStorage with IndexedDB for caching found blocks between page reloads.
+- Performance improvements when view more than 2000+ found blocks. 
+- Improved error handling.
 
 = 4.0.1 =
 
