@@ -4,17 +4,27 @@
 import { useState, useEffect, useRef } from "@wordpress/element";
 import { __ } from "@wordpress/i18n";
 import apiFetch from "@wordpress/api-fetch";
+import useIndexedDB from "./useIndexedDB.js";
+
 /**
  * Fetch the blocks from the server.
- * the blocks contain the following fields.
+ * The blocks contain the following fields.
  *
  * count, edit_url, id, isNested, isReusable, nestedBlockType, postType, post_url, status, title
  */
-export const useFinder = ({
-  searchArgs = {},
-  cachedFoundBlocks = [],
-  setCachedFoundBlocks,
-}) => {
+export const useFinder = ({ searchArgs = {} }) => {
+  const [cachedFoundBlocks, setCacheFoundBlocks] = useIndexedDB(
+    "find_my_blocks",
+    "caches",
+    "found_blocks"
+  );
+
+  const [cacheVersion, setCacheVersion] = useIndexedDB(
+    "find_my_blocks",
+    "caches",
+    "version"
+  );
+
   const filtersDefault = {
     name: false,
     blockProvider: false,
@@ -24,7 +34,7 @@ export const useFinder = ({
   const [foundBlocks, setFoundBlocks] = useState([]);
   const [filters, setFilters] = useState(filtersDefault);
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState(null);
+  const [searchError, setSearchError] = useState(null);
   const [progress, setProgress] = useState({
     currentPage: 0,
     totalPages: 0,
@@ -45,7 +55,7 @@ export const useFinder = ({
     if (abortControllerRef.current) {
       abortControllerRef.current.abort();
       console.log("Search aborted by user.");
-      setError(new Error(__("Search aborted by user", "find-my-blocks"))); // Set an error state indicating the search was aborted
+      setSearchError(__("Search aborted by user", "find-my-blocks")); // Set an error state indicating the search was aborted
     }
   };
 
@@ -149,14 +159,26 @@ export const useFinder = ({
               "Search aborted or timeout reached - Please try lower the amount of posts to search per request.",
               error
             );
-            setError(
-              new Error(
-                "Abort/timeout error. Try choosing a lower amount of posts to search per request."
+            setSearchError(
+              __(
+                "Abort/timeout error. Try choosing a lower amount of posts to search per request.",
+                "find-my-blocks"
               )
             );
           } else {
-            console.error("Error fetching blocks:", error);
-            setError(error);
+            const errorInfo =
+              typeof error === "object"
+                ? JSON.stringify(error)
+                : error.toString();
+
+            setSearchError(
+              __(
+                `Search Error, please submit on the support forum:`,
+                "find-my-blocks"
+              ) +
+                " " +
+                errorInfo
+            );
           }
 
           searchStatus = "failed"; // Update the search status to failed
@@ -170,15 +192,12 @@ export const useFinder = ({
         const mergedBlocks = mergeBlocks(localBatchResults);
         const sortedBlocks = changeBlockSorting(sortOrder, mergedBlocks);
 
-        setFilters(filtersDefault);
         setFoundBlocks(sortedBlocks);
-        setCachedFoundBlocks(sortedBlocks);
+        setCacheFoundBlocks(sortedBlocks);
+        setCacheVersion(fmbGlobal.version);
       } else {
-        setError(
-          new Error("Search completed with no results or an error occurred.")
-        );
-
-        reset();
+        const skipErrorRest = true;
+        reset(skipErrorRest);
       }
 
       // Add a 1 second delay to view the finished search stats.
@@ -191,14 +210,18 @@ export const useFinder = ({
   /**
    * Reset the search state to its initial values.
    */
-  const reset = () => {
+  const reset = (skipErrorRest = false) => {
     if (abortControllerRef.current) {
       abortControllerRef.current.abort();
     }
     setFoundBlocks([]);
-    setCachedFoundBlocks([]);
+    setFilters(filtersDefault);
+    setCacheVersion(false);
+    setCacheFoundBlocks([]);
     setIsLoading(false);
-    setError(null);
+    if (!skipErrorRest) {
+      setSearchError(null);
+    }
     setProgress({
       currentPage: 0,
       totalPages: 0,
@@ -212,12 +235,18 @@ export const useFinder = ({
 
   let firstLoad = true;
 
+  // Set the found blocks from cache if available on initial load.
   useEffect(() => {
-    if (firstLoad && cachedFoundBlocks && cachedFoundBlocks.length > 0) {
+    if (
+      firstLoad &&
+      cachedFoundBlocks &&
+      cachedFoundBlocks.length > 0 &&
+      cacheVersion === fmbGlobal.version
+    ) {
       firstLoad = false;
       setFoundBlocks(changeBlockSorting(sortOrder, cachedFoundBlocks));
     }
-  }, [cachedFoundBlocks]);
+  }, [cachedFoundBlocks, cacheVersion]);
 
   const changeBlockSorting = (order, foundBlocks) => {
     // First, sort the blocks
@@ -246,49 +275,52 @@ export const useFinder = ({
   };
 
   const withFilters = (blocks) => {
-    if (filters.name) {
-      blocks = blocks.filter((block) =>
-        block.name.toLowerCase().includes(filters.name.toLowerCase())
-      );
-    }
+    const nameFilter = filters.name ? filters.name.toLowerCase() : "";
+    const blockProviderFilter = filters.blockProvider
+      ? filters.blockProvider.toLowerCase()
+      : "";
 
-    if (filters.blockProvider) {
-      blocks = blocks.filter((block) =>
-        block.name
-          .split("/")[0]
-          .toLowerCase()
-          .includes(filters.blockProvider.toLowerCase())
-      );
-    }
+    return blocks.reduce((filteredBlocks, block) => {
+      // Check if block matches the name filter
+      const matchesName = nameFilter
+        ? block.name.toLowerCase().includes(nameFilter)
+        : true;
 
-    /**
-     * Conditional Blocks Integration.
-     */
-    if (filters.hasConditionalBlocks) {
-      blocks = blocks
-        .map((block) => {
-          // Filter out posts that do not have hasConditionalBlocks
-          const filteredPosts = block.posts.filter(
-            (post) => post.hasConditionalBlocks
-          );
-          // Return the block with the filtered posts, or null if no posts left
-          return filteredPosts.length > 0
-            ? { ...block, posts: filteredPosts }
-            : null;
-        })
-        .filter((block) => block !== null); // Remove blocks that have no posts left
-    }
+      // Check if block matches the block provider filter
+      const matchesBlockProvider = blockProviderFilter
+        ? block.name.split("/")[0].toLowerCase().includes(blockProviderFilter)
+        : true;
 
-    return blocks;
+      // If block doesn't match filters, skip it
+      if (!matchesName || !matchesBlockProvider) {
+        return filteredBlocks;
+      }
+
+      // Filter posts for conditional blocks if needed
+      let posts = block.posts;
+      if (filters.hasConditionalBlocks) {
+        posts = posts.filter((post) => post.hasConditionalBlocks);
+      }
+
+      // If there are no posts left after filtering, skip the block
+      if (filters.hasConditionalBlocks && posts.length === 0) {
+        return filteredBlocks;
+      }
+
+      // Add the block with filtered posts to the result
+      filteredBlocks.push({ ...block, posts });
+      return filteredBlocks;
+    }, []);
   };
 
   return {
     reset,
     foundBlocks,
     withFilters,
+    filters,
     setFilters,
     isLoading,
-    error,
+    searchError,
     startSearch,
     abortSearch,
     progress,

@@ -3,6 +3,7 @@ import {
   DropdownMenu,
   MenuGroup,
   MenuItem,
+  ExternalLink,
 } from "@wordpress/components";
 import style from "./PageHeader.module.css";
 import { __ } from "@wordpress/i18n";
@@ -24,10 +25,16 @@ const PageHeader = ({ children }) => {
             onClick={() => (foundBlocks.length > 0 ? reset() : false)}
           />
           <div className={style.headerNavigation}>
+            <ExternalLink
+              href="https://wordpress.org/support/plugin/find-my-blocks/reviews/"
+              target="_blank"
+            >
+              {__("Submit Review", "find-my-blocks")}
+            </ExternalLink>
             <Button
               onClick={() => (foundBlocks.length > 0 ? reset() : startSearch())}
               icon={foundBlocks.length > 0 ? "update-alt" : null}
-              isPrimary
+              variant="primary"
               disabled={isLoading}
             >
               {foundBlocks.length > 0 // If there are found blocks, show "Search Again"

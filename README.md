@@ -42,7 +42,7 @@ A production ready zip file will be created within `/production/zip/`.
 ## Feature wishlist
 
 - [ ] Standardize & refactor filters so third-parties can add their own checkboxes.
-- [ ] Simplify how preferences is stored within localStorage and React useState().
+- [ ] Remove useLocalStorage & usePreferences in favor of useIndexedDB.
 
 ## Who is behind this?
 

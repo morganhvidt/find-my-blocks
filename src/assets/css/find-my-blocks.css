@@ -131,3 +131,6 @@
     grid-template-columns: 1fr;
   } 
 }
+.fmb-card-virtualized {
+  margin-bottom: 10px;
+}

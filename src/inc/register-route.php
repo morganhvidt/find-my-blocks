@@ -64,10 +64,17 @@ function find_my_blocks_rest_search_callback( $request ) {
 
 		$duration = microtime( true ) - $time_start;
 
-	} catch (Exception $e) {
+	} catch (Throwable $e) {
 		// Return WP Error as REST Response.
+		$error_message = $e->getMessage();
+
+		if ( $e instanceof Error || $e instanceof Exception ) {
+			$error_message = $e->getMessage();
+		} else {
+			$error_message = get_class( $e ) . ': ' . $e->getMessage();
+		}
 		return new WP_REST_Response( [ 
-			'error' => $e->getMessage(),
+			'error' => $error_message,
 		], 500 );
 	}
 

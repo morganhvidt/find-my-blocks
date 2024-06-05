@@ -29,7 +29,7 @@ function SearchPage() {
     abortSearch,
     progress,
     isLoading,
-    error,
+    searchError,
     postsWithBlock,
   } = finder;
 
@@ -57,7 +57,7 @@ function SearchPage() {
             <Button
               onClick={() => abortSearch()}
               isDestructive
-              isPrimary
+              variant="primary"
               disabled={!isLoading}
             >
               {__("Abort Search", "find-my-blocks")}
@@ -69,7 +69,7 @@ function SearchPage() {
 
   const posts = postsWithBlock(selectedBlock);
 
-  if (!error && foundBlocks.length > 0) {
+  if (!searchError && foundBlocks.length > 0) {
     return (
       <Fragment>
         <div className="fmb-container">
@@ -121,7 +121,7 @@ function SearchPage() {
 
   return (
     <Fragment>
-      <ErrorNotice error={error} />
+      <ErrorNotice error={searchError} />
       <div className="fmb-bento-container">
         <div className="fmb-bento-grid">
           <div className="fmb-box fmb-box-full">
@@ -165,7 +165,7 @@ function SearchPage() {
 
             <Button
               onClick={() => startSearch()}
-              isPrimary
+              variant="primary"
               disabled={isLoading}
             >
               {__("Start Search", "find-my-blocks")}
@@ -242,7 +242,11 @@ function SearchPage() {
 
 const ErrorNotice = ({ error }) => {
   if (error) {
-    return <Notice status="error">{error.message}</Notice>;
+    return (
+      <Notice className="fmb-error-notice" isDismissible={false} status="error">
+        {error}
+      </Notice>
+    );
   }
 
   return null;
@@ -307,15 +311,9 @@ function BlockProviderFilter() {
  * Conditional Blocks Integration.
  */
 const ConditionalBlocksFilter = () => {
-  const { finder, preferences } = useFindMyBlocks();
-
-  const [isChecked, setChecked] = useState(
-    preferences?.conditionalBlocks ? true : false
-  );
+  const { finder } = useFindMyBlocks();
 
   const handleChange = (value) => {
-    setChecked(value ? true : false);
-    preferences?.setConditionalBlocks(value ? true : false);
     finder.setFilters((prev) => ({
       ...prev,
       hasConditionalBlocks: value ? true : false,
@@ -329,7 +327,7 @@ const ConditionalBlocksFilter = () => {
         "Only blocks with visibility changed by the Conditional Blocks plugin",
         "find-my-blocks"
       )}
-      checked={isChecked}
+      checked={finder?.filters?.hasConditionalBlocks}
       onChange={handleChange}
     />
   );

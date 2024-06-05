@@ -5,13 +5,16 @@ import {
   CardHeader,
   Button,
   ExternalLink,
+  Icon,
 } from "@wordpress/components";
 import { __ } from "@wordpress/i18n";
+import { useMemo } from "@wordpress/element";
+import { VList } from "virtua";
 
 import { Tag } from "../Tag/Tag.js";
 
 export const Card = ({ post, blockName }) => {
-  const tags = getTags(post);
+  const tags = useMemo(() => getTags(post, blockName), [post, blockName]);
 
   return (
     <WPCard size="small" className="fmb-card">
@@ -28,7 +31,7 @@ export const Card = ({ post, blockName }) => {
         <div>
           <Button
             target="_blank"
-            isTertiary
+            variant="tertiary"
             href={post.post_url}
             size={"small"}
           >
@@ -36,7 +39,7 @@ export const Card = ({ post, blockName }) => {
           </Button>
           <Button
             target="_blank"
-            isTertiary
+            variant="tertiary"
             href={post.edit_url}
             size={"small"}
           >
@@ -48,9 +51,9 @@ export const Card = ({ post, blockName }) => {
         <>
           <CardDivider />
           <CardBody>
-            {tags.map((tag) => {
-              return <Tag key={tag.label} {...tag} />;
-            })}
+            {tags.map((tag) => (
+              <Tag key={tag.label} {...tag} />
+            ))}
           </CardBody>
         </>
       )}
@@ -104,6 +107,8 @@ export const Card = ({ post, blockName }) => {
   }
 };
 
+const MemoizedCard = React.memo(Card);
+
 export function CardGrid({ posts, blockName = "" }) {
   if (!posts || posts.length < 1) {
     return (
@@ -117,11 +122,49 @@ export function CardGrid({ posts, blockName = "" }) {
     );
   }
 
+  if (posts.length >= 2000) {
+    return (
+      <div>
+        <p>
+          <Icon icon={"warning"} />{" "}
+          {__(
+            "Performance virtualization applied to large list.",
+            "find-my-blocks"
+          )}
+        </p>
+        <div className="fmb-cards-virtualized">
+          <VList
+            style={{
+              display: "grid", // Enable CSS grid layout
+              height: "740px", // Set the height of the VList
+            }}
+          >
+            {posts.map((post, index) => {
+              return (
+                <div className="fmb-card-virtualized">
+                  <Card
+                    key={blockName + post?.id}
+                    post={post}
+                    blockName={blockName}
+                  />
+                </div>
+              );
+            })}
+          </VList>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="fmb-card-grid">
       {posts.map((post, index) => {
         return (
-          <Card key={blockName + post?.id} post={post} blockName={blockName} />
+          <MemoizedCard
+            key={blockName + post?.id}
+            post={post}
+            blockName={blockName}
+          />
         );
       })}
     </div>
