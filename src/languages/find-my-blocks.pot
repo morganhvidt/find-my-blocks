@@ -217,27 +217,27 @@ msgstr ""
 
 #: assets/js/find-my-blocks.js:1
 #: assets/js/find-my-blocks.js:941
-msgid "Find My Blocks will search through all your templates, posts and pages to find the WordPress blocks."
+msgid "Warning! Choose the performance level that matches your server. Fetching too many posts in one batch may temporarily crash your site."
 msgstr ""
 
 #: assets/js/find-my-blocks.js:1
 #: assets/js/find-my-blocks.js:950
-msgid "Warning! Choose the performance level that matches your server. Fetching too may posts at once may temporarily crash your site."
+msgid "Warning! Choose the performance level that matches your server. Fetching too many posts in one batch may temporarily crash your site."
 msgstr ""
 
 #: assets/js/find-my-blocks.js:1
 #: assets/js/find-my-blocks.js:959
-msgid "Low (Recommended for most sites, 10 post per run)"
+msgid "Low (Recommended for most sites, 30 post per batch)"
 msgstr ""
 
 #: assets/js/find-my-blocks.js:1
 #: assets/js/find-my-blocks.js:966
-msgid "Standard (100 posts per run)"
+msgid "Standard (100 posts per batch)"
 msgstr ""
 
 #: assets/js/find-my-blocks.js:1
 #: assets/js/find-my-blocks.js:970
-msgid "Ultra (500 posts per run)"
+msgid "Ultra (500 posts per batch)"
 msgstr ""
 
 #: assets/js/find-my-blocks.js:1

@@ -128,7 +128,7 @@ function SearchPage() {
             <h2>{__("Get Started", "find-my-blocks")}</h2>
             <p>
               {__(
-                "Find My Blocks will search through all your templates, posts and pages to find the WordPress blocks.",
+                "Find My Blocks search through all your WordPress templates, posts and pages within 1 scan. The scan will be performed in batches, and you'll be able to see the progress of the scan.",
                 "find-my-blocks"
               )}
             </p>
@@ -137,7 +137,7 @@ function SearchPage() {
               className="fmb-performance-control"
               label="Performance"
               help={__(
-                "Warning! Choose the performance level that matches your server. Fetching too may posts at once may temporarily crash your site.",
+                "Warning! Choose the performance level that matches your server. Fetching too many posts in one batch may temporarily crash your site.",
                 "find-my-blocks"
               )}
               onChange={(val) => {
@@ -146,21 +146,21 @@ function SearchPage() {
               options={[
                 {
                   label: __(
-                    "Low (Recommended for most sites, 10 post per run)",
+                    "Low (Recommended for most sites, 30 posts per batch)",
                     "find-my-blocks"
                   ),
-                  value: 10,
+                  value: 30,
                 },
                 {
-                  label: __("Standard (100 posts per run)", "find-my-blocks"),
+                  label: __("Standard (100 posts per batch)", "find-my-blocks"),
                   value: 100,
                 },
                 {
-                  label: __("Ultra (500 posts per run)", "find-my-blocks"),
+                  label: __("Ultra (500 posts per batch)", "find-my-blocks"),
                   value: 500,
                 },
               ]}
-              selected={postsPerRun ?? 10}
+              selected={postsPerRun ?? 30}
             />
 
             <Button
