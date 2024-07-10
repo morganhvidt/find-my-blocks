@@ -2,9 +2,9 @@
 Contributors: morganhvidt, edeesims
 Donate link: https://morganhvidt.com/donate
 Tags: gutenberg, find, blocks, search blocks, locator
-Stable tag: 4.0.2
+Stable tag: 4.0.3
 Requires at least: 5.0
-Tested up to: 6.5
+Tested up to: 6.6
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -94,6 +94,12 @@ A special thanks to [Edeesims](https://profiles.wordpress.org/edeesims/) who ori
 3. Find My Blocks - Found Blocks within WordPress Content.
 
 == Changelog ==
+
+= 4.0.3 =
+
+- Ready for WordPress 6.6
+- Increased low performance option from 10 to 30 posts per batch.
+- Updated usage of the "Performance" option to be more clear.
 
 = 4.0.2 =
 
