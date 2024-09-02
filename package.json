@@ -10,6 +10,7 @@
   },
   "scripts": {
     "dev": "node wp-plugins.build.js dev",
+    "dev:hot": "wp-scripts start ./src/assets/js/find-my-blocks.js --output-path=./production/find-my-blocks/assets/js/ --hot --allowed-hosts all",
     "build": "node wp-plugins.build.js build",
     "production": "node wp-plugins.build.js production",
     "postinstall": "composer install"
